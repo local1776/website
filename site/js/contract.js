@@ -39,16 +39,19 @@
     none.hidden = shown > 0 || !words.length;
     mark(words.filter(function (w) { return w.length > 1; }));
   });
-  // Enter on a number ("12.4" or "12") jumps straight to that section or article
-  q.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter') return;
+  // the Search button, or Enter: a number ("12.4" or "12") jumps straight to that section or article; words go to the
+  // first match, with the phone's keyboard put away so the results show
+  function search() {
+    if (!q.value.trim()) { q.focus(); return; }
     var v = q.value.trim().replace(/^(section|sec\.?|article|art\.?)\s*/i, '');
     var m = v.match(/^(\d+)(?:\.(\d+))?$/);
-    if (!m) { var first = document.querySelector('.ct-sec:not([hidden])'); if (first) first.scrollIntoView({ block: 'start' }); return; }
-    e.preventDefault();
+    q.blur();
+    if (!m) { var first = document.querySelector('.ct-sec:not([hidden])'); if (first) first = first.closest('.ct-art') || first; (first || none).scrollIntoView({ block: 'start' }); return; }
     q.value = ''; q.dispatchEvent(new Event('input'));
     go(document.getElementById(m[2] ? 's' + m[1] + '-' + m[2] : 'a' + m[1]));
-  });
+  }
+  q.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); search(); } });
+  document.querySelector('[data-find]').addEventListener('click', search);
 
   // on a phone the contents fold away after you pick an article
   if (toc) toc.addEventListener('click', function (e) { if (e.target.closest('a') && phone.matches) toc.open = false; });

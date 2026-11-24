@@ -11,6 +11,22 @@
   'use strict';
   var finder = document.getElementById('find');
 
+  // ---------------------------------------------------------------- on the home screen, as an app
+  // No browser means no Back button, so a PDF opened by itself is a dead end (Ben, Nov 24 2026): every PDF link on every page
+  // opens in our own reader (/document), which keeps the header, the menu and a Back button. In a browser nothing changes.
+  var asApp = navigator.standalone === true || !!(window.matchMedia && ['standalone', 'fullscreen', 'minimal-ui'].some(function (m) { return matchMedia('(display-mode: ' + m + ')').matches; }));
+  window.L1776_AS_APP = asApp;
+  if (asApp) document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.origin !== location.origin || !/\.pdf$/i.test(a.pathname)) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    // the document's name: the link's own words; an icon button has none, so its handout's title or the page's
+    var ho = a.closest('.ho'), t = a.matches('.btn,.ho-dl') ? '' : a.textContent.trim(); if (/signed pdf|full document/i.test(t)) t = '';
+    if (!t) t = ((ho && ho.querySelector('h3,h4,b')) || document.querySelector('h1') || {}).textContent || '';
+    try { sessionStorage.setItem('l1776-doc', JSON.stringify({ f: a.pathname, t: t.replace(/\s+/g, ' ').trim().slice(0, 120) })); } catch (x) {}
+    location.href = '/document?f=' + encodeURIComponent(a.pathname);
+  }, true);
+
   // ---------------------------------------------------------------- the rotating line
   var hl = document.querySelector('.hline');
   if (hl && window.fetch) {

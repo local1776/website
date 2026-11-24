@@ -78,6 +78,9 @@ const ICON = {
   back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
   plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
   minus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg>',
+  // the signed PDF, no label under it: a page with PDF written on it (Ben, Nov 24 2026)
+  pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V4a2 2 0 0 1 2-2h7l5 5v4"/><path d="M14 2v5h5"/><path d="M5 20.5A1.5 1.5 0 0 0 6.5 22h11a1.5 1.5 0 0 0 1.5-1.5"/><text x="12" y="18.6" text-anchor="middle" font-family="Libre Franklin,Arial,sans-serif" font-size="8.4" font-weight="800" letter-spacing=".2" fill="currentColor" stroke="none">PDF</text></svg>',
+  share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="m8 6.5 4-3.5 4 3.5"/><path d="M7 10.5H5.5V21h13V10.5H17"/></svg>',
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg>',
   close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
   prev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>',
@@ -741,7 +744,7 @@ function contractPage(u) {
   <div class="wrap">
     <div class="kicker">Union Contract &middot; In Effect</div>
     <h1 class="ct-h1"><span>${esc(u.line1)}</span> <span>${esc(u.line2)}</span></h1>
-    <p class="deck ct-deck"><span class="long">Between the ${esc(party)} and LIUNA Local 1776</span><span class="short"><span>Between the ${esc(abbr)}</span> <span>and LIUNA Local 1776</span></span></p>
+    <div class="ct-dr"><p class="deck ct-deck"><span class="long">Between the ${esc(party)} and LIUNA Local 1776</span><span class="short"><span>Between the ${esc(abbr)}</span> <span>and LIUNA Local 1776</span></span></p>${button(c.pdf, 'pdf', 'PDF', 'alt icon').replace('title="PDF"', 'title="Signed Contract (PDF)" aria-label="Signed Contract (PDF)"')}</div>
     <div class="ct-status"><h2>Status</h2><p>${CONTRACT_STATUS}</p>${u.code === 'ARNG' ? `<p>${ARNG_TARC}</p>` : ''}</div>
     <div class="t-tiles four ct-tiles">
       <div class="tile"><span>Executed</span><b>${esc(date(c.executed))}</b></div>
@@ -754,7 +757,7 @@ function contractPage(u) {
 </header>
 <div class="wrap split ct-split">
   <aside class="ct-side" aria-label="Contents and search">
-    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off">${button(c.pdf, 'plan', 'PDF', 'alt')}<span class="rcount" aria-live="polite">${nSec} sections</span></div>
+    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off" enterkeyhint="search"><button type="button" class="btn" data-find><span class="ico">${ICON.search}</span><span class="lbl">Search</span></button><span class="rcount" aria-live="polite">${nSec} sections</span></div>
     <details class="ct-toc" open><summary>Contents</summary>
       <ol>${c.preamble.length ? '<li><a href="#preamble"><span>&ndash;</span><em>Preamble</em></a></li>' : ''}${c.articles.map(a => `<li><a href="#a${a.n}" title="${esc(tc(a.title))}"><span>${a.n}</span><em>${phrases(tc(a.title))}</em></a></li>`).join('')}</ol>
     </details>
@@ -791,7 +794,7 @@ function copyDir(from, to) {
 const started = Date.now();
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const d of ['css', 'js', 'img', 'files', 'map', 'congress']) copyDir(path.join(SRC, d), path.join(OUT, d));
+for (const d of ['css', 'js', 'img', 'files', 'map', 'congress', 'vendor']) copyDir(path.join(SRC, d), path.join(OUT, d));
 for (const k of OFF) for (const f of FORM_JS[k]) fs.rmSync(path.join(OUT, 'js', f));   // a form that is off: its script is not published
 // who holds each seat (for the Legislation page map) — written fresh every build
 fs.writeFileSync(path.join(OUT, 'congress', 'members.json'), JSON.stringify({ congress: congress.congress, asOf: congress.asOf, names: ST_NAME, senate: congress.senate, house: congress.house }));
@@ -873,7 +876,7 @@ posts.forEach((p, i) => {
   count++;
 });
 // a story withdrawn in the app: its address says so (kept out of search engines and the sitemap)
-const NOSITEMAP = new Set(['404.html', ...OFF_PAGES.map(p => p.slice(1) + '.html')]);
+const NOSITEMAP = new Set(['404.html', 'document.html', ...OFF_PAGES.map(p => p.slice(1) + '.html')]);
 for (const slug of NEWS.withdrawn) {
   if (taken.has(slug)) continue;
   const html = `<header class="top"><div class="wrap"><div class="kicker">News</div><h1>This Story Is No Longer Available</h1>
@@ -970,7 +973,7 @@ function fill(src) {
       out.push({ k: 'n', t, u, c: post ? (post.video ? 'Video' : byWho(post)) : 'Video', d: post ? (post.subtitle || post.excerpt || '') : d, h: '', x: cut(strip(main), 600), dt: post ? String(post.date).slice(0, 10) : '' });
       continue;
     }
-    if (slug === '404' || slug === 'test-story-do-not-publish') continue;
+    if (slug === '404' || slug === 'document' || slug === 'test-story-do-not-publish') continue;
     out.push({ k: 'p', t, u, c: '', d, h: cut(heads.join(' · '), 700), x: cut(strip(main), 2000) });
   }
   // every document and link on the Resources page

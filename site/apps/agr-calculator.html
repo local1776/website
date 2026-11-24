@@ -1382,7 +1382,7 @@ function doPrint(){
   catch(e){ window.print(); return; }
   const styles=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
   const nm=($('fname')&&$('fname').value.trim())?(' for '+$('fname').value.trim()):'';
-  const w=window.open('','agrprint','width=920,height=1000');
+  const w=window.L1776_AS_APP?null:window.open('','agrprint','width=920,height=1000');   // on the home screen a pop-up has no way back: print from the page itself
   if(!w){ // popup blocked → in-page fallback
     try{
       const old=document.getElementById('printDoc'); if(old) old.remove();
