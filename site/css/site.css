@@ -481,6 +481,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.2vw,56px);l
 .ft-reach dd span{display:block;white-space:nowrap}
 .ft-reach dd a{color:var(--ink);text-decoration:none;white-space:nowrap}
 .ft-reach dd a:hover{color:var(--navy);text-decoration:underline}
+@media (min-width:901px) and (max-width:1023px){.ft-reach dl div{grid-template-columns:46px minmax(0,1fr);gap:8px}.ft-reach dd{font-size:13px}}   /* the email fits its column (Nov 23 2026) */
 .ft-legal{background:var(--navy);color:#c9d3e2;font-size:12px;line-height:1.55}
 .ft-legal .wrap{padding-top:14px;padding-bottom:16px}
 .ft-legal p{margin:0}
@@ -583,7 +584,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.2vw,56px);l
 @media (max-width:380px){.next h2.brk{font-size:18px}}
 
 /* the narrowest phones: keep the Plan button in view beside the three headline lines */
-@media (max-width:380px){.hero-card{gap:12px;padding:12px 12px 12px 14px}.hero-card h2{font-size:17px}}
+@media (max-width:380px){.hero-card{padding:12px 14px}.hero-card h2{font-size:17px}}
 .nmeta .short{display:none}
 @media (max-width:640px){.nmeta .long{display:none}.nmeta .short{display:inline}}
 .story-body figure.linked a{display:block}
@@ -1408,6 +1409,19 @@ fieldset.fset[disabled] *{cursor:not-allowed}
 .hero-card .btn.light .lbl{display:flex;justify-content:center;width:100%;font-size:9px;font-weight:400;letter-spacing:0}
 @media (max-width:640px){.hero-card .btn.light{width:44px}.hero-card .btn.light .ico{width:44px;height:44px}.hero-card .btn.light .ico svg{width:21px;height:21px}.hero-card .btn.light .lbl{font-size:8.5px}}
 .hero-card .btn.icon .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}   /* icon only: the subtitle says "click the button" */
+/* phone (Nov 23 2026): the button sits beside the title, inside the banner's margin; the kicker and note run the full width */
+@media (max-width:640px){
+  .hero-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 12px}
+  .hero-card>div{display:contents}
+  .hero-card .k,.hero-card .hc-note{grid-column:1/-1}
+  .hero-card .btn.light{grid-column:2;grid-row:2;align-self:center}
+}
+@media (max-width:340px){.hero-card .k{letter-spacing:.1em}.hero-card .hc-note{font-size:12px}}
+/* upright tablet: a two-line title and the short note, so the button stays on the banner and clear of the pause button */
+@media (min-width:641px) and (max-width:900px){
+  .hero-card h2.lines span:last-child{display:block}
+  .hc-note .long{display:none}.hc-note .short{display:inline}
+}
 /* the reform card's button catches the light every few seconds (Ben, Nov 21 2026) */
 .hero-card .btn.light .ico{position:relative;overflow:hidden}
 .hero-card .btn.light .ico::after{content:"";position:absolute;top:-20%;left:-120%;width:55%;height:140%;transform:skewX(-20deg);
