@@ -60,6 +60,8 @@ const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').re
 const MONTHS = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
 const imgUrl = i => (/^(https?:)?\/\//.test(i) || i.startsWith('/') ? i : '/' + i);   // our pictures (img/...) or the app's (https://...)
 const apDate = d => `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;   // newspaper style, as on reform
+// an outside headline's day, Eastern time (a late-evening story keeps its own day wherever the build runs); null = no date
+const easternDay = d => d && !isNaN(d) ? new Date(d.toLocaleDateString('en-US', { timeZone: 'America/New_York' }) + ' UTC') : null;
 
 // ---------- the menu (Ben, Nov 20 2026) ----------
 const NAV = [
@@ -336,7 +338,7 @@ async function feedsHtml() {
           <h3><span>${esc(f.name)}</span><a class="more" href="${f.home}" rel="noopener">More &rsaquo;</a></h3>
           <p class="sub">${esc(f.sub)}</p>
           <ul>${items.length ? items.map(i => `
-            <li><time datetime="${i.date.toISOString()}">${MONTHS[i.date.getMonth()].replace('.', '')} ${i.date.getDate()}</time><a href="${esc(i.link)}" rel="noopener">${esc(i.title)}${i.by ? `<small>${esc(i.by)}</small>` : ''}</a></li>`).join('') : '<li><span></span><span class="note">Headlines are unavailable right now.</span></li>'}
+            <li><time datetime="${i.date.toISOString()}">${MONTHS[easternDay(i.date).getUTCMonth()].replace('.', '')} ${easternDay(i.date).getUTCDate()}</time><a href="${esc(i.link)}" rel="noopener">${esc(i.title)}${i.by ? `<small>${esc(i.by)}</small>` : ''}</a></li>`).join('') : '<li><span></span><span class="note">Headlines are unavailable right now.</span></li>'}
           </ul>
         </div>`).join('');
   return `<div class="feeds">${col(blocks)}</div>`;
@@ -858,7 +860,7 @@ for (const name of APPS) {
 if (APPS.length) {
   // + the classes /js/header.js adds later (search results, the rotating line's fade), so their rules come along too
   const sample = layout({ title: 'x', description: '', path: '/x', app: 'agr', menu: [['#a', 'A']], current: '#a', css: '' }, '')
-    + '<div class="find"><div class="find-out"><div class="find-g"></div><a class="find-r find-m on"><b><mark></mark></b><span><a></a></span></a><p class="find-none"></p></div></div><a class="hl-item out"></a><span class="hl-k out"></span>';
+    + '<div class="find"><div class="find-out"><div class="find-g"></div><a class="find-r find-m on"><b><mark></mark></b><span><a></a></span></a><p class="find-none"></p></div></div><a class="hl-item out"></a><span class="hl-k out"><span class="hl-d"></span></span>';
   fs.writeFileSync(path.join(OUT, 'css', 'chrome.css'), '/* Built from site.css by tools/build.mjs — the header, menu, contact strip and footer only (app pages). Do not edit. */\n'
     + chromeCss(fs.readFileSync(path.join(SRC, 'css', 'site.css'), 'utf8'), sample) + '\n');
 }
@@ -986,9 +988,11 @@ function fill(src) {
   // our own news: a video shows its hook (site/data/video-hooks.json — a quote or teaser, Ben, Nov 22 2026), else its title;
   // a story shows its title and subtitle
   const hooks = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'video-hooks.json'), 'utf8')).hooks;
-  const news = posts.slice(0, 3).map(p => ({ k: p.video ? 'Local 1776 Video' : 'Local 1776 News', u: '/' + p.slug,
+  // each news item and video carries its publication day (Ben, Nov 24 2026); Know Your Rights facts have none, so they show none
+  const day = d => d && !isNaN(d) ? apDate(d) : undefined;
+  const news = posts.slice(0, 3).map(p => ({ k: p.video ? 'Local 1776 Video' : 'Local 1776 News', u: '/' + p.slug, d: day(new Date(p.date)),
     t: p.video ? (hooks[p.slug.replace(/^video\//, '')] || titleCase(p.title)) : titleCase(p.title) + (p.subtitle ? ': ' + p.subtitle : '') }));
-  for (let i = 0; i < 2; i++) for (const { f, items } of FEED_ITEMS) if (items[i]) news.push({ k: f.name, t: items[i].title, u: items[i].link, ext: 1 });
+  for (let i = 0; i < 2; i++) for (const { f, items } of FEED_ITEMS) if (items[i]) news.push({ k: f.name, t: items[i].title, u: items[i].link, d: day(easternDay(items[i].date)), ext: 1 });
   const line = [];
   for (let i = 0; i < Math.max(facts.length, news.length); i++) {
     if (facts[i]) line.push({ k: 'Know Your Rights', t: facts[i].text, u: facts[i].href });

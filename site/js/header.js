@@ -25,7 +25,12 @@
     var setP = function () { pb.innerHTML = held ? PLAY : PAUSE; pb.setAttribute('aria-label', held ? 'Play' : 'Pause'); pb.title = held ? 'Play' : 'Pause'; };
     var show = function (n) {
       var it = items[n];
-      k.textContent = it.k; t.textContent = it.t; a.href = it.u;
+      k.textContent = it.k;
+      if (it.d) {   // the day it was published, beside the title
+        var d = document.createElement('span'); d.className = 'hl-d'; d.textContent = it.d;
+        k.appendChild(document.createTextNode(' ')); k.appendChild(d);
+      }
+      t.textContent = it.t; a.href = it.u;
       if (it.ext) { a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); a.removeAttribute('rel'); }
     };
     var busy = function () {

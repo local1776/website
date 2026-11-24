@@ -1691,6 +1691,7 @@ h2,h3,h4,dt,figcaption{text-wrap:balance}
 .hl-b svg{width:12px;height:12px}
 .hl-p svg{width:10px;height:10px}
 .hl-item{display:block;min-width:0;margin-top:4px;color:var(--ink);text-decoration:none;transition:opacity .25s}
+.hl-d{margin-left:5px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--muted);font-variant-numeric:tabular-nums}
 .hl-item.out,.hl-k.out{opacity:0}
 .hl-k{display:block;flex:1;min-width:0;transition:opacity .25s;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hl-t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:0;font-family:var(--sans);font-weight:400;font-size:13px;line-height:1.4;color:var(--navy);text-wrap:pretty}
