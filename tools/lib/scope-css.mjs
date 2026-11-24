@@ -112,8 +112,8 @@ export function scopeCss(css, scope = '#main') {
 // The header / menu / contact strip / footer rules from site.css, and nothing else. A rule is kept only when every
 // class, id and tag it names appears in that markup; rules written for the page in general (a, .btn, .wrap...) are
 // limited to those parts with :where(), which adds no weight, so the header looks exactly as on every other page.
-const ROOTS = ['skip', 'print-head', 'mast', 'nav', 'find', 'strip', 'site-foot'];
-const WHERE = ':where(.skip,.print-head,.mast,.nav,.find,body>.strip,.site-foot)';
+const ROOTS = ['skip', 'print-head', 'mast', 'nav', 'find', 'strip', 'site-foot', 'ptr'];
+const WHERE = ':where(.skip,.print-head,.mast,.nav,.find,body>.strip,.site-foot,.ptr)';
 export function chromeCss(siteCss, chromeHtml) {
   const classes = new Set(), ids = new Set(), tags = new Set(['html', 'body']);
   for (const m of chromeHtml.matchAll(/\bclass="([^"]*)"/g)) m[1].split(/\s+/).filter(Boolean).forEach(c => classes.add(c));

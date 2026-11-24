@@ -27,6 +27,35 @@
     location.href = '/document?f=' + encodeURIComponent(a.pathname);
   }, true);
 
+  // iPhone home screen: pull the page down from the top to refresh it (Ben, Nov 24 2026). Android's own pull already works.
+  // Never over a zoomed map, a window or a list that is scrolled, and never once something has been typed in a form.
+  if (navigator.standalone === true) (function () {
+    var tip = document.createElement('div'), sx = 0, sy = 0, pull = 0, on = false, typed = false, NEED = 64;
+    tip.className = 'ptr'; tip.setAttribute('aria-hidden', 'true');
+    tip.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.5V8h-4.5"/></svg>';
+    document.body.appendChild(tip);
+    document.addEventListener('input', function (e) { if (e.target.type !== 'search' && e.target.closest('main')) typed = true; });
+    var blocked = function (el) {
+      if (typed || (finder && !finder.hidden) || document.querySelector('dialog[open],[aria-modal="true"]:not([hidden])') || /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || '')) return true;
+      for (; el && el !== document.body && el.nodeType === 1; el = el.parentNode) {
+        if (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.scrollTop > 0) return true;
+        var c = getComputedStyle(el); if (c.touchAction === 'none') return true;
+      }
+      return false;
+    };
+    var draw = function () { tip.style.transform = 'translate(-50%,' + (pull - 48) + 'px) rotate(' + pull * 3 + 'deg)'; tip.style.opacity = Math.min(1, pull / 40); tip.classList.toggle('set', pull >= NEED); };
+    var end = function () { on = false; pull = 0; tip.classList.remove('set'); tip.style.transform = ''; tip.style.opacity = ''; };
+    document.addEventListener('touchstart', function (e) { on = e.touches.length === 1 && window.scrollY <= 0 && !blocked(e.target); if (on) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; pull = 0; } }, { passive: true });
+    document.addEventListener('touchmove', function (e) {
+      if (!on) return;
+      var dx = Math.abs(e.touches[0].clientX - sx), dy = e.touches[0].clientY - sy;
+      if (e.touches.length > 1 || window.scrollY > 0 || (pull === 0 && (dy < 0 || dx > dy + 4))) { end(); return; }
+      pull = Math.max(0, Math.min(84, dy * 0.5)); draw();
+    }, { passive: true });
+    document.addEventListener('touchend', function () { if (!on) return; if (pull >= NEED) { on = false; tip.classList.add('spin'); location.reload(); } else end(); });
+    document.addEventListener('touchcancel', end);
+  })();
+
   // ---------------------------------------------------------------- the rotating line
   var hl = document.querySelector('.hline');
   if (hl && window.fetch) {

@@ -209,7 +209,7 @@ details.branch .plist{padding:0 14px 6px}
 
 /* Home photo slider (the old site's slideshow, kept by request) */
 .hero{position:relative;background:var(--navy)}
-.hero .slides{position:relative;height:clamp(320px,38vw,560px);overflow:hidden;background:#14233f}
+.hero .slides{position:relative;height:clamp(320px,38vw,560px);overflow:hidden;background:#14233f center 35%/cover no-repeat}
 .hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:0;transition:opacity 1.4s ease}
 .hero .slides img.on{opacity:1}
 /* Home, desktop + tablet only (Ben, Nov 22 2026): the WHOLE header (logo, menu bar, white strip) and the photo hold still
@@ -1838,3 +1838,12 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 .dv-p{width:100%;margin:0 0 10px;border:1px solid var(--rule);background:#fff}
 .dv-p canvas{display:block;width:100%;height:100%}
 .dv-msg{padding-top:24px;font-family:var(--serif);font-size:17px;color:var(--body-ink)}
+
+/* pull down to refresh (iPhone home screen only; header.js) */
+.ptr{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 4px);z-index:60;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:50%;background:#fff;color:var(--muted);box-shadow:0 2px 10px rgba(11,42,85,.22);opacity:0;transform:translate(-50%,-48px);pointer-events:none}
+.ptr svg{width:18px;height:18px}
+.ptr.set{color:var(--navy);border-color:var(--navy)}
+.ptr.spin{opacity:1!important;transform:translate(-50%,20px)!important;color:var(--navy)}
+.ptr.spin svg{animation:ptr .8s linear infinite}
+@keyframes ptr{to{transform:rotate(360deg)}}
+@media print{.ptr{display:none}}

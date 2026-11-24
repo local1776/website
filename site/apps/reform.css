@@ -766,3 +766,28 @@ select{height:32px;padding:0 8px;font-size:12.5px}
 @media (max-width:860px){.gtl .yr small{font-size:9px;letter-spacing:0}}
 @media (min-width:861px) and (max-width:1000px){.chips button{font-size:10.8px;padding:0 2px}.seg.ht{white-space:normal;text-wrap:balance;line-height:1.15;font-size:10px;padding:0 5px}}
 @media (max-width:359px){.chips button{font-size:10px;padding:0 1px;letter-spacing:-.02em}.seg{font-size:9px;padding:0 3px}.ho-top .ho-k{font-size:8px;letter-spacing:0}.lb-bar b{font-size:11px;white-space:normal;line-height:1.2}}
+
+/* the list of agencies: Search button, count and arrows, as on the contract pages (Nov 24 2026) */
+.ag-row{display:flex;gap:4px;align-items:center}
+.ag-row input{min-width:0}
+.ag-find{flex:none;display:flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:1.5px solid var(--navy);border-radius:6px;background:#fff;color:var(--navy);cursor:pointer;transition:background .15s}
+.ag-find:hover{background:#eef2f7}
+.ag-find svg{width:17px;height:17px}
+.ag-res{display:flex;align-items:center;gap:8px;min-height:32px}
+.ag-res .tools{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ag-nav{display:flex;flex:none;gap:4px}
+.ag-nav[hidden]{display:none}
+.ag-nav button{position:relative;display:flex;align-items:center;justify-content:center;width:18px;height:18px;padding:0;border:0;background:none;color:var(--navy);cursor:pointer}
+.ag-nav button:hover,.ag-nav button:focus-visible{color:var(--gold-text)}
+.ag-nav svg{width:15px;height:15px}
+::highlight(ct){background:#fff4e3;color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px}
+::highlight(ct-now){background:var(--gold);color:var(--ink);text-decoration:none}
+@media screen and (max-width:1023px),screen and (pointer:coarse){
+  .agbar input[type=search]{height:34px;font-size:16px}
+  .ag-find{width:34px;height:34px}
+  .ag-res{min-height:34px}
+  .ag-nav button{width:34px;height:34px}
+  .ag-nav svg{width:18px;height:18px}
+}
+@media (max-width:640px){.ag-row input[type=search]{flex:1}.ag-res{width:100%;justify-content:space-between}}
+.agbar{scroll-margin-top:40px}

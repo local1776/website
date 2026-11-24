@@ -657,8 +657,11 @@ function videosHtml(list) {
 // ---------- home photo slider ----------
 // Every picture in site/img/slides (01.jpg, 02.jpg ...) in order. The first loads with the page; site.js loads the rest
 // one at a time, just before each is shown.
+// Phones get the smaller copies in slides/m. slides/first.txt is the first photo at 40 px, kept in the page itself: it shows
+// at once, so the space is never a plain blue box while the real photo is on its way (Ben, Nov 24 2026).
 const slideFiles = fs.readdirSync(path.join(SRC, 'img', 'slides')).filter(f => /\.jpe?g$/i.test(f)).sort();
-const slides = `<div class="slides" data-slides='${JSON.stringify(slideFiles.map(f => '/img/slides/' + f))}'><img class="on" src="/img/slides/${slideFiles[0]}" alt="" fetchpriority="high"></div>
+const slideFirst = fs.readFileSync(path.join(SRC, 'img', 'slides', 'first.txt'), 'utf8').trim();
+const slides = `<div class="slides" style="background-image:url(${slideFirst})" data-slides='${JSON.stringify(slideFiles.map(f => '/img/slides/' + f))}'><picture><source media="(max-width:640px)" srcset="/img/slides/m/${slideFiles[0]}"><img class="on" src="/img/slides/${slideFiles[0]}" alt="" fetchpriority="high"></picture></div>
   <button class="hero-ctl" type="button" aria-label="Pause the photos" title="Pause">${ICON.pause}</button>`;
 
 // The privacy note on every form, like the AGR calculator's (Ben, Nov 21 2026). A form that sends: we get it, but nothing
@@ -780,6 +783,7 @@ function contractPage(u) {
   </div>
 </div>
 <button type="button" class="btn icon to-top" data-top title="Back to Top" hidden><span class="ico">${ICON.up}</span><span class="lbl">Back to Top</span></button>
+<script src="/js/terms.js" defer></script>
 <script src="/js/contract.js" defer></script>`;
   return { meta: { title: `${name} Contract`, nav: 'agencies', description: `The full text of the collective bargaining agreement between the ${party} and LIUNA Local 1776, with the signed PDF.` }, html, slug: c.slug };
 }
@@ -866,7 +870,7 @@ for (const name of APPS) {
 if (APPS.length) {
   // + the classes /js/header.js adds later (search results, the rotating line's fade), so their rules come along too
   const sample = layout({ title: 'x', description: '', path: '/x', app: 'agr', menu: [['#a', 'A']], current: '#a', css: '' }, '')
-    + '<div class="find"><div class="find-out"><div class="find-g"></div><a class="find-r find-m on"><b><mark></mark></b><span><a></a></span></a><p class="find-none"></p></div></div><a class="hl-item out"></a><span class="hl-k out"><span class="hl-d"></span></span>';
+    + '<div class="find"><div class="find-out"><div class="find-g"></div><a class="find-r find-m on"><b><mark></mark></b><span><a></a></span></a><p class="find-none"></p></div></div><a class="hl-item out"></a><span class="hl-k out"><span class="hl-d"></span></span><div class="ptr set spin"><svg></svg></div>';
   fs.writeFileSync(path.join(OUT, 'css', 'chrome.css'), '/* Built from site.css by tools/build.mjs — the header, menu, contact strip and footer only (app pages). Do not edit. */\n'
     + chromeCss(fs.readFileSync(path.join(SRC, 'css', 'site.css'), 'utf8'), sample) + '\n');
 }

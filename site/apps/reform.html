@@ -119,7 +119,7 @@
     <div class="sec-head"><div class="kicker">Who was hit, who was spared</div><h2>The list of &ldquo;national security&rdquo; agencies</h2></div>
     <p class="sec-deck">Every department, agency and office named in the two 2025 orders. Search for yours. The White House tied the list to eight themes: national defense, border security, foreign relations, energy security, pandemic preparedness, cybersecurity, the economy and public safety.</p>
     <div class="agbar">
-      <div class="fg"><label for="agq">Search the list</label><input type="search" id="agq" placeholder="Try Weather, Veterans, patents" autocomplete="off"></div>
+      <div class="fg"><label for="agq">Search the list</label><div class="ag-row"><input type="search" id="agq" placeholder="Word or &ldquo;Phrase,&rdquo; like Weather" autocomplete="off" enterkeyhint="search"><button type="button" class="ag-find" id="agFind" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg></button></div></div>
       <div class="fg"><span class="lab">Order</span>
         <div class="chips" id="agOrder">
           <button type="button" data-v="all" aria-pressed="true">Both</button>
@@ -127,7 +127,7 @@
           <button type="button" data-v="14343" aria-pressed="false">August 2025</button>
         </div>
       </div>
-      <span class="tools" id="agCount" aria-live="polite" style="padding:0 0 6px"></span>
+      <span class="ag-res"><span class="tools" id="agCount" aria-live="polite" style="padding:0"></span><span class="ag-nav" id="agNav" hidden><button type="button" data-step="-1" aria-label="Previous match" title="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></button><button type="button" data-step="1" aria-label="Next match" title="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" data-step="x" aria-label="Clear search" title="Clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span></span>
     </div>
     <div class="agwrap"><table class="agtable"><thead><tr><th>Department or agency</th><th>What was excluded</th><th>Order</th></tr></thead><tbody id="agBody"></tbody></table></div>
     <p class="note">Source: text of Executive Order 14251 (March 27, 2025) and Executive Order 14343 (August 28, 2025).<sup class="fn" data-k="eo14251txt"></sup><sup class="fn" data-k="eo14343"></sup> TSA officers lost bargaining through a separate Homeland Security decision on March 7, 2025.<sup class="fn" data-k="tsa"></sup> Employee counts by agency are not shown.</p>
@@ -1071,6 +1071,7 @@ window.addEventListener("resize",function(){setBar();onScroll();});
 window.TL_SRC=SRC; drawChart(); setBar(); apply();
 })();
 </script>
+<script src="/js/terms.js"></script>
 <script>(function(){
 "use strict";
 function $(id){return document.getElementById(id);}
@@ -1285,16 +1286,50 @@ var AG=[
 ];
 var agF={q:"",o:"all"};
 function agRender(){
-  var q=agF.q.toLowerCase(), n=0, h="";
+  var F=window.L1776_FIND, ts=F?F.terms(agF.q):[], n=0, h="";
   AG.forEach(function(r){
-    var txt=(r[0]+" "+r[1]+" "+(r[3]||"")).toLowerCase();
-    if((agF.o==="all"||agF.o===r[2])&&(!q||txt.indexOf(q)>=0)){
+    var txt=r[0]+"\n"+r[1]+"\n"+(r[3]||"");
+    if((agF.o==="all"||agF.o===r[2])&&ts.every(function(t){return F.find({t:txt},t).length;})){
       n++; h+="<tr><td>"+r[0]+"</td><td>"+r[1]+(r[3]?'<span class="sm">'+r[3]+"</span>":"")+'</td><td><span class="tag">'+(r[2]==="14251"?"Mar. 2025":"Aug. 2025")+"</span></td></tr>";
     }
   });
   $("agBody").innerHTML=h||'<tr><td colspan="3" style="font-weight:400;white-space:normal">Nothing on the list matches that search. If your agency is not here, it was not named in either order.</td></tr>';
-  $("agCount").textContent="Showing "+n+" of "+AG.length+" entries";
+  agN=n; agHits=[]; agNow=-1;
+  if(ts.length) each($("agBody").querySelectorAll("td:not(:last-child)"),function(td){
+    var T=F.read(td,"span.sm,td"); F.places(T,ts).forEach(function(p){agHits.push(F.range(T,p[0],p[1]));});
+  });
+  agTell();
 }
+/* the matches: "3 of 12", next, previous and clear, as on the contract pages (Ben, Nov 24 2026) */
+var agHits=[], agNow=-1, agN=0;
+function agTell(){
+  var n=agHits.length, F=window.L1776_FIND; if(F) F.paint(agHits,agNow);
+  $("agNav").hidden=!n;
+  $("agCount").textContent=n?(agNow>=0?(agNow+1)+" of "+n:n+(n===1?" match":" matches")+" \u00b7 "+agN+(agN===1?" entry":" entries")):"Showing "+agN+" of "+AG.length+" entries";
+}
+function agStep(d){
+  if(!agHits.length) return;
+  agNow=agNow<0?(d>0?0:agHits.length-1):(agNow+d+agHits.length)%agHits.length; agTell();
+  var w=document.querySelector(".agwrap"), b=w.getBoundingClientRect(), r=agHits[agNow].getBoundingClientRect();
+  if(r.top<b.top+44||r.bottom>b.bottom-20) w.scrollTop+=r.top-b.top-w.clientHeight*.35;
+  r=agHits[agNow].getBoundingClientRect();
+  if(r.top<40||r.bottom>innerHeight-20) document.querySelector(".agbar").scrollIntoView({block:"start"});   /* the list itself is off the screen */
+}
+function agClear(){ $("agq").value=""; agF.q=""; agRender(); document.querySelector(".agwrap").scrollTop=0; }
+function agSearch(back){
+  if(!agF.q){ $("agq").focus(); return; }
+  if(window.matchMedia("(max-width:900px),(pointer:coarse)").matches) $("agq").blur();
+  agStep(back?-1:1);
+}
+$("agFind").addEventListener("click",function(){agSearch();});
+$("agq").addEventListener("keydown",function(e){
+  if(e.key==="Enter"){ e.preventDefault(); agSearch(e.shiftKey); }
+  else if(e.key==="Escape"&&this.value){ e.preventDefault(); agClear(); }
+});
+$("agNav").addEventListener("click",function(e){
+  var b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.step==="x") agClear(); else agStep(+b.dataset.step);
+});
 $("agq").addEventListener("input",function(){agF.q=this.value.trim();agRender();});
 $("agOrder").addEventListener("click",function(ev){
   var b=ev.target.closest("button"); if(!b) return; agF.o=b.dataset.v;

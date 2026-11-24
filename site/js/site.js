@@ -12,14 +12,29 @@
   var hero = document.querySelector('.hero .slides');
   if (hero) {
     var srcs = JSON.parse(hero.dataset.slides || '[]');
+    if (window.matchMedia && matchMedia('(max-width: 640px)').matches) srcs = srcs.map(function (s) { return s.replace('/slides/', '/slides/m/'); });
     var imgs = [hero.querySelector('img')], cur = 0, timer = null;
     var ctl = document.querySelector('.hero-ctl');
     var PAUSE = ctl ? ctl.innerHTML : '';
     var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>';
     var get = function (k) {
-      if (!imgs[k]) { var im = new Image(); im.alt = ''; im.decoding = 'async'; im.src = srcs[k]; hero.appendChild(im); imgs[k] = im; }
+      if (!imgs[k]) { var im = new Image(); im.alt = ''; im.decoding = 'async'; watch(im, k); im.src = srcs[k]; hero.appendChild(im); imgs[k] = im; }
       return imgs[k];
     };
+    // A photo that fails is asked for again. A phone often opens a home screen app before its connection is awake: the page
+    // comes from the phone's own copy and the first photo fails, which left a blue box until the next one (Ben, Nov 24 2026).
+    var ready = function (im) { return im && im.complete && im.naturalWidth > 0; };
+    var again = function (k) {
+      var im = imgs[k]; if (!im || ready(im)) return;
+      if (im.parentNode.tagName === 'PICTURE') { [].forEach.call(im.parentNode.querySelectorAll('source'), function (s) { s.remove(); }); }
+      im.src = srcs[k] + '?again=' + (im.tries = (im.tries || 0) + 1);
+    };
+    var watch = function (im, k) { im.addEventListener('load', function () { im.style.visibility = ''; }); im.addEventListener('error', function () { im.style.visibility = 'hidden'; if ((im.tries || 0) < 8) setTimeout(function () { again(k); }, Math.min(8000, 700 * ((im.tries || 0) + 1))); }); };
+    watch(imgs[0], 0);
+    if (imgs[0].complete && !imgs[0].naturalWidth) { imgs[0].style.visibility = 'hidden'; again(0); }
+    var wake = function () { if (!document.hidden) { [cur, (cur + 1) % srcs.length].forEach(function (k) { if (imgs[k] && imgs[k].complete) again(k); }); } };
+    ['online', 'pageshow'].forEach(function (e) { window.addEventListener(e, wake); });
+    document.addEventListener('visibilitychange', wake);
     var show = function (k) {
       var next = get(k);
       var go = function () { imgs[cur].classList.remove('on'); next.classList.add('on'); cur = k; if (srcs.length > 1) get((k + 1) % srcs.length); };
@@ -29,6 +44,7 @@
     var stop = function () { clearInterval(timer); timer = null; if (ctl) { ctl.innerHTML = PLAY; ctl.setAttribute('aria-label', 'Play the photos'); ctl.title = 'Play'; } };
     if (srcs.length > 1) {
       get(1);
+      setTimeout(function () { if (cur === 0 && timer && !ready(imgs[0]) && ready(imgs[1])) { show(1); play(); } }, 2500);   // the second came first: don't wait on the first
       if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) stop(); else play();
       if (ctl) ctl.addEventListener('click', function () { if (timer) stop(); else play(); });
     } else if (ctl) ctl.hidden = true;
