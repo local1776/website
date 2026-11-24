@@ -110,6 +110,63 @@
       if (credit) credit.hidden = !(gu || (vb[2] < 14 && streetsG.childNodes.length));
       var small = (svg.getBoundingClientRect().width || 800) < 520;      // phones: slightly smaller pins
       svg.querySelectorAll('.scl').forEach(function (g) { var kk = small && g.classList.contains('pin') ? k * 0.78 : k, rot = g.getAttribute('data-r'); g.setAttribute('transform', 'translate(' + g.getAttribute('data-x') + ',' + g.getAttribute('data-y') + ') scale(' + kk + ')' + (rot ? ' rotate(' + rot + ')' : '')); });
+      place();
+    };
+    // ---------- no overlapping names: every town name takes a free spot beside its dot (right, left, above, below); with
+    // none free it stays hidden until zooming in makes room. Bigger towns choose first; pins and shields keep their place.
+    var ctx = document.createElement('canvas').getContext('2d'), SANS = getComputedStyle(document.body).fontFamily;
+    var place = function () {
+      if (!current || !labelsG.childNodes.length) return;
+      var R = svg.getBoundingClientRect(), W = R.width, H = R.height, kx = W / vb[2], ky = H / vb[3], small = W < 520, taken = [], pinBoxes = [];
+      var shown = function (g) { return g.style.display !== 'none' && getComputedStyle(g).display !== 'none'; };
+      var at = function (g) { return [(g.getAttribute('data-x') - vb[0]) * kx, (g.getAttribute('data-y') - vb[1]) * ky]; };
+      var near = function (p) { return p[0] > -90 && p[0] < W + 90 && p[1] > -30 && p[1] < H + 30; };
+      var hits = function (b, list, m) { return list.some(function (q) { return b[0] < q[2] + m && b[2] > q[0] - m && b[1] < q[3] + m && b[3] > q[1] - m; }); };
+      var q = small ? 0.78 : 1;
+      [zmCtl, credit].forEach(function (el) { if (!el || el.hidden) return; var r = el.getBoundingClientRect(); if (r.width) taken.push([r.left - R.left, r.top - R.top, r.right - R.left, r.bottom - R.top]); });
+      pinsG.querySelectorAll('.pin').forEach(function (g) { var p = at(g); if (near(p)) pinBoxes.push([p[0] - 7 * q, p[1] - 21 * q, p[0] + 7 * q, p[1]]); });
+      labelsG.querySelectorAll('.shield').forEach(function (g) {
+        g.style.visibility = ''; var p = at(g); if (!near(p) || !shown(g)) return;
+        var w = g.classList.contains('sh3') ? 13.5 : 11, b = [p[0] - w, p[1] - 11, p[0] + w, p[1] + 13];
+        if (hits(b, taken, 1) || hits(b, pinBoxes, -2)) { g.style.visibility = 'hidden'; return; }
+        taken.push(b);
+      });
+      var list = [];
+      labelsG.querySelectorAll('.city').forEach(function (g) {
+        var p = at(g); if (!near(p) || !shown(g)) return;
+        if (p[0] < 0 || p[0] > W || p[1] < 0 || p[1] > H) { g.style.visibility = 'hidden'; return; }   // its dot is off the map
+        list.push({ g: g, p: p, tier: g.classList.contains('t1') ? 0 : g.classList.contains('t2') ? 1 : 2, out: g.classList.contains('out') ? 1 : 0 });
+      });
+      list.forEach(function (c, i) { c.i = i; });
+      list.sort(function (a, b) { return a.tier - b.tier || a.out - b.out || a.i - b.i; });
+      list.forEach(function (c) {
+        var t = c.g.lastChild, w = t.__w;
+        if (!w) { ctx.font = (c.tier ? '500 11px ' : '700 12px ') + SANS; w = t.__w = ctx.measureText(t.textContent).width + 1; }
+        var x = c.p[0], y = c.p[1], dot = [x - 3, y - 3, x + 3, y + 3];
+        var spots = [['start', 5, 4], ['end', -5, 4], ['middle', 0, -7], ['middle', 0, 15], ['start', 4, -5], ['start', 4, 13], ['end', -4, -5], ['end', -4, 13],
+          ['middle', 0, -19], ['middle', 0, 26], ['start', 14, 4], ['end', -14, 4], ['start', 12, -14], ['end', -12, -14], ['start', 12, 22], ['end', -12, 22]].map(function (o) {
+          var l = x + o[1] - (o[0] === 'end' ? w : o[0] === 'middle' ? w / 2 : 0), b = [l, y + o[2] - 10, l + w, y + o[2] + 3];
+          return { o: o, b: b, was: t.__o === o.join(), inside: b[0] >= 1 && b[2] <= W - 1 && b[1] >= 1 && b[3] <= H - 1 };
+        }).filter(function (sp) { return sp.inside && !hits(sp.b, taken, 1); }).sort(function (a, b) { return b.was - a.was; });   // keeps its spot while the map moves
+        // free of pins too; only at the whole-state view may a major city share a little room with a pin rather than vanish
+        spots.forEach(function (sp) { sp.pins = pinBoxes.filter(function (p) { return hits(sp.b, [p], 0); }).length; });
+        var best = spots.filter(function (sp) { return !sp.pins; })[0] || (c.tier || zoomLevel() > 1.1 ? null : spots.sort(function (a, b) { return a.pins - b.pins; })[0]);
+        c.g.style.visibility = best && !hits(dot, taken, 0) ? '' : 'hidden';
+        if (c.g.style.visibility) return;
+        t.__o = best.o.join(); t.setAttribute('text-anchor', best.o[0]); t.setAttribute('x', best.o[1]); t.setAttribute('y', best.o[2]);
+        taken.push(best.b, dot);
+      });
+      // street names last: never across a town name, a shield or another street name
+      var pts = [];
+      if (svg.classList.contains('w6')) streetsG.querySelectorAll('.sname').forEach(function (g) {
+        var p = at(g); if (!near(p)) return; g.style.visibility = ''; if (!shown(g)) return;
+        var t = g.lastChild, w = t.__w;
+        if (!w) { ctx.font = '600 10px ' + SANS; w = t.__w = ctx.measureText(t.textContent).width; }
+        var r = (g.getAttribute('data-r') || 0) * Math.PI / 180, mine = [];
+        for (var d = -w / 2; d <= w / 2; d += 6) mine.push([p[0] + Math.cos(r) * d, p[1] + Math.sin(r) * d]);
+        var bad = mine.some(function (m) { return hits([m[0] - 4, m[1] - 4, m[0] + 4, m[1] + 4], taken, 0) || pts.some(function (o) { return Math.abs(o[0] - m[0]) < 9 && Math.abs(o[1] - m[1]) < 9; }); });
+        if (bad) g.style.visibility = 'hidden'; else pts = pts.concat(mine);
+      });
     };
     var animateTo = function (target, done) {
       cancelAnimationFrame(anim);
@@ -385,6 +442,8 @@
       if (pin) { openCard(+pin.getAttribute('data-site'), false); return; }
       var pick = e.target.closest('.site-pick');
       if (pick) { openCard(+pick.getAttribute('data-site'), true); return; }
+      var hit = e.target.closest('[data-hit]');   // a fingertip just beside a small state on the US map
+      if (hit) { select(hit.getAttribute('data-hit'), true); return; }
       var t = e.target.closest('[data-unit]');
       if (t) {
         e.preventDefault();

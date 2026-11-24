@@ -210,11 +210,15 @@
   var svgEl = function () { return stateBox.querySelector('svg'); };
   function relabel() {
     var svg = svgEl(); if (!svg) return;
-    var k = VIEW[2] / (svg.getBoundingClientRect().width || 1);
+    var k = VIEW[2] / (svg.getBoundingClientRect().width || 1), nums = [];
     [].forEach.call(svg.querySelectorAll('.cg-lbl text'), function (t) {
       t.style.fontSize = (12 * k) + 'px';
       var p = svg.querySelector('.cg-d[data-n="' + t.getAttribute('data-n') + '"]').getBBox();
       t.style.display = Math.min(p.width, p.height) < 26 * k ? 'none' : '';   // only where the number fits
+      if (!t.style.display) nums.push({ t: t, x: +t.getAttribute('x'), y: +t.getAttribute('y'), w: t.textContent.length * 7.5 * k, a: p.width * p.height });
+    });
+    nums.sort(function (a, b) { return b.a - a.a; }).forEach(function (n, i) {   // and never over another number (the larger district keeps its own)
+      if (nums.slice(0, i).some(function (o) { return !o.t.style.display && Math.abs(o.x - n.x) < (o.w + n.w) / 2 && Math.abs(o.y - n.y) < 12 * k; })) n.t.style.display = 'none';
     });
   }
   var zoomed = function () { return FULL && VIEW[2] < FULL[2] * 0.999; };

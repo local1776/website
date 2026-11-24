@@ -378,8 +378,16 @@ function usMap(kind) {
   const guShape = full
     ? `<g class="gu" data-unit="GU" tabindex="0" role="button" aria-label="Guam: ${esc(unitName(gu))}"><title>Guam: ${esc(unitName(gu))}</title>${guInner}</g>`
     : `<a href="/agencies#GU" aria-label="Guam: ${esc(unitName(gu))}"><g class="gu"><title>Guam: ${esc(unitName(gu))}</title>${guInner}</g></a>`;
+  // phones and tablets: a fingertip-size invisible area under each small state (under every state, so a real shape always wins)
+  const hits = usStates.map(s => {
+    const code = unitOfState[s.abbr]; if (!code) return '';
+    const b = pathBox(s.d), w = b[2] - b[0], h = b[3] - b[1];
+    if (Math.min(w, h) >= 110) return '';
+    const c = `<circle class="hit"${full ? ` data-hit="${code}"` : ''} cx="${Math.round((b[0] + b[2]) / 2)}" cy="${Math.round((b[1] + b[3]) / 2)}" r="54"/>`;
+    return full ? c : `<a href="/agencies#${code}" tabindex="-1" aria-hidden="true">${c}</a>`;
+  }).join('');
   // No work-site dots on the US map (Ben: "chicken pox"). Sites appear on the zoomed street map instead.
-  return `<svg class="usmap ${kind}" viewBox="-120 0 1095 610" role="group" aria-label="Map of the United States and Guam. Highlighted places are where Local 1776 represents employees.">${shapes}${guShape}${full ? '<g class="pins"></g>' : ''}</svg>`;
+  return `<svg class="usmap ${kind}" viewBox="-120 0 1095 610" role="group" aria-label="Map of the United States and Guam. Highlighted places are where Local 1776 represents employees.">${hits}${shapes}${guShape}${full ? '<g class="pins"></g>' : ''}</svg>`;
 }
 const unitTabs = (hrefBase) => `<nav class="tabs unit-tabs" aria-label="Choose a state or unit">${hrefBase ? '' : '<a href="#" data-us aria-current="true">US</a>'}${units.map(u => `<a href="${hrefBase}#${u.code}" data-unit="${u.code}">${u.code}</a>`).join('')}</nav>`;
 

@@ -1800,3 +1800,6 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 @media (max-width:359px){.rp-c i{display:none}.rp-c a{display:block}.rk-list li{font-size:12.5px;grid-template-columns:30px 46px minmax(0,1fr)!important}}
 @media (max-width:359px){.hp-t b{font-size:15px}.stat{padding-left:10px;padding-right:6px}.stat b{font-size:22px}.t-tiles .tile b,.ct-tiles .tile b{font-size:15px}.ct-h1 span{font-size:.86em}.kicker,.kicker span{letter-spacing:.04em}}
 @media (min-width:641px) and (max-width:960px){.tease .n{letter-spacing:.03em}}
+.usmap .hit{fill:none;pointer-events:none}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.usmap:not(.cg-us):not(.zoomed) .hit{pointer-events:all}.usmap:not(.cg-us):not(.zoomed) .st:not(.on){pointer-events:none}}
+.usmap.zoomed .hit{display:none}
