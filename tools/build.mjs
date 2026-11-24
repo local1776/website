@@ -207,7 +207,7 @@ ${pdfNewTab(body)}
     </div>
   </div>
   <div class="ft-legal"><div class="wrap">
-    <p><span>LIUNA Local 1776 is part of the Laborers&rsquo; International Union of North America. This is not a U.S. government website.</span> <span>The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.</span></p>
+    <p><span>LIUNA Local 1776 is part of the <a href="https://www.liuna.org/" target="_blank" rel="noopener">Laborers&rsquo; International Union of North America</a>. This is not a U.S. government website.</span> <span>The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.</span></p>
     <p class="ft-copy">&copy; ${new Date().getFullYear()} LIUNA Local 1776. All rights reserved.</p>
   </div></div>
 </footer>
@@ -873,6 +873,53 @@ if (APPS.length) {
     + '<div class="find"><div class="find-out"><div class="find-g"></div><a class="find-r find-m on"><b><mark></mark></b><span><a></a></span></a><p class="find-none"></p></div></div><a class="hl-item out"></a><span class="hl-k out"><span class="hl-d"></span></span><div class="ptr set spin"><svg></svg></div>';
   fs.writeFileSync(path.join(OUT, 'css', 'chrome.css'), '/* Built from site.css by tools/build.mjs — the header, menu, contact strip and footer only (app pages). Do not edit. */\n'
     + chromeCss(fs.readFileSync(path.join(SRC, 'css', 'site.css'), 'utf8'), sample) + '\n');
+}
+// ---------- case pages (/cases/<slug>; Ben, Nov 24 2026: "an individual page for each case. Make it look nice") ----------
+// site/data/cases.json. draft:true shows only with --cases (this PC), so nothing is public until Ben has seen it.
+const CASES_PAGES = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'cases.json'), 'utf8')).filter(c => !c.draft || process.argv.includes('--cases'));
+const AU = { play: '<svg class="pl" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><svg class="pa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>', back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v5h5"/><path d="M4.6 9A8 8 0 1 1 4 13"/><text x="12" y="16" text-anchor="middle" font-family="Libre Franklin,Arial,sans-serif" font-size="7.4" font-weight="700" fill="currentColor" stroke="none">15</text></svg>', fwd: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4v5h-5"/><path d="M19.4 9A8 8 0 1 0 20 13"/><text x="12" y="16" text-anchor="middle" font-family="Libre Franklin,Arial,sans-serif" font-size="7.4" font-weight="700" fill="currentColor" stroke="none">15</text></svg>' };
+function casePage(c) {
+  const ext = h => /^https?:/.test(h) ? ' target="_blank" rel="noopener"' : '';
+  const list = a => `<ul class="side-list case-docs">${a.map(([t, h, s]) => `<li><a href="${h}"${ext(h)}>${t}${s ? `<small>${s}</small>` : ''}</a></li>`).join('')}</ul>`;
+  const au = c.audio;
+  return `<article class="case">
+  <header class="top"><div class="wrap">
+    <div class="kicker">${c.forum} &middot; ${c.court}</div>
+    <h1 class="case-h">${c.title.map(t => `<span>${t}</span>`).join(' ')}</h1>
+    <p class="deck">${c.deck}</p>
+    <div class="t-tiles four case-tiles">${c.tiles.map(([k, v, n]) => `<div class="tile"><span>${k}</span><b>${v}</b><em>${n}</em></div>`).join('')}</div>
+  </div></header>
+  <div class="wrap">
+    <section class="case-means"><h2>What It Means for You</h2><p>${c.means}</p></section>${au ? `
+    <section class="case-au" aria-labelledby="hear">
+      <h2 id="hear">Hear the Argument</h2>
+      <p class="au-n">${au.note.map(n => `<span>${n}</span>`).join(' ')}</p>
+      <div class="au" data-seconds="${au.seconds}">
+        <audio preload="none" src="${au.src}"></audio>
+        <button type="button" class="au-play" data-au="play" aria-label="Play" title="Play">${AU.play}</button>
+        <input type="range" min="0" max="${au.seconds}" value="0" step="1" aria-label="Position in the recording"><span class="au-t">0:00</span>
+        <div class="au-c"><button type="button" data-skip="-15" aria-label="Back 15 seconds" title="Back 15 seconds">${AU.back}</button><button type="button" data-skip="15" aria-label="Forward 15 seconds" title="Forward 15 seconds">${AU.fwd}</button><button type="button" class="au-sp" data-au="speed" aria-label="Speed 1 times" title="Speed">1&times;</button></div>
+      </div>
+      <p class="au-e" hidden>The recording could not be played here. <a href="${au.src}">Open the file</a> instead.</p>
+      <dl class="au-who">${au.who.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+    </section>` : ''}
+    <section class="case-tl"><h2>How It Got There</h2><ol class="steps n${c.timeline.length}">${c.timeline.map(([d, h, p]) => `<li><span class="yr">${d}</span><h3>${h}</h3><p>${p}</p></li>`).join('')}</ol></section>
+  </div>
+  <div class="wrap split case-split">
+    <div class="prose story-body">${c.sections.map(([h, ps], i) => `<h2>${h}</h2>${ps.map(p => `<p>${p}</p>`).join('')}${i === 1 && c.quote ? `<figure class="case-q"><blockquote>&ldquo;${c.quote[0]}&rdquo;</blockquote><figcaption>${c.quote[1]}</figcaption></figure>` : ''}`).join('\n')}</div>
+    <aside class="story-side">
+      <div class="aside"><h3>The Documents</h3>${list(c.docs)}</div>
+      <div class="aside"><h3>The Law</h3>${list(c.law)}</div>
+      <div class="aside"><h3>The Union</h3><p class="case-n">${c.union}</p><h3>Where It Applies</h3><p class="case-n">${c.reach}</p></div>
+    </aside>
+  </div>
+</article>
+<script src="/js/case.js" defer></script>`;
+}
+for (const c of CASES_PAGES) {
+  fs.mkdirSync(path.join(OUT, 'cases'), { recursive: true });
+  fs.writeFileSync(path.join(OUT, 'cases', c.slug + '.html'), layout({ title: c.title.join(' '), nav: 'resources', description: c.deck, path: '/cases/' + c.slug, noindex: !!c.draft }, fill(casePage(c))));
+  count++;
 }
 // every story at its old address (/slug), in the new format
 posts.forEach((p, i) => {

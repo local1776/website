@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "flra-v-michigan-army-national-guard",
+    "draft": true,
+    "forum": "U.S. Court of Appeals",
+    "court": "Sixth Circuit",
+    "title": ["FLRA v. Michigan", "Army National Guard"],
+    "deck": "Can the Guard forbid its employees from talking to their union in private? The Sixth Circuit said no.",
+    "tiles": [
+      ["Decided", "Dec. 18, 2017", "Sixth Circuit, No. 17-3128"],
+      ["Citation", "878 F.3d 171", "Published, full text"],
+      ["Result", "Union Win", "With one change"],
+      ["Vote", "3 to 0", "To enforce the order"]
+    ],
+    "means": "You may talk to your union in private, about your job and about discipline. Wearing a uniform to work does not take that away. The notice the court approved says it outright: employees &ldquo;have the right to privately communicate with their union representatives about their conditions of employment, including disciplinary matters.&rdquo;",
+    "audio": {
+      "src": "/files/cases/6th-circuit-17-3128-argument.mp3",
+      "seconds": 2052,
+      "note": ["Three federal judges question both attorneys.", "Argued October 4, 2017 &middot; 34 minutes &middot; Court recording"],
+      "who": [
+        ["The Judges", "Eric L. Clay, John M. Rogers and Jeffrey S. Sutton"],
+        ["For the FLRA", "Zachary R. Henige, Federal Labor Relations Authority"],
+        ["For the Guard", "Tyce R. Walters, U.S. Department of Justice"]
+      ]
+    },
+    "timeline": [
+      ["March 2014", "The Letter", "A Guard attorney tells the union not to speak with employees alone."],
+      ["Oct. 2015", "The Judge", "An FLRA administrative law judge rules for the union."],
+      ["May 2016", "The FLRA", "The Authority agrees and orders the Guard to stop."],
+      ["Oct. 2017", "The Argument", "The Guard refuses to comply. The case is argued in the Sixth Circuit."],
+      ["Dec. 2017", "The Ruling", "All three judges vote to enforce the order."]
+    ],
+    "sections": [
+      ["What Happened", [
+        "In 2014, the Michigan Army National Guard fired two dual status technicians. They used the Guard&rsquo;s own appeal process, and their union, LIUNA Local 2132, represented them.",
+        "While that appeal was open, a Guard attorney wrote to the union&rsquo;s representative, Ben Banchs. It said that any communications with Guard employees without a Guard attorney present were &ldquo;improper&rdquo; until the hearing examiner decided otherwise.",
+        "Banchs answered that the Guard had &ldquo;no legal authority to regulate communications between bargaining unit employees . . . and the Union.&rdquo; The Guard said it meant only communications about the hearing, but left its letter in place. The union filed an unfair labor practice charge.",
+        "An administrative law judge ruled for the union, and so did the Federal Labor Relations Authority (FLRA). The Guard refused to comply, so the FLRA asked a federal court to enforce its order."
+      ]],
+      ["What the Court Decided", [
+        "<b>The letter broke the law.</b> The FLRA read it as a &ldquo;sweeping command&rdquo; that banned all private talk between employees and their union. The court found enough evidence to support that reading.",
+        "<b>The Technicians Act was no shield.</b> That law leaves decisions to fire a technician to the adjutant general. A ban on all private contact, including contact that had nothing to do with the firing, is not part of that decision.",
+        "<b>The union was in the right place.</b> Whether the Guard followed its own rules, and whether it broke federal labor law, are two different questions. The union could bring the second one to the FLRA."
+      ]],
+      ["The One Change", [
+        "The court narrowed the order&rsquo;s wording so that it bars &ldquo;sweeping directives&rdquo; against private communication, because that is what the FLRA found. Judge Clay agreed with the result but would have enforced the order as written. He called the Guard&rsquo;s letter &ldquo;slapdash.&rdquo;"
+      ]],
+      ["What It Left Open", [
+        "The court did not decide whether the Guard could use a narrower rule, one limited to private contact with witnesses about a pending termination hearing."
+      ]]
+    ],
+    "quote": ["Assuming that the FSLMRS provides labor rights of any sort to dual‑status technicians, which it clearly does, it is hard to see how the basic ability of union members to talk with union officers could not be protected.", "Judge Rogers, for the court"],
+    "docs": [
+      ["The Court&rsquo;s Opinion", "/files/cases/6th-circuit-17-3128-opinion.pdf", "16 pages, PDF"],
+      ["The FLRA&rsquo;s Decision", "https://www.flra.gov/decisions/v69/69-56.html", "69 FLRA No. 56, May 25, 2016"],
+      ["The Administrative Law Judge", "https://www.flra.gov/decisions/alj-decisions/michigan-army-national-guard-and-laborers-international-union-north-america", "Case CH-CA-14-0475"]
+    ],
+    "law": [
+      ["5 U.S.C. 7102", "https://www.law.cornell.edu/uscode/text/5/7102", "Employees&rsquo; rights"],
+      ["5 U.S.C. 7116", "https://www.law.cornell.edu/uscode/text/5/7116", "Unfair labor practices"],
+      ["32 U.S.C. 709", "https://www.law.cornell.edu/uscode/text/32/709", "Technicians Act"]
+    ],
+    "union": "LIUNA Local 2132, Michigan Army National Guard. It is now part of Local 1776.",
+    "reach": "Sixth Circuit rulings bind federal courts in Kentucky, Michigan, Ohio and Tennessee."
+  }
+]

@@ -260,7 +260,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.2vw,56px);l
 .byline span{position:relative;white-space:nowrap}
 .byline span::before{content:"";position:absolute;left:-15px;top:0;bottom:0;width:1px;background:var(--rule)}   /* the divider hides itself at the start of a line */
 .byline b{color:var(--ink);font-weight:700}
-.byline a{color:var(--ink);text-decoration:none}
+.byline a{position:relative;color:var(--navy);text-decoration:underline;text-decoration-color:#9fb0c8;text-underline-offset:3px}
+.byline a:hover{text-decoration-color:var(--gold)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .stat{padding:18px 22px;border-left:1px solid var(--rule);min-width:0}
 .stat:first-child{border-left:0;padding-left:0}
@@ -538,7 +539,7 @@ figure.lead img{display:block;width:100%;max-height:560px;object-fit:contain;bor
   .nav a{padding:12px 11px 9px;font-size:10.5px}
   .top{padding-top:26px}
   .deck{font-size:18px}
-  .byline span:nth-child(n+3){display:none}
+  .story .byline span:nth-child(n+3){display:none}
   .stat b{font-size:30px}
   .sec{padding-top:48px}
   .sec-deck{font-size:17px}
@@ -898,13 +899,13 @@ p,li,.deck,.rnote{text-wrap:pretty}
 .steps h3{font-family:var(--display);font-size:18px;line-height:1.2;margin:8px 0 4px;white-space:nowrap}
 .steps p{margin:0;font-size:14px;line-height:1.45;color:var(--body-ink)}
 .hist-h{margin:26px 0 8px}
-.locals{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.locals{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .locals li{display:flex;flex-direction:column;gap:3px;padding:8px 12px;border:1px solid var(--rule);border-radius:6px;background:#fff}
 .locals span{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .locals b{font-size:15px;color:var(--navy);white-space:nowrap}
 .f-pic figcaption .cap-l{display:block}
-@media (max-width:900px){.steps{grid-template-columns:1fr;gap:26px}.steps li+li::before{left:50%;top:-21px;margin:0 0 0 -8px;transform:rotate(90deg)}.locals{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.locals .wide{grid-column:1/-1}}
+@media (max-width:900px){.steps{grid-template-columns:1fr;gap:26px}.steps li+li::before{left:50%;top:-21px;margin:0 0 0 -8px;transform:rotate(90deg)}}
+@media (max-width:640px){.locals{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-flow:dense}.locals .wide{grid-column:1/-1}}
 
 /* slim menu bar — same as reform.local1776.org (Ben, Nov 21 2026: "I wanted the main website to match the Reform website") */
 .nav{border-bottom-width:1px}
@@ -1847,3 +1848,77 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 .ptr.spin svg{animation:ptr .8s linear infinite}
 @keyframes ptr{to{transform:rotate(360deg)}}
 @media print{.ptr{display:none}}
+
+/* ---------- case pages (/cases/…; Ben, Nov 24 2026) ---------- */
+.case-h span{display:inline-block}
+.case .deck{margin-bottom:18px}
+.case-tiles b{font-size:24px;white-space:nowrap}
+.case h2{font-family:var(--display);font-weight:800;font-size:28px;line-height:1.15;margin:0 0 12px}
+.case-means{border:1px solid var(--rule);border-radius:6px;padding:18px 22px 20px;margin:8px 0 34px;background:#fff}
+.case .case-means h2{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);margin:0 0 6px}
+.case-means p{margin:0;font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink)}
+.case-au,.case-tl{border-top:1px solid var(--navy);padding-top:20px;margin-bottom:36px}
+.au-n{margin:-6px 0 10px;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.au{display:flex;align-items:center;gap:12px;height:42px;border-radius:6px;background:var(--navy);color:#fff;padding:0 8px 0 10px}   /* slim (Ben, Nov 24 2026): the play button is hardly bigger than its icon */
+.au button{position:relative}
+.au-play{flex:none;display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:0;background:none;color:#fff;cursor:pointer}
+.au-play:hover,.au-c button:hover{color:var(--gold)}
+.au-play svg{width:20px;height:20px}
+.au-play .pa,.au.on .au-play .pl{display:none}
+.au.on .au-play .pa{display:block}
+.au-t{flex:none;text-align:right;font-size:12.5px;font-variant-numeric:tabular-nums;color:#dfe6f0;white-space:nowrap}
+.au input[type=range]{flex:1;min-width:0;height:24px;margin:0;padding:0;border:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer}
+.au input[type=range]::-webkit-slider-runnable-track{height:5px;border-radius:3px;background:linear-gradient(to right,var(--gold) var(--p,0%),rgba(255,255,255,.28) var(--p,0%))}
+.au input[type=range]::-moz-range-track{height:5px;border-radius:3px;background:linear-gradient(to right,var(--gold) var(--p,0%),rgba(255,255,255,.28) var(--p,0%))}
+.au input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;margin-top:-5px;border:0;border-radius:50%;background:#fff}
+.au input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:#fff}
+.au-c{flex:none;display:flex;gap:4px}
+.au-c button{display:flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;border:0;background:none;color:#fff;cursor:pointer}
+.au-c svg{width:20px;height:20px}
+.au-c .au-sp{width:36px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.au-e{margin:8px 0 0;font-size:13px}
+.au-who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 28px;margin:14px 0 0}
+.au-who dt{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.au-who dd{margin:3px 0 0;font-size:14.5px;line-height:1.4;color:var(--ink)}
+.steps.n5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.steps.n5 .yr{font-size:20px;white-space:nowrap}
+.case-split{padding-bottom:40px}
+.case-split .story-body>h2:first-child{margin-top:0}
+.case-q{margin:26px 0!important;padding:20px 0 18px;border-top:1px solid var(--navy);border-bottom:1px solid var(--navy)}
+.case-q blockquote{margin:0!important;padding:0!important;border:0!important;font-family:var(--display);font-style:normal!important;font-weight:700;font-size:25px!important;line-height:1.35;color:var(--navy);text-wrap:balance}
+.case-q figcaption{text-align:left!important;margin-top:10px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text)}
+.case .story-side{gap:26px}
+.case-docs small{display:block;margin-top:2px;font-family:var(--sans);font-weight:400;font-size:12.5px;color:var(--muted)}
+.case-n{margin:0 0 16px;font-size:14.5px;line-height:1.5;color:var(--body-ink)}
+@media (max-width:1100px) and (min-width:901px){.steps.n5{gap:20px}.steps.n5 li{padding:10px}.steps.n5 li+li::before{left:-18px}.steps.n5 h3{font-size:16px}.steps.n5 .yr{font-size:17px}.steps.n5 p{font-size:13px}}
+@media (max-width:900px){.steps.n5{grid-template-columns:1fr}}
+@media (max-width:760px){.au-who{grid-template-columns:1fr}}
+@media (max-width:480px){.au{gap:9px;padding:0 4px 0 8px}.au-t span{display:none}.au-c{gap:2px}}
+@media (max-width:640px){.case-h span{display:block}.case-means{padding:14px 16px 16px;margin-bottom:26px}.case-means p{font-size:17.5px}.case h2{font-size:24px}.case-q blockquote{font-size:21px!important}.case-tiles.t-tiles.four{grid-template-columns:1fr 1fr}.case-tiles b{font-size:19px}.case-tiles em{font-size:12px}}
+@media (max-width:389px){.case-tiles b{font-size:17px}}
+@media print{.case-au .au{display:none}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.au input[type=range]{height:34px}.au button::before{content:"";position:absolute;inset:-8px -3px}.au-play::before{inset:-9px -6px!important}}
+@media (max-width:359px){.case-h{font-size:27px}}
+@media (max-width:760px){.au-n span{display:block}}
+@media (max-width:389px){.au-n{font-size:13px}}
+/* About: where Local 1776 fits (Ben, Nov 24 2026: the empty space beside the photo); the footer names our parent union */
+.steps.fit{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0}
+.steps.fit li{display:flex;flex-direction:column}
+.steps.fit .yr{font-size:19px;white-space:nowrap}
+.steps.fit h3{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:6px 0 4px}
+.steps.fit p{flex:1;margin-bottom:10px}
+.f-pic figcaption i{font-style:normal;white-space:nowrap}
+.ft-legal a{color:inherit;text-decoration:underline;text-decoration-color:rgba(201,211,226,.5);text-underline-offset:2px}
+.ft-legal a:hover{color:#fff;text-decoration-color:#fff}
+@media (min-width:901px) and (max-width:1120px){.steps.fit{gap:22px}.steps.fit li{padding:10px}.steps.fit li+li::before{left:-19px}.steps.fit .yr{font-size:16px}.steps.fit p{font-size:13px}}
+@media (min-width:641px) and (max-width:900px){.steps.fit{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.steps.fit li+li::before{left:-22px;top:50%;margin:-8px 0 0;transform:none}}
+@media (max-width:640px){.steps.fit{grid-template-columns:1fr}}
+.stat .stat-logos{display:flex;margin-top:11px}
+.stat-logos a{position:relative;display:block;flex:none}
+.stat-logos img{display:block;width:auto;height:32px}
+.stat-logos a:hover img{opacity:.8}
+@media (min-width:901px) and (max-width:1160px){.stat-logos img{height:26px}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.stat-logos a::before{content:"";position:absolute;inset:-6px -6px}}
+@media (min-width:641px) and (max-width:720px){.steps.fit{grid-template-columns:1fr;gap:26px}.steps.fit li+li::before{left:50%;top:-21px;margin:0 0 0 -8px;transform:rotate(90deg)}.locals{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:901px) and (max-width:980px){.steps.fit{gap:18px}.steps.fit li+li::before{left:-17px}.steps.fit li{padding:8px}.steps.fit .yr{font-size:14px}.steps.fit h3{font-size:9px;letter-spacing:.04em}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.byline a::before{content:"";position:absolute;inset:-8px -5px}}
