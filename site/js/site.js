@@ -251,13 +251,15 @@
     };
 
     // ---------- the side panel
+    // a long name or address breaks only between its phrases (after a comma, before a parenthesis, after "National Guard")
+    var phrases = function (t) { return String(t).replace(/(Army|Air) National Guard /g, '$&\n').replace(/, /g, ',\n').replace(/ \(/g, '\n(').split('\n').map(function (x) { return '<i class="ph">' + esc(x.trim()) + '</i>'; }).join(' '); };
     var siteRow = function (s, i) {
       // under the name: the street address in two set lines — street / city, state zip (Ben, Nov 22 2026: "put the actual
       // street address there underneath each one"); no address on file → the town
       // split before the city: "PO Box 105103, BLDG 7727, S. Loop Access Rd." / "Fort Irwin, CA 92310-5103"
       var parts = s.address ? s.address.split(', ') : [];
       var lines = parts.length >= 3 ? [parts.slice(0, -2).join(', '), parts.slice(-2).join(', ')] : parts.length ? (parts.length === 2 ? parts : [s.address]) : (s.place ? [s.place] : []);
-      return '<li data-site="' + i + '"><button type="button" class="site-pick" data-site="' + i + '"><b>' + esc(s.name) + '</b>' + lines.map(function (l) { return '<span>' + esc(l) + '</span>'; }).join('') + '</button>' +
+      return '<li data-site="' + i + '"><button type="button" class="site-pick" data-site="' + i + '"><b>' + phrases(s.name) + '</b>' + lines.map(function (l) { return '<span>' + phrases(l) + '</span>'; }).join('') + '</button>' +
         // Directions: the small icon-only turn-arrow button, as on the site card (only when a street address is on file)
         (s.address ? '<a class="btn alt sm icon go" href="' + dirUrl(s) + '" target="_blank" rel="noopener" title="Directions"><span class="ico">' + ICON.dir + '</span><span class="lbl">Directions</span></a>' : '') + '</li>';
     };

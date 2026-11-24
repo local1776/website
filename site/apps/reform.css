@@ -746,3 +746,23 @@ select{height:32px;padding:0 8px;font-size:12.5px}
 .mast .acts .btn .ico svg{width:23px;height:23px}
 .mast .acts .btn .lbl{display:flex;justify-content:center;width:100%;font-size:9px;font-weight:400;letter-spacing:0}
 @media (max-width:640px){.mast .acts .btn{width:44px}.mast .acts .btn .ico{width:44px;height:44px}.mast .acts .btn .ico svg{width:21px;height:21px}.mast .acts .btn .lbl{font-size:8.5px}}
+
+/* full check, Nov 24 2026: the handout buttons look like every other square button, and are easy to tap on phones and tablets */
+.ho-act,.lb-act{gap:4px}
+.ho-dl,.cta .ho-dl{background:#fff;color:var(--navy)}
+.ho-view:hover,.ho-dl:hover,.cta .ho-dl:hover{background:#eef2f7}
+.lb-act .ho-dl{background:transparent;color:#fff;border-color:#fff}
+.lb-act button:hover,.lb-act .ho-dl:hover{background:rgba(255,255,255,.12)}
+@media screen and (max-width:1023px),screen and (pointer:coarse){
+  .linkbtn,.ho-act>*,.lb-act>*,.ft-links a,.more{position:relative}
+  .linkbtn::before,.ft-links a::before,.more::before{content:"";position:absolute;inset:-9px -5px}
+  .ho-act>*::before,.lb-act>*::before{content:"";position:absolute;inset:-5px -2px}
+  .ho-act>:first-child::before,.lb-act>:first-child::before{left:-5px}
+  .ho-act>:last-child::before,.lb-act>:last-child::before{right:-5px}
+}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.chips button{height:34px;min-height:34px}}
+@media (max-width:860px){.seg.ht{white-space:normal;text-wrap:balance;line-height:1.15}}
+@media (min-width:861px) and (max-width:1180px){.chips button{padding:0 4px;font-size:11.5px;letter-spacing:-.01em}}
+@media (max-width:860px){.gtl .yr small{font-size:9px;letter-spacing:0}}
+@media (min-width:861px) and (max-width:1000px){.chips button{font-size:10.8px;padding:0 2px}.seg.ht{white-space:normal;text-wrap:balance;line-height:1.15;font-size:10px;padding:0 5px}}
+@media (max-width:359px){.chips button{font-size:10px;padding:0 1px;letter-spacing:-.02em}.seg{font-size:9px;padding:0 3px}.ho-top .ho-k{font-size:8px;letter-spacing:0}.lb-bar b{font-size:11px;white-space:normal;line-height:1.2}}

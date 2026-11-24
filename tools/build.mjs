@@ -156,7 +156,7 @@ ${meta.app ? `<link rel="stylesheet" href="/css/chrome.css">\n<style>\n${meta.cs
   <div class="find-out" aria-live="polite"></div>
 </div></div>
 <div class="strip"><div class="wrap">
-  <span class="who">LIUNA Local 1776 &middot; We represent U.S. government employees</span>
+  <span class="who"><span class="lo">LIUNA Local 1776 &middot; </span>We represent U.S. government employees</span>
   <span class="reach"><a href="tel:+18005695861">1 (800) 569-5861</a><a href="mailto:contact_us@local1776.org">contact_us@local1776.org</a></span>
 </div></div>
 <main id="main">
@@ -242,6 +242,8 @@ const byWho = p => p.source || p.author || 'Local 1776';
 // ---------- the News page and one page per story (Ben, Nov 20 2026: every story rebuilt in the new format) ----------
 // short names for the News list on a phone (no cut-off labels)
 const SHORT_SOURCE = { 'Government Executive': 'GovExec', 'Courthouse News Service': 'Courthouse News', 'Associated Press': 'AP', 'The Seattle Times, 2005': 'Seattle Times' };
+// a title that may need a second line breaks only between its phrases (before "and" or a parenthesis, after a comma)
+const phrases = t => t.split(/(?<=,) |(?<=^.{12,}) (?=and )| (?=\()/).map(x => `<i class="ph">${esc(x)}</i>`).join(' ');
 const minutes = p => Math.max(1, Math.round((p.words || 200) / 230));
 function newsIndex() {
   const years = [...new Set(posts.map(p => new Date(p.date).getUTCFullYear()))];
@@ -249,7 +251,7 @@ function newsIndex() {
         <li class="nrow${p.source ? ' repost' : ' ours'}">
           <a href="/${p.slug}">
             ${p.image ? `<img src="${imgUrl(p.image)}" alt="" loading="lazy">` : '<span class="noimg" aria-hidden="true"></span>'}
-            <span class="nmeta">${apDate(new Date(p.date))} &middot; ${p.source && SHORT_SOURCE[p.source] ? `<span class="long">${esc(p.source)}</span><span class="short">${SHORT_SOURCE[p.source]}</span>` : esc(byWho(p))}${p.video ? ' &middot; Video' : ''}</span>
+            <span class="nmeta"><span>${apDate(new Date(p.date))}</span><span class="sep"> &middot; </span><span class="ns">${p.source && SHORT_SOURCE[p.source] ? `<span class="long">${esc(p.source)}</span><span class="short">${SHORT_SOURCE[p.source]}</span>` : esc(byWho(p))}${p.video ? ' &middot; Video' : ''}</span></span>
             <b>${esc(titleCase(p.title))}</b>
             <span class="nsub">${esc(p.subtitle || p.excerpt)}</span>
           </a>
@@ -744,7 +746,7 @@ function contractPage(u) {
   <aside class="ct-side" aria-label="Contents and search">
     <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off">${button(c.pdf, 'plan', 'PDF', 'alt')}<span class="rcount" aria-live="polite">${nSec} sections</span></div>
     <details class="ct-toc" open><summary>Contents</summary>
-      <ol>${c.preamble.length ? '<li><a href="#preamble"><span>&ndash;</span><em>Preamble</em></a></li>' : ''}${c.articles.map(a => `<li><a href="#a${a.n}" title="${esc(tc(a.title))}"><span>${a.n}</span><em>${esc(tc(a.title))}</em></a></li>`).join('')}</ol>
+      <ol>${c.preamble.length ? '<li><a href="#preamble"><span>&ndash;</span><em>Preamble</em></a></li>' : ''}${c.articles.map(a => `<li><a href="#a${a.n}" title="${esc(tc(a.title))}"><span>${a.n}</span><em>${phrases(tc(a.title))}</em></a></li>`).join('')}</ol>
     </details>
   </aside>
   <div class="ct-main">

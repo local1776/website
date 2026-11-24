@@ -325,3 +325,5 @@ footer{border-top:1px solid var(--ink);margin-top:22px;padding:14px 0;font-size:
    no thick amber top edge */
 #go{color:var(--gold);border-radius:6px}
 #go:hover{background:#071d3d}
+/* easy to tap on phones and tablets (full check, Nov 24 2026) */
+@media screen and (max-width:1023px),screen and (pointer:coarse){.ack{padding:6px 0;margin-top:1px}}
