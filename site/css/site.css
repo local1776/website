@@ -192,19 +192,19 @@ details.branch .plist{padding:0 14px 6px}
 .strip .reach a:last-child{text-transform:none;letter-spacing:.02em;font-weight:600}
 
 /* Square icon buttons with a one-word label underneath (house rule). One helper for the whole site.
-   ONE label standard everywhere (Ben, Nov 24 2026: "scrub the whole website"): regular weight, no
-   letter spacing, 8.5px (9px on the header's bigger tiles); the button is exactly its tile's width, so the tile lines up with the text beside it
-   and the word centers under it and never sticks out. Too long to fit = a shorter word. */
-.btn{display:inline-flex;flex-direction:column;align-items:stretch;width:42px;gap:5px;background:none;border:0;padding:0;margin:0;color:var(--navy);text-decoration:none;font-size:8.5px;font-weight:400;letter-spacing:0;text-transform:uppercase;line-height:1;cursor:pointer;white-space:nowrap}
+   ONE look everywhere (Ben, Nov 24 2026: "all the square buttons need to work just like the ones in the header, like the
+   AGR one"): white tile, thin navy outline, navy icon, light tint on hover, 48px (44px on a phone); label 9px regular (8.5px
+   on a phone), no letter spacing, centered, never wider than the tile. Filled navy = "you are here" (header only), amber =
+   Join only. On navy (.light): the same in white outline. Icon-only (.icon) and small (.sm) tiles keep their smaller sizes. */
+.btn{display:inline-flex;flex-direction:column;align-items:stretch;width:48px;gap:5px;background:none;border:0;padding:0;margin:0;color:var(--navy);text-decoration:none;font-size:9px;font-weight:400;letter-spacing:0;text-transform:uppercase;line-height:1;cursor:pointer;white-space:nowrap}
 .btn .lbl{display:flex;justify-content:center;width:100%}
-.btn .ico{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:6px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;transition:background .15s}
-.btn .ico svg{width:21px;height:21px}
-.btn:hover .ico{background:#071d3d;border-color:#071d3d}
-.btn.alt .ico{background:#fff;color:var(--navy)}
-.btn.alt:hover .ico{background:#eef2f7}
+.btn .ico{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:6px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);transition:background .15s}
+.btn .ico svg{width:23px;height:23px}
+.btn:hover .ico{background:#eef2f7}
 .btn.light{color:#fff}
-.btn.light .ico{background:#fff;border-color:#fff;color:var(--navy)}
-.btn.light:hover .ico{background:#e9eef5}
+.btn.light .ico{background:transparent;border:1px solid #fff;color:#fff}
+.btn.light:hover .ico{background:rgba(255,255,255,.12)}
+.btn.icon{width:42px}.btn.icon .ico{width:42px;height:42px}.btn.icon .ico svg{width:21px;height:21px}
 .btn[disabled]{opacity:.5;cursor:default}
 
 /* Home photo slider (the old site's slideshow, kept by request) */
@@ -519,7 +519,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.2vw,56px);l
   .logo{height:54px}
   .acts{gap:4px}
 
-  .btn.icon{width:38px}.btn.icon .ico{width:38px;height:38px}.btn.icon .ico svg{width:19px;height:19px}   /* labeled tiles stay 42px so the word fits */
+  .btn{width:44px;font-size:8.5px}.btn .ico{width:44px;height:44px}.btn .ico svg{width:21px;height:21px}
+  .btn.icon{width:38px}.btn.icon .ico{width:38px;height:38px}.btn.icon .ico svg{width:19px;height:19px}
   .btn.sm{width:34px}.btn.sm .ico{width:34px;height:34px}.btn.sm .ico svg{width:17px;height:17px}
   .strip .who{display:none}
   .strip .wrap{justify-content:center;font-size:10.5px;letter-spacing:.1em}
@@ -721,8 +722,8 @@ p,li,.deck,.rnote{text-wrap:pretty}
 .lede-s{font-family:var(--serif);font-size:18px;line-height:1.5;color:var(--body-ink);margin:0 0 20px}
 .cg-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:end}
 .cg-find label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.cg-row{display:flex;gap:4px;align-items:stretch}
-.cg-row input{flex:1;min-width:0;min-height:48px;padding:10px 14px;font-size:16px;border:1px solid #b9c0cb;border-radius:6px;background:#fff}
+.cg-row{display:flex;gap:4px;align-items:flex-start}
+.cg-row input{flex:1;min-width:0;height:48px;padding:10px 14px;font-size:16px;border:1px solid #b9c0cb;border-radius:6px;background:#fff}
 .cg-row input:focus{border-color:var(--navy);outline:3px solid rgba(255,158,11,.3);outline-offset:0}
 .cg-msg{font-size:13px;color:var(--muted);margin:6px 0 0;min-height:18px}
 .cg-links{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
@@ -1081,9 +1082,10 @@ p,li,.deck,.rnote{text-wrap:pretty}
 .ct-side{position:sticky;top:64px;display:grid;gap:12px}
 .ct-find{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4px;row-gap:6px;align-items:start}
 .ct-find label{grid-column:1/-1;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.ct-find input{width:100%;min-height:44px;padding:10px 12px;font-size:15px;border:1px solid #b9c0cb;border-radius:6px;background:#fff}
+.ct-find input{width:100%;height:48px;padding:10px 12px;font-size:15px;border:1px solid #b9c0cb;border-radius:6px;background:#fff}
 .ct-find input:focus{border-color:var(--navy);outline:3px solid rgba(255,158,11,.3);outline-offset:0}
 .ct-find .btn{grid-row:2/4;grid-column:2}
+@media (max-width:640px){.ct-find input,.cg-row input{height:44px}}
 .ct-find .rcount{grid-column:1;margin-top:-2px}
 .ct-toc{min-height:0;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
 .ct-toc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);padding:10px 0 6px}
@@ -1198,7 +1200,6 @@ p,li,.deck,.rnote{text-wrap:pretty}
 /* Back to Top on the contract pages: a square tile, bottom right */
 .to-top{position:fixed;right:20px;bottom:20px;z-index:30}
 .to-top .ico{box-shadow:0 2px 8px rgba(11,42,85,.25)}
-.to-top:hover .ico{background:#0f3a73}
 @media (max-width:640px){.to-top{right:14px;bottom:14px}}
 @media print{.to-top{display:none!important}}
 
@@ -1380,15 +1381,11 @@ fieldset.fset[disabled] *{cursor:not-allowed}
 @media (max-width:900px){.uf-wyw{grid-template-columns:minmax(0,1fr)}.uf-seals{display:none}}
 /* header button labels in regular weight (Ben, Nov 21 2026 — trial) */
 
-/* header tiles a little bigger than the 42px buttons elsewhere (Ben, Nov 21 2026 — trial) */
-.acts .btn{width:48px;font-size:9px}.acts .btn .ico{width:48px;height:48px}.acts .btn .ico svg{width:23px;height:23px}
-@media (max-width:640px){.acts .btn{width:44px;font-size:8.5px}.acts .btn .ico{width:44px;height:44px}.acts .btn .ico svg{width:21px;height:21px}}
 /* the reform card's Plan button matches the header buttons: same size, thin white outline on the card's navy,
    regular-weight label (Ben, Nov 21 2026) */
-.hero-card .btn.light{width:48px;color:#fff}
-.hero-card .btn.light .ico{width:48px;height:48px;background:transparent;border:1px solid #fff;color:#fff}
+.hero-card .btn.light{width:48px}
+.hero-card .btn.light .ico{width:48px;height:48px}
 .hero-card .btn.light .ico svg{width:23px;height:23px}
-.hero-card .btn.light:hover .ico{background:rgba(255,255,255,.12)}
 @media (max-width:640px){.hero-card .btn.light{width:44px}.hero-card .btn.light .ico{width:44px;height:44px}.hero-card .btn.light .ico svg{width:21px;height:21px}}
 .hero-card .btn.icon .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}   /* icon only: the subtitle says "click the button" */
 /* phone (Nov 23 2026): the button sits beside the title, inside the banner's margin; the kicker and note run the full width */
@@ -1467,8 +1464,6 @@ fieldset.fset[disabled] *{cursor:not-allowed}
 .rq-nav .form-msg{flex:1 1 240px;margin:12px 0 0;min-width:0;text-align:right}
 .rq-resume,.rq-sent{margin:0 0 22px;padding:14px 16px;border:1px solid var(--rule);border-radius:6px;font-size:14.5px;line-height:1.5;color:var(--body-ink);scroll-margin-top:96px}
 .rq-resume p{margin:0 0 12px}
-.rq-resume .btn{width:48px}
-.rq-resume .btn .ico{width:48px;height:48px}
 .rq-sent{color:var(--navy);font-weight:600}
 .req-no{font-weight:inherit;white-space:nowrap}   /* a request number never splits across lines */
 .rq-explain{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}
@@ -1617,7 +1612,7 @@ fieldset.fset[disabled] *{cursor:not-allowed}
 /* header buttons AGR · Uniform · Help · Join, 4px apart (Ben, Nov 22 2026). The filled navy tile (Help; AGR on the calculator)
    carries an amber icon; Join is a solid amber tile with a navy icon and a slightly deeper amber edge ("so it looks like it's a
    solid button… some contrast with the background") */
-.mast .acts .btn:not(.alt):not(.join) .ico{color:var(--gold)}
+.mast .acts .btn:not(.alt):not(.join) .ico,.mast .acts .btn:not(.alt):not(.join):hover .ico{background:var(--navy);color:var(--gold)}
 .mast .acts .btn.join .ico{background:var(--gold);border-color:#e68a00;color:var(--navy)}
 .mast .acts .btn.join:hover .ico{background:#f08c00;border-color:#d67d00}
 

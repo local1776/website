@@ -2,7 +2,7 @@
 // The app publishes one public Firestore document per story at publicPosts/{slug} and an index at publicStats/newsIndex
 // ({updatedAt, stories:[{slug,title,excerpt,date,kind,tags,image,imageAlt}] newest first (max 200), withdrawn:[slug]}).
 // At every build this reads the index and each story, cleans the story HTML down to plain story formatting, and hands the
-// build regular story objects. Photos stay where the app put them (Firebase Storage, public). Withdrawn stories get a
+// build regular story objects. Photos: lib/photos.mjs makes our own small copies. Withdrawn stories get a
 // "no longer available" page, not a 404. Nothing published yet (404) = no app stories. Last good copies are cached in
 // site/data/news-cache/ for an offline build. --news-sample (this PC only) reads site/data/news-sample/ instead.
 import fs from 'node:fs';

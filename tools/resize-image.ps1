@@ -3,6 +3,8 @@
 param([string]$In, [string]$Out, [int]$Max = 320)
 Add-Type -AssemblyName System.Drawing
 $src = [System.Drawing.Image]::FromFile((Resolve-Path $In))
+# a phone photo that is stored sideways: turn it the right way up (EXIF orientation)
+if ($src.PropertyIdList -contains 274) { switch ($src.GetPropertyItem(274).Value[0]) { 3 { $src.RotateFlip('Rotate180FlipNone') } 6 { $src.RotateFlip('Rotate90FlipNone') } 8 { $src.RotateFlip('Rotate270FlipNone') } } }
 $scale = [Math]::Min(1.0, [Math]::Min($Max / $src.Width, $Max / $src.Height))
 $w = [int][Math]::Round($src.Width * $scale); $h = [int][Math]::Round($src.Height * $scale)
 $bmp = New-Object System.Drawing.Bitmap $w, $h

@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { congressData, vvHtml, congressGovUrl } from './lib/congress.mjs';
 import { lobbyData, lobbyLines } from './lib/lobby.mjs';
 import { appNews } from './lib/news.mjs';
+import { storyPhotos } from './lib/photos.mjs';
 import { scopeCss, chromeCss } from './lib/scope-css.mjs';
 import { appAgencies, mergeAgencies } from './lib/agencies.mjs';
 import { project as albers, round as rnd } from './lib/albers.mjs';
@@ -124,7 +125,8 @@ function layout(meta, body) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(meta.description)}">
 ${LIVE && !meta.noindex ? '' : '<meta name="robots" content="noindex">\n'}<link rel="canonical" href="${url}">
-<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="icon" type="image/png" href="/img/favicon.png?v=2">
+<link rel="apple-touch-icon" href="/img/home-icon.png">
 <meta property="og:type" content="${meta.ogType || 'website'}">
 <meta property="og:site_name" content="LIUNA Local 1776">
 <meta property="og:title" content="${esc(meta.ogTitle || meta.title)}">
@@ -814,6 +816,7 @@ for (const s of NEWS.stories) {
   if (taken.has(s.slug)) { console.warn(`news: "${s.slug}" is already an address on the site — that story was skipped`); continue; }
   posts.push(s); taken.add(s.slug);
 }
+await storyPhotos(NEWS.stories, OUT, ROOT, OFFLINE);   // our own small copies of the app's photos
 posts.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 let count = 0;
 for (const file of fs.readdirSync(path.join(SRC, 'pages')).filter(f => f.endsWith('.html'))) {
