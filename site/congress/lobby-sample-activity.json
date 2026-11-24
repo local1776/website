@@ -1,0 +1,20 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicLobbying/activity",
+ "fields": {
+  "updatedAt": {
+   "stringValue": "2026-11-21T18:00:00Z"
+  },
+  "year": {
+   "integerValue": "2026"
+  },
+  "officesMet": {
+   "integerValue": "46"
+  },
+  "visits": {
+   "integerValue": "58"
+  },
+  "trips": {
+   "integerValue": "2"
+  }
+ }
+}

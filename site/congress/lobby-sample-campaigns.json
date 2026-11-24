@@ -1,0 +1,275 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicLobbying/campaigns",
+ "fields": {
+  "updatedAt": {
+   "stringValue": "2026-11-21T18:00:00Z"
+  },
+  "campaigns": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "slug": {
+         "stringValue": "protect-americas-workforce"
+        },
+        "title": {
+         "stringValue": "Tell Congress: Pass the Protect America’s Workforce Act"
+        },
+        "summary": {
+         "stringValue": "The House passed H.R. 2550 in December 2025. Ask your senators to pass it and your representative to keep it in the final bill."
+        },
+        "talkingPoints": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "I am a federal employee and a constituent."
+           },
+           {
+            "stringValue": "Executive orders in 2025 took bargaining rights from more than a million federal workers."
+           },
+           {
+            "stringValue": "Please support H.R. 2550 and restore those rights."
+           }
+          ]
+         }
+        },
+        "billIds": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "hr2550-119"
+           }
+          ]
+         }
+        },
+        "audience": {
+         "mapValue": {
+          "fields": {
+           "chambers": {
+            "arrayValue": {
+             "values": [
+              {
+               "stringValue": "house"
+              },
+              {
+               "stringValue": "senate"
+              }
+             ]
+            }
+           },
+           "states": {
+            "stringValue": "all"
+           },
+           "committees": {
+            "arrayValue": {
+             "values": []
+            }
+           }
+          }
+         }
+        },
+        "starts": {
+         "stringValue": "2026-11-01"
+        },
+        "ends": {
+         "stringValue": "2027-01-31"
+        },
+        "status": {
+         "stringValue": "active"
+        },
+        "participation": {
+         "mapValue": {
+          "fields": {
+           "total": {
+            "integerValue": "212"
+           },
+           "byState": {
+            "mapValue": {
+             "fields": {
+              "LA": {
+               "integerValue": "61"
+              },
+              "CA": {
+               "integerValue": "40"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "slug": {
+         "stringValue": "guard-technicians-asc"
+        },
+        "title": {
+         "stringValue": "Armed Services: Keep National Guard Technicians"
+        },
+        "summary": {
+         "stringValue": "Sample campaign aimed only at Armed Services Committee members."
+        },
+        "talkingPoints": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "Sample point one."
+           },
+           {
+            "stringValue": "Sample point two."
+           }
+          ]
+         }
+        },
+        "billIds": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "s4784-119"
+           }
+          ]
+         }
+        },
+        "audience": {
+         "mapValue": {
+          "fields": {
+           "chambers": {
+            "arrayValue": {
+             "values": [
+              {
+               "stringValue": "senate"
+              },
+              {
+               "stringValue": "house"
+              }
+             ]
+            }
+           },
+           "states": {
+            "stringValue": "all"
+           },
+           "committees": {
+            "arrayValue": {
+             "values": [
+              {
+               "stringValue": "SSAS"
+              },
+              {
+               "stringValue": "HSAS"
+              }
+             ]
+            }
+           }
+          }
+         }
+        },
+        "starts": {
+         "stringValue": "2026-11-01"
+        },
+        "ends": {
+         "stringValue": "2026-12-31"
+        },
+        "status": {
+         "stringValue": "active"
+        },
+        "participation": {
+         "nullValue": null
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "slug": {
+         "stringValue": "closed-sample"
+        },
+        "title": {
+         "stringValue": "Sample Closed Campaign"
+        },
+        "summary": {
+         "stringValue": "This one has closed."
+        },
+        "talkingPoints": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "Point."
+           }
+          ]
+         }
+        },
+        "billIds": {
+         "arrayValue": {
+          "values": []
+         }
+        },
+        "audience": {
+         "mapValue": {
+          "fields": {
+           "chambers": {
+            "arrayValue": {
+             "values": [
+              {
+               "stringValue": "house"
+              }
+             ]
+            }
+           },
+           "states": {
+            "arrayValue": {
+             "values": [
+              {
+               "stringValue": "LA"
+              }
+             ]
+            }
+           },
+           "committees": {
+            "arrayValue": {
+             "values": []
+            }
+           }
+          }
+         }
+        },
+        "starts": {
+         "stringValue": "2026-01-01"
+        },
+        "ends": {
+         "stringValue": "2026-03-01"
+        },
+        "status": {
+         "stringValue": "closed"
+        },
+        "participation": {
+         "mapValue": {
+          "fields": {
+           "total": {
+            "integerValue": "40"
+           },
+           "byState": {
+            "mapValue": {
+             "fields": {
+              "LA": {
+               "integerValue": "40"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

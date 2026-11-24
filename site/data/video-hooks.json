@@ -1,0 +1,8 @@
+{
+ "_note": "Hooks for videos in the header's rotating line (Ben, Nov 22 2026: give them more than the title — a quote or teaser that makes people click). Keyed by the video's slug in videos.json. A video without a hook here shows its title. Quotes come from the video's own description.",
+ "hooks": {
+  "the-agr-conversion-part-2": "“If your AGR tour gets cut short, you come up short by hundreds of thousands of dollars.” Watch Ops Check before you sign anything.",
+  "the-agr-conversion": "Is going AGR really the better deal? “A Technician job is a federal job. It can only be taken for cause.” Watch Ops Check.",
+  "what-tuesdays-election-means-for-us": "What does the new Congress mean for your bargaining rights and the AGR conversion? Ben Banchs breaks it down. Watch now."
+ }
+}

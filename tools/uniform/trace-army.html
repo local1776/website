@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><body><canvas id="c" width="540" height="1280"></canvas>
+<script>
+// Trace the outline of each part of the uniform in the photo (cap, coat, trousers, boots) from its pixels.
+window.__out = new Promise(done => {
+  const img = new Image();
+  img.onload = () => {
+    const W = 540, H = 1280, cv = document.getElementById('c'), g = cv.getContext('2d');
+    g.drawImage(img, 0, 0, W, H);
+    const px = g.getImageData(0, 0, W, H).data;
+    const at = (x, y) => { const i = (y * W + x) * 4; return [px[i], px[i + 1], px[i + 2]]; };
+    // 1) the backdrop: light and gray (little color), reached from the edges of the photo
+    const light = new Uint8Array(W * H);
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const [r, gg, b] = at(x, y); const mx = Math.max(r, gg, b), mn = Math.min(r, gg, b); const warmZone = (x >= 195 && x <= 262 && y >= 40 && y <= 102) || (x >= 352 && x <= 428 && y >= 590 && y <= 705); light[y * W + x] = (mx - mn < 22 && mx > 150 && (!warmZone || r - b < 13)) ? 1 : 0; }
+    const bg = new Uint8Array(W * H), st = [];
+    for (let x = 0; x < W; x++) { st.push(x, (H - 1) * W + x); } for (let y = 0; y < H; y++) { st.push(y * W, y * W + W - 1); }
+    while (st.length) { const i = st.pop(); if (bg[i] || !light[i]) continue; bg[i] = 1; const x = i % W, y = (i / W) | 0; if (x > 0) st.push(i - 1); if (x < W - 1) st.push(i + 1); if (y > 0) st.push(i - W); if (y < H - 1) st.push(i + W); }
+    // 2) skin (face, neck, hands): pinker than the tan of the uniform — only looked for where skin can be
+    const skinZones = [[150, 70, 380, 245], [40, 600, 200, 760], [360, 600, 470, 760]];
+    const isSkin = () => false; const isSkinOld = (x, y) => { if (!skinZones.some(([a, b2, c, d]) => x >= a && x <= c && y >= b2 && y <= d)) return false; const [r, gg, b] = at(x, y); return r > 120 && r - gg > 18 && r - b > 35 && gg - b > 4; };
+    // 3) which part a pixel of uniform belongs to
+    // boundaries measured on 3x gridded close-ups: face and neck (with the undershirt), both hands, the cap's lower edge
+    const inPoly = (x, y, p) => { let c = false; for (let i = 0, j = p.length - 1; i < p.length; j = i++) { const [xi, yi] = p[i], [xj, yj] = p[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+    const FACE = [[196, 86], [362, 86], [362, 192], [318, 202], [310, 236], [305, 266], [280, 269], [268, 246], [255, 232], [240, 212], [226, 192], [196, 192]];
+    const LHAND = [[110, 702], [128, 690], [160, 681], [178, 686], [188, 710], [194, 747], [180, 752], [158, 750], [133, 737], [110, 724]];
+    const RHAND = [[384, 664], [411, 659], [418, 680], [418, 706], [409, 724], [396, 724], [388, 702], [384, 682]];
+    const CAPLINE = [[180, 97], [215, 96], [250, 92], [300, 88], [330, 86], [352, 97], [380, 97]];
+    const capY = x => { for (let i = 1; i < CAPLINE.length; i++) { const [x1, y1] = CAPLINE[i - 1], [x2, y2] = CAPLINE[i]; if (x <= x2) return y1 + (y2 - y1) * (x - x1) / (x2 - x1); } return 97; };
+    const part = (x, y) => {
+      if (inPoly(x, y, FACE) || inPoly(x, y, LHAND) || inPoly(x, y, RHAND)) return null;
+      if (y < 100) return y <= capY(x) ? 'cap' : null;
+      if (y < 150) return null;
+      if ((y < 679 && !(x > 385 && y >= 666)) || (x < 120 && y < 702)) return 'coat';
+      if (x < 262 ? y >= 1118 : y >= 1084) return 'boots';
+      return 'trousers';
+    };
+    const masks = {};
+    for (const k of ['cap', 'coat', 'trousers', 'boots']) masks[k] = new Uint8Array(W * H);
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const i = y * W + x; if (bg[i] || isSkin(x, y)) continue; const k = part(x, y); if (k) masks[k][i] = 1; }
+    // the person (face, neck, hands): shown in natural color once anything is picked (Ben, Nov 21 2026)
+    const UNDERSHIRT = [[268, 244], [310, 244], [306, 270], [278, 270]];
+    masks.skin = new Uint8Array(W * H);
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const i = y * W + x; if (bg[i]) continue;
+      if ((inPoly(x, y, FACE) && y > capY(x) && !inPoly(x, y, UNDERSHIRT)) || inPoly(x, y, LHAND) || inPoly(x, y, RHAND)) masks.skin[i] = 1; }
+    // tidy: close small gaps (3x3), then keep pieces bigger than specks
+    const close = m => { const d = new Uint8Array(W * H), e = new Uint8Array(W * H);
+      for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) { const i = y * W + x; d[i] = m[i] || m[i - 1] || m[i + 1] || m[i - W] || m[i + W] ? 1 : 0; }
+      for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) { const i = y * W + x; e[i] = d[i] && d[i - 1] && d[i + 1] && d[i - W] && d[i + W] ? 1 : 0; }
+      return e; };
+    const open = m => { const e = new Uint8Array(W * H), d = new Uint8Array(W * H);
+      for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) { const i = y * W + x; e[i] = m[i] && m[i - 1] && m[i + 1] && m[i - W] && m[i + W] ? 1 : 0; }
+      for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) { const i = y * W + x; d[i] = e[i] || e[i - 1] || e[i + 1] || e[i - W] || e[i + W] ? 1 : 0; }
+      return d; };
+    // 4) trace each piece's outer edge (Moore neighbor tracing) and simplify it
+    const dirs = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
+    function components(m) { const seen = new Uint8Array(W * H), out = [];
+      for (let i = 0; i < W * H; i++) { if (!m[i] || seen[i]) continue; let n = 0, s = [i], first = i; seen[i] = 1;
+        while (s.length) { const j = s.pop(); n++; const x = j % W, y = (j / W) | 0; for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const xx = x + dx, yy = y + dy; if (xx < 0 || yy < 0 || xx >= W || yy >= H) continue; const k = yy * W + xx; if (m[k] && !seen[k]) { seen[k] = 1; s.push(k); } } }
+        out.push({ first, n }); }
+      return out; }
+    function trace(m, start) {
+      const sx = start % W, sy = (start / W) | 0; let x = sx, y = sy, d = 6; const pts = [[x, y]];
+      const ok = (xx, yy) => xx >= 0 && yy >= 0 && xx < W && yy < H && m[yy * W + xx];
+      for (let steps = 0; steps < 40000; steps++) {
+        let found = false;
+        for (let k = 0; k < 8; k++) { const nd = (d + 6 + k) % 8, xx = x + dirs[nd][0], yy = y + dirs[nd][1]; if (ok(xx, yy)) { x = xx; y = yy; d = nd; found = true; break; } }
+        if (!found) break; if (steps === 0) var d0 = d; else if (x === sx && y === sy) break; pts.push([x, y]);
+      }
+      return pts; }
+    function simplify(p, tol) { if (p.length < 3) return p; const keep = new Uint8Array(p.length); keep[0] = keep[p.length - 1] = 1;
+      const st2 = [[0, p.length - 1]];
+      while (st2.length) { const [a, b] = st2.pop(); let md = 0, mi = -1; const [ax, ay] = p[a], [bx, by] = p[b], L = Math.hypot(bx - ax, by - ay) || 1;
+        for (let i = a + 1; i < b; i++) { const dd = Math.abs((bx - ax) * (ay - p[i][1]) - (ax - p[i][0]) * (by - ay)) / L; if (dd > md) { md = dd; mi = i; } }
+        if (md > tol) { keep[mi] = 1; st2.push([a, mi], [mi, b]); } }
+      return p.filter((_, i) => keep[i]); }
+    const res = {};
+    for (const k in masks) {
+      const m = open(close(masks[k]));
+      const comps = components(m).filter(c => c.n > 400).sort((a, b) => b.n - a.n).slice(0, k === 'boots' ? 2 : k === 'skin' ? 3 : 1);
+      res[k] = comps.map(c => simplify(trace(m, c.first), 1.6).map(([x, y]) => x + ',' + y).join(' '));
+    }
+    done(res);
+  };
+  img.src = '/img/uniform/ocp-army.jpg';
+});
+</script></body></html>

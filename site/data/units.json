@@ -1,0 +1,202 @@
+[
+ {
+  "code": "ARNG",
+  "line1": "Army National Guard",
+  "line2": "PEC and TARC",
+  "full": "Professional Education Center (PEC) and the Herbert R. Temple, Jr. Army National Guard Readiness Center (TARC)",
+  "states": [
+   "AR",
+   "VA"
+  ],
+  "seal": "/img/seals/arng.jpg",
+  "contract": "/national-guard-professional-education-center-PEC-collective-bargaining-agreement",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "CA",
+  "line1": "California",
+  "line2": "Army National Guard",
+  "states": [
+   "CA"
+  ],
+  "seal": "/img/seals/ca.jpg",
+  "contract": "/california-army-national-guard-collective-bargaining-agreement",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "GU",
+  "line1": "Guam",
+  "line2": "Army and Air National Guard",
+  "states": [
+   "GU"
+  ],
+  "seal": "/img/seals/gu.png",
+  "contract": "/guam-army-and-air-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "IL",
+  "line1": "Illinois",
+  "line2": "Army National Guard",
+  "states": [
+   "IL"
+  ],
+  "seal": "/img/seals/il.jpg",
+  "contract": "/illinois-army-national-guard-collective-bargaining-agreement",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "LA",
+  "line1": "Louisiana",
+  "line2": "Army and Air National Guard",
+  "states": [
+   "LA"
+  ],
+  "seal": "/img/seals/la.jpg",
+  "contract": "/louisiana-army-and-air-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "MI",
+  "line1": "Michigan",
+  "line2": "Army National Guard",
+  "states": [
+   "MI"
+  ],
+  "seal": "/img/seals/mi.jpg",
+  "contract": "/michigan-army-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "NV",
+  "line1": "Nevada",
+  "line2": "Army National Guard",
+  "states": [
+   "NV"
+  ],
+  "seal": "/img/seals/nv.jpg",
+  "contract": "/nevada-army-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "NM",
+  "line1": "New Mexico",
+  "line2": "Army and Air National Guard",
+  "states": [
+   "NM"
+  ],
+  "seal": "/img/seals/nm.jpg",
+  "contract": "/new-mexico-army-and-air-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "SC",
+  "line1": "South Carolina",
+  "line2": "Army and Air National Guard",
+  "states": [
+   "SC"
+  ],
+  "seal": "/img/seals/sc.jpg",
+  "contract": "/south-carolina-army-and-air-national-guard",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "SD",
+  "line1": "South Dakota",
+  "line2": "Army National Guard",
+  "states": [
+   "SD"
+  ],
+  "seal": "/img/seals/sd.png",
+  "contract": "/south-dakota-army-national-guard-collective-bargaining-agreement",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ },
+ {
+  "code": "UT",
+  "line1": "Utah",
+  "line2": "Army National Guard",
+  "states": [
+   "UT"
+  ],
+  "seal": "/img/seals/ut.jpg",
+  "contract": "/utah-national-guard-collective-bargaining-agreement",
+  "reps": [
+   {
+    "name": "Ben Banchs",
+    "role": "Business Manager",
+    "phone": "(800) 569-5861 ext. 1001",
+    "email": "bbanchs@local1776.org"
+   }
+  ]
+ }
+]

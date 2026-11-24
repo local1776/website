@@ -1,0 +1,158 @@
+<!--page {"title": "Request Representation", "nav": "contact",
+ "description": "{{IF:representation}}Ask LIUNA Local 1776 to represent you on a problem at work: discipline, adverse actions, investigations, pay, leave, promotions, discrimination and more.{{ELSE}}Online requests are coming soon. Need help now? Call LIUNA Local 1776 at (800) 569-5861.{{END}}"} -->
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Request Help</div>
+    <h1>Request Representation</h1>
+{{IF:representation}}    <p class="deck g-wide">Tell us what&rsquo;s going on at work. A Local 1776 representative reads every request and will contact you about your options.</p>
+    {{PRIVACY:rep}}
+{{ELSE}}    {{OFFNOTE}}
+{{END}}  </div>
+</header>
+{{IF:representation}}
+<section class="sec uf-sec">
+  <div class="wrap">
+    <form class="form uf rq" id="rq" data-form="representation" novalidate>
+      <div class="rq-sent" role="status" hidden></div>
+      <div class="rq-resume" hidden>
+        <p><b>You have a request saved on this device</b><span data-saved-at></span>. Continue where you left off, or start over.</p>
+        <div class="rq-btns">{{ACT:next|Continue||resume}}{{ACT:restart|Restart|alt|restart}}</div>
+      </div>
+      <p class="rq-step" data-step></p>
+      <div class="rq-page" data-page="start">
+      <p class="uf-note rq-uni">Asking for uniforms? Use the <a href="/request-uniforms-and-other-personal-items">Uniform Request</a>.</p>
+      <fieldset class="fset">
+        <legend>Where You Work</legend>
+        <div class="uf-wyw">
+        <div class="uf-wyw-l">
+        <div class="fields">
+          <div class="field two fit"><label for="rq-agency">Employing Agency <i>*</i></label><select id="rq-agency" name="agency" required><option value="">Choose One</option>{{UNIT_OPTIONS:ALL}}</select></div>
+          <div class="field two" data-show="other"><label for="rq-other">Agency Name <i>*</i></label><input id="rq-other" name="otherAgency" maxlength="100" placeholder="Agency, base or command" required></div>
+        </div>
+        <p class="uf-warn" data-show="other"><b>We can help with two kinds of cases here.</b> Local 1776 doesn&rsquo;t hold a contract with this agency, so we can represent you only in adverse actions (removal, suspension of more than 14 days, indefinite suspension, reduction in grade or pay, furlough of 30 days or less) and discrimination complaints.</p>
+        <p class="uf-gate" data-gate-note>Choose your employing agency. The rest of the form unlocks after that.</p>
+        </div>
+        <div class="uf-seals" aria-hidden="true">
+          <figure data-seal="air"><img src="/img/seals/ang-lg.png" width="240" height="233" alt=""><figcaption>Air National Guard</figcaption></figure>
+          <figure data-seal="army"><img src="/img/seals/arng.jpg" width="240" height="180" alt=""><figcaption>Army National Guard</figcaption></figure>
+        </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>About You</legend>
+        <div class="fields">
+          <div class="field"><label for="rq-first">First Name <i>*</i></label><input id="rq-first" name="firstName" autocomplete="given-name" maxlength="60" required></div>
+          <div class="field"><label for="rq-last">Last Name <i>*</i></label><input id="rq-last" name="lastName" autocomplete="family-name" maxlength="60" required></div>
+          <div class="field"><label for="rq-goes">Name You Go By</label><input id="rq-goes" name="goesBy" maxlength="40" placeholder="If different"></div>
+          <div class="field"><label for="rq-email">Email <i>*</i></label><input id="rq-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+          <div class="field"><label for="rq-phone">Cell Phone <i>*</i></label><input id="rq-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required></div>
+          <div class="field"><label for="rq-street">Home Street Address <i>*</i></label><input id="rq-street" name="street" autocomplete="street-address" maxlength="100" required></div>
+          <div class="field"><label for="rq-city">City <i>*</i></label><input id="rq-city" name="city" autocomplete="address-level2" maxlength="60" required></div>
+          <div class="field"><label for="rq-zip">State and ZIP <i>*</i></label><input id="rq-zip" name="stateZip" autocomplete="postal-code" maxlength="20" placeholder="LA 70420" required></div>
+        </div>
+        <fieldset class="seg seg-inline"><legend>OK to Text You?</legend><div class="seg-o"><label><input type="radio" name="textOk" value="yes" checked><span>Yes</span></label><label><input type="radio" name="textOk" value="no"><span>No</span></label></div></fieldset>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>Your Job</legend>
+        <fieldset class="seg rq-status"><legend>Your Status <i>*</i></legend><div class="seg-o"><label><input type="radio" name="status" value="Title 32"><span>Dual-Status (Title 32)</span></label><label><input type="radio" name="status" value="Title 5"><span>Title 5</span></label><label><input type="radio" name="status" value="Other"><span>Other</span></label></div></fieldset>
+        <div class="fields">
+          <div class="field"><label for="rq-title">Position Title <i>*</i></label><input id="rq-title" name="positionTitle" maxlength="80" required></div>
+          <div class="field"><label for="rq-grade">Pay Plan, Series and Grade</label><input id="rq-grade" name="grade" maxlength="40" placeholder="Like WG-5803-10"></div>
+          <div class="field"><label for="rq-site">Duty Location <i>*</i></label><input id="rq-site" name="dutyLocation" maxlength="80" placeholder="Work site, installation or base" required></div>
+          <div class="field"><label for="rq-section">Work Section</label><input id="rq-section" name="workSection" maxlength="80"></div>
+          <div class="field"><label for="rq-hire">Hire Date <i>*</i></label><input id="rq-hire" name="hireDate" type="date" required></div>
+          <div class="field"><label for="rq-scd">Service Computation Date</label><input id="rq-scd" name="scdLeave" type="date"></div>
+          <div class="field" data-show="dst"><label for="rq-unit">Military Unit</label><input id="rq-unit" name="militaryUnit" maxlength="80"></div>
+          <div class="field" data-show="dst"><label for="rq-mos">MOS or AFSC</label><input id="rq-mos" name="mosAfsc" maxlength="20" placeholder="Like 91B or 2A671"></div>
+          <div class="field"><label for="rq-sup">Supervisor&rsquo;s Name <i>*</i></label><input id="rq-sup" name="supervisorName" maxlength="80" required></div>
+          <div class="field"><label for="rq-supmail">Supervisor&rsquo;s Email</label><input id="rq-supmail" name="supervisorEmail" type="email" maxlength="120"></div>
+        </div>
+        <p class="uf-note">Your Service Computation Date is Block 31 on your SF-50 (Leave). Leave it blank if you don&rsquo;t know it. We use your supervisor&rsquo;s name only to represent you.</p>
+        <fieldset class="seg rq-q"><legend>Probationary or Trial Period? <i>*</i></legend><p class="rq-explain">Most new federal employees serve a one-year probationary or trial period. The remarks on your SF-50 usually say so.</p><div class="seg-o"><label><input type="radio" name="probation" value="yes"><span>Yes</span></label><label><input type="radio" name="probation" value="no"><span>No</span></label><label><input type="radio" name="probation" value="unsure"><span>Not Sure</span></label></div></fieldset>
+        <div class="fields rq-q" data-show="probation" hidden><div class="field"><label for="rq-pend">Probation Ends</label><input id="rq-pend" name="probationEnds" type="date"></div></div>
+        <fieldset class="seg rq-q"><legend>Are You a Supervisor or Manager? <i>*</i></legend><div class="seg-o"><label><input type="radio" name="supervisorRole" value="yes"><span>Yes</span></label><label><input type="radio" name="supervisorRole" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="seg rq-q" data-show="dst"><legend>Over 20?</legend><p class="rq-explain">You have 20 qualifying years toward a military retirement (your 20-year letter).</p><div class="seg-o"><label><input type="radio" name="over20" value="yes"><span>Yes</span></label><label><input type="radio" name="over20" value="no"><span>No</span></label><label><input type="radio" name="over20" value="unsure"><span>Not Sure</span></label></div></fieldset>
+        <div class="rq-q rq-sf50"><h3 class="ufig-h">Send Us Your SF-50 and Appraisals</h3><p class="uf-note">Download your most current SF-50 and your last three performance appraisals from MyBiz+ or your HRO portal, and email them to <a href="mailto:documents@local1776.org">documents@local1776.org</a> with your name in the subject line.</p></div>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>What&rsquo;s Going On</legend>
+        <h3 class="ufig-h">Choose Every Topic That Applies <i class="req">*</i></h3>
+        <div class="igrid rq-topics" role="group" aria-label="Topics"></div>
+        <p class="uf-note rq-next-note">Each topic you choose gets its own page next, with its own questions.</p>
+      </fieldset>
+      </div>
+
+      <div class="rq-tpages"></div>
+      <template class="rq-tpl-add">{{ACT:plus|Add|alt|add-incident}}</template>
+
+      <div class="rq-page" data-page="sign" hidden>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>Sign and Send</legend>
+        <fieldset class="seg rq-auth"><legend>Permission to Get Your Records <i>*</i></legend><p class="rq-explain">I authorize Local 1776 to request my personnel records and personal information from my agency (such as my SF-50s, personnel folder and any investigation file) to work my case. My agency may ask me to sign its own release form too.</p><div class="seg-o"><label><input type="radio" name="recordsAuth" value="yes"><span>Yes</span></label><label><input type="radio" name="recordsAuth" value="no"><span>No</span></label></div></fieldset>
+        <p class="uf-note rq-limit" data-show="records-no" hidden><b>Without your permission,</b> Local 1776 cannot get these records, and that will limit our ability to represent you to the fullest.</p>
+        <fieldset class="seg rq-auth" data-need="medical" hidden><legend>Permission for Medical Information <i>*</i></legend><p class="rq-explain">I authorize Local 1776 to request my medical records from my agency to work my case.</p><div class="seg-o"><label><input type="radio" name="medicalAuth" value="yes"><span>Yes</span></label><label><input type="radio" name="medicalAuth" value="no"><span>No</span></label></div></fieldset>
+        <p class="uf-note rq-limit" data-show="medical-no" hidden><b>Without your permission,</b> Local 1776 cannot get these records, and that will limit our ability to represent you to the fullest.</p>
+        <p class="uf-note rq-review"><b>How we review your records.</b> We examine the records you send us and the records your agency gives us with your permission. Apart from our attorneys and the services that help us handle your request, we do not share your records with anyone without your permission, unless the law requires it. Part of our review sometimes involves the use of artificial intelligence (AI).</p>
+        <label class="chk"><input type="checkbox" name="voluntary" required><span>I am asking Local 1776 for representation on my own. Sending this form does not mean Local 1776 has agreed to represent me. <i>*</i></span></label>
+        <label class="chk"><input type="checkbox" name="merits" required><span>I understand Local 1776 decides whether to represent me on the merits of my case, not on whether I am a member. <i>*</i></span></label>
+        <label class="chk"><input type="checkbox" name="costs" required><span>I have read the costs of representation below. I may be responsible for some or all of them, member or not. <i>*</i></span></label>
+        <div class="t-tiles four rq-fees">
+          <div class="tile"><span>Non-Adverse Action</span><b>$700+</b></div>
+          <div class="tile"><span>Adverse Action</span><b>$1,400+</b></div>
+          <div class="tile"><span>Discrimination Complaint</span><b>$1,400+</b></div>
+          <div class="tile"><span>MSPB Appeal</span><b>$1,400+</b></div>
+        </div>
+        <p class="uf-note">These are the minimum fees, and all other situations are $700+; the actual fee depends on the case and can be <a href="#hardship">waived for hardship</a>. When Local 1776 obtains a monetary settlement or award for you, the representation fee is 10% of the total, before taxes. <a href="/local-1776-terms-of-membership#costs">What Each Fee Covers &rsaquo;</a></p>
+        <div class="rq-hs" id="hardship">
+          <h3 class="ufig-h">Are You Facing a Financial Hardship?</h3>
+          <p class="rq-explain">Local 1776 charges a retainer because representing you has real costs, such as legal help, filing and travel. A hardship waiver is for people who would suffer serious financial harm by paying it. To show serious financial harm, you must generally be able to show that you expect to be in a non-paid status for at least 80 hours, in a row or added up, during the next 90 days, and that you have no other leave available to use. We also look at your whole household: other income, bills and savings. Being suspended or removed does not by itself mean a hardship. A request without proof is not considered.</p>
+          <label class="chk"><input type="checkbox" name="hardship"><span>I want to request a hardship waiver of fees.</span></label>
+          <div class="rq-hs-form" data-show="hardship" hidden>
+            <fieldset class="seg rq-q"><legend>What Are You Asking For? <i>*</i></legend><div class="seg-o"><label><input type="radio" name="hsRequest" value="full"><span>Full Waiver</span></label><label><input type="radio" name="hsRequest" value="reduced"><span>Reduced Fee</span></label><label><input type="radio" name="hsRequest" value="plan"><span>Payment Plan</span></label></div></fieldset>
+            <p class="rq-sub-h rq-q">Why? Check All That Apply <i>*</i></p>
+            <div class="rq-subgrid c2 rq-hs-why">
+              <label class="chk sm"><input type="checkbox" data-hsr value="Removal (Proposed or Decided)"><span>Removal (Proposed or Decided)</span></label>
+              <label class="chk sm"><input type="checkbox" data-hsr value="Suspension Without Pay"><span>Suspension Without Pay</span></label>
+              <label class="chk sm"><input type="checkbox" data-hsr value="Furlough or Cut Hours"><span>Furlough or Cut Hours</span></label>
+              <label class="chk sm"><input type="checkbox" data-hsr value="Out of Paid Leave"><span>Out of Paid Leave</span></label>
+              <label class="chk sm"><input type="checkbox" data-hsr value="Medical Bills"><span>Medical Bills</span></label>
+              <label class="chk sm"><input type="checkbox" data-hsr value="Something Else"><span>Something Else</span></label>
+            </div>
+            <input type="hidden" name="hsReasons">
+            <div class="fields rq-q">
+              <div class="field"><label for="hs-unpaid">Unpaid Hours, Next 90 Days <i>*</i></label><input id="hs-unpaid" name="hsUnpaidHours" type="number" inputmode="numeric" min="0" step="1" required></div>
+              <div class="field"><label for="hs-leave">Paid Leave Left (Hours) <i>*</i></label><input id="hs-leave" name="hsLeaveHours" type="number" inputmode="numeric" min="0" step="1" required></div>
+              <div class="field"><label for="hs-people">People in Your Household <i>*</i></label><input id="hs-people" name="hsHousehold" type="number" inputmode="numeric" min="0" step="1" required></div>
+              <div class="field"><label for="hs-pay">Your Take-Home Pay / Month <i>*</i></label><input id="hs-pay" name="hsTakeHome" type="number" inputmode="decimal" min="0" step="1" placeholder="$" required></div>
+              <div class="field"><label for="hs-other">Other Household Income / Month <i>*</i></label><input id="hs-other" name="hsOtherIncome" type="number" inputmode="decimal" min="0" step="1" placeholder="$" required></div>
+              <div class="field"><label for="hs-bills">Must-Pay Bills / Month <i>*</i></label><input id="hs-bills" name="hsBills" type="number" inputmode="decimal" min="0" step="1" placeholder="$" required></div>
+              <div class="field"><label for="hs-save">Savings and Cash on Hand <i>*</i></label><input id="hs-save" name="hsSavings" type="number" inputmode="decimal" min="0" step="1" placeholder="$" required></div>
+              <div class="field" data-show="hs-pay" hidden><label for="hs-now">What You Can Pay Now</label><input id="hs-now" name="hsPayNow" type="number" inputmode="decimal" min="0" step="1" placeholder="$"></div>
+              <div class="field" data-show="hs-pay" hidden><label for="hs-month">What You Can Pay Each Month</label><input id="hs-month" name="hsPayMonthly" type="number" inputmode="decimal" min="0" step="1" placeholder="$"></div>
+            </div>
+            <p class="uf-note">Other household income means a spouse&rsquo;s or partner&rsquo;s pay, drill pay, unemployment, VA disability, child support and the like. Must-pay bills means rent or mortgage, utilities, car, insurance, child care, medical and debt payments.</p>
+            <div class="fields rq-q"><div class="field full"><label for="hs-why">Explain Your Hardship <i>*</i></label><textarea id="hs-why" name="hsExplain" maxlength="3000" required></textarea></div></div>
+            <p class="uf-note"><b>Send proof</b> to <a href="mailto:documents@local1776.org">documents@local1776.org</a> with your name and &ldquo;Hardship&rdquo; in the subject line: your last two pay stubs or LES, proof of the household&rsquo;s other income, your bills, and any letter proposing or deciding a suspension or removal. A request without proof is not considered.</p>
+            <label class="chk rq-q"><input type="checkbox" name="hsCertify" required><span>I certify that my hardship request is true and complete. I understand Local 1776 decides whether to grant it. <i>*</i></span></label>
+          </div>
+        </div>
+        <label class="chk"><input type="checkbox" name="privacy" required><span>I have read the <a href="/privacy">Privacy Policy</a>. What I send is used only to represent me. <i>*</i></span></label>
+        <div class="fields">
+          <div class="field"><label for="rq-sign">Type Your Full Name to Sign <i>*</i></label><input id="rq-sign" name="signature" class="sig" maxlength="80" autocomplete="name" required></div>
+        </div>
+      </fieldset>
+      </div>
+      <input type="hidden" name="topics"><input type="hidden" name="agencyName"><input type="hidden" name="formVersion" value="2">
+      <div class="hp" aria-hidden="true"><label for="rq-web">Leave blank</label><input id="rq-web" name="website" tabindex="-1" autocomplete="off"></div>
+      <div class="form-foot rq-nav">
+        <div class="rq-btns">{{ACT:prev|Back|alt|back}}{{ACT:next|Next||next}}{{SUBMIT:send|Send}}{{ACT:save|Save|alt|save}}</div>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="/js/rep.js" defer></script>{{ELSE}}{{END}}

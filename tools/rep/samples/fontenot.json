@@ -1,0 +1,188 @@
+{
+  "_note": "MADE-UP sample (Ben, Nov 21 2026; per-topic shape Nov 22 2026): several issues on one request, each topic its own request. Not a real person.",
+  "id": "R-2026-0042",
+  "submittedAt": "2026-11-21T15:32:00Z",
+  "agency": "LA-ARMY",
+  "fields": {
+    "firstName": "Danielle",
+    "lastName": "Fontenot",
+    "goesBy": "Dani",
+    "email": "dani.fontenot@example.com",
+    "phone": "(318) 555-0142",
+    "street": "418 Bayou Rapides Road",
+    "city": "Alexandria",
+    "stateZip": "LA 71303",
+    "positionTitle": "Heavy Mobile Equipment Mechanic",
+    "grade": "WG-5803-10",
+    "dutyLocation": "Combined Support Maintenance Shop, Camp Beauregard",
+    "workSection": "Wheeled Vehicle Repair",
+    "militaryUnit": "Company B, 199th Brigade Support Battalion",
+    "supervisorName": "MSG Raymond Landry",
+    "supervisorEmail": "raymond.landry@example.mil",
+    "signature": "Danielle Fontenot",
+    "hireDate": "2020-08-10",
+    "scdLeave": "2016-03-14",
+    "mosAfsc": "91B",
+    "hsUnpaidHours": "168",
+    "hsLeaveHours": "6",
+    "hsHousehold": "3",
+    "hsTakeHome": "2450",
+    "hsOtherIncome": "0",
+    "hsBills": "2310",
+    "hsSavings": "400",
+    "hsPayNow": "150",
+    "hsPayMonthly": "100",
+    "hsExplain": "If the 21-day suspension goes through I lose three weeks of pay, and I have used almost all my sick leave on prenatal appointments. I am the only income for my two kids and me. I can pay something now and the rest a little each month."
+  },
+  "radios": {
+    "status": "Title 32",
+    "textOk": "yes",
+    "recordsAuth": "yes",
+    "medicalAuth": "yes",
+    "probation": "no",
+    "supervisorRole": "no",
+    "over20": "no",
+    "hsRequest": "plan"
+  },
+  "checks": [
+    "voluntary",
+    "merits",
+    "costs",
+    "privacy",
+    "hardship",
+    "hsCertify"
+  ],
+  "hsReasons": [
+    "Suspension Without Pay",
+    "Out of Paid Leave",
+    "Medical Bills"
+  ],
+  "topics": [
+    {
+      "key": "discipline",
+      "boxes": [
+        "discipline: Suspension of More Than 14 Days"
+      ],
+      "radios": {
+        "stage": "proposed",
+        "talkedMgmt": "yes"
+      },
+      "fields": {
+        "receivedDate": "2026-11-16",
+        "replyDue": "2026-11-26",
+        "outcome": "Withdraw the proposed 21-day suspension.",
+        "mgmtName": "CW3 Paul Guidry",
+        "mgmtPosition": "CSMS Shop Supervisor",
+        "mgmtSaid": "He said he would look into it. Nothing has changed."
+      },
+      "incidents": [
+        {
+          "date": "2026-11-16",
+          "ongoing": false,
+          "what": "I received a proposed 21-day suspension for failure to follow instructions and AWOL, both for the October 20 appointment. Two other mechanics missed time in October without approved leave and were not disciplined."
+        }
+      ],
+      "filings": []
+    },
+    {
+      "key": "discrimination",
+      "boxes": [
+        "discrimination: Sex",
+        "discrimination: Pregnancy",
+        "discrimination: Hostile Work Environment"
+      ],
+      "radios": {
+        "eeoContact": "yes",
+        "talkedMgmt": "yes"
+      },
+      "fields": {
+        "outcome": "Make the comments about my pregnancy stop and give me back the brake and suspension work.",
+        "mgmtName": "CW3 Paul Guidry",
+        "mgmtPosition": "CSMS Shop Supervisor",
+        "mgmtSaid": "He said he would look into it. Nothing has changed."
+      },
+      "incidents": [
+        {
+          "date": "2026-10-14",
+          "ongoing": true,
+          "what": "Since I told the shop I was pregnant, MSG Landry and two of the mechanics make comments almost every day that I should go home and that the shop is no place for a pregnant woman. MSG Landry took me off the brake and suspension work I have done for six years and gave it to a junior mechanic."
+        },
+        {
+          "date": "2026-11-16",
+          "ongoing": false,
+          "what": "I received a proposed 21-day suspension for failure to follow instructions and AWOL, both for the October 20 appointment. Two other mechanics missed time in October without approved leave and were not disciplined."
+        }
+      ],
+      "filings": [
+        {
+          "what": "EEO Complaint",
+          "date": "2026-11-02",
+          "filedWith": "State Equal Employment Manager",
+          "about": "MSG Raymond Landry",
+          "summary": "Informal complaint of pregnancy discrimination and harassment.",
+          "reply": "Counselor interview set for November 24."
+        }
+      ]
+    },
+    {
+      "key": "accommodation",
+      "boxes": [
+        "accommodation: I Was Denied One",
+        "accommodation: I Was Denied One | Pregnancy"
+      ],
+      "radios": {
+        "eeoContact": "yes",
+        "talkedMgmt": "yes"
+      },
+      "fields": {
+        "outcome": "Give me the light duty my doctor wrote for until my baby is born.",
+        "mgmtName": "CW3 Paul Guidry",
+        "mgmtPosition": "CSMS Shop Supervisor",
+        "mgmtSaid": "He said he would look into it. Nothing has changed."
+      },
+      "incidents": [
+        {
+          "date": "2026-10-06",
+          "ongoing": false,
+          "what": "I gave MSG Landry a note from my OB asking for light duty and no lifting over 25 pounds. He said there is no light duty in the shop and told me to take sick leave if I could not do the job. On October 19 I asked for four hours of sick leave for a prenatal appointment the next morning. He denied it, and when I went to the appointment anyway he marked me AWOL for the four hours."
+        }
+      ],
+      "filings": [
+        {
+          "what": "Something Else",
+          "kind": "Written Request for Light Duty",
+          "date": "2026-10-06",
+          "filedWith": "MSG Raymond Landry",
+          "about": "",
+          "summary": "Doctor's note asking for light duty, no lifting over 25 pounds.",
+          "reply": "Told there is no light duty."
+        }
+      ]
+    },
+    {
+      "key": "leave",
+      "boxes": [
+        "leave: Leave Denied",
+        "leave: Leave Denied | Sick",
+        "leave: Marked AWOL"
+      ],
+      "radios": {
+        "talkedMgmt": "yes"
+      },
+      "fields": {
+        "outcome": "Change the AWOL on October 20 to sick leave.",
+        "mgmtName": "CW3 Paul Guidry",
+        "mgmtPosition": "CSMS Shop Supervisor",
+        "mgmtSaid": "He said he would look into it. Nothing has changed."
+      },
+      "incidents": [
+        {
+          "date": "2026-10-06",
+          "ongoing": false,
+          "what": "I gave MSG Landry a note from my OB asking for light duty and no lifting over 25 pounds. He said there is no light duty in the shop and told me to take sick leave if I could not do the job. On October 19 I asked for four hours of sick leave for a prenatal appointment the next morning. He denied it, and when I went to the appointment anyway he marked me AWOL for the four hours."
+        }
+      ],
+      "filings": []
+    }
+  ]
+}

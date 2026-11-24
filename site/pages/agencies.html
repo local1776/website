@@ -1,0 +1,46 @@
+<!--page {"title": "Agencies", "nav": "agencies",
+ "description": "Where LIUNA Local 1776 represents employees: choose a state to see its union contract, its representatives and stewards, and directions to each work site."} -->
+<!-- Map first, at the top of the page, so it is fully in view when people arrive from the home page's map (Ben, Nov 20 2026).
+     The title, intro and numbers sit in the column beside it; choosing a state swaps that column for the state's details. -->
+<section class="sec atlas-sec" data-agencies>
+  <div class="wrap">
+    <div class="atlas">
+      <div class="atlas-map">
+        <div class="zm-bar"><span class="zm-title">All Units</span></div>
+        <div class="map-box">
+          {{MAP:full}}
+          <div class="zm-ctl" hidden>{{BTN:#|plus|Zoom In|alt sm icon zm-in}}{{BTN:#|minus|Zoom Out|alt sm icon zm-out}}</div>
+          <div class="map-credit" hidden>Streets &copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors</div>
+          <div class="site-card" hidden role="dialog" aria-modal="false" aria-labelledby="site-card-title"></div>
+          <div class="cg-tip map-tip" hidden></div>
+        </div>
+        {{UNIT_TABS:}}
+      </div>
+      <aside class="atlas-panel" id="panel" aria-live="polite">
+        <div class="atlas-intro">
+          <div class="kicker">Agencies</div>
+          <h1 class="brk-all"><span>Where We</span><span>Represent</span></h1>
+          <p>Local 1776 represents National Guard employees in nine states and Guam, and at the Army National Guard&rsquo;s Professional Education Center and Readiness Center.</p>
+          <div class="tiles"><div class="tile"><b>{{STAT:units}}</b><span>Contracts</span></div><div class="tile"><b>{{STAT:sites}}</b><span>Work Sites</span></div><div class="tile"><b>{{STAT:cases}}</b><span>Open Cases</span></div></div>
+          <p class="panel-note">Click a highlighted state, or pick a code under the map, to see its contract, your representative and every work site.</p>
+        </div>
+      </aside>
+    </div>
+    <!-- the chosen state's work sites, under the map in columns (Ben, Nov 22 2026: like the representatives on Legislation) -->
+    <div class="site-list" hidden aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="sec" id="cases">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">On the Record</div><h2>Active Cases</h2></div>
+    <p class="sec-deck">Open grievances, unfair labor practice charges and appeals, listed by subject only to protect the employees involved.</p>
+    <div class="cases">
+      <table>
+        <thead><tr><th>Unit</th><th>Type</th><th>Subject</th><th>Filed</th><th>Status</th></tr></thead>
+        <tbody id="case-rows">{{CASES}}</tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{{AGENCY_DATA}}

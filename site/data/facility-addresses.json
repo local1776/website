@@ -1,0 +1,263 @@
+{
+ "_note": "Street addresses for work sites the old Google map left blank. Found by an automatic lookup of each pin, then checked and corrected by Ben (Nov 22 2026). Merged into facilities.json by tools/import-worksites.mjs. Sites Ben could not confirm are left out until real addresses arrive (Union App work-site list).",
+ "sites": [
+  {
+   "unit": "ARNG",
+   "name": "Professional Education Center (PEC)",
+   "place": "Camp Robinson, North Little Rock",
+   "address": "6th St, North Little Rock, AR 72118"
+  },
+  {
+   "unit": "CA",
+   "name": "AASF 1",
+   "place": "Los Alamitos",
+   "address": "4102 Constitution Ave Bldg 912, Los Alamitos, CA 90720"
+  },
+  {
+   "unit": "GU",
+   "name": "ANG HQ",
+   "place": "",
+   "address": "8th Street, Yigo Municipality, GU"
+  },
+  {
+   "unit": "GU",
+   "name": "JFHQ",
+   "place": "",
+   "address": "430 Route 16, Bldg 300, Barrigada, GU 96913"
+  },
+  {
+   "unit": "LA",
+   "name": "122nd ASOS",
+   "place": "Camp Beauregard",
+   "address": "B Street, Pineville, LA 71405"
+  },
+  {
+   "unit": "LA",
+   "name": "159th FW",
+   "place": "NAS JRB New Orleans",
+   "address": "Radm Fowler Dr, Belle Chasse, LA 70037"
+  },
+  {
+   "unit": "LA",
+   "name": "236th CBCS",
+   "place": "Hammond",
+   "address": "600 Judge Leon Ford Street, Hammond, LA 70401"
+  },
+  {
+   "unit": "LA",
+   "name": "259th ATCS",
+   "place": "Alexandria",
+   "address": "1403 Floyd Rogers Blvd, Alexandria, LA 71303"
+  },
+  {
+   "unit": "LA",
+   "name": "AASF 1",
+   "place": "Hammond",
+   "address": "1501 Industrial Park Road, Hammond, LA 70401"
+  },
+  {
+   "unit": "LA",
+   "name": "AASF 2",
+   "place": "Pineville",
+   "address": "7601 Esler Field Rd, Pineville, LA 71360"
+  },
+  {
+   "unit": "LA",
+   "name": "CMF",
+   "place": "Pineville",
+   "address": "119 W Range Rd, Pineville, LA 71360"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 1",
+   "place": "Shreveport",
+   "address": "1965 N Spring St, Shreveport, LA 71101"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 2",
+   "place": "Ruston",
+   "address": "3212 McDonald Ave, Ruston, LA 71270"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 3",
+   "place": "Monroe",
+   "address": "5024 Central Ave, Monroe, LA 71203"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 5",
+   "place": "Hammond",
+   "address": "1501 Industrial Park Road, Hammond, LA 70401"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 9",
+   "place": "Lafayette",
+   "address": "1806 Surrey St, Lafayette, LA 70508"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 10",
+   "place": "Abbeville",
+   "address": "3405 Veterans Memorial Dr, Abbeville, LA 70510"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 11",
+   "place": "Lake Charles",
+   "address": "1111 1st Ave, Lake Charles, LA 70601"
+  },
+  {
+   "unit": "LA",
+   "name": "FMS 12",
+   "place": "Plaquemine",
+   "address": "24550 Railroad Ave, Plaquemine, LA 70764"
+  },
+  {
+   "unit": "LA",
+   "name": "JFHQ",
+   "place": "Camp Beauregard",
+   "address": "496 3rd St, Pineville, LA 71360"
+  },
+  {
+   "unit": "LA",
+   "name": "JFHQ",
+   "place": "Jackson Barracks",
+   "address": "6400 St Claude Ave, New Orleans, LA 70117"
+  },
+  {
+   "unit": "LA",
+   "name": "MATES 71",
+   "place": "Leesville",
+   "address": "8553 K Ave, Fort Polk South, LA 71459"
+  },
+  {
+   "unit": "LA",
+   "name": "UTES Minden",
+   "place": "Camp Minden",
+   "address": "General McArthur Road, Webster Parish, LA 71055"
+  },
+  {
+   "unit": "LA",
+   "name": "UTES Villere (North)",
+   "place": "Slidell",
+   "address": "620 Engineer Rd, Slidell, LA 70460"
+  },
+  {
+   "unit": "MI",
+   "name": "AASF 1",
+   "place": "Grand Ledge",
+   "address": "10600 W Eaton Hwy, Grand Ledge, MI 48837"
+  },
+  {
+   "unit": "MI",
+   "name": "AASF 2",
+   "place": "Selfridge ANGB",
+   "address": "44288 Andersen St, Selfridge Air National Guard Base, MI 48045"
+  },
+  {
+   "unit": "MI",
+   "name": "FMS 4",
+   "place": "Wyoming",
+   "address": "1200 44th St SW, Wyoming, MI 49509"
+  },
+  {
+   "unit": "MI",
+   "name": "FMS 4A",
+   "place": "Montague",
+   "address": "8061 Cook St, Montague, MI 49437"
+  },
+  {
+   "unit": "MI",
+   "name": "FMS 16",
+   "place": "Ishpeming",
+   "address": "900 Palms Ave, Ishpeming, MI 48949"
+  },
+  {
+   "unit": "MI",
+   "name": "FMS 22",
+   "place": "Midland",
+   "address": "2300 Airport Rd, Midland, MI 48642"
+  },
+  {
+   "unit": "MI",
+   "name": "FMSS 16A",
+   "place": "Kingsford",
+   "address": "401 S Carpenter Ave, Kingsford, MI 49802"
+  },
+  {
+   "unit": "MI",
+   "name": "FMSS 16B",
+   "place": "Sault Ste. Marie",
+   "address": "1170 E Portage Ave, Sault Ste. Marie, MI 49783"
+  },
+  {
+   "unit": "MI",
+   "name": "JFHQ (also USPF & CSMS)",
+   "place": "Lansing",
+   "address": "3323 N Martin Luther King Jr Blvd, Lansing, MI 48906"
+  },
+  {
+   "unit": "MI",
+   "name": "MATES",
+   "place": "Grayling",
+   "address": "2450 W North Down River Rd, Grayling, MI 49738"
+  },
+  {
+   "unit": "MI",
+   "name": "UTES",
+   "place": "Ft. Custer (FCTC)",
+   "address": "2501 26th St, Augusta, MI 49012"
+  },
+  {
+   "unit": "NV",
+   "name": "AASF",
+   "place": "Stead",
+   "address": "20000 Army Aviation Dr, Reno, NV 89506"
+  },
+  {
+   "unit": "NV",
+   "name": "CSMS 1",
+   "place": "Carson City",
+   "address": "2460 Fairview Dr, Carson City, NV 89701"
+  },
+  {
+   "unit": "NV",
+   "name": "CSMS 2",
+   "place": "Las Vegas (North)",
+   "address": "6600 Range Rd, Las Vegas, NV 89165"
+  },
+  {
+   "unit": "NV",
+   "name": "FMS 2",
+   "place": "Stead",
+   "address": "19980 Army Aviation Dr, Reno, NV 89506"
+  },
+  {
+   "unit": "NV",
+   "name": "JFHQ",
+   "place": "Carson City",
+   "address": "2460 Fairview Dr, Carson City, NV 89701"
+  },
+  {
+   "unit": "NV",
+   "name": "USPFO",
+   "place": "Carson City",
+   "address": "2460 Fairview Dr, Carson City, NV 89701"
+  },
+  {
+   "unit": "SC",
+   "name": "AASF 2",
+   "place": "Greenville",
+   "address": "129 Connecticut Ct, Greenville, SC 29605"
+  },
+  {
+   "unit": "SC",
+   "name": "USPFO",
+   "place": "Columbia",
+   "address": "9 National Guard Rd, Columbia, SC 29201"
+  }
+ ]
+}

@@ -1,0 +1,5450 @@
+{
+ "asOf": "2026-11-23",
+ "congress": 120,
+ "termBegins": "2027-01-03",
+ "statusValues": {
+  "elected": "won the Nov 3, 2026 election (race called, or the other candidate conceded)",
+  "continuing": "not on the 2026 ballot; term continues into the 120th Congress",
+  "uncalled": "not called by AP, or in a recount; name/party left null, candidates in note",
+  "runoff": "decided in a later runoff/general; candidates in note",
+  "vacant": "seat expected vacant (none at present)"
+ },
+ "sources": [
+  "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections (wikitext, retrieved 2026-11-21) - primary list of district winners",
+  "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections (wikitext, retrieved 2026-11-21) - Senate winners",
+  "https://ballotpedia.org/Election_results,_2026:_U.S._House (call timeline, last updated Nov 19, 2026) - cross-check",
+  "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_<State>,_2026 (all 50 state pages) - cross-check",
+  "https://ballotpedia.org/<Territory>%27s_At-large_Congressional_District_election,_2026 (AS, DC, GU, MP, VI) - cross-check",
+  "https://ballotpedia.org/United_States_Senate_elections,_2026 and https://ballotpedia.org/Election_results,_2026:_U.S._Senate - Senate cross-check",
+  "https://api.sos.ca.gov/returns/us-rep/district/all (California Secretary of State, official count as of Nov 20, 2026)",
+  "https://er.ncsbe.gov/enr/20261103/data/results_0.txt (North Carolina State Board of Elections, unofficial)",
+  "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL.txt (Florida Division of Elections)",
+  "https://theunitedstates.io/congress-legislators/legislators-current.json (unitedstates/congress-legislators) - continuing senators, PR, bioguide IDs",
+  "https://www.yahoo.com/news/politics/article/lots-of-2026-midterm-races-havent-been-called-yet-heres-where-things-stand-right-now-235850171.html (uncalled races, Nov 20, 2026)",
+  "https://www.wral.com/news/nccapitol/elections-recounts-house-races-north-carolina-minnesota-november-2026/ (recounts, Nov 18, 2026)",
+  "https://time.com/article/2026/11/18/midterm-elections-recounts-house/ (recounts, Nov 18, 2026)",
+  "https://ballotpedia.org/Election_results,_2026:_Governors (Klobuchar and Blackburn elected governor)",
+  "https://www.wfae.org/politics/2026-11-23/foxx-concedes-to-hubbard-after-recount-in-n-c-5th-district-race (NC-5, retrieved 2026-11-23)",
+  "https://ncpoliticalnews.com/news/bell-concedes-north-carolina-10th-district-after-recount/ (NC-10, retrieved 2026-11-23)",
+  "https://tennesseelookout.com/2026/11/16/desjarlais-concedes-tennessee-4th-congressional-district-to-democrat-victoria-broderick/ (TN-4, retrieved 2026-11-23)",
+  "https://www.mprnews.org/story/2026/11/19/brad-finstad-requests-recount-in-1st-congressional-district-after-loss-to-jake-johnson (MN-1 recount dates, retrieved 2026-11-23)"
+ ],
+ "crossCheck": {
+  "house": "All 430 Wikipedia-called voting seats outside LA-2 matched Ballotpedia (state pages and/or call timeline) on winner and party: 0 mismatches. LA-2 (Troy Carter, won outright in the Nov 3 primary) matched the Ballotpedia primary result. 92 seats (CA 52, FL 27, NC 13) also matched official state results. Party totals (D 258 / R 173 incl. TN-4 and NC-10 leaders) match Ballotpedia. Delegates AS, DC, GU, MP, VI matched Ballotpedia.",
+  "senate": "All 35 races (33 regular + FL and OH specials) matched Ballotpedia; FL and NC also matched official state results. Composition 54 D, 2 I, 44 R matches Ballotpedia (56-44 Democratic caucus)."
+ },
+ "house": [
+  {
+   "state": "AK",
+   "district": 0,
+   "name": "Nick Begich III",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001323",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 1,
+   "name": "Jerry Carl",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 2,
+   "name": "Shomari Figures",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000481",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 3,
+   "name": "Mike Rogers",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000575",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 4,
+   "name": "Robert Aderholt",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000055",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 5,
+   "name": "Dale Strong",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001220",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 6,
+   "name": "Gary Palmer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000609",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "district": 7,
+   "name": "Terri Sewell",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001185",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "district": 1,
+   "name": "Rick Crawford",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001087",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "district": 2,
+   "name": "French Hill",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001072",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "district": 3,
+   "name": "Steve Womack",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000809",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "district": 4,
+   "name": "Bruce Westerman",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000821",
+   "note": ""
+  },
+  {
+   "state": "AS",
+   "district": 0,
+   "name": "Amata Coleman Radewagen",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000600",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 1,
+   "name": "Amish Shah",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 2,
+   "name": "Eli Crane",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001132",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 3,
+   "name": "Yassamin Ansari",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000381",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 4,
+   "name": "Greg Stanton",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001211",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 5,
+   "name": "Mark Lamb",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 6,
+   "name": "JoAnna Mendoza",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 7,
+   "name": "Adelita Grijalva",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000606",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 8,
+   "name": "Abraham Hamadeh",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001098",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "district": 9,
+   "name": "Paul Gosar",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000565",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 1,
+   "name": "Mike McGuire",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 2,
+   "name": "Jared Huffman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001068",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 3,
+   "name": "Ami Bera",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001287",
+   "note": "Currently represents CA-6; elected in the redrawn CA-3."
+  },
+  {
+   "state": "CA",
+   "district": 4,
+   "name": "Eric Jones",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 5,
+   "name": "Tom McClintock",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001177",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 6,
+   "name": "Richard Pan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 7,
+   "name": "Doris Matsui",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001163",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 8,
+   "name": "John Garamendi",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000559",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 9,
+   "name": "Josh Harder",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001090",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 10,
+   "name": "Mark DeSaulnier",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000623",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 11,
+   "name": "Scott Wiener",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 12,
+   "name": "Lateefah Simon",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001231",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 13,
+   "name": "Adam Gray",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000605",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 14,
+   "name": "Aisha Wahab",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000832",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 15,
+   "name": "Kevin Mullin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001225",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 16,
+   "name": "Sam Liccardo",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000607",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 17,
+   "name": "Ro Khanna",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000389",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 18,
+   "name": "Zoe Lofgren",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000397",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 19,
+   "name": "Jimmy Panetta",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000613",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 20,
+   "name": "Vince Fong",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000480",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 21,
+   "name": "Jim Costa",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001059",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 22,
+   "name": "Randy Villegas",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 23,
+   "name": "Jay Obernolte",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "O000019",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 24,
+   "name": "Salud Carbajal",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001112",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 25,
+   "name": "Raul Ruiz",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000599",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 26,
+   "name": "Jacqui Irwin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 27,
+   "name": "George T. Whitesides",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000830",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 28,
+   "name": "Judy Chu",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001080",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 29,
+   "name": "Luz Rivas",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000620",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 30,
+   "name": "Laura Friedman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000483",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 31,
+   "name": "Gil Cisneros",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001123",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 32,
+   "name": "Brad Sherman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000344",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 33,
+   "name": "Pete Aguilar",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000371",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 34,
+   "name": "Angela Gonzales-Torres",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 35,
+   "name": "Norma Torres",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000474",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 36,
+   "name": "Ted Lieu",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000582",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 37,
+   "name": "Sydney Kamlager-Dove",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000400",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 38,
+   "name": "Hilda Solis",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 39,
+   "name": "Mark Takano",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000472",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 40,
+   "name": "Ken Calvert",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C000059",
+   "note": "Currently represents CA-41; elected in the redrawn CA-40."
+  },
+  {
+   "state": "CA",
+   "district": 41,
+   "name": "Linda Sánchez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001156",
+   "note": "Currently represents CA-38; elected in the redrawn CA-41."
+  },
+  {
+   "state": "CA",
+   "district": 42,
+   "name": "Robert Garcia",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000598",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 43,
+   "name": "Maxine Waters",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000187",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 44,
+   "name": "Nanette Barragán",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001300",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 45,
+   "name": "Derek Tran",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000491",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 46,
+   "name": "Lou Correa",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001110",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 47,
+   "name": "Dave Min",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001241",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 48,
+   "name": "Marni von Wilpert",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 49,
+   "name": "Mike Levin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000593",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 50,
+   "name": "Scott Peters",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000608",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 51,
+   "name": "Sara Jacobs",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000305",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "district": 52,
+   "name": "Juan Vargas",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "V000130",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 1,
+   "name": "Melat Kiros",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 2,
+   "name": "Joe Neguse",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "N000191",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 3,
+   "name": "Jeff Hurd",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001100",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 4,
+   "name": "Eileen Laubacher",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 5,
+   "name": "Jessica Killin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 6,
+   "name": "Jason Crow",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001121",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 7,
+   "name": "Brittany Pettersen",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000620",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "district": 8,
+   "name": "Manny Rutinel",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "district": 1,
+   "name": "Luke Bronin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "district": 2,
+   "name": "Joe Courtney",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001069",
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "district": 3,
+   "name": "Rosa DeLauro",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000216",
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "district": 4,
+   "name": "Jim Himes",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001047",
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "district": 5,
+   "name": "Jahana Hayes",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001081",
+   "note": ""
+  },
+  {
+   "state": "DC",
+   "district": 0,
+   "name": "Robert White",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "DE",
+   "district": 0,
+   "name": "Sarah McBride",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001238",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 1,
+   "name": "Jimmy Patronis",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000622",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 2,
+   "name": "Austin Rogers",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 3,
+   "name": "Kat Cammack",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001039",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 4,
+   "name": "Aaron Bean",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001314",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 5,
+   "name": "John Rutherford",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000609",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 6,
+   "name": "Randy Fine",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000484",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 7,
+   "name": "Ryan Elijah",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 8,
+   "name": "Mike Haridopolos",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001099",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 9,
+   "name": "Darren Soto",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001200",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 10,
+   "name": "Maxwell Frost",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000476",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 11,
+   "name": "Joe Strada",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 12,
+   "name": "Gus Bilirakis",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001257",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 13,
+   "name": "Anna Paulina Luna",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000596",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 14,
+   "name": "Kathy Castor",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001066",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 15,
+   "name": "Laurel Lee",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000597",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 16,
+   "name": "Sydney Gruters",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 17,
+   "name": "Greg Steube",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001214",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 18,
+   "name": "Scott Franklin",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000472",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 19,
+   "name": "Jim Schwartzel",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 20,
+   "name": "Debbie Wasserman Schultz",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000797",
+   "note": "Currently represents FL-25; elected in the redrawn FL-20."
+  },
+  {
+   "state": "FL",
+   "district": 21,
+   "name": "Brian Mast",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001199",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 22,
+   "name": "Pia Dandiya",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 23,
+   "name": "Lois Frankel",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000462",
+   "note": "Currently represents FL-22; elected in the redrawn FL-23."
+  },
+  {
+   "state": "FL",
+   "district": 24,
+   "name": "Oliver Gilbert",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 25,
+   "name": "Jared Moskowitz",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001217",
+   "note": "Currently represents FL-23; elected in the redrawn FL-25."
+  },
+  {
+   "state": "FL",
+   "district": 26,
+   "name": "Mario Díaz-Balart",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000600",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 27,
+   "name": "María Elvira Salazar",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000168",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "district": 28,
+   "name": "Carlos A. Giménez",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000593",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 1,
+   "name": "Jim Kingston",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 2,
+   "name": "Sanford Bishop",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B000490",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 3,
+   "name": "Brian Jack",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000311",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 4,
+   "name": "Hank Johnson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000288",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 5,
+   "name": "Nikema Williams",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000788",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 6,
+   "name": "Lucy McBath",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001208",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 7,
+   "name": "Rich McCormick",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001218",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 8,
+   "name": "Austin Scott",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001189",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 9,
+   "name": "Andrew Clyde",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001116",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 10,
+   "name": "Houston Gaines",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 11,
+   "name": "John Cowan",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 12,
+   "name": "Rick Allen",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000372",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 13,
+   "name": "Jasmine Clark",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "district": 14,
+   "name": "Clay Fuller",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000485",
+   "note": ""
+  },
+  {
+   "state": "GU",
+   "district": 0,
+   "name": "Alicia Limtiaco",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "HI",
+   "district": 1,
+   "name": "Ed Case",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001055",
+   "note": ""
+  },
+  {
+   "state": "HI",
+   "district": 2,
+   "name": "Jill Tokuda",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000487",
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "district": 1,
+   "name": "Christina Bohannan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "district": 2,
+   "name": "Lindsay James",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "district": 3,
+   "name": "Sarah Trone Garriott",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "district": 4,
+   "name": "Chris McGowan",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "ID",
+   "district": 1,
+   "name": "Russ Fulcher",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000469",
+   "note": ""
+  },
+  {
+   "state": "ID",
+   "district": 2,
+   "name": "Mike Simpson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001148",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 1,
+   "name": "Jonathan Jackson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000309",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 2,
+   "name": "Donna Miller",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 3,
+   "name": "Delia Ramirez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000617",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 4,
+   "name": "Patty García",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 5,
+   "name": "Mike Quigley",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "Q000023",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 6,
+   "name": "Sean Casten",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001117",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 7,
+   "name": "La Shawn Ford",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 8,
+   "name": "Melissa Bean",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 9,
+   "name": "Daniel Biss",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 10,
+   "name": "Brad Schneider",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001190",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 11,
+   "name": "Bill Foster",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000454",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 12,
+   "name": "Mike Bost",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001295",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 13,
+   "name": "Nikki Budzinski",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001315",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 14,
+   "name": "Lauren Underwood",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "U000040",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 15,
+   "name": "Mary Miller",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001211",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 16,
+   "name": "Darin LaHood",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000585",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "district": 17,
+   "name": "Eric Sorensen",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001225",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 1,
+   "name": "Frank J. Mrvan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001214",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 2,
+   "name": "Rudy Yakym",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "Y000067",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 3,
+   "name": "Marlin Stutzman",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001188",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 4,
+   "name": "Jim Baird",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001307",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 5,
+   "name": "J. D. Ford",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 6,
+   "name": "Jefferson Shreve",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001229",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 7,
+   "name": "André Carson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001072",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 8,
+   "name": "Mark Messmer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001233",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "district": 9,
+   "name": "Erin Houchin",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001093",
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "district": 1,
+   "name": "Tracey Mann",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M000871",
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "district": 2,
+   "name": "Derek Schmidt",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001228",
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "district": 3,
+   "name": "Sharice Davids",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000629",
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "district": 4,
+   "name": "Ron Estes",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000298",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 1,
+   "name": "James Comer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001108",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 2,
+   "name": "Brett Guthrie",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000558",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 3,
+   "name": "Morgan McGarvey",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001220",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 4,
+   "name": "Ed Gallrein",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 5,
+   "name": "Hal Rogers",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000395",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "district": 6,
+   "name": "Zach Dembo",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "district": 1,
+   "name": "Steve Scalise",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001176",
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "district": 2,
+   "name": "Troy Carter",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001125",
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "district": 3,
+   "name": "Clay Higgins",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001077",
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "district": 4,
+   "name": "Mike Johnson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000299",
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "district": 5,
+   "name": null,
+   "party": null,
+   "status": "runoff",
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Louisiana general election Dec 12, 2026 (top two from the Nov 3 primary): Patricia \"Pat\" Moore (D) vs. Gabe Firment (R). Seat held by Julia Letlow (R), who won the U.S. Senate race."
+  },
+  {
+   "state": "LA",
+   "district": 6,
+   "name": null,
+   "party": null,
+   "status": "runoff",
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Louisiana general election Dec 12, 2026 (top two from the Nov 3 primary): Chauna Banks (D) vs. Blake Miguez (R). Open seat (Cleo Fields, D, ran for state senate); district redrawn in 2026."
+  },
+  {
+   "state": "MA",
+   "district": 1,
+   "name": "Richard Neal",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "N000015",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 2,
+   "name": "Jim McGovern",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M000312",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 3,
+   "name": "Lori Trahan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000482",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 4,
+   "name": "Jake Auchincloss",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000148",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 5,
+   "name": "Katherine Clark",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001101",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 6,
+   "name": "Dan Koh",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 7,
+   "name": "Ayanna Pressley",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000617",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 8,
+   "name": "Stephen Lynch",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000562",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "district": 9,
+   "name": "Bill Keating",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000375",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 1,
+   "name": "Andy Harris",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001052",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 2,
+   "name": "Johnny Olszewski",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "O000176",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 3,
+   "name": "Sarah Elfreth",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000301",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 4,
+   "name": "Glenn Ivey",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "I000058",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 5,
+   "name": "Adrian Boafo",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 6,
+   "name": "April McClain Delaney",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001232",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 7,
+   "name": "Kweisi Mfume",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M000687",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "district": 8,
+   "name": "Jamie Raskin",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000606",
+   "note": ""
+  },
+  {
+   "state": "ME",
+   "district": 1,
+   "name": "Chellie Pingree",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000597",
+   "note": ""
+  },
+  {
+   "state": "ME",
+   "district": 2,
+   "name": "Paul LePage",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 1,
+   "name": "Jack Bergman",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001301",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 2,
+   "name": "John Moolenaar",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001194",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 3,
+   "name": "Hillary Scholten",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001221",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 4,
+   "name": "Sean McCann",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 5,
+   "name": "Tim Walberg",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000798",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 6,
+   "name": "Debbie Dingell",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000624",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 7,
+   "name": "William Lawrence",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 8,
+   "name": "Kristen McDonald Rivet",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001237",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 9,
+   "name": "Lisa McClain",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001136",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 10,
+   "name": "Christina Hines",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 11,
+   "name": "Jeremy Moss",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 12,
+   "name": "Rashida Tlaib",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000481",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "district": 13,
+   "name": "Donavan McKinney",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 1,
+   "name": null,
+   "party": null,
+   "status": "uncalled",
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Recount: Jake Johnson (DFL) leads incumbent Brad Finstad (R) by about 320 votes. Hand recount Nov 30 - Dec 3; the State Canvassing Board certifies it Dec 8, 2026. AP has not called it."
+  },
+  {
+   "state": "MN",
+   "district": 2,
+   "name": "Matt Little",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 3,
+   "name": "Kelly Morrison",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001234",
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 4,
+   "name": "Betty McCollum",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001143",
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 5,
+   "name": "Ilhan Omar",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "O000173",
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 6,
+   "name": "Tom Emmer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000294",
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 7,
+   "name": "Michelle Fischbach",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000470",
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "district": 8,
+   "name": "Pete Stauber",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001212",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 1,
+   "name": "Wesley Bell",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001324",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 2,
+   "name": "Fred Wellman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 3,
+   "name": "Bob Onder",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "O000177",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 4,
+   "name": "Mark Alford",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000379",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 5,
+   "name": "Emanuel Cleaver",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001061",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 6,
+   "name": "Chris Stigall",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 7,
+   "name": "Eric Burlison",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001316",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "district": 8,
+   "name": "Jason Smith",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001195",
+   "note": ""
+  },
+  {
+   "state": "MP",
+   "district": 0,
+   "name": "Kimberlyn King-Hinds",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000404",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "district": 1,
+   "name": "Trent Kelly",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000388",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "district": 2,
+   "name": "Bennie Thompson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000193",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "district": 3,
+   "name": "Michael Guest",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000591",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "district": 4,
+   "name": "Mike Ezell",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000235",
+   "note": ""
+  },
+  {
+   "state": "MT",
+   "district": 1,
+   "name": "Sam Forstag",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MT",
+   "district": 2,
+   "name": "Troy Downing",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000634",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 1,
+   "name": "Don Davis",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000230",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 2,
+   "name": "Deborah Ross",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000305",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 3,
+   "name": "Raymond Smith Jr.",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 4,
+   "name": "Valerie Foushee",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000477",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 5,
+   "name": "Chuck Hubbard",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Won by about 330 votes; Virginia Foxx (R) conceded Nov 22, 2026 after the recount."
+  },
+  {
+   "state": "NC",
+   "district": 6,
+   "name": "Cyril Jefferson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 7,
+   "name": "David Rouzer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000603",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 8,
+   "name": "Mark Harris",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001102",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 9,
+   "name": "Richard Ojeda",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 10,
+   "name": "Pat Harrigan",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001101",
+   "note": "Won by about 2,500 votes; Ashley Bell (D) conceded after the recount."
+  },
+  {
+   "state": "NC",
+   "district": 11,
+   "name": "Jamie Ager",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 12,
+   "name": "Alma Adams",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000370",
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 13,
+   "name": "Paul Barringer",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "district": 14,
+   "name": "LaKesha Womack",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "ND",
+   "district": 0,
+   "name": "Julie Fedorchak",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000482",
+   "note": ""
+  },
+  {
+   "state": "NE",
+   "district": 1,
+   "name": "Mike Flood",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000474",
+   "note": ""
+  },
+  {
+   "state": "NE",
+   "district": 2,
+   "name": "Denise Powell",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NE",
+   "district": 3,
+   "name": "Adrian Smith",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001172",
+   "note": ""
+  },
+  {
+   "state": "NH",
+   "district": 1,
+   "name": "Stefany Shaheen",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NH",
+   "district": 2,
+   "name": "Maggie Goodlander",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000604",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 1,
+   "name": "Donald Norcross",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "N000188",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 2,
+   "name": "Zack Mullock",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 3,
+   "name": "Herb Conaway",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001136",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 4,
+   "name": "Chris Smith",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000522",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 5,
+   "name": "Josh Gottheimer",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000583",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 6,
+   "name": "Frank Pallone",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000034",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 7,
+   "name": "Rebecca Bennett",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 8,
+   "name": "Rob Menendez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001226",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 9,
+   "name": "Nellie Pou",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000621",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 10,
+   "name": "LaMonica McIver",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001229",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 11,
+   "name": "Analilia Mejia",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001246",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "district": 12,
+   "name": "Adam Hamawy",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NM",
+   "district": 1,
+   "name": "Melanie Stansbury",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001218",
+   "note": ""
+  },
+  {
+   "state": "NM",
+   "district": 2,
+   "name": "Gabe Vasquez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "V000136",
+   "note": ""
+  },
+  {
+   "state": "NM",
+   "district": 3,
+   "name": "Teresa Leger Fernández",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000273",
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "district": 1,
+   "name": "Dina Titus",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000468",
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "district": 2,
+   "name": "Teresa Benitez-Thompson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "district": 3,
+   "name": "Susie Lee",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000590",
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "district": 4,
+   "name": "Steven Horsford",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001066",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 1,
+   "name": "Nick LaLota",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000598",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 2,
+   "name": "Andrew Garbarino",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000597",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 3,
+   "name": "Tom Suozzi",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001201",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 4,
+   "name": "Laura Gillen",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000602",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 5,
+   "name": "Gregory Meeks",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001137",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 6,
+   "name": "Grace Meng",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001188",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 7,
+   "name": "Claire Valdez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 8,
+   "name": "Hakeem Jeffries",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000294",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 9,
+   "name": "Yvette Clarke",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001067",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 10,
+   "name": "Brad Lander",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 11,
+   "name": "Nicole Malliotakis",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M000317",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 12,
+   "name": "Micah Lasher",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 13,
+   "name": "Darializa Avila Chevalier",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 14,
+   "name": "Alexandria Ocasio-Cortez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "O000172",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 15,
+   "name": "Ritchie Torres",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000486",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 16,
+   "name": "George Latimer",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000606",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 17,
+   "name": "Cait Conley",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 18,
+   "name": "Pat Ryan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000579",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 19,
+   "name": "Josh Riley",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000622",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 20,
+   "name": "Paul Tonko",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000469",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 21,
+   "name": "Anthony Constantino",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 22,
+   "name": "John Mannion",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001231",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 23,
+   "name": "Nick Langworthy",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000600",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 24,
+   "name": "Claudia Tenney",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000478",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 25,
+   "name": "Joseph Morelle",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001206",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "district": 26,
+   "name": "Tim Kennedy",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000402",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 1,
+   "name": "Greg Landsman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000601",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 2,
+   "name": "David Taylor",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000490",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 3,
+   "name": "Joyce Beatty",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001281",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 4,
+   "name": "Jim Jordan",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000289",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 5,
+   "name": "Bob Latta",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000566",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 6,
+   "name": "Michael Rulli",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000619",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 7,
+   "name": "Brian Poindexter",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 8,
+   "name": "Warren Davidson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000626",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 9,
+   "name": "Marcy Kaptur",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000009",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 10,
+   "name": "Kristina Knickerbocker",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 11,
+   "name": "Shontel Brown",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001313",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 12,
+   "name": "Troy Balderson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001306",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 13,
+   "name": "Emilia Sykes",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001223",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 14,
+   "name": "David Joyce",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000295",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "district": 15,
+   "name": "Don Leonard",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "OK",
+   "district": 1,
+   "name": "Mark Tedford",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "OK",
+   "district": 2,
+   "name": "Josh Brecheen",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001317",
+   "note": ""
+  },
+  {
+   "state": "OK",
+   "district": 3,
+   "name": "Frank Lucas",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000491",
+   "note": ""
+  },
+  {
+   "state": "OK",
+   "district": 4,
+   "name": "Tom Cole",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001053",
+   "note": ""
+  },
+  {
+   "state": "OK",
+   "district": 5,
+   "name": "Stephanie Bice",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B000740",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 1,
+   "name": "Suzanne Bonamici",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001278",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 2,
+   "name": "Cliff Bentz",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B000668",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 3,
+   "name": "Maxine Dexter",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000635",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 4,
+   "name": "Val Hoyle",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001094",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 5,
+   "name": "Janelle Bynum",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001326",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "district": 6,
+   "name": "Andrea Salinas",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001226",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 1,
+   "name": "Bob Harvie",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 2,
+   "name": "Brendan Boyle",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001296",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 3,
+   "name": "Chris Rabb",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 4,
+   "name": "Madeleine Dean",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000631",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 5,
+   "name": "Mary Gay Scanlon",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001205",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 6,
+   "name": "Chrissy Houlahan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001085",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 7,
+   "name": "Bob Brooks",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 8,
+   "name": "Paige Cognetti",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 9,
+   "name": "Dan Meuser",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001204",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 10,
+   "name": "Janelle Stelson",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 11,
+   "name": "Lloyd Smucker",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001199",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 12,
+   "name": "Summer Lee",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000602",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 13,
+   "name": "John Joyce",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000302",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 14,
+   "name": "Guy Reschenthaler",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000610",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 15,
+   "name": "Glenn Thompson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000467",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 16,
+   "name": "Mike Kelly",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000376",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "district": 17,
+   "name": "Chris Deluzio",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000530",
+   "note": ""
+  },
+  {
+   "state": "PR",
+   "district": 0,
+   "name": "Pablo José Hernández",
+   "party": "D",
+   "status": "continuing",
+   "incumbent": true,
+   "bioguide": "H001103",
+   "note": "Resident Commissioner; 4-year term (elected 2024) runs to Jan 3, 2029, so not on the 2026 ballot."
+  },
+  {
+   "state": "RI",
+   "district": 1,
+   "name": "Gabe Amo",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "A000380",
+   "note": ""
+  },
+  {
+   "state": "RI",
+   "district": 2,
+   "name": "Seth Magaziner",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001223",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 1,
+   "name": "Nancy Lacore",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 2,
+   "name": "Joe Wilson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000795",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 3,
+   "name": "Sheri Biggs",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001325",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 4,
+   "name": "William Timmons",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "T000480",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 5,
+   "name": "Wes Climer",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 6,
+   "name": "Jim Clyburn",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C000537",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "district": 7,
+   "name": "Russell Fry",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000478",
+   "note": ""
+  },
+  {
+   "state": "SD",
+   "district": 0,
+   "name": "Marty Jackley",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 1,
+   "name": "Diana Harshbarger",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "H001086",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 2,
+   "name": "Tim Burchett",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001309",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 3,
+   "name": "Chuck Fleischmann",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000459",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 4,
+   "name": "Victoria Broderick",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Won by about 280 votes; Scott DesJarlais (R) conceded Nov 16, 2026."
+  },
+  {
+   "state": "TN",
+   "district": 5,
+   "name": "Charlie Hatcher",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 6,
+   "name": "Johnny Garrett",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 7,
+   "name": "Matt Van Epps",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "V000139",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 8,
+   "name": "David Kustoff",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000392",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "district": 9,
+   "name": "Brent Taylor",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 1,
+   "name": "Nathaniel Moran",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001224",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 2,
+   "name": "Steve Toth",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 3,
+   "name": "Keith Self",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001224",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 4,
+   "name": "Pat Fallon",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000246",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 5,
+   "name": "Lance Gooden",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000589",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 6,
+   "name": "Jake Ellzey",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000071",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 7,
+   "name": "Lizzie Fletcher",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000468",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 8,
+   "name": "Jessica Steinmann",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 9,
+   "name": "Leticia Gutierrez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 10,
+   "name": "Chris Gober",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 11,
+   "name": "August Pfluger",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000048",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 12,
+   "name": "Craig Goldman",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000601",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 13,
+   "name": "Ronny Jackson",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000304",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 14,
+   "name": "Randy Weber",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000814",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 15,
+   "name": "Bobby Pulido",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 16,
+   "name": "Veronica Escobar",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "E000299",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 17,
+   "name": "Pete Sessions",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000250",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 18,
+   "name": "Christian Menefee",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001245",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 19,
+   "name": "Tom Sell",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 20,
+   "name": "Joaquin Castro",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001091",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 21,
+   "name": "Mark Teixeira",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 22,
+   "name": "Trever Nehls",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 23,
+   "name": "Katy Padilla Stout",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 24,
+   "name": "Beth Van Duyne",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "V000134",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 25,
+   "name": "Roger Williams",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000816",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 26,
+   "name": "Brandon Gill",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000603",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 27,
+   "name": "Michael Cloud",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001115",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 28,
+   "name": "Henry Cuellar",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001063",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 29,
+   "name": "Sylvia Garcia",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000587",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 30,
+   "name": "Frederick Haynes III",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 31,
+   "name": "John Carter",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001051",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 32,
+   "name": "Jace Yarbrough",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 33,
+   "name": "Colin Allred",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 34,
+   "name": "Vicente Gonzalez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000581",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 35,
+   "name": "Johnny Garcia",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 36,
+   "name": "Brian Babin",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001291",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "district": 37,
+   "name": "Greg Casar",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001131",
+   "note": "Currently represents TX-35; elected in the redrawn TX-37."
+  },
+  {
+   "state": "TX",
+   "district": 38,
+   "name": "Jon Bonck",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "UT",
+   "district": 1,
+   "name": "Ben McAdams",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "UT",
+   "district": 2,
+   "name": "Blake Moore",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001213",
+   "note": "Currently represents UT-1; elected in the redrawn UT-2."
+  },
+  {
+   "state": "UT",
+   "district": 3,
+   "name": "Celeste Maloy",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001228",
+   "note": "Currently represents UT-2; elected in the redrawn UT-3."
+  },
+  {
+   "state": "UT",
+   "district": 4,
+   "name": "Mike Kennedy",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "K000403",
+   "note": "Currently represents UT-3; elected in the redrawn UT-4."
+  },
+  {
+   "state": "VA",
+   "district": 1,
+   "name": "Shannon Taylor",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 2,
+   "name": "Elaine Luria",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 3,
+   "name": "Bobby Scott",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000185",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 4,
+   "name": "Jennifer McClellan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001227",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 5,
+   "name": "John McGuire",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001239",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 6,
+   "name": "Ben Cline",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "C001118",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 7,
+   "name": "Eugene Vindman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "V000138",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 8,
+   "name": "Don Beyer",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001292",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 9,
+   "name": "Morgan Griffith",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000568",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 10,
+   "name": "Suhas Subramanyam",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001230",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "district": 11,
+   "name": "James Walkinshaw",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000831",
+   "note": ""
+  },
+  {
+   "state": "VI",
+   "district": 0,
+   "name": "Janelle Sarauw",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "VT",
+   "district": 0,
+   "name": "Becca Balint",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001318",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 1,
+   "name": "Suzan DelBene",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "D000617",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 2,
+   "name": "Rick Larsen",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "L000560",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 3,
+   "name": "Marie Gluesenkamp Perez",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000600",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 4,
+   "name": "Amanda McKinney",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 5,
+   "name": "Michael Baumgartner",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "B001322",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 6,
+   "name": "Emily Randall",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "R000621",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 7,
+   "name": "Pramila Jayapal",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "J000298",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 8,
+   "name": "Kim Schrier",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001216",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 9,
+   "name": "Adam Smith",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S000510",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "district": 10,
+   "name": "Marilyn Strickland",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "S001159",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 1,
+   "name": "Mitchell Berman",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 2,
+   "name": "Mark Pocan",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "P000607",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 3,
+   "name": "Rebecca Cooke",
+   "party": "D",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 4,
+   "name": "Gwen Moore",
+   "party": "D",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001160",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 5,
+   "name": "Scott Fitzgerald",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "F000471",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 6,
+   "name": "Glenn Grothman",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "G000576",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 7,
+   "name": "Michael Alfonso",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "district": 8,
+   "name": "Tony Wied",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "W000829",
+   "note": ""
+  },
+  {
+   "state": "WV",
+   "district": 1,
+   "name": "Carol Miller",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001205",
+   "note": ""
+  },
+  {
+   "state": "WV",
+   "district": 2,
+   "name": "Riley Moore",
+   "party": "R",
+   "status": "elected",
+   "incumbent": true,
+   "bioguide": "M001235",
+   "note": ""
+  },
+  {
+   "state": "WY",
+   "district": 0,
+   "name": "Chuck Gray",
+   "party": "R",
+   "status": "elected",
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  }
+ ],
+ "senate": [
+  {
+   "state": "AK",
+   "name": "Mary Peltola",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "AK",
+   "name": "Lisa Murkowski",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "M001153",
+   "note": ""
+  },
+  {
+   "state": "AL",
+   "name": "Barry Moore",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "M001212",
+   "note": "Currently a U.S. Representative (AL-1); bioguide is from that House service."
+  },
+  {
+   "state": "AL",
+   "name": "Katie Boyd Britt",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "B001319",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "name": "Tom Cotton",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "C001095",
+   "note": ""
+  },
+  {
+   "state": "AR",
+   "name": "John Boozman",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "B001236",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "name": "Ruben Gallego",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "G000574",
+   "note": ""
+  },
+  {
+   "state": "AZ",
+   "name": "Mark Kelly",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "K000377",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "name": "Adam B. Schiff",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "S001150",
+   "note": ""
+  },
+  {
+   "state": "CA",
+   "name": "Alex Padilla",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "P000145",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "name": "John Hickenlooper",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "H000273",
+   "note": ""
+  },
+  {
+   "state": "CO",
+   "name": "Michael F. Bennet",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "B001267",
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "name": "Christopher Murphy",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "M001169",
+   "note": ""
+  },
+  {
+   "state": "CT",
+   "name": "Richard Blumenthal",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "B001277",
+   "note": ""
+  },
+  {
+   "state": "DE",
+   "name": "Lisa Blunt Rochester",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "B001303",
+   "note": ""
+  },
+  {
+   "state": "DE",
+   "name": "Chris Coons",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "C001088",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "name": "Rick Scott",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "S001217",
+   "note": ""
+  },
+  {
+   "state": "FL",
+   "name": "Ashley Moody",
+   "party": "R",
+   "status": "elected",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "M001244",
+   "note": "Appointed senator, now elected in the special election for the rest of the term ending Jan 3, 2029."
+  },
+  {
+   "state": "GA",
+   "name": "Jon Ossoff",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "O000174",
+   "note": ""
+  },
+  {
+   "state": "GA",
+   "name": "Raphael G. Warnock",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "W000790",
+   "note": ""
+  },
+  {
+   "state": "HI",
+   "name": "Mazie K. Hirono",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "H001042",
+   "note": ""
+  },
+  {
+   "state": "HI",
+   "name": "Brian Schatz",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "S001194",
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "name": "Josh Turek",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IA",
+   "name": "Chuck Grassley",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "G000386",
+   "note": ""
+  },
+  {
+   "state": "ID",
+   "name": "Jim Risch",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "R000584",
+   "note": ""
+  },
+  {
+   "state": "ID",
+   "name": "Mike Crapo",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "C000880",
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "name": "Juliana Stratton",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "IL",
+   "name": "Tammy Duckworth",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "D000622",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "name": "Jim Banks",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "B001299",
+   "note": ""
+  },
+  {
+   "state": "IN",
+   "name": "Todd Young",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "Y000064",
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "name": "Adam Hamilton",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "KS",
+   "name": "Jerry Moran",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "M000934",
+   "note": ""
+  },
+  {
+   "state": "KY",
+   "name": "Andy Barr",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "B001282",
+   "note": "Currently a U.S. Representative (KY-6); bioguide is from that House service."
+  },
+  {
+   "state": "KY",
+   "name": "Rand Paul",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "P000603",
+   "note": ""
+  },
+  {
+   "state": "LA",
+   "name": "Julia Letlow",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "L000595",
+   "note": "Currently a U.S. Representative (LA-5); bioguide is from that House service."
+  },
+  {
+   "state": "LA",
+   "name": "John Kennedy",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "K000393",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "name": "Elizabeth Warren",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "W000817",
+   "note": ""
+  },
+  {
+   "state": "MA",
+   "name": "Ed Markey",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "M000133",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "name": "Angela D. Alsobrooks",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "A000382",
+   "note": ""
+  },
+  {
+   "state": "MD",
+   "name": "Chris Van Hollen",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "V000128",
+   "note": ""
+  },
+  {
+   "state": "ME",
+   "name": "Angus S. King, Jr.",
+   "party": "I",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "K000383",
+   "note": ""
+  },
+  {
+   "state": "ME",
+   "name": "Troy Jackson",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "name": "Elissa Slotkin",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "S001208",
+   "note": ""
+  },
+  {
+   "state": "MI",
+   "name": "Abdul El-Sayed",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MN",
+   "name": "Amy Klobuchar",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "K000367",
+   "note": "Elected governor of Minnesota on Nov 3, 2026; expected to resign the Senate seat around her Jan 2027 inauguration. An appointee (not yet named) will serve until a special election (Nov 2027)."
+  },
+  {
+   "state": "MN",
+   "name": "Peggy Flanagan",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "name": "Josh Hawley",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "H001089",
+   "note": ""
+  },
+  {
+   "state": "MO",
+   "name": "Eric Schmitt",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "S001227",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "name": "Roger F. Wicker",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "W000437",
+   "note": ""
+  },
+  {
+   "state": "MS",
+   "name": "Scott Colom",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "MT",
+   "name": "Tim Sheehy",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "S001232",
+   "note": ""
+  },
+  {
+   "state": "MT",
+   "name": "Kurt Alme",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "name": "Roy Cooper",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "NC",
+   "name": "Ted Budd",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "B001305",
+   "note": ""
+  },
+  {
+   "state": "ND",
+   "name": "Kevin Cramer",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "C001096",
+   "note": ""
+  },
+  {
+   "state": "ND",
+   "name": "John Hoeven",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "H001061",
+   "note": ""
+  },
+  {
+   "state": "NE",
+   "name": "Deb Fischer",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "F000463",
+   "note": ""
+  },
+  {
+   "state": "NE",
+   "name": "Pete Ricketts",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "R000618",
+   "note": ""
+  },
+  {
+   "state": "NH",
+   "name": "Chris Pappas",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "P000614",
+   "note": "Currently a U.S. Representative (NH-1); bioguide is from that House service."
+  },
+  {
+   "state": "NH",
+   "name": "Margaret Wood Hassan",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "H001076",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "name": "Andy Kim",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "K000394",
+   "note": ""
+  },
+  {
+   "state": "NJ",
+   "name": "Cory Booker",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "B001288",
+   "note": ""
+  },
+  {
+   "state": "NM",
+   "name": "Martin Heinrich",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "H001046",
+   "note": ""
+  },
+  {
+   "state": "NM",
+   "name": "Ben Ray Luján",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "L000570",
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "name": "Jacky Rosen",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "R000608",
+   "note": ""
+  },
+  {
+   "state": "NV",
+   "name": "Catherine Cortez Masto",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "C001113",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "name": "Kirsten E. Gillibrand",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "G000555",
+   "note": ""
+  },
+  {
+   "state": "NY",
+   "name": "Charles E. Schumer",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "S000148",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "name": "Bernie Moreno",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "M001242",
+   "note": ""
+  },
+  {
+   "state": "OH",
+   "name": "Sherrod Brown",
+   "party": "D",
+   "status": "elected",
+   "class": 3,
+   "incumbent": false,
+   "bioguide": null,
+   "note": "Won the special election for the rest of the term ending Jan 3, 2029; takes office once the result is certified (before the 120th Congress starts). Former senator (bioguide B000944 in legislators-historical)."
+  },
+  {
+   "state": "OK",
+   "name": "Kevin Hern",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "H001082",
+   "note": "Currently a U.S. Representative (OK-1); bioguide is from that House service."
+  },
+  {
+   "state": "OK",
+   "name": "James Lankford",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "L000575",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "name": "Jeff Merkley",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "M001176",
+   "note": ""
+  },
+  {
+   "state": "OR",
+   "name": "Ron Wyden",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "W000779",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "name": "David McCormick",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "M001243",
+   "note": ""
+  },
+  {
+   "state": "PA",
+   "name": "John Fetterman",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "F000479",
+   "note": ""
+  },
+  {
+   "state": "RI",
+   "name": "Sheldon Whitehouse",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "W000802",
+   "note": ""
+  },
+  {
+   "state": "RI",
+   "name": "Jack Reed",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "R000122",
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "name": "Annie Andrews",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "SC",
+   "name": "Tim Scott",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "S001184",
+   "note": ""
+  },
+  {
+   "state": "SD",
+   "name": "Mike Rounds",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "R000605",
+   "note": ""
+  },
+  {
+   "state": "SD",
+   "name": "John Thune",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "T000250",
+   "note": ""
+  },
+  {
+   "state": "TN",
+   "name": "Marsha Blackburn",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "B001243",
+   "note": "Elected governor of Tennessee on Nov 3, 2026; says she will keep the Senate seat until sworn in as governor on Jan 17, 2027, then appoint a successor (not yet named)."
+  },
+  {
+   "state": "TN",
+   "name": "Bill Hagerty",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "H000601",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "name": "Ted Cruz",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "C001098",
+   "note": ""
+  },
+  {
+   "state": "TX",
+   "name": "James Talarico",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": null,
+   "note": ""
+  },
+  {
+   "state": "UT",
+   "name": "John R. Curtis",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "C001114",
+   "note": ""
+  },
+  {
+   "state": "UT",
+   "name": "Mike Lee",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "L000577",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "name": "Tim Kaine",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "K000384",
+   "note": ""
+  },
+  {
+   "state": "VA",
+   "name": "Mark Warner",
+   "party": "D",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "W000805",
+   "note": ""
+  },
+  {
+   "state": "VT",
+   "name": "Bernard Sanders",
+   "party": "I",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "S000033",
+   "note": ""
+  },
+  {
+   "state": "VT",
+   "name": "Peter Welch",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "W000800",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "name": "Maria Cantwell",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "C000127",
+   "note": ""
+  },
+  {
+   "state": "WA",
+   "name": "Patty Murray",
+   "party": "D",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "M001111",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "name": "Tammy Baldwin",
+   "party": "D",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "B001230",
+   "note": ""
+  },
+  {
+   "state": "WI",
+   "name": "Ron Johnson",
+   "party": "R",
+   "status": "continuing",
+   "class": 3,
+   "incumbent": true,
+   "bioguide": "J000293",
+   "note": ""
+  },
+  {
+   "state": "WV",
+   "name": "James C. Justice",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "J000312",
+   "note": ""
+  },
+  {
+   "state": "WV",
+   "name": "Shelley Moore Capito",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": true,
+   "bioguide": "C001047",
+   "note": ""
+  },
+  {
+   "state": "WY",
+   "name": "John Barrasso",
+   "party": "R",
+   "status": "continuing",
+   "class": 1,
+   "incumbent": true,
+   "bioguide": "B001261",
+   "note": ""
+  },
+  {
+   "state": "WY",
+   "name": "Harriet Hageman",
+   "party": "R",
+   "status": "elected",
+   "class": 2,
+   "incumbent": false,
+   "bioguide": "H001096",
+   "note": "Currently a U.S. Representative (WY-AL); bioguide is from that House service."
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+<!--page {"title": "Request Your Uniforms", "nav": "agencies",
+ "description": "Dual-status technicians: your Local 1776 contract promises four full sets of your duty uniform.{{IF:uniform}} Tell us what you're missing and we'll take it from there.{{ELSE}} Online requests are coming soon.{{END}}"} -->
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">For Dual-Status Technicians</div>
+    <h1>Request Your Uniforms</h1>
+    <p class="deck g-wide">Your contract promises four full sets of your duty uniform, with every accessory regulations require.{{IF:uniform}} Tell us what you&rsquo;re missing and Local 1776 will take it from there.{{ELSE}}{{END}}</p>
+{{IF:uniform}}    <ol class="steps three">
+      <li><span class="yr">1</span><h3>You Tell Us</h3><p>Fill in this form. You get a copy by email.</p></li>
+      <li><span class="yr">2</span><h3>We Ask</h3><p>We make the request under your contract, at the right level.</p></li>
+      <li><span class="yr">3</span><h3>We Enforce</h3><p>If the Agency misses its deadline, we file a grievance.</p></li>
+    </ol>
+    {{PRIVACY:send}}
+{{ELSE}}    {{OFFNOTE}}
+{{END}}  </div>
+</header>
+{{IF:uniform}}
+<section class="sec uf-sec">
+  <div class="wrap">
+    <form class="form uf" id="uf" data-form="uniform" novalidate>
+      <fieldset class="fset">
+        <legend>Where You Work</legend>
+        <div class="uf-wyw">
+        <div class="uf-wyw-l">
+        <div class="fields">
+          <div class="field two fit"><label for="uf-agency">State or Territory <i>*</i></label><select id="uf-agency" name="agency" required><option value="">Choose One</option>{{UNIT_OPTIONS:ARNG}}</select></div>
+        </div>
+        <label class="chk uf-dst"><input type="checkbox" name="dst" required><span>I am a dual-status technician (Title 32). Uniform requests are only for dual-status technicians. <i>*</i></span></label>
+        <p class="uf-gate" data-gate-note>Pick your state or territory and confirm you&rsquo;re a dual-status technician. The rest of the form unlocks after that.</p>
+        </div>
+        <div class="uf-seals" aria-hidden="true">
+          <figure data-seal="air"><img src="/img/seals/ang-lg.png" width="240" height="233" alt=""><figcaption>Air National Guard</figcaption></figure>
+          <figure data-seal="army"><img src="/img/seals/arng.jpg" width="240" height="180" alt=""><figcaption>Army National Guard</figcaption></figure>
+        </div>
+        </div>
+        <div class="uf-how" hidden>
+          <h3>How It Works in <span data-name></span></h3>
+          <dl><div><dt>How to Ask</dt><dd data-ask></dd></div><div><dt>Deadlines</dt><dd data-time></dd></div></dl>
+          <p class="uf-link"><a data-contract href="#">Read Section 10.1 of Your Contract &rsaquo;</a></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>About You</legend>
+        <div class="fields">
+          <div class="field"><label for="uf-first">First Name <i>*</i></label><input id="uf-first" name="firstName" autocomplete="given-name" maxlength="60" required></div>
+          <div class="field"><label for="uf-last">Last Name <i>*</i></label><input id="uf-last" name="lastName" autocomplete="family-name" maxlength="60" required></div>
+          <div class="field"><label for="uf-email">Email <i>*</i></label><input id="uf-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+          <div class="field"><label for="uf-phone">Cell Phone <i>*</i></label><input id="uf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required></div>
+          <div class="field"><label for="uf-title">Position Title</label><input id="uf-title" name="positionTitle" maxlength="80"></div>
+          <div class="field"><label for="uf-site">Duty Location <i>*</i></label><input id="uf-site" name="dutyLocation" maxlength="80" placeholder="Work site, installation or base" required></div>
+          <div class="field"><label for="uf-section">Work Section</label><input id="uf-section" name="workSection" maxlength="80"></div>
+          <div class="field"><label for="uf-unit">Military Unit</label><input id="uf-unit" name="militaryUnit" maxlength="80"></div>
+          <div class="field"><label for="uf-sup">Supervisor&rsquo;s Name <i>*</i></label><input id="uf-sup" name="supervisorName" maxlength="80" required></div>
+          <div class="field"><label for="uf-supmail">Supervisor&rsquo;s Email</label><input id="uf-supmail" name="supervisorEmail" type="email" maxlength="120"></div>
+        </div>
+        <p class="uf-note">We use your supervisor&rsquo;s name only to represent you. We need it to make the request at the right level.</p>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>What You Need</legend>
+        <div class="ufig" data-ufig>
+          <div class="ufig-toggles">
+            <fieldset class="seg"><legend>Uniform <i>*</i></legend><div class="seg-o"><label><input type="radio" name="uniform" value="ocp" checked><span>OCP</span></label><label><input type="radio" name="uniform" value="classb"><span>Class B</span></label><label><input type="radio" name="uniform" value="flight"><span>Flight</span></label></div></fieldset>
+            <fieldset class="seg"><legend>Sex <i>*</i></legend><div class="seg-o"><label><input type="radio" name="sex" value="m"><span>Male</span></label><label><input type="radio" name="sex" value="f"><span>Female</span></label></div></fieldset>
+            <fieldset class="seg seg-n"><legend>Wearable Sets You Have Now <i>*</i></legend><div class="seg-o"><label><input type="radio" name="setsOnHand" value="0"><span>0</span></label><label><input type="radio" name="setsOnHand" value="1"><span>1</span></label><label><input type="radio" name="setsOnHand" value="2"><span>2</span></label><label><input type="radio" name="setsOnHand" value="3"><span>3</span></label><label><input type="radio" name="setsOnHand" value="4"><span>4+</span></label></div></fieldset>
+          </div>
+          <h3 class="ufig-h">Tap What You Need</h3>
+          <div class="igrid" data-group="main" role="group" aria-label="Uniform items"></div>
+          <p class="uf-note" data-flight-note hidden>Flight uniforms are usually organizational issue, not personal clothing. Ask anyway; we&rsquo;ll sort out who supplies them.</p>
+          <div data-wrap="maternity" hidden><h3 class="ufig-h">Maternity</h3><div class="igrid" data-group="maternity" role="group" aria-label="Maternity items"></div></div>
+          <label class="chk ufig-under"><input type="checkbox" data-under><span>I also need items worn underneath</span></label>
+          <div class="igrid" data-group="under" hidden role="group" aria-label="Items worn underneath"></div>
+          <label class="chk ufig-under"><input type="checkbox" data-safety><span>I also need safety or cold-weather gear</span></label>
+          <div class="igrid" data-group="safety" hidden role="group" aria-label="Safety and cold-weather gear"></div>
+          <div class="ufig-oh2"><h3 class="ufig-h">Your Order</h3>{{ACT:clear|Clear|alt|clear-order}}</div>
+          <div class="ufig-order"></div>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="uf-why">Why You Need Them <i>*</i></label><select id="uf-why" name="reason" required><option value="">Choose One</option><option value="short">I Have Fewer Than Four Sets</option><option value="wear">Normal Wear and Tear</option><option value="duty">Damaged or Worn Out on Duty</option><option value="new">Never Issued (New Hire)</option><option value="weather">Cold-Weather or Safety Gear</option><option value="other">Something Else</option></select></div>
+          <div class="field" data-show="worn"><label for="uf-worn">Date It Wore Out</label><input id="uf-worn" name="unserviceableDate" type="date"></div>
+          <div class="field"><label for="uf-asked">Have You Already Asked? <i>*</i></label><select id="uf-asked" name="askedBefore" required><option value="">Choose One</option><option>No</option><option>Yes</option></select></div>
+          <div class="field" data-show="asked"><label for="uf-askdate">Date You Asked</label><input id="uf-askdate" name="askedDate" type="date"></div>
+          <div class="field" data-show="asked"><label for="uf-askwho">Who You Asked</label><input id="uf-askwho" name="askedWho" maxlength="80" placeholder="Unit supply, CIF, supervisor"></div>
+          <div class="field" data-show="asked"><label for="uf-order">Order Date, If Known</label><input id="uf-order" name="orderDate" type="date"></div>
+          <div class="field" data-show="asked"><label for="uf-answer">What They Told You</label><input id="uf-answer" name="askedAnswer" maxlength="120"></div>
+          <div class="field full"><label for="uf-more">Anything Else We Should Know</label><textarea id="uf-more" name="details" maxlength="3000"></textarea></div>
+        </div>
+        <p class="uf-warn" data-season hidden><b>Outside Open Season?</b> Your contract takes uniform requests during FEHB Open Season (usually mid-November to mid-December). The rest of the year it covers only items damaged or worn out on duty, and you may have to buy the others yourself. Send your request anyway and we&rsquo;ll tell you where you stand.</p>
+        <div class="uf-mail" data-mail hidden>
+          <h3>Email Your Unit Supply</h3>
+          <p>Your contract asks you to email your unit supply, with a copy to your supervisor. This button opens the email with your items filled in. Add your unit supply&rsquo;s address and send it.</p>
+          {{ACT:send|Email|alt|mail}}
+        </div>
+      </fieldset>
+
+      <fieldset class="fset" data-gate disabled>
+        <legend>Sign and Send</legend>
+        <label class="chk"><input type="checkbox" name="privacy" required><span>I have read the <a href="/privacy">Privacy Policy</a>. What I send is used only to represent me. <i>*</i></span></label>
+        <div class="fields">
+          <div class="field"><label for="uf-sign">Type Your Full Name to Sign <i>*</i></label><input id="uf-sign" name="signature" class="sig" maxlength="80" autocomplete="name" required></div>
+        </div>
+        <input type="hidden" name="items"><input type="hidden" name="branch">
+        <div class="hp" aria-hidden="true"><label for="uf-web">Leave blank</label><input id="uf-web" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="form-foot">
+          {{SUBMIT:send|Send}}
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
+{{DATA:uniform}}
+<script>window.L1776_CONTRACTS = {{CONTRACT_LINKS}};</script>
+<script src="/js/ufig.js" defer></script>
+<script src="/js/uniform.js" defer></script>{{ELSE}}{{END}}

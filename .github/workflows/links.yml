@@ -1,0 +1,35 @@
+# Monthly check of every outside link on www.local1776.org (Ben, Nov 22 2026: "once a month").
+# Only links that truly no longer exist (404, 410, a dead website) count. Sites that refuse automated checks are ignored.
+# When something is broken, this opens a GitHub issue listing it; GitHub emails Ben. Run it by hand from the Actions tab too.
+name: Monthly Link Check
+
+on:
+  schedule:
+    - cron: "0 14 1 * *"          # the 1st of every month, 14:00 UTC (8 or 9 AM Central)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build the site
+        run: node tools/build.mjs
+      - name: Check every link
+        id: check
+        run: |
+          set +e
+          node tools/check-links.mjs --issue
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+      - name: Open an issue if anything is broken
+        if: steps.check.outputs.code == '3'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Broken links found ($(date -u +%Y-%m-%d))" --body-file review/link-broken.md

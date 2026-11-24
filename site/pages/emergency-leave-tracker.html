@@ -1,0 +1,113 @@
+<!--page {"title": "Emergency Leave Tracker", "nav": "resources",
+ "description": "A Local 1776 leave status election and tracker for National Guard technicians activated for an emergency: fill it in online, keep it on your own device, print it to sign."} -->
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Emergency Activation</div>
+    <h1>Leave Status Election and Tracker</h1>
+    <div class="g-row">
+      <p class="deck g-lead">Choose your leave status for an emergency activation and track it day by day. Fill it in here, then print it to sign and give to your supervisor.</p>
+      <div class="g-acts">{{ACT:print|Print||print}}{{ACT:clear|Clear|alt|clear}}</div>
+    </div>
+    <div class="no-print">{{PRIVACY:device}}</div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker brk"><span>C-1. Generic Leave Status</span> <span>During CONUS Emergency Response</span></div><h2>Your Leave Options</h2></div>
+    <div class="g-two">
+      <div class="prose">
+        <h3 class="g-h">Law Enforcement Leave (LEL)</h3>
+        <ol>
+          <li>Technicians placed on State or Federal active duty to provide military aid to enforce the law, or to assist civil authorities in protecting or saving life or preventing injury, are entitled to an additional 22 days (176 hours) of leave each calendar year for CONUS emergencies. None of the 22 workdays carries over.</li>
+          <li>Unlike the 160 hours of regular military leave for active and inactive duty, LEL does not let technicians keep both military and civilian pay. Under the offset rule, civilian pay is reduced by the military pay received while on LEL (other than travel, transportation or per diem). Pay is not reduced for military pay on non-workdays, and LEL is not charged for non-workdays.</li>
+          <li>LEL is normally worked out after the fact: technicians are first placed in leave without pay (LWOP). On returning, give your supervisor or timekeeper a copy of your active duty orders and other paperwork so your time and attendance can be processed.</li>
+          <li>LEL may be combined with annual leave, compensatory time, time-off awards, LWOP and regular military leave on active duty orders for emergency operations.</li>
+        </ol>
+        <p><a href="/law-enforcement-leave-fact-sheet">Read the full LEL fact sheet &rsaquo;</a></p>
+      </div>
+      <div class="prose">
+        <h3 class="g-h">Military Leave (ML)</h3>
+        <ol>
+          <li>Technicians are entitled to 20 days (160 hours) of military leave each fiscal year for active duty, active duty training and inactive duty training. Unused military leave carries over, up to a total of 20 days (160 hours) at the start of the next fiscal year.</li>
+          <li>Military leave can be used only during federal activation (Title 10 or Title 32), not during State Active Duty (SAD).</li>
+        </ol>
+        <h3 class="g-h">LWOP, Compensatory Time, Time-Off Awards and Annual Leave</h3>
+        <ol>
+          <li>Technicians may use LWOP or any accrued compensatory time, time-off awards and annual leave with any type of activation.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec lt-sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">C-2. Leave Status Election</div><h2>Your Election</h2></div>
+    <div class="g-two">
+      <div class="prose">
+        <ol>
+          <li>Enter the leave status you want for your voluntary or involuntary activation for CONUS emergency response operations.</li>
+          <li>You must account for 80 hours of leave each pay period. Plan on an initial activation of at least 2 weeks.</li>
+          <li>Attach a copy of your latest LES and your activation orders, if you have them.</li>
+          <li>If you don&rsquo;t choose a leave status, you will be placed in LWOP automatically.</li>
+        </ol>
+      </div>
+      <div class="prose">
+        <h4 class="rhead">Leave Status Codes</h4>
+        <ul class="lt-codes">
+          <li><b>AL</b> Annual Leave</li><li><b>ML</b> Military Leave</li><li><b>CT</b> Compensatory Time</li><li><b>LL</b> Law Enforcement Leave</li>
+          <li><b>LW</b> Leave Without Pay</li><li><b>OD</b> Regular Off Day</li><li><b>H</b> Holiday</li>
+        </ul>
+      </div>
+    </div>
+    <form class="lt" id="lt" autocomplete="off" onsubmit="return false">
+      <div class="lt-head">
+        <label class="lt-f wide">Member Name<input name="name" maxlength="60"></label>
+        <label class="lt-f">A. Order Number<input name="order" maxlength="30"></label>
+        <label class="lt-f">B. Period of Activation<span class="lt-per"><input name="period" inputmode="numeric" maxlength="4"><select name="unit"><option value="weeks">Weeks</option><option value="days">Days</option></select></span></label>
+        <label class="lt-f">C. Date Orders Begin<input name="begin" type="date"></label>
+        <label class="lt-f">D. Date Orders End<input name="end" type="date"></label>
+      </div>
+      <div class="lt-pps"></div>
+      <div class="lt-more no-print">{{ACT:plus|Add|alt|add}}{{ACT:minus|Remove|alt|remove}}<span>Add a pay period for each two weeks of the activation.</span></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker brk"><span>D. Typical Provisions &middot;</span> <span>Check Your State&rsquo;s Operations Order</span></div><h2>If You Stay in Technician Status</h2></div>
+    <p class="prose g-wide">These provisions are typical of emergency operations orders. Your state&rsquo;s order controls.</p>
+    <div class="g-two">
+      <div class="prose">
+        <ol type="a">
+          <li>Under 32 U.S.C. 709(h), overtime hours are credited as compensatory time earned. You must tell your civilian supervisor when compensatory time is being earned.</li>
+          <li>If you are directed to stay in the immediate area for more than 24 hours, and there is adequate lodging,* compensatory time is credited for all hours worked beyond the normal duty day, minus no more than 8 hours for sleep. The sleep and meal time that may be excluded may not exceed 8 hours in a 24-hour period. If sleep is interrupted by a call to work, the time spent on duty counts as hours of work toward compensatory time.</li>
+          <li>If you are directed to stay at a remote location for more than 24 hours, and it does not meet the adequacy requirements in (b), compensatory time is credited for <b>all</b> hours beyond the normal duty day, with no deduction for sleep or meals.</li>
+        </ol>
+      </div>
+      <div class="prose">
+        <ol type="a" start="4">
+          <li>When emergency operations extend into scheduled days off (Saturday, Sunday, Monday and/or federal holidays), military technicians <b>will</b> be placed on SAD or Title 32 orders for the entire non-work period. No compensatory time accrues for regularly scheduled days off.</li>
+          <li>To keep good order and discipline and give on-site commanders flexibility, military technicians performing emergency or emergency-related duty will be under the command of their Task Force (TF) Commander and subject to the operational environment of service members on SAD or Title 32 orders.</li>
+          <li>Even so, once SAD or Title 32 status is approved, Task Force Commanders may place any or all military technicians in their area of responsibility on SAD or Title 32 orders when local conditions call for the change.</li>
+        </ol>
+        <p class="g-note">* Adequate lodging means, at a minimum, a bed with a mattress and suitable linen in a building built for lodging people (for example a hotel or barracks), with access to latrines with running water for showering and shaving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">E. Acknowledgment</div><h2>Sign After Printing</h2></div>
+    <div class="t-form lt-sign">
+      <p><b>I certify that I have carefully read this form. Any questions I had were explained to my satisfaction. I also fully understand that failure to submit this form properly and on time may result in debt, overpayment, or loss or lapse in important pay and benefits.</b></p>
+      <div class="lt-sig"><span>14. Signature of Member</span><span>15. Date</span><span>16. Supervisor Signature</span><span>17. Date</span></div>
+      <div class="lt-sig four"><span>18. Next Review Due</span><span>19. Member&rsquo;s Initials</span><span>20. Supervisor&rsquo;s Initials</span><span>21. Submitted to Finance</span></div>
+    </div>
+    <p class="g-help">Questions about your status or pay during an activation? <a href="/assistance-request-portal">Ask Local 1776 for help</a>.</p>
+  </div>
+</section>
+<script src="/js/tracker.js" defer></script>

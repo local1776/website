@@ -1,0 +1,1100 @@
+[
+ {
+  "id": "ours",
+  "title": "Local 1776 Information",
+  "groups": [
+   {
+    "title": "Legal Filings",
+    "items": [
+     {
+      "fact": "Type of Organization",
+      "value": "501(c)(5) Labor Organization",
+      "href": "https://www.irs.gov/charities-non-profits/other-non-profits/labor-and-agricultural-organizations"
+     },
+     {
+      "fact": "IRS EIN",
+      "value": "27-3964267"
+     },
+     {
+      "fact": "DOL File Number",
+      "value": "544-423"
+     },
+     {
+      "fact": "Louisiana Charter Number",
+      "value": "40508107N"
+     }
+    ]
+   },
+   {
+    "title": "LIUNA Union Documents",
+    "items": [
+     {
+      "label": "LIUNA International Constitution (2021)",
+      "href": "/files/liuna-international-constitution-september-2021.pdf"
+     },
+     {
+      "label": "LIUNA District Council Constitution (2021)",
+      "href": "/files/liuna-district-council-constitution-september-2021.pdf"
+     },
+     {
+      "label": "LIUNA Local Union Constitution (2021)",
+      "href": "/files/liuna-local-union-constitution-september-2021.pdf"
+     },
+     {
+      "label": "Local 1776 Operating Manual (2026)",
+      "href": "/files/liuna-local-1776-operating-manual-november-2026.pdf"
+     }
+    ]
+   },
+   {
+    "title": "Department of Labor",
+    "split": true,
+    "items": [
+     {
+      "head": "Annual LM Reports",
+      "cols": 3
+     },
+     {
+      "label": "2025 LM-2",
+      "href": "/files/544-423-lm2-12-31-2025.pdf"
+     },
+     {
+      "label": "2024 LM-2",
+      "href": "/files/544-423-lm2-12-31-2024.pdf"
+     },
+     {
+      "label": "2023 LM-2",
+      "href": "/files/lm-2-1776-2023.pdf"
+     },
+     {
+      "label": "2022 LM-2",
+      "href": "/files/lm-2-1776-2022.pdf"
+     },
+     {
+      "label": "2021 LM-2",
+      "href": "/files/544-423-lm2-12-31-2021.pdf"
+     },
+     {
+      "label": "2020 LM-2",
+      "href": "/files/lm-2-1776-2020.pdf"
+     },
+     {
+      "label": "2019 LM-2",
+      "href": "/files/544-423-lm2-12-31-2019.pdf"
+     },
+     {
+      "label": "2018 LM-2",
+      "href": "/files/544-423-lm2-12-31-2018.pdf"
+     },
+     {
+      "label": "2017 LM-2",
+      "href": "/files/lm-2-1776-2017.pdf"
+     },
+     {
+      "label": "2016 LM-2",
+      "href": "/files/lm-2-1776-2016.pdf"
+     },
+     {
+      "label": "2015 LM-2",
+      "href": "/files/lm-2-1776-2015.pdf"
+     },
+     {
+      "label": "2014 LM-2",
+      "href": "/files/2014-lm2-liuna-ngdc.pdf"
+     },
+     {
+      "label": "2013 LM-2",
+      "href": "/files/2013-lm2-liuna-ngdc.pdf"
+     },
+     {
+      "label": "2012 LM-2",
+      "href": "/files/2012-lm2.pdf"
+     },
+     {
+      "label": "2011 LM-2",
+      "href": "/files/2011-lm2.pdf"
+     },
+     {
+      "label": "2010 LM-3",
+      "href": "/files/2010-lm3-copy.pdf"
+     },
+     {
+      "head": "Department of Labor Audits"
+     },
+     {
+      "label": "2025 Audit Report",
+      "href": "/files/dol-audit-2024.pdf"
+     },
+     {
+      "label": "Closing Letter (March 10, 2025)",
+      "href": "/files/dol-2025-03-10.pdf"
+     }
+    ]
+   }
+  ],
+  "tab": "Local 1776"
+ },
+ {
+  "id": "pay",
+  "title": "Employment and Compensation",
+  "groups": [
+   {
+    "title": "Employment",
+    "items": [
+     {
+      "label": "Guide to Processing Personnel Actions",
+      "href": "https://www.opm.gov/policy-data-oversight/data-analysis-documentation/personnel-documentation/#url=Processing-Personnel-Actions",
+      "sub": 0
+     },
+     {
+      "label": "Leave Administration",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/leave-administration/",
+      "sub": 0
+     },
+     {
+      "label": "Paid Parental Leave",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/leave-administration/fact-sheets/paid-parental-leave/",
+      "sub": 1
+     },
+     {
+      "label": "Parental Bereavement Leave",
+      "href": "/files/parental-bereavement-leave-04012022.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Uniform Allowances (OPM)",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/pay-administration/fact-sheets/uniform-allowances-fact-sheet/"
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "Army Benefits Center - Civilian (ABC-C)",
+      "href": "https://portal.chra.army.mil/abc?id=abc"
+     },
+     {
+      "label": "Resources",
+      "href": "https://portal.chra.army.mil/abc?id=chra_kb_home&kb_base=df76d97ff4a01300d853a880ab368742",
+      "sub": 1
+     },
+     {
+      "label": "National Guard",
+      "href": "https://portal.chra.army.mil/abc?id=kb_article&kb_base=df76d97ff4a01300d853a880ab368742&sys_id=0f622f784175a344d853c60161030ade",
+      "sub": 1
+     },
+     {
+      "label": "New Employee Benefits Toolkit",
+      "href": "https://portal.chra.army.mil/abc?id=kb_article&kb_base=df76d97ff4a01300d853a880ab368742&sys_id=50d96ab919badb00d853667c9db8c432",
+      "sub": 1
+     }
+    ],
+    "split": true,
+    "bold": true
+   },
+   {
+    "title": "Pay",
+    "split": true,
+    "bold": true,
+    "items": [
+     {
+      "label": "General Schedule (GS)",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/"
+     },
+     {
+      "label": "Federal Wage System (FWS)",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/pay-systems/federal-wage-system/#url=Overview"
+     },
+     {
+      "label": "Appropriated Fund Schedules",
+      "href": "https://wageandsalary.dcpas.osd.mil/BWN/AFWageSchedules/",
+      "sub": 1
+     },
+     {
+      "label": "FWS Overseas",
+      "href": "https://wageandsalary.dcpas.osd.mil/BWN/AFOverseasSchedules/",
+      "sub": 1
+     },
+     {
+      "label": "Special Salary Rates (SSR)",
+      "href": "https://wageandsalary.dcpas.osd.mil/BWN/FWSSpecialSchedules",
+      "sub": 1
+     },
+     {
+      "label": "Classification Appeals",
+      "href": "https://www.opm.gov/policy-data-oversight/classification-qualifications/appeal-decisions/#url=Overview",
+      "sub": 0
+     },
+     {
+      "label": "Fact Sheet MSO-98-3",
+      "href": "/files/opm-classification-appeals-fact-sheet-mso-98-3.pdf",
+      "sub": 1
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "Severance Pay"
+     },
+     {
+      "label": "OPM Fact Sheet",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/pay-administration/fact-sheets/severance-pay/",
+      "sub": 1
+     },
+     {
+      "label": "DCPAS Guide",
+      "href": "/files/severance-pay-dcpas-guide.pdf",
+      "sub": 1
+     },
+     {
+      "label": "DoD Displaced Employee Guide (2025)",
+      "href": "/files/dod-displaced-employee-guide-2025-09.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Back-Pay Calculator (OPM)",
+      "href": "https://www.opm.gov/policy-data-oversight/pay-leave/back-pay-calculator/"
+     },
+     {
+      "label": "Pay Period Calendars",
+      "href": "https://www.gsa.gov/buy-through-us/shared-services/hr-and-payroll-services/payroll-calendars"
+     }
+    ]
+   },
+   {
+    "title": "Benefits",
+    "items": [
+     {
+      "label": "Federal Employees Retirement (FERS)",
+      "href": "https://www.opm.gov/retirement-center/fers-information/"
+     },
+     {
+      "label": "Federal Group Life Insurance (FEGLI)",
+      "href": "https://www.opm.gov/healthcare-insurance/life-insurance/"
+     },
+     {
+      "label": "Federal Employees Health Benefits (FEHB)",
+      "href": "https://www.opm.gov/healthcare-insurance/healthcare/"
+     },
+     {
+      "label": "OPM Retirement Guide",
+      "href": "https://www.opm.gov/retirement-center/apply/quick-guide/"
+     }
+    ]
+   }
+  ],
+  "tab": "Employment"
+ },
+ {
+  "id": "protections",
+  "title": "Workplace Protections",
+  "groups": [
+   {
+    "title": "Know Your Rights",
+    "items": [
+     {
+      "label": "Formal Meeting Checklist",
+      "href": "/files/liuna-local-1776-formal-meeting-checklist.pdf"
+     },
+     {
+      "label": "Right to Privacy",
+      "href": "/right-to-privacy-for-federal-employees"
+     },
+     {
+      "label": "Federal Employee Rights",
+      "href": "/federal-employee-rights"
+     },
+     {
+      "label": "State Active Duty Concerns",
+      "href": "/law-enforcement-leave"
+     }
+    ]
+   },
+   {
+    "title": "Military Service & USERRA",
+    "items": [
+     {
+      "label": "DCPAS USERRA Page",
+      "href": "https://www.dcpas.osd.mil/policy/employment/uniformedemploymentreemploymentrights"
+     },
+     {
+      "label": "ESGR Website",
+      "href": "https://www.militaryonesource.mil/benefits/employer-support-of-the-guard-and-reserve/"
+     },
+     {
+      "label": "USERRA Guidance (Department of Labor)",
+      "href": "https://www.dol.gov/agencies/vets/programs/userra"
+     },
+     {
+      "label": "NGB USERRA Guide",
+      "href": "/files/ngb-userra-guide.pdf"
+     }
+    ]
+   },
+   {
+    "title": "Workplace Safety",
+    "items": [
+     {
+      "label": "LIUNA Health and Safety Fund (LHSFNA)",
+      "href": "https://lhsfna.org/"
+     },
+     {
+      "label": "OSHA 3151 Protective Equipment (2023)",
+      "href": "/files/osha-3151-ppe-2023.pdf"
+     },
+     {
+      "label": "PASGT/ACH Helmet Blunt Impact Tests",
+      "href": "/files/pasgt-ach-blunt-impact-performance-test.pdf"
+     }
+    ]
+   }
+  ],
+  "tab": "Protections"
+ },
+ {
+  "id": "laws",
+  "title": "Laws and Regulations",
+  "groups": [
+   {
+    "title": "United States Code",
+    "href": "https://www.law.cornell.edu/uscode/text",
+    "items": [
+     {
+      "label": "Title 5: Government Employees",
+      "href": "https://www.law.cornell.edu/uscode/text/5"
+     },
+     {
+      "label": "Section 2302: Prohibited Personnel Practices",
+      "href": "https://www.law.cornell.edu/uscode/text/5/2302",
+      "sub": 1
+     },
+     {
+      "label": "Section 5596: Back Pay",
+      "href": "https://www.law.cornell.edu/uscode/text/5/5596",
+      "sub": 1
+     },
+     {
+      "label": "Section 6323: Military Leave",
+      "href": "https://www.law.cornell.edu/uscode/text/5/6323",
+      "sub": 1
+     },
+     {
+      "label": "Chapter 71: Labor-Management Relations",
+      "href": "https://www.law.cornell.edu/uscode/text/5/part-III/subpart-F/chapter-71",
+      "sub": 1
+     },
+     {
+      "label": "Chapter 75: Adverse Actions",
+      "href": "https://www.law.cornell.edu/uscode/text/5/part-III/subpart-F/chapter-75",
+      "sub": 1
+     },
+     {
+      "label": "Chapter 84: Federal Retirement (FERS)",
+      "href": "https://www.law.cornell.edu/uscode/text/5/part-III/subpart-G/chapter-84",
+      "sub": 1
+     },
+     {
+      "label": "Section 8412: Immediate Retirement",
+      "href": "https://www.law.cornell.edu/uscode/text/5/8412",
+      "sub": 2
+     },
+     {
+      "label": "Section 8414(c): Technician Retirement",
+      "href": "https://www.law.cornell.edu/uscode/text/5/8414#c",
+      "sub": 2
+     },
+     {
+      "label": "Section 8456: Technician Disability",
+      "href": "https://www.law.cornell.edu/uscode/text/5/8456",
+      "sub": 2
+     },
+     {
+      "label": "Title 10: Armed Forces",
+      "href": "https://www.law.cornell.edu/uscode/text/10"
+     },
+     {
+      "label": "Chapter 47: Uniform Code of Military Justice",
+      "href": "https://www.law.cornell.edu/uscode/text/10/subtitle-A/part-II/chapter-47",
+      "sub": 1
+     },
+     {
+      "label": "Section 10216: Military Technicians",
+      "href": "https://www.law.cornell.edu/uscode/text/10/10216",
+      "sub": 1
+     },
+     {
+      "label": "Chapter 1011: National Guard Bureau",
+      "href": "https://www.law.cornell.edu/uscode/text/10/subtitle-E/part-I/chapter-1011",
+      "sub": 1
+     },
+     {
+      "label": "Section 12310: Active Guard/Reserve (AGR)",
+      "href": "https://www.law.cornell.edu/uscode/text/10/12310",
+      "sub": 1
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "Title 32: National Guard",
+      "href": "https://www.law.cornell.edu/uscode/text/32"
+     },
+     {
+      "label": "Section 328: Active Guard/Reserve (AGR)",
+      "href": "https://www.law.cornell.edu/uscode/text/32/328",
+      "sub": 1
+     },
+     {
+      "label": "Section 502: Required Drills/Field Exercises",
+      "href": "https://www.law.cornell.edu/uscode/text/32/502",
+      "sub": 1
+     },
+     {
+      "label": "Section 709: Technicians",
+      "href": "https://www.law.cornell.edu/uscode/text/32/709",
+      "sub": 1
+     },
+     {
+      "label": "Title 38: USERRA",
+      "href": "https://www.law.cornell.edu/uscode/text/38/part-III/chapter-43"
+     },
+     {
+      "label": "Section 4303: Definitions",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4303",
+      "sub": 1
+     },
+     {
+      "label": "Section 4311: Discrimination and Reprisal",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4311",
+      "sub": 1
+     },
+     {
+      "label": "Section 4312: Reemployment Rights",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4312",
+      "sub": 1
+     },
+     {
+      "label": "Section 4313: Reemployment Positions",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4313",
+      "sub": 1
+     },
+     {
+      "label": "Section 4314: Federal Reemployment",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4314",
+      "sub": 1
+     },
+     {
+      "label": "Section 4316: Seniority and Benefits",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4316",
+      "sub": 1
+     },
+     {
+      "label": "Section 4317: Health Plans",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4317",
+      "sub": 1
+     },
+     {
+      "label": "Section 4318: Pension Plans",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4318",
+      "sub": 1
+     },
+     {
+      "label": "Section 4322: Enforcement (Labor Dept.)",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4322",
+      "sub": 1
+     },
+     {
+      "label": "Section 4324: Enforcement (Federal)",
+      "href": "https://www.law.cornell.edu/uscode/text/38/4324",
+      "sub": 1
+     }
+    ],
+    "split": true
+   },
+   {
+    "title": "Code of Federal Regulations",
+    "href": "https://www.law.cornell.edu/cfr/text",
+    "items": [
+     {
+      "label": "5 CFR Subchapter B: Civil Service Rules",
+      "href": "https://www.law.cornell.edu/cfr/text/5/chapter-I/subchapter-B"
+     },
+     {
+      "label": "Part 180: Personal Property Claims",
+      "href": "https://www.law.cornell.edu/cfr/text/5/part-180",
+      "sub": 1
+     },
+     {
+      "label": "Part 211: Veteran Preference",
+      "href": "https://www.law.cornell.edu/cfr/text/5/part-211",
+      "sub": 1
+     },
+     {
+      "label": "Part 335: Promotion & Internal Placement",
+      "href": "https://www.law.cornell.edu/cfr/text/5/part-335/subpart-A",
+      "sub": 1
+     },
+     {
+      "label": "Part 353: USERRA",
+      "href": "https://www.law.cornell.edu/cfr/text/5/part-353/subpart-B",
+      "sub": 1
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "5 CFR Chapter XIV: FLRA Regulations",
+      "href": "https://www.law.cornell.edu/cfr/text/5/chapter-XIV",
+      "bold": true
+     },
+     {
+      "label": "5 CFR Chapter II: MSPB Regulations",
+      "href": "https://www.law.cornell.edu/cfr/text/5/chapter-II"
+     },
+     {
+      "label": "Part 1201: Practices and Procedures",
+      "href": "https://www.law.cornell.edu/cfr/text/5/part-1201",
+      "sub": 1
+     },
+     {
+      "label": "20 CFR Part 1002: USERRA Regulations",
+      "href": "https://www.law.cornell.edu/cfr/text/20/part-1002",
+      "bold": true
+     },
+     {
+      "label": "29 CFR Part 1614: EEOC Federal Sector EEO",
+      "href": "https://www.law.cornell.edu/cfr/text/29/part-1614",
+      "bold": true
+     }
+    ],
+    "split": true
+   },
+   {
+    "title": "National Defense Authorization Acts",
+    "items": [
+     {
+      "label": "FY2026: Public Law 119-60",
+      "href": "/files/fy26-ndaa.pdf"
+     },
+     {
+      "label": "FY2025: Public Law 118-159",
+      "href": "/files/fy25-ndaa.pdf"
+     },
+     {
+      "label": "FY2024: Public Law 118-31",
+      "href": "/files/fy24-ndaa.pdf"
+     },
+     {
+      "label": "FY2023: Public Law 117-263",
+      "href": "/files/fy23-ndaa.pdf"
+     },
+     {
+      "label": "FY2022: Public Law 117-81",
+      "href": "/files/fy22-ndaa.pdf"
+     },
+     {
+      "label": "FY2021: Public Law 116-283",
+      "href": "/files/fy21-ndaa.pdf"
+     },
+     {
+      "label": "FY2020: Public Law 116-92",
+      "href": "/files/fy20-ndaa.pdf"
+     },
+     {
+      "label": "FY2019: Public Law 115-232",
+      "href": "/files/fy19-ndaa.pdf"
+     },
+     {
+      "label": "FY2018: Public Law 115-91",
+      "href": "/files/fy18-ndaa.pdf"
+     },
+     {
+      "label": "FY2017: Public Law 114-328",
+      "href": "/files/fy17-ndaa.pdf"
+     },
+     {
+      "label": "FY2016: Public Law 114-92",
+      "href": "/files/fy16-ndaa.pdf"
+     },
+     {
+      "label": "FY2015: Public Law 113-291",
+      "href": "/files/fy15-ndaa.pdf"
+     },
+     {
+      "label": "FY2014: Public Law 113-66",
+      "href": "/files/fy14-ndaa.pdf"
+     },
+     {
+      "label": "FY2013: Public Law 112-239",
+      "href": "/files/fy13-ndaa.pdf"
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "FY2012: Public Law 112-81",
+      "href": "/files/fy12-ndaa.pdf"
+     },
+     {
+      "label": "FY2011: Public Law 111-383",
+      "href": "/files/fy11-ndaa.pdf"
+     },
+     {
+      "label": "FY2010: Public Law 111-84",
+      "href": "/files/fy10-ndaa.pdf"
+     },
+     {
+      "label": "FY2009: Public Law 110-417",
+      "href": "/files/fy09-ndaa.pdf"
+     },
+     {
+      "label": "FY2008: Public Law 110-181",
+      "href": "/files/fy08-ndaa.pdf"
+     },
+     {
+      "label": "FY2007: Public Law 109-364",
+      "href": "/files/fy07-ndaa.pdf"
+     },
+     {
+      "label": "FY2006: Public Law 109-163",
+      "href": "/files/fy06-ndaa.pdf"
+     },
+     {
+      "label": "FY2005: Public Law 108-375",
+      "href": "/files/fy05-ndaa.pdf"
+     },
+     {
+      "label": "FY2004: Public Law 108-136",
+      "href": "/files/fy04-ndaa.pdf"
+     },
+     {
+      "label": "FY2003: Public Law 107-314",
+      "href": "/files/fy03-ndaa.pdf"
+     },
+     {
+      "label": "FY2002: Public Law 107-107",
+      "href": "/files/fy02-ndaa.pdf"
+     },
+     {
+      "label": "FY2001: Public Law 106-398",
+      "href": "/files/fy01-ndaa.pdf"
+     },
+     {
+      "label": "FY2000: Public Law 106-65",
+      "href": "/files/fy00-ndaa.pdf"
+     }
+    ],
+    "split": true
+   },
+   {
+    "title": "Court Decisions",
+    "items": [
+     {
+      "label": "Ohio Adjutant General v. FLRA (2023)",
+      "href": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/21-1454.html"
+     }
+    ]
+   }
+  ],
+  "tab": "Laws",
+  "note": "Selected laws and regulations that often affect National Guard technicians and other Title 5 employees. Not a complete list."
+ },
+ {
+  "id": "agency",
+  "title": "Agency Policies",
+  "groups": [
+   {
+    "title": "Department of Defense",
+    "href": "https://www.war.gov/",
+    "items": [
+     {
+      "head": "DoD Issuances",
+      "href": "https://www.esd.whs.mil/DD/DoD-Issuances/"
+     },
+     {
+      "label": "DoDD 1020.02E Civil Rights and EO (2025)",
+      "href": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/102002p.PDF"
+     },
+     {
+      "label": "DoDI 1035.01 Telework/Remote Work (2024)",
+      "href": "/files/dodi-1035-01-telework-remote-work-2024.pdf"
+     },
+     {
+      "label": "DoDI 1241.01 RC LOD and INCAP Pay (2016)",
+      "href": "/files/dodi-1241-01-reserve-component-medical-care-and-incapacitation-pay-for-line-of-duty-conditions.pdf"
+     },
+     {
+      "label": "DoDI 1400.25 Civilian Personnel",
+      "href": "https://www.esd.whs.mil/DD/DoD-Issuances/140025/"
+     },
+     {
+      "label": "Volume 591: Uniform Allowances (2024)",
+      "href": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/140025/140025_vol591.PDF",
+      "sub": 1
+     },
+     {
+      "label": "Reference Guide PT-837 (2018)",
+      "href": "/files/dod-uniform-allowance-rates-reference-guide-pt-837-2018.pdf",
+      "sub": 2
+     },
+     {
+      "label": "Volume 711: Labor-Management Relations",
+      "href": "/files/dodi-1400-25-vol-711-labor-management-relations.pdf",
+      "sub": 1
+     },
+     {
+      "label": "DoDM 5200.02 Personnel Security Program",
+      "href": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodm/520002m.pdf"
+     },
+     {
+      "label": "Financial Management Regulation (FMR)",
+      "href": "https://comptroller.war.gov/FMR/"
+     },
+     {
+      "label": "Volume 7A: Military Pay Policy",
+      "href": "https://comptroller.war.gov/Portals/45/documents/fmr/Volume_07a.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Chapter 57: Reserve Entitlements (2025)",
+      "href": "https://comptroller.war.gov/Portals/45/documents/fmr/current/07a/07a_57.pdf",
+      "sub": 2
+     },
+     {
+      "label": "Volume 8: Civilian Pay Policy",
+      "href": "https://comptroller.war.gov/Portals/45/documents/fmr/Volume_08.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Joint Travel Regulations (JTR)",
+      "href": "https://www.travel.dod.mil/Policy-Regulations/Joint-Travel-Regulations/"
+     },
+     {
+      "label": "Integrated Lodging Program Sites",
+      "href": "https://www.travel.dod.mil/Programs/Lodging/Integrated-Lodging-Program-Sites/",
+      "sub": 1
+     },
+     {
+      "head": "DCPAS Policy",
+      "href": "https://www.dcpas.osd.mil/"
+     },
+     {
+      "label": "Awards",
+      "href": "https://www.dcpas.osd.mil/policy/performance/awards"
+     },
+     {
+      "label": "Benefits",
+      "href": "https://www.dcpas.osd.mil/policy/benefits"
+     },
+     {
+      "label": "Compensation",
+      "href": "https://www.dcpas.osd.mil/policy/compensation/compensation"
+     },
+     {
+      "label": "Employment",
+      "href": "https://www.dcpas.osd.mil/policy/employment"
+     },
+     {
+      "label": "Furloughs",
+      "href": "https://www.dcpas.osd.mil/policy/compensation/furlough"
+     },
+     {
+      "label": "Leave and Hours of Work",
+      "href": "https://www.dcpas.osd.mil/policy/compensation/leavehoursofwork"
+     },
+     {
+      "label": "Night Pay vs Night Shift Differential",
+      "href": "/files/nightpayvsnightshiftdifferential.pdf"
+     },
+     {
+      "label": "Performance Management",
+      "href": "https://www.dcpas.osd.mil/policy/performancemanagement"
+     },
+     {
+      "label": "Retirement",
+      "href": "https://www.dcpas.osd.mil/policy/retirement"
+     },
+     {
+      "label": "Telework",
+      "href": "https://www.dcpas.osd.mil/policy/worklife/telework"
+     },
+     {
+      "label": "Telework and Remote Work FAQs (2026)",
+      "href": "/files/dod-telework-remote-work-faqs-2026-03.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Work-Life",
+      "href": "https://www.dcpas.osd.mil/policy/worklife"
+     }
+    ],
+    "split": true
+   },
+   {
+    "title": "Department of the Air Force",
+    "items": [
+     {
+      "head": "Air Force Instructions",
+      "href": "https://www.e-publishing.af.mil/"
+     },
+     {
+      "label": "DAFI 36-2606 Reenlistment (2024)",
+      "href": "https://static.e-publishing.af.mil/production/1/af_a1/publication/dafi36-2606/dafi36-2606.pdf"
+     },
+     {
+      "label": "DAFI 36-2903 Dress/Appearance (2024)",
+      "href": "https://static.e-publishing.af.mil/production/1/af_a1/publication/dafi36-2903/dafi36-2903.pdf"
+     },
+     {
+      "label": "Guidance Memo DAFGM 2026-02 (2026)",
+      "href": "https://www.af.mil/Portals/1/documents/2026SAF/DAFI_36_2903_DAFGM_2026_02_20260219.pdf",
+      "sub": 1
+     },
+     {
+      "label": "DAFI 36-2910 LOD/MEDCON/INCAP (2021)",
+      "href": "https://static.e-publishing.af.mil/production/1/af_a1/publication/dafi36-2910/dafi36-2910.pdf"
+     },
+     {
+      "label": "DAFMAN 16-1405 Personnel Security (2018)",
+      "href": "https://static.e-publishing.af.mil/production/1/saf_oc/publication/dodman5200.02_dafman16-1405/dodman5200.02_dafman16-1405.pdf"
+     },
+     {
+      "head": "Air National Guard Instructions"
+     },
+     {
+      "label": "ANGI 36-101 AGR Program (2022)",
+      "href": "https://static.e-publishing.af.mil/production/1/ang/publication/angi36-101/angi36-101.pdf"
+     },
+     {
+      "label": "ANGI 36-2001 Training/Op Support (2025)",
+      "href": "https://static.e-publishing.af.mil/production/1/ang/publication/angi36-2001/angi36-2001.pdf"
+     }
+    ],
+    "href": "https://www.e-publishing.af.mil/",
+    "split": true
+   },
+   {
+    "title": "Department of the Army",
+    "items": [
+     {
+      "label": "AR 58-1 Use of Motor Vehicles (2014)",
+      "href": "/files/ar-58-1-management-acquisition-and-use-of-motor-vehicles.pdf"
+     },
+     {
+      "label": "AR 95-2 Air Traffic Control (2026)",
+      "href": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=64645"
+     },
+     {
+      "label": "AR 135-18 AGR Program (2025)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN42904-AR_135-18-000-WEB-1.pdf"
+     },
+     {
+      "label": "AR 135-178 Enlisted Separations (2025)",
+      "href": "/files/ar-135-178-enlisted-administrative-separations.pdf"
+     },
+     {
+      "label": "AR 135-180 Non-Regular Retirement (2024)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN43635-AR_135-180-001-WEB-2.pdf"
+     },
+     {
+      "label": "AR 135-381 Incap Reserve Soldiers (2021)",
+      "href": "/files/ar-135-381-incap-of-reserve-component-soldiers.pdf"
+     },
+     {
+      "label": "AR 190-5 Motor Vehicle Traffic (2006)",
+      "href": "/files/ar-190-5-motor-vehicle-traffic-supervision.pdf"
+     },
+     {
+      "label": "AR 385-10 Safety and Health (2023)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN34981-AR_385-10-000-WEB-1.pdf"
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "AR 570-4 Manpower Management (2024)",
+      "href": "/files/ar-570-4-manpower-management.pdf"
+     },
+     {
+      "label": "AR 600-20 Army Command Policy (2026)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46266-AR_600-20-000-WEB-1.pdf"
+     },
+     {
+      "label": "AR 600-85 Substance Abuse (2024)",
+      "href": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1029227"
+     },
+     {
+      "label": "AR 670-1 Uniform Wear/Appearance (2025)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN30302-AR_670-1-001-WEB-3.pdf"
+     },
+     {
+      "label": "AR 690-610 Hours of Duty (2021)",
+      "href": "/files/ar-690-610-hours-of-duty-aws-and-holidays.pdf"
+     },
+     {
+      "label": "AR 690-752 Discipline/Adverse (2022)",
+      "href": "/files/ar-690-752-disciplinary-and-adverse-actions.pdf"
+     },
+     {
+      "label": "Army Directive 2026-18 (Rescinds Ch. 3)",
+      "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN47111-ARMY_DIR_2026-18-000-WEB-1.pdf",
+      "sub": 1
+     },
+     {
+      "label": "DA PAM 135-381 Incap Processing (2021)",
+      "href": "https://armypubs.army.mil/ProductMaps/PubForm/PAM.aspx"
+     }
+    ],
+    "href": "https://armypubs.army.mil/",
+    "split": true
+   },
+   {
+    "title": "National Guard Bureau",
+    "href": "https://www.ngbpmc.ng.mil/",
+    "items": [
+     {
+      "label": "CNGBI 1400.25A Technicians (2020)",
+      "href": "/files/cngbi-1400-25a-technician-and-civilian-personnel-policy-2020.pdf"
+     },
+     {
+      "label": "Vol 213: Excepted Service (2024)",
+      "href": "/files/cngbi-1400-25-vol-213-20240731.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 293: Supervisor Employee Folder",
+      "href": "/files/cngbi-1400-25-vol-293-20180725.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 303A: Mil Tech Compatibility (2023)",
+      "href": "/files/cngbi-1400-25-vol-303a-20230712.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 334: IPA Assignments (2026)",
+      "href": "/files/cngbi-1400-25-vol-334-20260528.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 400: HR Development",
+      "href": "/files/cngbi-1400-25-vol-400-20180905.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 431: Performance Appraisals",
+      "href": "/files/cngbi-1400-25-vol-431-20220120.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 451: Incentive Awards",
+      "href": "/files/cngbi-1400-25-vol-451-20181005.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 511: Position Classification",
+      "href": "/files/cngbi-1400-25-vol-511-20200630.pdf",
+      "sub": 1
+     },
+     {
+      "head": "NGB Memoranda",
+      "stack": true
+     },
+     {
+      "label": "NGB-DTM 1101.01 Telework (2023)",
+      "href": "https://www.ngbpmc.ng.mil/Portals/27/Publications/NGB-DTM/NGBDTM%201101.01_20230518p.pdf"
+     },
+     {
+      "label": "RIF Procedures Memo (NGB-J1-TN, 2020)",
+      "href": "/files/ngb-j1-tn-rif-procedures-20200414.pdf"
+     },
+     {
+      "col": 1
+     },
+     {
+      "label": "CNGBI 1400.25A, Continued"
+     },
+     {
+      "label": "Vol 575: Recruitment Incentives (2026)",
+      "href": "/files/cngbi-1400-25-vol-575-change-1-20260616.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 610: Hours of Work (2026)",
+      "href": "/files/cngbi-1400-25-vol-610-20260924.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 630: Absence and Leave",
+      "href": "/files/cngbi-1400-25-vol-630-20210423.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 715: Non-Disciplinary Actions",
+      "href": "/files/cngbi-1400-25-vol-715-20210915.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 752: Discipline/Adverse Action",
+      "href": "/files/cngbi-1400-25-vol-752-20211108.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 753: Adverse Action Appeals",
+      "href": "/files/cngbi-1400-25-vol-753-20200629.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 792: Substance Abuse",
+      "href": "/files/cngbi-1400-25-vol-792-20191105.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 800: Injury Compensation",
+      "href": "/files/cngbi-1400-25-vol-800-20180809.pdf",
+      "sub": 1
+     },
+     {
+      "label": "Vol 840: Phased Retirement",
+      "href": "/files/cngbi-1400-25-vol-840-20180725.pdf",
+      "sub": 1
+     }
+    ],
+    "split": true
+   },
+   {
+    "title": "Office of the Director of National Intelligence",
+    "items": [
+     {
+      "label": "DNI Security Policy",
+      "href": "https://www.dni.gov/index.php/ncsc-how-we-work/ncsc-security-executive-agent/ncsc-policy"
+     }
+    ]
+   }
+  ],
+  "tab": "Agency Policies"
+ },
+ {
+  "id": "more",
+  "title": "Federal Careers",
+  "groups": [
+   {
+    "title": "Federal Jobs",
+    "items": [
+     {
+      "label": "USAJOBS",
+      "href": "https://www.usajobs.gov/"
+     },
+     {
+      "label": "Feds Hire Vets (OPM)",
+      "href": "https://www.opm.gov/fedshirevets/"
+     },
+     {
+      "label": "Partnership for Public Service",
+      "href": "https://ourpublicservice.org/"
+     }
+    ]
+   }
+  ],
+  "tab": "Careers"
+ }
+]

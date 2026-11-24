@@ -1,0 +1,21 @@
+{
+ "_about": "Changes Ben approved for individual stories (applied by tools/import-posts.mjs). unlink: link targets to remove (the words stay); relink: old link -> new link; relabel: visible link text -> new text; note: a line shown at the top of the story.",
+ "6th-circuit-court-of-appeals-rules-wep-applies-to-dual-status-technicians": {
+  "approved": "Ben, Nov 20 2026",
+  "unlink": [
+   "https://www.ssa.gov/planners/retire/wep.html",
+   "https://www.ssa.gov/planners/retire/wep-chart.html"
+  ],
+  "note": "Update: WEP was repealed by the Social Security Fairness Act, signed January 5, 2025."
+ },
+ "explaining-the-8th-circuit-court-of-appeals-wep-decision": {
+  "approved": "Ben, Nov 20 2026 (our own copy of the Internet Archive PDF)",
+  "relink": {
+   "http://workerscompensationwatch.com/wp-content/uploads/2012/02/NOSSCR-Article.pdf": "/files/nosscr-2012-wep-history-moore.pdf"
+  },
+  "note": "Update: WEP was repealed by the Social Security Fairness Act, signed January 5, 2025.",
+  "relabel": {
+   "http://workerscompensationwatch.com/wp-content/uploads/2012/02/NOSSCR-Article.pdf": "“When Did I Get My Windfall?” Social Security Forum, January 2012 (PDF)"
+  }
+ }
+}

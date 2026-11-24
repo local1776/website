@@ -1,0 +1,62 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicStats/newsIndex",
+ "fields": {
+  "updatedAt": {
+   "timestampValue": "2026-11-22T15:00:00Z"
+  },
+  "stories": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "slug": {
+         "stringValue": "test-story-do-not-publish"
+        },
+        "title": {
+         "stringValue": "sample story for the website importer"
+        },
+        "excerpt": {
+         "stringValue": "This is a made-up story so the website can build its importer against the real shape."
+        },
+        "date": {
+         "timestampValue": "2026-11-22T15:00:00Z"
+        },
+        "kind": {
+         "stringValue": "ours"
+        },
+        "tags": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "Representation"
+           },
+           {
+            "stringValue": "Contracts"
+           }
+          ]
+         }
+        },
+        "image": {
+         "stringValue": "/img/posts/disturbing-allegations-at-sc-army-national-guard-aasf-1.jpg"
+        },
+        "imageAlt": {
+         "stringValue": "A made-up photo"
+        }
+       }
+      }
+     }
+    ]
+   }
+  },
+  "withdrawn": {
+   "arrayValue": {
+    "values": [
+     {
+      "stringValue": "an-old-withdrawn-story"
+     }
+    ]
+   }
+  }
+ }
+}

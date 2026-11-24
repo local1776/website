@@ -1,0 +1,110 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicAgencies/cases",
+ "fields": {
+  "updatedAt": {
+   "timestampValue": "2026-11-22T18:00:00Z"
+  },
+  "cases": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "c1"
+        },
+        "agency": {
+         "stringValue": "LA-ARMY"
+        },
+        "type": {
+         "stringValue": "Grievance"
+        },
+        "subject": {
+         "stringValue": "Sample: Annual leave denied during drill weekend"
+        },
+        "filed": {
+         "stringValue": "2026-11-03"
+        },
+        "status": {
+         "stringValue": "Open"
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "c2"
+        },
+        "agency": {
+         "stringValue": "MI"
+        },
+        "type": {
+         "stringValue": "Unfair Labor Practice"
+        },
+        "subject": {
+         "stringValue": "Sample: Schedule change without notice"
+        },
+        "filed": {
+         "stringValue": "2026-10-14"
+        },
+        "status": {
+         "stringValue": "Pending Decision"
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "c3"
+        },
+        "agency": {
+         "stringValue": "SC-AIR"
+        },
+        "type": {
+         "stringValue": "MSPB Appeal"
+        },
+        "subject": {
+         "stringValue": "Sample: Removal action"
+        },
+        "filed": {
+         "stringValue": "2026-09-28"
+        },
+        "status": {
+         "stringValue": "Open"
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "c4"
+        },
+        "agency": {
+         "stringValue": "CA"
+        },
+        "type": {
+         "stringValue": "Grievance"
+        },
+        "subject": {
+         "stringValue": "Sample: closed case (should not show)"
+        },
+        "filed": {
+         "stringValue": "2026-06-01"
+        },
+        "status": {
+         "stringValue": "Closed"
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

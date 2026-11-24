@@ -1,0 +1,224 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicAgencies/workSites",
+ "fields": {
+  "updatedAt": {
+   "timestampValue": "2026-11-22T18:00:00Z"
+  },
+  "sites": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "ws1"
+        },
+        "agency": {
+         "stringValue": "LA-ARMY"
+        },
+        "name": {
+         "stringValue": "FMS 6"
+        },
+        "place": {
+         "stringValue": "Jena"
+        },
+        "street": {
+         "stringValue": "100 Sample Armory Rd"
+        },
+        "building": {
+         "stringValue": "Bldg 1"
+        },
+        "city": {
+         "stringValue": "Jena"
+        },
+        "state": {
+         "stringValue": "LA"
+        },
+        "zip": {
+         "stringValue": "71342"
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "lat": {
+         "nullValue": null
+        },
+        "lng": {
+         "nullValue": null
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "ws2"
+        },
+        "agency": {
+         "stringValue": "LA-ARMY"
+        },
+        "name": {
+         "stringValue": "FMS 8"
+        },
+        "place": {
+         "stringValue": "Baton Rouge"
+        },
+        "street": {
+         "stringValue": "200 Sample Ave"
+        },
+        "building": {
+         "stringValue": ""
+        },
+        "city": {
+         "stringValue": "Baton Rouge"
+        },
+        "state": {
+         "stringValue": "LA"
+        },
+        "zip": {
+         "stringValue": "70807"
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "lat": {
+         "nullValue": null
+        },
+        "lng": {
+         "nullValue": null
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "ws3"
+        },
+        "agency": {
+         "stringValue": "LA-ARMY"
+        },
+        "name": {
+         "stringValue": "Sample New Site"
+        },
+        "place": {
+         "stringValue": "Alexandria"
+        },
+        "street": {
+         "stringValue": "300 Sample St"
+        },
+        "building": {
+         "stringValue": ""
+        },
+        "city": {
+         "stringValue": "Alexandria"
+        },
+        "state": {
+         "stringValue": "LA"
+        },
+        "zip": {
+         "stringValue": "71301"
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "lat": {
+         "doubleValue": 31.3113
+        },
+        "lng": {
+         "doubleValue": -92.4451
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "ws4"
+        },
+        "agency": {
+         "stringValue": "LA-AIR"
+        },
+        "name": {
+         "stringValue": "159th FW"
+        },
+        "place": {
+         "stringValue": "NAS JRB New Orleans"
+        },
+        "street": {
+         "stringValue": "400 Sample Dr"
+        },
+        "building": {
+         "stringValue": "Bldg 4"
+        },
+        "city": {
+         "stringValue": "Belle Chasse"
+        },
+        "state": {
+         "stringValue": "LA"
+        },
+        "zip": {
+         "stringValue": "70037"
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "lat": {
+         "nullValue": null
+        },
+        "lng": {
+         "nullValue": null
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "ws5"
+        },
+        "agency": {
+         "stringValue": "LA-ARMY"
+        },
+        "name": {
+         "stringValue": "UTES Villere (South)"
+        },
+        "place": {
+         "stringValue": "New Orleans"
+        },
+        "street": {
+         "stringValue": ""
+        },
+        "building": {
+         "stringValue": ""
+        },
+        "city": {
+         "stringValue": "New Orleans"
+        },
+        "state": {
+         "stringValue": "LA"
+        },
+        "zip": {
+         "stringValue": ""
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "lat": {
+         "nullValue": null
+        },
+        "lng": {
+         "nullValue": null
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

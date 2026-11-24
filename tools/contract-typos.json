@@ -1,0 +1,21 @@
+{
+ "_about": "Typos fixed in the contract text on the web pages (Ben, Nov 21 2026: fix typos as long as they don't change the meaning). The signed PDF is never changed. Each pair is an exact phrase → its fix, applied by tools/import-contracts.mjs to every contract.",
+ "fixes": [
+  ["Blacks' Law Dictionary", "Black's Law Dictionary"],
+  ["Blacks’ Law Dictionary", "Black's Law Dictionary"],
+  ["(CFR’s)", "(CFRs)"],
+  ["(i.e., lose, torn", "(i.e., loose, torn"],
+  ["painting, scrapping, or minor demolition", "painting, scraping, or minor demolition"],
+  ["employee has acknowledge said notice", "employee has acknowledged said notice"],
+  ["the Agency will insure the work", "the Agency will ensure the work"],
+  ["Undue hardship means then Agency", "Undue hardship means the Agency"],
+  ["unsheltered conditions during period of extreme", "unsheltered conditions during periods of extreme"],
+  ["beginning of their shift of the day of the", "beginning of their shift on the day of the"],
+  ["responsible with oversite", "responsible with oversight"],
+  ["oversite", "oversight"],
+  ["actual enroute travel", "actual en route travel"],
+  ["enroute", "en route"],
+  ["the wellbeing of its employees", "the well-being of its employees"],
+  ["are governed by 5 CFR Part 1614", "are governed by 29 CFR Part 1614"]
+ ]
+}

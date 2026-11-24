@@ -1,0 +1,4 @@
+{
+ "_about": "Notes shown beside a contract section (Ben, Nov 21 2026: explainers, what it meant when we negotiated it, cases and grievances). Each note: units = list of unit codes (or \"all\"), section = \"10.1\", kind = explain | intent | case, title (optional), text, date and outcome (optional, for cases: subject only, never an employee's name), draft = true to show only in a build run with --drafts. Later the Union App sends the cases.",
+ "notes": []
+}

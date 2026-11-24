@@ -1,0 +1,64 @@
+{
+  "_note": "MADE-UP sample (Ben, Nov 21 2026): Air Guard technician still on probation, one topic. Not a real person.",
+  "id": "R-2026-0043",
+  "submittedAt": "2026-11-21T19:05:00Z",
+  "agency": "SC-AIR",
+  "fields": {
+    "firstName": "Marcus",
+    "lastName": "Reed",
+    "email": "marcus.reed@example.com",
+    "phone": "(803) 555-0177",
+    "street": "27 Shady Grove Lane",
+    "city": "Eastover",
+    "stateZip": "SC 29044",
+    "positionTitle": "Aircraft Mechanic",
+    "grade": "WG-8852-10",
+    "dutyLocation": "McEntire Joint National Guard Base",
+    "workSection": "Aircraft Maintenance Squadron",
+    "militaryUnit": "169th Maintenance Squadron",
+    "mosAfsc": "2A671",
+    "supervisorName": "SMSgt Alan Price",
+    "hireDate": "2026-03-02",
+    "scdLeave": "2026-03-02",
+    "probationEnds": "2027-03-02",
+    "signature": "Marcus Reed"
+  },
+  "radios": {
+    "status": "Title 32",
+    "textOk": "yes",
+    "probation": "yes",
+    "supervisorRole": "no",
+    "over20": "no",
+    "recordsAuth": "yes"
+  },
+  "checks": [
+    "voluntary",
+    "merits",
+    "costs",
+    "privacy"
+  ],
+  "topics": [
+    {
+      "key": "discipline",
+      "boxes": [
+        "discipline: Letter of Reprimand"
+      ],
+      "radios": {
+        "stage": "decided",
+        "talkedMgmt": "no"
+      },
+      "fields": {
+        "receivedDate": "2026-11-18",
+        "outcome": "Take the letter of reprimand out of my file."
+      },
+      "incidents": [
+        {
+          "date": "2026-11-18",
+          "ongoing": false,
+          "what": "I was given a letter of reprimand for leaving a tool in a work area during an inspection. The tool was signed out to another mechanic on the shift, and I was not on the aircraft that day."
+        }
+      ],
+      "filings": []
+    }
+  ]
+}

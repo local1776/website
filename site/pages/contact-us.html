@@ -1,0 +1,90 @@
+<!--page {"title": "Contact Us", "nav": "contact",
+ "description": "Contact LIUNA Local 1776: phone, fax, email and mailing address, our full-time staff, and the representatives and stewards for each state and territory."} -->
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h1>Contact Local 1776</h1>
+    <p class="deck">Call, email or write to us, or reach the representative for your state or territory directly. {{IF:representation}}If you need help with a workplace matter, the fastest route is a <a href="/assistance-request-portal">request for help</a>.{{ELSE}}Need help with a workplace matter now? Deadlines can be short: call us or <a href="#message">send us a message</a>.{{END}}</p>
+    <div class="stats stack">
+      <div class="stat small"><b><a href="tel:+18005695861">1 (800) 569-5861</a></b><span>Telephone, toll-free in the U.S.</span></div>
+      <div class="stat small"><b>1 (888) 506-6082</b><span>Fax</span></div>
+      <div class="stat small"><b><a href="mailto:contact_us@local1776.org">Email us</a></b><span>contact_us@local1776.org</span></div>
+      <div class="stat small"><b>PO Box 1794</b><span>Abita Springs, LA 70420</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="staff">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Full-Time Staff</div><h2>The People Who Run Local 1776</h2></div>
+    <div class="staff">
+      <article class="person">
+        <div class="role">Business Manager</div>
+        <h3>Ben Banchs</h3>
+        <a class="mail" href="mailto:bbanchs@local1776.org">bbanchs@local1776.org</a>
+        <p>Mr. Banchs joined LIUNA in 2005. He has served as Business Manager and Secretary-Treasurer of Local 1776 since December 2010.</p>
+        <details>
+          <summary>Experience</summary>
+          <dl class="cv">
+            <div><dt>Civilian</dt>
+              <dd><span>F-15 Electronics Integrated</span><span>Systems Mechanic</span><small>Louisiana Air National Guard &middot; 2003&ndash;2009</small></dd>
+              <dd><span>Labor Relations Specialist</span><small>Louisiana National Guard &middot; 2009&ndash;2010</small></dd></div>
+            <div><dt>Military</dt>
+              <dd><span>Master Sergeant (E-7), retired</span><small>Louisiana Air National Guard &middot; 1991&ndash;2018</small></dd>
+              <dd><span>F-15 Armament Systems</span><small>1991&ndash;2003</small></dd>
+              <dd><span>F-15 Avionics Systems</span><small>2003&ndash;2018</small></dd></div>
+            <div><dt>Education</dt>
+              <dd><span>BA, Communications</span><small>Arizona State University</small></dd></div>
+          </dl>
+        </details>
+      </article>
+      <article class="person">
+        <div class="role">Assistant Business Manager</div>
+        <h3>Ja&rsquo;Net Vallotton</h3>
+        <a class="mail" href="mailto:jvallotton@local1776.org">jvallotton@local1776.org</a>
+        <p>Ms. Vallotton joined LIUNA in 2007. She has served as Mr. Banchs&rsquo; assistant and as Local 1776&rsquo;s Recording Secretary since January 2015.</p>
+        <details>
+          <summary>Experience</summary>
+          <dl class="cv">
+            <div><dt>Civilian</dt>
+              <dd><span>Supply Tech / HAZMAT Specialist</span><small>California Army National Guard &middot; 2007&ndash;2012</small></dd></div>
+            <div><dt>Military</dt>
+              <dd><span>Construction Equipment Mechanic (62B)</span><small>U.S. Army &middot; 1998&ndash;2001</small></dd>
+              <dd><span>Sergeant (E-5), retired</span><small>California Army National Guard &middot; 2001&ndash;2019</small></dd>
+              <dd><span>Wheeled Vehicle Repairer (91B)</span><span>Motor Transport Operator (88M)</span></dd>
+              <dd><span>Operation Iraqi Freedom</span><small>OIF IV&ndash;V</small></dd></div>
+          </dl>
+        </details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="representatives">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Representatives and Stewards</div><h2>Your State or Territory</h2></div>
+    {{REPS}}
+  </div>
+</section>
+
+<section class="sec" id="message">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Send a Message</div><h2>Write to Us</h2></div>
+    <p class="sec-deck">{{IF:representation}}For general questions. To ask for representation on a workplace matter, use the <a href="/assistance-request-portal">request for help</a> instead so we get the details we need.{{ELSE}}For questions, or to tell us about a problem at work. Online requests for representation and uniforms are coming soon.{{END}}</p>
+    {{PRIVACY:send}}
+    <form class="form" id="contactForm" data-form="contact" novalidate>
+      <div class="fields">
+        <div class="field"><label for="cf-first">First Name <i>*</i></label><input id="cf-first" name="firstName" autocomplete="given-name" maxlength="60" required></div>
+        <div class="field"><label for="cf-last">Last Name <i>*</i></label><input id="cf-last" name="lastName" autocomplete="family-name" maxlength="60" required></div>
+        <div class="field"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30"></div>
+        <div class="field"><label for="cf-email">Email <i>*</i></label><input id="cf-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+        <div class="field full"><label for="cf-msg">Message <i>*</i></label><textarea id="cf-msg" name="message" maxlength="4000" required></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="cf-web">Leave blank</label><input id="cf-web" name="website" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <div class="form-foot">
+        {{SUBMIT:send|Send}}
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>

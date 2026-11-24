@@ -1,0 +1,21 @@
+# Copied off Duda for reference (220 MB) - kept on this PC, not in the site repo
+backup/
+# Build output - made by tools/build.mjs
+dist/
+# Screenshots I take while working
+previews/
+node_modules/
+tools/.resize-list.txt
+
+# Real filled-out forms Ben dropped in as samples - personal data, never commit
+/*.pdf
+# (the ones Ben already dropped in now live in private/originals/)
+
+# Samples built from real people's requests - personal data, never commit
+/private/
+
+# Finished things for Ben to open (sample PDFs etc.) - may hold personal data, never commit
+/review/
+
+# The clean public copy pushed to github.com/local1776/website (tools/publish.mjs) - never commit it here
+/publish/

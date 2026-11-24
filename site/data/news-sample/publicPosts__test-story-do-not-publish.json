@@ -1,0 +1,71 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicPosts/test-story-do-not-publish",
+ "fields": {
+  "slug": {
+   "stringValue": "test-story-do-not-publish"
+  },
+  "title": {
+   "stringValue": "sample story for the website importer"
+  },
+  "subtitle": {
+   "stringValue": "A made-up story with every field filled in"
+  },
+  "excerpt": {
+   "stringValue": "This is a made-up story so the website can build its importer against the real shape."
+  },
+  "date": {
+   "timestampValue": "2026-11-22T15:00:00Z"
+  },
+  "updated": {
+   "timestampValue": "2026-11-22T15:00:00Z"
+  },
+  "author": {
+   "stringValue": "Business Manager"
+  },
+  "kind": {
+   "stringValue": "ours"
+  },
+  "image": {
+   "mapValue": {
+    "fields": {
+     "url": {
+      "stringValue": "/img/posts/disturbing-allegations-at-sc-army-national-guard-aasf-1.jpg"
+     },
+     "alt": {
+      "stringValue": "A made-up photo"
+     },
+     "caption": {
+      "stringValue": "Caption text"
+     },
+     "credit": {
+      "stringValue": "Photo credit"
+     },
+     "width": {
+      "integerValue": "1600"
+     },
+     "height": {
+      "integerValue": "1067"
+     }
+    }
+   }
+  },
+  "body": {
+   "stringValue": "<p>First paragraph.</p><h2>A Heading</h2><ul><li>One</li><li>Two</li></ul><p><a href=\"https://www.local1776.org\">A link</a> and <a href=\"https://example.com\">an outside link</a>.</p><script>alert(1)</script><p onclick=\"x()\">Cleaned: no script, no onclick, <a href=\"javascript:alert(1)\">no javascript link</a>.</p>"
+  },
+  "tags": {
+   "arrayValue": {
+    "values": [
+     {
+      "stringValue": "Representation"
+     },
+     {
+      "stringValue": "Contracts"
+     }
+    ]
+   }
+  },
+  "status": {
+   "stringValue": "published"
+  }
+ }
+}

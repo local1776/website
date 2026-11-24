@@ -1,0 +1,100 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicLobbying/positions",
+ "fields": {
+  "updatedAt": {
+   "stringValue": "2026-11-21T18:00:00Z"
+  },
+  "positions": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "billId": {
+         "stringValue": "hr2550-119"
+        },
+        "congress": {
+         "integerValue": "119"
+        },
+        "label": {
+         "stringValue": "H.R. 2550"
+        },
+        "title": {
+         "stringValue": "Protect America’s Workforce Act"
+        },
+        "position": {
+         "stringValue": "support"
+        },
+        "line": {
+         "stringValue": "Cancels the 2025 executive orders that took bargaining rights from more than a million federal workers."
+        },
+        "url": {
+         "stringValue": "https://www.congress.gov/bill/119th-congress/house-bill/2550"
+        },
+        "since": {
+         "stringValue": "2025-04-15"
+        },
+        "letters": {
+         "arrayValue": {
+          "values": [
+           {
+            "mapValue": {
+             "fields": {
+              "date": {
+               "stringValue": "2025-12-08"
+              },
+              "title": {
+               "stringValue": "Letter to the House in Support of H.R. 2550"
+              },
+              "pdfUrl": {
+               "stringValue": "/files/sample-letter.pdf"
+              }
+             }
+            }
+           }
+          ]
+         }
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "billId": {
+         "stringValue": "s4784-119"
+        },
+        "congress": {
+         "integerValue": "119"
+        },
+        "label": {
+         "stringValue": "S. 4784"
+        },
+        "title": {
+         "stringValue": "Sample: Senate Defense Bill, Section 513"
+        },
+        "position": {
+         "stringValue": "oppose"
+        },
+        "line": {
+         "stringValue": "Sample line: section 513 would phase out National Guard technicians. Shown only on the preview."
+        },
+        "url": {
+         "stringValue": ""
+        },
+        "since": {
+         "stringValue": "2026-07-01"
+        },
+        "letters": {
+         "arrayValue": {
+          "values": []
+         }
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

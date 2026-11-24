@@ -1,0 +1,37 @@
+<!--page {"title": "Join Local 1776", "nav": "about",
+ "description": "Join LIUNA Local 1776: choose Regular or Retired membership and sign up for monthly dues with PayPal."} -->
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Membership</div>
+    <h1>Join LIUNA Local 1776</h1>
+    <p class="deck g-wide">Local 1776 represents U.S. government employees, including Department of Defense civilians and National Guard technicians. Joining puts a union behind you at work and in Congress.</p>
+  </div>
+</header>
+
+<section class="sec" id="dues">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Monthly Dues</div><h2>Choose Your Membership Type</h2></div>
+    <!-- PayPal's hosted Subscribe button from the old site (same button id and option names). Each card's Select button
+         sends its own choice (os0), so PayPal opens with that membership type already picked. -->
+    <form class="join-cards" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="Y32ZTFE3774W4">
+      <input type="hidden" name="on0" value="Choose Your Membership Category">
+      <input type="hidden" name="currency_code" value="USD">
+      <div class="join-card">
+        <span class="lab">Regular Member</span>
+        <b>$58.50</b><em>Every Month</em>
+        <p>For employees working in a job Local 1776 represents, such as Department of Defense civilians and National Guard technicians.</p>
+        <button type="submit" class="tbtn" name="os0" value="Regular Member" aria-label="Select Regular Member">Select</button>
+      </div>
+      <div class="join-card">
+        <span class="lab">Retired Member</span>
+        <b>$29.25</b><em>Every Month</em>
+        <p>For members who have retired from federal service and want to stay part of Local 1776.</p>
+        <button type="submit" class="tbtn" name="os0" value="Retired Member" aria-label="Select Retired Member">Select</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{{SECTION:local-1776-terms-of-membership#costs}}

@@ -1,0 +1,116 @@
+{
+ "name": "projects/liuna-local-1776/databases/(default)/documents/publicAgencies/representatives",
+ "fields": {
+  "updatedAt": {
+   "timestampValue": "2026-11-22T18:00:00Z"
+  },
+  "reps": {
+   "arrayValue": {
+    "values": [
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "r1"
+        },
+        "name": {
+         "stringValue": "Ben Banchs"
+        },
+        "title": {
+         "stringValue": "Business Manager"
+        },
+        "agencies": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "ALL"
+           }
+          ]
+         }
+        },
+        "phone": {
+         "stringValue": "(800) 569-5861 ext. 1001"
+        },
+        "email": {
+         "stringValue": "bbanchs@local1776.org"
+        },
+        "order": {
+         "integerValue": "1"
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "r2"
+        },
+        "name": {
+         "stringValue": "Sample Assistant"
+        },
+        "title": {
+         "stringValue": "Assistant Business Manager"
+        },
+        "agencies": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "ALL"
+           }
+          ]
+         }
+        },
+        "phone": {
+         "stringValue": "(800) 569-5861"
+        },
+        "email": {
+         "stringValue": "sample@local1776.org"
+        },
+        "order": {
+         "integerValue": "2"
+        }
+       }
+      }
+     },
+     {
+      "mapValue": {
+       "fields": {
+        "id": {
+         "stringValue": "r3"
+        },
+        "name": {
+         "stringValue": "Sample Steward"
+        },
+        "title": {
+         "stringValue": "Steward"
+        },
+        "agencies": {
+         "arrayValue": {
+          "values": [
+           {
+            "stringValue": "LA-ARMY"
+           },
+           {
+            "stringValue": "LA-AIR"
+           }
+          ]
+         }
+        },
+        "phone": {
+         "stringValue": ""
+        },
+        "email": {
+         "stringValue": "sample.steward@local1776.org"
+        },
+        "order": {
+         "integerValue": "10"
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,635 @@
+{
+  "_about": {
+    "source": "Plain-text extracts of each signed CBA in this folder (<CODE>.txt). ARNG.txt ignored as instructed.",
+    "dayRule": "Every contract's Article 2 says: \"Unless otherwise stated, all timelines are calculated in calendar days\". Days below are calendar days unless marked business days.",
+    "quotes": "Quotes are exact contract wording with PDF line breaks joined by spaces; '...' marks words left out."
+  },
+
+  "CA": {
+    "agency": "The Adjutant General of the California National Guard (CANG) - California Army National Guard (CAARNG) unit",
+    "contract": "Executed December 6, 2021; approved by DoD January 5, 2022",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required for proper uniform wear IAW military regulations (10.1(3)).",
+      "itemDetail": "Not stated beyond 'all accessories required for proper uniform wear IAW military regulations'. Safety and protective clothing/equipment also owed IAW Section 11.3 (10.1(4)); outdoor workers get inclement-weather protective clothing (11.3(6)).",
+      "replacement": "Not stated for the military uniform. (Protective footwear: replaced on fair wear and tear no later than 30 days after a request, 11.3(3)(b).)",
+      "eligible": "Dual status technicians (DSTs).",
+      "requestProcedure": {
+        "to": "not stated",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "not stated",
+        "agencyDeadline": "not stated"
+      }
+    },
+    "preconditions": {
+      "requestFirst": "not stated",
+      "waitBeforeGrievance": "not stated",
+      "informalStep": "Encouraged, not required: employees 'should attempt to seek informal resolution ... with their first-line supervisor ... however, this is not a requirement' (12.1(2)).",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union ('grievances filed by or on behalf of employees, or by the Union against the Agency', 12.4(4)); 'Parties' includes the Union and employees (12.1(5)). Employee may decline Union representation (12.1(3)); Union may be present at all proceedings (12.1(4)).",
+      "filingDeadline": "60 days after the occurrence, or 60 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "The lowest level of the Agency with the ability to resolve the matter (12.4(1)).",
+      "steps": [
+        "Step 1: aggrieved party advises the Agency of intent to grieve; Agency forwards to the representative able to provide relief; Agency has 15 days (12.4(4)(a)).",
+        "Step 2 (Adjutant General Review): petition TAG; notice must be served no later than 60 days after Step 1 ends; TAG decides within 30 days of receipt (12.4(4)(b)).",
+        "Arbitration: Union only; invoke within 30 days of the end of TAG Review (12.4(4)(b)(3), 12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. Step 2 (TAG): 30 days. Agency's failure to meet a time limit lets the grievant advance to the next step (12.4(3)).",
+      "skipToStep2": "Only for financial hardship (14+ days of lost income) (12.3(3), 12.4(4)). No 'contract matters go straight to TAG' rule in this contract.",
+      "form": "Appendix D, 'CA National Guard Grievance Form' (employee name/phone, duty location, work section, narrative incl. Article and Section, proposed resolution, union representation choice, signature, Step 1-3 boxes).",
+      "formRequired": "not stated (Article 12 never refers to Appendix D).",
+      "requiredContents": "not stated in Article 12 (the Appendix D form asks for the items above).",
+      "delivery": "not stated ('advise the Agency of their intent'); email: not stated.",
+      "arbitration": "Only the Union may invoke (12.4(4)(b)(3)); within 30 days of the end of TAG Review, requesting 7 names from FMCS and giving the Agency a copy of the request and list within the same 30 days (12.6(1)-(2))."
+    },
+    "notes": "No request procedure, no timeline and no grievance clause in 10.1 - the obligation is just '4 sets ... and all accessories'. 11.3(6) and 10.1(4) point at each other for inclement-weather gear (circular reference). The Appendix D form shows three steps although Article 12 has two (Step 1 and TAG Review).",
+    "quotes": {
+      "10.1(1)": "Dual status technicians (DSTs) will wear the military uniform IAW federal law, US Army regulations, and this Agreement.",
+      "10.1(3)": "Employees receive their normal issue of military apparel through their membership in the CAARNG. The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations.",
+      "10.1(4)": "In addition to the items required in Paragraph 3, the Agency will provide DSTs with safety and protective clothing/equipment IAW Section 11.3.",
+      "11.3(6)": "In addition to the protective clothing required in Paragraph 4, for employees whose duties require them to work outdoors in any capacity, the Agency will provide protective clothing items for inclement weather conditions IAW Section 10.1(4).",
+      "12.1(2)": "Employees should attempt to seek informal resolution of workplace matters directly with their first-line supervisor in lieu of invoking the grievance process; however, this is not a requirement.",
+      "12.4(1)": "Notwithstanding Section 12.3(3), a grievance must be submitted to the lowest level of the Agency with the ability to resolve the matter.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than sixty (60) days after the occurrence of a grievable matter or incident, or no later than sixty (60) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(a)(1)": "The aggrieved party shall advise the Agency of their intent to initiate the grievance process. The timeline for resolution begins upon notice being served.",
+      "12.4(4)(a)(4)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant to proceed to Step 2. Notice at Step 2 must be served not later than sixty (60) days after conclusion of Step 1.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have thirty (30) days from conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  },
+
+  "GU": {
+    "agency": "The Adjutant General of the Guam National Guard (GUNG)",
+    "contract": "Executed April 20, 2022; effective May 21, 2022",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations; DSTs get priority over other personnel for issue and replacement (10.1(3)).",
+      "itemDetail": "Uniforms 'ready-to-wear' with emblems/patches/ribbons, nametags/tapes, insignia; all other accessories (undershirts, socks, ties, gloves, shoes/boots, hats, etc.); cold and foul weather gear 'as provided in Section 11.3(5)' (10.1(3)(a)-(c)).",
+      "replacement": "Fair wear and tear. Employees 'highly encouraged' to get replacements as soon as an item becomes unserviceable; those who wait until the whole stock is unserviceable may face delays and may have to buy their own (10.1(3)(d)).",
+      "eligible": "Dual status technicians (DSTs) - Army and Air ('US Army and Air Force regulations', 10.1(1)).",
+      "requestProcedure": {
+        "to": "Orders go 'through the Agency to either their military unit of assignment, to the Central Issuing Facility (CIF), or to another Agency section that is responsible for executing the Agency's supply system for uniform issue (e.g., G4)' (10.1(4)(a)(1)).",
+        "inWriting": "not stated ('submit a request' / 'submit orders').",
+        "form": "not stated",
+        "window": "The annual 30-day FEHB Open Season is the normal request cycle (10.1(4)(a)). Out-of-cycle requests allowed at any time when an item becomes damaged or unserviceable while performing assigned duties (10.1(4)(b)). Those who miss the cycle 'may be responsible for purchasing their own items'.",
+        "agencyDeadline": "Agency reviews and places the order 'as soon as possible, but no later than thirty (30) days after the uniform items were requested' (10.1(4)(a)(2)). Employee must confirm order status no later than 60 days after the order is placed (10.1(4)(a)(3)). If items are not expected within 90 days of the order, or 90 days have passed, 'the Agency can secure the uniform items through alternate means' (10.1(4)(a)(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes in practice - the contract sets a request process (Open Season or out-of-cycle) and says a grievance 'arising from this Section' compels the Agency 'to provide the requested items' (10.1(4)(c)).",
+      "waitBeforeGrievance": "No waiting period is stated as a condition of filing. Timed duties a grievance can rest on: order placed within 30 days of the request; 90 days after the order, alternate means ('can').",
+      "informalStep": "not stated",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(5), 12.4(4)).",
+      "filingDeadline": "60 days after the occurrence, or 60 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Uniform grievances go straight to Step 2, Adjutant General Review: 10.1(4)(c) says file 'IAW Section 12.4(b)'; 12.2(2) says contract-covered matters are filed at 12.4(4)(b).",
+      "steps": [
+        "Step 1 (skipped for contract matters): advise the Agency of intent; Agency has 7 days (12.4(4)(a)).",
+        "Step 2 (Adjutant General Review): petition TAG; TAG decides within 15 days of receipt (12.4(4)(b)).",
+        "Arbitration: Union only; invoke within 90 days of the end of TAG Review (12.4(4)(b)(3), 12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 7 days. TAG: 15 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "Appendix D, 'GU National Guard Grievance Form' (same fields as the other contracts).",
+      "formRequired": "not stated (Article 12 does not refer to Appendix D).",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "not stated ('petition the Adjutant General for relief'; 'notice being served to the Agency'); email: not stated.",
+      "arbitration": "Union only; 90 days from the end of TAG Review; FMCS list of 7, copy to the Agency within the same 90 days (12.6(1)-(2))."
+    },
+    "notes": "One of three contracts (with NV, UT) with the Open Season request cycle and an express uniform-grievance clause. 10.1(3)(c) cites 11.3(5) for cold/foul weather gear, but 11.3(5) is the hot-weather layering rule; inclement-weather clothing is 11.3(6). 11.3(8): 'The Agency shall reimburse an employee who expends personal funds because of the Agency's failure to comply with this Section' - this covers Section 11.3 items; no matching reimbursement clause in 10.1. Guam's Agency deadlines are the shortest of the Open Season group (90 days vs 120 in NV/UT) and its alternate-means clause says 'can' (NV/UT: 'should').",
+    "quotes": {
+      "10.1(1)": "Dual status technicians (DSTs) will wear the military uniform IAW federal law, US Army and Air Force regulations, and this Agreement.",
+      "10.1(3)": "The Agency shall prioritize DSTs over other personnel for the issue and replacement of uniforms. DSTs shall be provided with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations as follows:",
+      "10.1(3)(a)": "Uniforms will be provided `ready-to-wear' to include emblems/patches/ribbons, nametags/tapes, insignia, etc. as required by regulations.",
+      "10.1(3)(b)": "All other clothing accessories such as undershirts and socks, ties, gloves, shoes/boots, hats, etc. as required by regulations.",
+      "10.1(3)(c)": "Cold and foul weather gear as provided in Section 11.3(5).",
+      "10.1(3)(d)": "Items shall be replaced on a fair wear and tear basis. Employees are highly encouraged to procure fair wear and tear replacement items as soon as the item becomes unserviceable. Employees who delay procuring replacement items until their entire stock of uniforms is unserviceable, they may experience delays in having items issued and may become responsible for purchasing their own items in order to comply with their requirement to report to work in the appropriate duty uniform.",
+      "10.1(4)": "Employees receive their normal issue of military apparel through their membership in the GUNG. The Agency shall provide a standardized system to allow DSTs to be issued uniform items and accessories. The following process will be observed when requesting uniform items, to include items required by Section 11.3:",
+      "10.1(4)(a)": "DSTs shall submit a request for uniform items and accessories during the annual thirty (30) day FEHB Open Season period. This period shall serve as the normal cycle for employees to request uniform items in order to ensure they have a full complement of uniforms IAW Section 10.1(3) and 11.3.",
+      "10.1(4)(a)(1)": "Employees will submit orders for required uniform items through the Agency to either their military unit of assignment, to the Central Issuing Facility (CIF), or to another Agency section that is responsible for executing the Agency's supply system for uniform issue (e.g., G4).",
+      "10.1(4)(a)(2)": "The order will be reviewed by the Agency to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than thirty (30) days after the uniform items were requested.",
+      "10.1(4)(a)(3)": "As soon as possible, but no later than sixty (60) days after placing an order, the employee shall confirm the status of their uniform order with the Agency, to include the expected date of issue.",
+      "10.1(4)(a)(4)": "If the uniform items are not expected to be issued within ninety (90) days after initial order, or it's been more than ninety (90) days since the initial order was placed, the Agency can secure the uniform items through alternate means.",
+      "10.1(4)(b)": "DSTs who fail to request uniform items during the period provided for in sub-paragraph a may be responsible for purchasing their own items in order to comply with the requirement to wear a uniform. However, an employee may request an out-of-cycle replacement uniform item(s) at any time if that request is pursuant to an item becoming damaged or unserviceable during the course of the employee performing their assigned duties.",
+      "10.1(4)(c)": "A grievance arising from this Section shall be filed IAW Section 12.4(b) in order to compel the Agency to provide the requested items.",
+      "11.3(6)": "In addition to the protective clothing required in Paragraph 4, for employees whose duties require them to work outdoors in any capacity, the Agency will provide protective clothing items for inclement weather conditions. The items will be replaced on a fair wear and tear basis. Employees will be responsible for the maintenance and safekeeping of these items.",
+      "11.3(8)": "The Agency shall reimburse an employee who expends personal funds because of the Agency's failure to comply with this Section.",
+      "12.2(2)": "Grievances related to matters that are covered in this Agreement shall be filed IAW Section 12.4(4)(b), Adjutant General Review, for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than sixty (60) days after the occurrence of a grievable matter or incident, or no later than sixty (60) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(b)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 1, or if the grievance is covered by Sections 12.2(2) or 12.3(3), then the grievant may petition the Adjutant General for relief. The timeline for resolution begins upon notice being served to the Agency.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than fifteen (15) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have ninety (90) days from conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  },
+
+  "IL": {
+    "agency": "The Adjutant General of the Illinois National Guard - Illinois Army National Guard (ILARNG) unit",
+    "contract": "Executed May 28, 2020; approved by DoD June 18, 2020",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations (10.1(3)).",
+      "itemDetail": "Replacement of items worn on the uniform when unserviceable (emblems/patches, nametags/tapes, insignia); all other accessories (undershirts, socks, ties, gloves, shoes/boots, hats, etc.); cold and foul weather gear per 11.3(6) (10.1(3)(a)-(c)). 11.3(6): inclement-weather clothing 'IAW CTA requirements and authorizations', on the employee's property record, replaced on fair wear and tear or when unserviceable in normal duties.",
+      "replacement": "Fair wear and tear; same 'highly encouraged ... may become responsible for purchasing their own items' warning (10.1(3)(d)).",
+      "eligible": "Employees / Title 32 technicians ('performing duties as a Title 32 technician requires wear of the uniform', 10.1(1)).",
+      "requestProcedure": {
+        "to": "STEP 1: 'through their military unit of assignment's supply system' (10.1(4)(a)).",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "Any time (no cycle stated).",
+        "agencyDeadline": "STEP 2: unit places the order no later than 30 days after the request. STEP 3: employee confirms status no later than 60 days after the order; if expected within 120 days, follow up; if not received as expected, or not expected within 180 days of the order, go to STEP 4. STEP 4: employee notifies immediate supervisor so the Agency can secure items by alternate means incl. local purchase; if not secured within 30 days, STEP 5. STEP 5: the employee may grieve at the Adjutant General Review (10.1(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes - the 5-step process in 10.1(4) ends with the grievance as STEP 5.",
+      "waitBeforeGrievance": "Yes. After the order is overdue (not received when expected within 120 days, or not expected within 180 days of the order), the employee must notify the immediate supervisor (STEP 4), and the Agency then has 30 days to secure the items before a grievance (STEP 5).",
+      "informalStep": "Steps 1-2 of Article 12 are described as the informal levels (12.4(3)), but 10.1(4)(e) sends uniform grievances to Step 3.",
+      "supervisorNotice": "Required: 'The employee shall notify their immediate supervisor of the delay' (10.1(4)(d))."
+    },
+    "grievance": {
+      "whoMayFile": "The Union, the Agency, or an employee or group of employees; only the Union or a Union-approved representative may represent employees; employees may file without the Union, but the Union may attend formal discussions (12.3(1)). Agency may settle with an unrepresented employee only with Union concurrence on matters covered by the Agreement (12.3(2)).",
+      "filingDeadline": "15 days after the occurrence, or 15 days after the aggrieved party became aware; continuing violations excepted (12.4(2)).",
+      "dayType": "calendar (Article 2.3(1) default; Article 12 does not say otherwise)",
+      "filedWith": "Uniform grievance: Adjutant General Review ('Section 12.6, Step 3' per 10.1(4)(e) - Step 3 is actually 12.4(3)(c)). All grievances are submitted through the Labor Relations Office (LRO) on the form (12.5(1)); all documents go to the LRO at each step (12.4(1)).",
+      "steps": [
+        "Step 1: in writing on the form to the first-level Agency representative with authority to resolve; written decision within 15 days (12.4(3)(a)).",
+        "Step 2: to the second-level representative (generally Directorate level) within 15 days of the Step 1 decision; written decision within 15 days (12.4(3)(b)).",
+        "Step 3 (Adjutant General Review): within 15 days of the end of Step 2; TAG decides within 30 days of receipt (12.4(3)(c)). Uniform grievances start here (10.1(4)(e)).",
+        "Optional ADR (mediation): written request within 7 days of the final decision, with a copy of the FMCS submission; needs both parties' agreement (12.7(1)).",
+        "Arbitration: Union or Agency only; request FMCS list (max 7) within 30 days of the final decision or 10 days after unsuccessful ADR, telling the other party at the same time (12.9(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. Step 2: 15 days. TAG: 30 days. Respondent's missed deadline lets the grievant advance (12.8(2)).",
+      "form": "IL Army National Guard Grievance Form - printed as Appendix B (also a separate PDF, appendix-b-ilarng-grievance-form.pdf), although Article 12 calls it 'Appendix C' (Appendix C is a blank page).",
+      "formRequired": "Yes - 'shall be submitted through the LRO sing [using] the grievance form' (12.5(1)); Step 1 'will be made in writing, using Appendix C' (12.4(3)(a)).",
+      "requiredContents": "(a) statement of the grievance citing the law, regulation and section of the Agreement violated; (b) the remedy sought; (c) reasons with supporting evidence; (d) name of the designated representative, if any (12.5(1)).",
+      "delivery": "In writing on the form, through the LRO (12.4(3)(a), 12.5(1)). Email: not stated for filing.",
+      "arbitration": "Union or Agency only (12.9(1)); 'only the Union may invoke arbitration on behalf of an employee' (12.4(3)(c)(3)). 30 days from final decision (or 10 days after failed ADR)."
+    },
+    "notes": "Strictest contract: shortest filing deadline (15 days), a mandatory form, mandatory contents, and a request-then-wait path written into 10.1(4). Two cross-reference errors to handle in wording: 10.1(4)(e) says 'Section 12.6, Step 3' (12.6 is Withdrawing of Grievances; TAG Review is 12.4(3)(c)), and 12.4/12.5 say 'Appendix C' for the form that is printed as Appendix B. Cite both the section named and the real one. The 15-day clock likely starts when the 30 days after supervisor notice run out (STEP 5) - the contract does not say so in words.",
+    "quotes": {
+      "10.1(1)": "The Parties agree that performing duties as a Title 32 technician requires wear of the uniform appropriate for the member's grade. Technicians will adhere to appropriate appearance standards, customs, and courtesies of their respective service.",
+      "10.1(3)": "The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations as follows:",
+      "10.1(3)(a)": "Employees will be issued replacement items worn on the uniform if they become unserviceable, to include emblems/patches, nametags/tapes, insignia, etc. as required by regulations.",
+      "10.1(3)(b)": "All other clothing accessories such as undershirts and socks, ties, gloves, shoes/boots, hats, etc. as required by regulations.",
+      "10.1(3)(c)": "Cold and foul weather gear as provided in Section 11.3(6).",
+      "10.1(4)": "Employees receive their normal issue of military apparel through their membership in the IL ARNG. The following process will be observed when requesting uniform items:",
+      "10.1(4)(a)": "STEP 1: Employees will submit orders for required uniform items through their military unit of assignment's supply system.",
+      "10.1(4)(b)": "STEP 2: The military unit will review the order to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than thirty (30) days after the uniform items were requested.",
+      "10.1(4)(c)": "STEP 3: As soon as possible, but no later than sixty (60) days after placing an order, the employee shall confirm the status of their uniform order with their military unit, to include the expected date of issue.",
+      "10.1(4)(c)(1)": "If the uniform items are expected to issue within one-hundred and twenty (120) days, the employee shall follow-up with their unit to ensure they retrieve the ordered items. If items are not received as expected, go to STEP 4.",
+      "10.1(4)(c)(2)": "If the uniform items are not expected to be issued within one-hundred and eighty (180) days after initial order, go to STEP 4.",
+      "10.1(4)(d)": "STEP 4: The employee shall notify their immediate supervisor of the delay so that the Agency can secure the uniform items through alternate means, to include local purchase. If the Agency is not able to secure the items within thirty (30) days, go to STEP 5.",
+      "10.1(4)(e)": "STEP 5: The employee may file a grievance IAW Section 12.6, Step 3, the Adjutant General Review, in order to compel the Agency to provide the requested items.",
+      "12.3(1)": "A grievance may be undertaken by the Union, by the Agency, or by an employee or group of employees. Only the Union or a representative approved by the Union may represent employees in such grievances. However, an employee may present a grievance without representation by the Union provided that the Union will be permitted to attend all formal discussions during the grievance process.",
+      "12.4(1)": "All documentation and attachments must be forwarded at each step to the Labor Relations Office (LRO) and from one level to another, so all participants will have better knowledge of the facts and representations of the Parties.",
+      "12.4(2)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than fifteen (15) days after the occurrence of a grievable matter or incident, or no later than fifteen (15) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(3)(a)": "Step 1: The complaint or grievance will be made in writing, using Appendix C, to the first level Agency representative with the authority to resolve the issue (or the State Representative if the grievance is filed by the Agency against the Union) and then informally discussed at that level within fifteen (15) days after the incident or action occurs or from the time the complaining party could have reasonably been expected to become aware of the incident or action that generated the grievance. A written decision will be provided within fifteen (15) days after receipt.",
+      "12.4(3)(c)(1)": "If the aggrieved party is dissatisfied with the decision reached at Step 2, then the grievance may be submitted to the Adjutant General not later than fifteen (15) days after conclusion of Step 2. The timeline for resolution begins upon notice being served.",
+      "12.4(3)(c)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(3)(c)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration on behalf of an employee.",
+      "12.5(1)": "All grievances submitted IAW Section 12.4 (above) shall be submitted through the LRO sing the grievance form in Appendix C, and will contain the following: a. A statement of the grievance with reference to what law, regulation, and section of this Agreement has been violated; b. A statement as to the remedial action or relief sought; c. A statement of reason(s), together with the supporting evidence, explaining why the aggrieved Party believes the remedy should be granted; and, d. The name of the designated representative if one has been designated.",
+      "12.8(2)": "A respondent's failure to observe time limits shall entitle the grievant to advance the complaint to the next step. A complainant's failure to observe the time limits will result in the grievance being cancelled.",
+      "12.9(1)": "Arbitration will be used to settle unresolved grievances arising under this article. Arbitration may only be invoked by the Agency or the Union. The request for a list of Arbitrators (no more than 7) must be submitted by the Party invoking arbitration to the Federal Mediation and Conciliation Service (FMCS) within thirty (30) days of the date of final decision or ten (10) days after unsuccessful ADR."
+    }
+  },
+
+  "LA": {
+    "agency": "The Adjutant General of the Louisiana National Guard (LANG)",
+    "contract": "Executed September 8, 2020; approved by DoD October 1, 2020",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "'eligible employees' get four (4) sets of the primary duty uniform and all accessories required IAW military regulations (10.1(3)).",
+      "itemDetail": "Ready-to-wear (emblems/patches/ribbons, nametags/tapes, insignia); all other accessories (undershirts, socks, ties, gloves, shoes/boots, hats, etc.); cold and foul weather gear per 11.3(6) (10.1(3)(a)-(c)). 11.3(6): inclement-weather clothing 'IAW CTA (or equivalent) requirements and authorizations', on the property record, fair wear and tear.",
+      "replacement": "Fair wear and tear; same 'highly encouraged ... may become responsible for purchasing their own items' warning (10.1(3)(d)).",
+      "eligible": "'eligible employees' - eligibility is not defined in 10.1.",
+      "requestProcedure": {
+        "to": "not stated",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "not stated",
+        "agencyDeadline": "not stated"
+      }
+    },
+    "preconditions": {
+      "requestFirst": "not stated",
+      "waitBeforeGrievance": "not stated",
+      "informalStep": "Step 1 of the grievance is itself called 'Informal' (12.4(4)(a)); it is the first grievance step, not a pre-filing step.",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employees individually or as a group (12.3(1)); 'Parties' includes the Union (12.1(4)) and 12.4 is titled 'Union or Employee Grievance Procedures', but 12.4(4) describes 'grievances filed by employees against the Agency'. A separate Union filing route: not stated.",
+      "filingDeadline": "30 days after the occurrence, or 30 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Human Resources Office (HRO) at Step 1 (12.4(4)(a)(1)); lowest level able to resolve (12.4(1)).",
+      "steps": [
+        "Step 1 - Informal: advise the HRO of intent, 'should' use Appendix C; HRO acknowledges (signature/date or email timestamp) and forwards; Agency has 15 days (12.4(4)(a)).",
+        "Step 2 - Formal: ask HRO to forward to the Chief of Staff within 15 days after Step 1 ends; CoS has 15 days (12.4(4)(b)).",
+        "Step 3 - Adjutant General Review: ask HRO to submit to TAG within 15 days after Step 2 ends; TAG decides within 30 days (12.4(4)(c)).",
+        "Arbitration: Agency or Union only; within 30 days of the end of TAG Review, with written notice to the other party (12.7(1)-(2))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. Step 2 (CoS): 15 days. TAG: 30 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "skipSteps": "Directly to Step 3 only for immediate financial hardship (within 15 days) from an adverse or administrative action (12.4(4)). No 'contract matters go straight to TAG' rule.",
+      "form": "Appendix C, 'LA National Guard Grievance Form'.",
+      "formRequired": "Expected but softly worded: 'Notice should be provided using Appendix C' (12.4(4)(a)(1)).",
+      "requiredContents": "not stated in Article 12 (form fields only).",
+      "delivery": "To the HRO; receipt acknowledged 'with signature and date (or via email timestamp)' (12.4(4)(a)(2)) - so email is contemplated, though not expressly authorized for filing.",
+      "arbitration": "Only Agency or Union (12.7(1)); 'only the Union may invoke arbitration on behalf of an employee' (12.4(4)(c)(3)); 30 days from end of TAG Review; if seeking attorney fees, say so when requesting arbitration (12.7(2))."
+    },
+    "notes": "Like CA: the duty is clear (4 sets, ready-to-wear, accessories) but there is no request process and no timeline, so the grievable 'occurrence' must be created by the employee's own request and the Agency's failure. Everything runs through the HRO. Three-step grievance (the longest path to TAG). The LA section numbering skips 10.3 (USERRA is 10.4).",
+    "quotes": {
+      "10.1(1)": "The Parties agree that performing duties as a dual status (DS) technician requires wear of the uniform appropriate for the member's grade. Technicians will adhere to appropriate appearance standards, customs, and courtesies of their respective military service.",
+      "10.1(3)": "The Agency will provide eligible employees a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations as follows:",
+      "10.1(3)(a)": "Uniforms will be provided `ready-to-wear' to include emblems/patches/ribbons, nametags/tapes, insignia, etc. as required by regulations.",
+      "10.1(3)(b)": "All other clothing accessories such as undershirts and socks, ties, gloves, shoes/boots, hats, etc. as required by regulations.",
+      "10.1(3)(c)": "Cold and foul weather gear as provided in Section 11.3(6).",
+      "10.1(3)(d)": "Items shall be replaced on a fair wear and tear basis. Employees are highly encouraged to procure fair wear and tear replacement items as soon as the item becomes unserviceable. Employees who delay procuring replacement items until their entire stock of uniforms is unserviceable may experience delays in having items issued and may become responsible for purchasing their own items in order to comply with their requirement to report to work in the appropriate duty uniform.",
+      "12.4(1)": "A grievance must be submitted to the lowest level of the Agency with the ability to resolve the matter.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) days after the occurrence of a grievable matter or incident, or no later than thirty (30) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(a)(1)": "The aggrieved party shall advise the Human Resources Office (HRO) of their intent to initiate the informal grievance process. Notice should be provided using Appendix C. The timeline for resolution begins upon notice being served.",
+      "12.4(4)(a)(2)": "The HRO or his/her designee will acknowledge receipt of the grievance with signature and date (or via email timestamp) and will forward a copy of the grievance to the appropriate Agency representative with the ability to provide relief.",
+      "12.4(4)(a)(4)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant to proceed to Step 2.",
+      "12.4(4)(b)(1)": "When resolution is not achieved during Step 1, the grievant may request that the HRO forward the complaint to the Chief of Staff (CoS), not later than fifteen (15) days after conclusion of Step 1. The timeline for resolution begins upon notice being served to the HRO.",
+      "12.4(4)(b)(3)": "The CoS will have fifteen (15) days to attempt resolution of the grievance.",
+      "12.4(4)(c)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 2, then the grievant may request that the HRO submit the complaint to the Adjutant General, not later than fifteen (15) days after conclusion of Step 2. The timeline for resolution begins upon notice being served to the HRO.",
+      "12.4(4)(c)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(4)(c)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration on behalf of an employee.",
+      "12.7(2)": "The aggrieved party will have thirty (30) days from the conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to request arbitration. The Party seeking arbitration shall provide written notification to the other Party informing them that the grievance has been submitted for arbitration. If the Union seeks attorney's fees as part of their proposed remedy, then they shall inform the Agency at the time a request for arbitration is submitted IAW with this paragraph."
+    }
+  },
+
+  "MI": {
+    "agency": "The Adjutant General of the Michigan National Guard (MING) - Michigan Army National Guard (MIARNG) unit",
+    "contract": "Executed June 13, 2022; approved by DoD July 1, 2022",
+    "uniformSection": "10.1 (Article 10 is titled 'Dual Status Technician Requirements' in this contract)",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations; plus 'additional uniforms, not to exceed four (4) sets, upon request when a uniform is deemed unserviceable by both the employee and the supervisor' (10.1(3)).",
+      "itemDetail": "Not itemized beyond 'all accessories'. Safety and protective clothing/equipment IAW 11.3 (10.1(6)); 11.3(6): inclement-weather clothing 'IAW CTA requirements and authorizations'.",
+      "replacement": "Fair wear and tear. Employees are encouraged to get replacements as soon as an item becomes unserviceable, 'but no later than fifteen (15) days from the day the item becomes unserviceable' (10.1(4)).",
+      "eligible": "Dual status technicians (DSTs).",
+      "requestProcedure": {
+        "to": "STEP 1: 'through their military unit of assignment's supply system' (10.1(5)(a)).",
+        "inWriting": "Yes - 'The request shall be submitted via email, with a courtesy copy furnished to the employee's immediate supervisor' (10.1(5)(a)).",
+        "form": "not stated",
+        "window": "Any time; replacement request within 15 days of an item becoming unserviceable (10.1(4)).",
+        "agencyDeadline": "STEP 2: unit places the order no later than 15 days after the request and gives the employee and supervisor confirmation of the order and expected issue date. STEP 3: if not expected within 45 days of the order, 'the Agency will secure the uniform items through alternate means, to include requesting an exception to policy for local purchase' (10.1(5))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes in practice - emailed request to unit supply, cc supervisor (10.1(5)(a)). The contract does not expressly make it a condition of grieving.",
+      "waitBeforeGrievance": "Not stated as a condition. Timed duties: order within 15 days of the request; alternate means if not expected within 45 days of the order.",
+      "informalStep": "not stated",
+      "supervisorNotice": "The supervisor is copied on the request (10.1(5)(a)); additional sets require the supervisor to agree the uniform is unserviceable (10.1(3))."
+    },
+    "grievance": {
+      "whoMayFile": "Employees, the Union, or the Agency (12.1(2) examples); Section 12.6 is titled 'Grievance Procedures for Employees and the Union', though 12.6(4) describes 'grievances filed by employees against the Agency'. Employee marks representation preference on the form (12.1(3)).",
+      "filingDeadline": "30 calendar days after the occurrence, or after the aggrieved party 'became aware or reasonably should have been aware'; continuing violations excepted (12.6(3)).",
+      "dayType": "BUSINESS days for the step timelines in Section 12.6 (12.6(2)); the 30-day filing deadline is expressly calendar days (12.6(3)).",
+      "filedWith": "The appropriate Agency representative - 'usually the first supervisor or management representative in the employee's supervisory chain that can grant relief' - AND the Labor Relations Specialist (LRS) (12.6(4)(a)(1)).",
+      "steps": [
+        "Step 1 - Initial Notice: Grievance Form (Appendix C) to the Agency representative and the LRS; acknowledged by signature/date or email timestamp; 5 business days to resolve (12.6(4)(a)).",
+        "Step 2 - Chief of Staff Review: Grievance Form and supporting documents to the Chief of Staff within 15 business days after Step 1; copy to HRO; 5 business days (12.6(4)(b)).",
+        "Step 3 - Adjutant General Review: within 15 business days after Step 2; TAG decides within 15 business days (12.6(4)(c)).",
+        "Arbitration: Union or Agency only; within 15 days after TAG's final decision, written notice to the other party that it has been submitted for arbitration (12.9(1)-(2)); FMCS list of 10 (12.10(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 5 business days. Step 2: 5 business days. TAG: 15 business days. Agency's missed deadline lets the grievant advance (12.6(3)).",
+      "form": "Appendix C, 'MI Army National Guard Grievance Form'.",
+      "formRequired": "Yes - 'by using the approved Grievance Form located at Appendix C' (12.6(4)(a)(1)).",
+      "requiredContents": "not stated beyond the form (narrative citing Article and Section, proposed resolution, representation choice) and 'any supporting documents' (12.6(4)(a)(2)).",
+      "delivery": "'either in person or via email, however email is the preferred method' - applies to each step (12.6(4)(a)(2)).",
+      "arbitration": "Union or Agency only; 'only the Union may invoke arbitration on behalf of an employee' (12.6(4)(c)(3)); notice within 15 days after TAG's final decision (12.9(2)) - day type for 12.9 not stated (business-day rule is limited to 'this Section', 12.6)."
+    },
+    "notes": "Only contract with an express email rule for both the uniform request (10.1(5)(a)) and the grievance (12.6(4)(a)(2), email preferred). Business-day step clocks are unique. MI also lets an employee ask for up to 4 extra sets when employee AND supervisor agree a uniform is unserviceable. The 15-day replacement-request deadline in 10.1(4) puts a burden on the employee - the form should capture when the item became unserviceable.",
+    "quotes": {
+      "10.1(1)": "The Parties agree that performing duties as a dual status technician (DST) requires wear of the uniform appropriate for the member's grade. DSTs will adhere to appropriate appearance standards, customs, and courtesies IAW US Army regulations and/or local Agency policy.",
+      "10.1(3)": "Employees receive their normal issue of military apparel through their membership in the MIARNG. The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations. The Agency shall provide employees with additional uniforms, not to exceed four (4) sets, upon request when a uniform is deemed unserviceable by both the employee and the supervisor.",
+      "10.1(4)": "Items shall be replaced on a fair wear and tear basis. Employees are highly encouraged to procure fair wear and tear replacement items as soon as the item becomes unserviceable, but no later than fifteen (15) days from the day the item becomes unserviceable. Employees who delay procuring replacement items until their entire stock of uniforms is unserviceable may experience delays in having items issued and may become responsible for purchasing their own items in order to comply with their requirement to report to work in the appropriate duty uniform.",
+      "10.1(5)(a)": "STEP 1: Employees will submit orders for required uniform items through their military unit of assignment's supply system. The request shall be submitted via email, with a courtesy copy furnished to the employee's immediate supervisor.",
+      "10.1(5)(b)": "STEP 2: The military unit will review the order to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than fifteen (15) days after the uniform items were requested. The unit will provide the requesting employee and their supervisor confirmation of order placement and expected date of issue.",
+      "10.1(5)(c)": "STEP 3: If the uniform items are not expected to be issued within forty-five (45) days after initial order, the Agency will secure the uniform items through alternate means, to include requesting an exception to policy for local purchase.",
+      "10.1(6)": "In addition to the items required in Paragraph 3, the Agency will provide DSTs with safety and protective clothing/equipment IAW Section 11.3.",
+      "12.1(3)": "The employee retains the right to request Union representation in the grievance procedure, or to decline such representation. Employees will indicate their representation preference on the Grievance Form.",
+      "12.6(2)": "All timelines in this Section are calculated in business days, unless otherwise stated.",
+      "12.6(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) calendar days after the occurrence of a grievable matter or incident, or no later than thirty (30) calendar days after the aggrieved party became aware or reasonably should have been aware of a grievable matter or incident.",
+      "12.6(4)(a)(1)": "The employee(s) shall advise the appropriate Agency representative and the Labor Relations Specialist (LRS) of their intent to initiate the grievance process by using the approved Grievance Form located at Appendix C. The appropriate Agency representative at this Step is usually the first supervisor or management representative in the employee's supervisory chain that can grant relief to the employee's complaint or appeal.",
+      "12.6(4)(a)(2)": "The Grievance Form, as well as any supporting documents, may be submitted to the appropriate Agency representative either in person or via email, however email is the preferred method. The timeline for resolution begins upon notice being served. This applies to each Step of the employee grievance process.",
+      "12.6(4)(a)(3)": "The Agency representative will acknowledge receipt of the grievance with signature and date (or via email timestamp) and will have five (5) days to attempt resolution of the grievance.",
+      "12.6(4)(b)(1)": "When resolution is not achieved during Step 1, the employee may submit their complaint (i.e., Grievance Form and supporting documents) to the Chief of Staff no later than fifteen (15) days after Step 1 has concluded. The timeline for resolution begins upon notice being served.",
+      "12.6(4)(c)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 2, then the grievance may be submitted to the Adjutant General not later than fifteen (15) days after conclusion of Step 2. The timeline for resolution begins upon notice being served.",
+      "12.6(4)(c)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party, and render a final Agency decision no later than fifteen (15) days after receipt of the grievance.",
+      "12.6(4)(c)(3)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration on behalf of an employee.",
+      "12.9(2)": "Within fifteen (15) days after The Adjutant General issues his final decision concerning a grievance, the Union or the Agency should provide written notification to the other party informing them that the grievance has been submitted for arbitration."
+    }
+  },
+
+  "NV": {
+    "agency": "The Adjutant General of the Nevada Army National Guard (NV ARNG)",
+    "contract": "Executed June 28, 2023; approved by DoD July 11, 2023",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations; DSTs get priority for issue and replacement (10.1(3)).",
+      "itemDetail": "Ready-to-wear (emblems/patches/ribbons, nametags/tapes, insignia); all other accessories (undershirts, socks, ties, gloves, shoes/boots, hats, etc.); cold and foul weather gear per 11.3(6) (10.1(3)(a)-(c)). 11.3(6): outdoor workers get inclement-weather protective clothing, fair wear and tear.",
+      "replacement": "Fair wear and tear; same 'highly encouraged ... may become responsible for purchasing their own items' warning (10.1(3)(d)).",
+      "eligible": "'Eligible DSTs' (10.1(4)) - eligibility is not defined.",
+      "requestProcedure": {
+        "to": "'through the Agency. The Agency is responsible to ensure uniforms are issued as required by this Section' (10.1(4)(a)(1)).",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "Annual 30-day FEHB Open Season is the normal cycle (10.1(4)(a)); out-of-cycle at any time for items damaged or unserviceable while performing assigned duties, 'unless damage occurs through negligence or abuse' (10.1(4)(b)).",
+        "agencyDeadline": "Order placed no later than 30 days after the request (10.1(4)(a)(2)); employee confirms status no later than 60 days after the order (10.1(4)(a)(3)); if not provided within 120 days of the order, items 'should be secured through alternate means, within budgetary constraints, to include local purchase' (10.1(4)(a)(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes in practice (Open Season or out-of-cycle request); grievance compels 'the requested items' (10.1(4)(c)).",
+      "waitBeforeGrievance": "Not stated as a condition. Timed duties: order within 30 days of request; alternate means after 120 days from order ('should').",
+      "informalStep": "not stated",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(5), 12.4(4)).",
+      "filingDeadline": "45 days after the occurrence, or 45 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Straight to Step 2, Adjutant General Review (10.1(4)(c) 'IAW Section 12.4(b)'; 12.2(2)).",
+      "steps": [
+        "Step 1 - Initial Notice (skipped for contract matters): Agency has 14 days; Step 2 notice within 30 days after Step 1 (12.4(4)(a)).",
+        "Step 2 - Adjutant General Review: TAG decides within 30 days of receipt (12.4(4)(b)).",
+        "Arbitration: Union only; within 90 days of the end of TAG Review (12.4(4)(b)(3), 12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 14 days. TAG: 30 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "Appendix D, 'NV National Guard Grievance Form'.",
+      "formRequired": "not stated (Article 12 does not refer to Appendix D).",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "not stated ('petition the Adjutant General'; notice 'served to the Agency'); email: not stated.",
+      "arbitration": "Union only; 90 days from the end of TAG Review; FMCS list of 7 (12.6(1)-(2))."
+    },
+    "notes": "Same design as GU/UT (Open Season cycle + express grievance clause) but with 120 days and 'should ... within budgetary constraints'. Out-of-cycle requests excluded when damage came from negligence or abuse. Also: the Agency must email all employees and post a notice when a grievance on a personnel policy/practice is filed, and jointly announce the outcome (12.1(6)).",
+    "quotes": {
+      "10.1(3)": "The Agency shall prioritize DSTs over other personnel for the issue and replacement of uniforms. DSTs shall be provided with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations as follows:",
+      "10.1(3)(a)": "Uniforms will be provided \"ready-to-wear\" to include emblems/patches/ribbons, nametags/tapes, insignia, etc. as required by regulations;",
+      "10.1(3)(c)": "Cold and foul weather gear as provided in Section 11.3(6); and,",
+      "10.1(4)": "Eligible DST receive their normal issue of military apparel through their membership in the NVARNG. The Agency shall provide a standardized system to allow eligible DSTs to be issued uniform items and accessories. The following process will be observed when requesting uniform items, to include items required by Section 11.3:",
+      "10.1(4)(a)": "Eligible DSTs shall submit a request for uniform items and accessories during the annual thirty (30) day FEHB Open Season period. This period shall serve as the normal cycle for employees to request uniform items in order to ensure they have a full complement of uniforms IAW Section 10.1(3) and 11.3.",
+      "10.1(4)(a)(1)": "Eligible DSTs will submit orders for required uniform items through the Agency. The Agency is responsible to ensure uniforms are issued as required by this Section.",
+      "10.1(4)(a)(2)": "The order will be reviewed by the Agency to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than thirty (30) days after the uniform items were requested.",
+      "10.1(4)(a)(3)": "As soon as possible, but no later than sixty (60) days after placing an order, the employee shall confirm the status of their uniform order with the Agency, to include the expected date of issue.",
+      "10.1(4)(a)(4)": "When the Agency is unable to provide a uniform(s) item within one-hundred and twenty (120) days after initial order, the item(s) should be secured through alternate means, within budgetary constraints, to include local purchase.",
+      "10.1(4)(b)": "Eligible DSTs who fail to request uniform items during the period provided for in sub-paragraph (a) may be responsible for purchasing their own items in order to comply with the requirement to wear a uniform. However, an employee may request an out-of-cycle replacement uniform item(s) at any time if that request is pursuant to an item becoming damaged or unserviceable while the employee is performing their assigned duties, unless damage occurs through negligence or abuse.",
+      "10.1(4)(c)": "A grievance arising from this Section shall be filed IAW Section 12.4(b) in order to compel the Agency to provide the requested items.",
+      "12.2(2)": "Grievances related to matters that are covered in this Agreement shall be filed IAW Section 12.4(4)(b), Adjutant General Review, for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than forty-five (45) days after the occurrence of a grievable matter or incident, or no later than forty-five (45) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have ninety (90) days from conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  },
+
+  "NM": {
+    "agency": "The Adjutant General of the New Mexico National Guard (NMNG)",
+    "contract": "Executed June 10, 2022; approved by DoD July 1, 2022",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations (10.1(3)).",
+      "itemDetail": "Not itemized beyond 'all accessories'. Safety and protective clothing/equipment IAW 11.3 (10.1(5)); 11.3(5): outdoor workers get inclement-weather protective clothing, fair wear and tear.",
+      "replacement": "not stated for the military uniform.",
+      "eligible": "Dual status technicians (DSTs) - Army or Air ('US Army or Air Force regulations (as applicable)', 10.1(1)).",
+      "requestProcedure": {
+        "to": "not stated",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "not stated",
+        "agencyDeadline": "Only: if the Agency cannot provide an item within 120 days after the initial order, it 'should be secured through alternate means, within budgetary constraints, to include local purchase' (10.1(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "not stated (10.1(4) assumes an 'initial order' exists).",
+      "waitBeforeGrievance": "not stated as a condition; the only timed duty is 120 days after the initial order (10.1(4)).",
+      "informalStep": "not stated",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(5), 12.4(4)).",
+      "filingDeadline": "30 days after the occurrence, or 30 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Straight to Step 2, Adjutant General Review, petitioned 'through the Human Resources Office (HRO)' (12.2(2), 12.4(4)(b)(1)).",
+      "steps": [
+        "Step 1 - Initial Notice (skipped for contract matters): Appendix D recommended; Agency has 15 days; Step 2 notice within 15 days after Step 1 (12.4(4)(a)).",
+        "Step 2 - Adjutant General Review, through HRO: TAG decides within 30 days (12.4(4)(b)).",
+        "Arbitration: Union only; within 30 days of the end of TAG Review; FMCS list of 10 (12.6(1)-(2))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. TAG: 30 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "Appendix D, 'NM National Guard Grievance Form'.",
+      "formRequired": "No - 'Use of Appendix D is recommended, but not required' (12.4(4)(a)(1)).",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "TAG petition goes through the HRO (12.4(4)(b)(1)); email: not stated.",
+      "arbitration": "Union only; 30 days from the end of TAG Review (12.6(1))."
+    },
+    "notes": "No express uniform-grievance clause in 10.1, but 12.2(2) sends every contract-covered grievance to TAG Review. No request process in the contract, so the form must create the record (date of request/order). Air and Army DSTs both covered.",
+    "quotes": {
+      "10.1(1)": "The Parties agree that performing duties as a dual status technician (DST) requires wear of the uniform appropriate for the member's grade. DSTs will adhere to appropriate appearance standards, customs, and courtesies IAW US Army or Air Force regulations (as applicable) and/or local Agency policy.",
+      "10.1(3)": "Employees receive their normal issue of military apparel through their membership in the NMNG. The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations.",
+      "10.1(4)": "When the Agency is unable to provide a uniform(s) item within one-hundred and twenty (120) days after initial order, the item(s) should be secured through alternate means, within budgetary constraints, to include local purchase.",
+      "10.1(5)": "In addition to the items required in Paragraph 3, the Agency will provide DSTs with safety and protective clothing/equipment IAW Section 11.3.",
+      "12.2(2)": "Grievances related to matters that are covered in this Agreement shall be filed IAW Section 12.4(4)(b), Adjutant General Review, for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) days after the occurrence of a grievable matter or incident, or no later than thirty (30) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(a)(1)": "The aggrieved party shall advise the Agency of their intent to initiate the grievance process. The timeline for resolution begins upon notice being served. Use of Appendix D is recommended, but not required.",
+      "12.4(4)(b)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 1, or if the grievance is covered by Sections 12.2(2) or 12.3(3), then the grievant may petition the Adjutant General, through the Human Resources Office (HRO), for relief. The timeline for resolution begins upon notice being served to the Agency.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have thirty (30) days from conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  },
+
+  "SC": {
+    "agency": "The Adjutant General of the South Carolina National Guard (SCNG)",
+    "contract": "Executed March 31, 2023; approved by DoD April 14, 2023",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations (10.1(3)).",
+      "itemDetail": "Not itemized in 10.1. Safety and protective clothing/equipment IAW 11.3 (10.1(5)). 11.3(5)-(6): on request, employees whose duties expose them to outdoor elements on a recurring and on-going basis get GoreTex outer gear (or equivalent), one watch cap, one pair of cold weather gloves; on the property record; replaced on fair wear and tear or when unserviceable in normal duties; employee pays for items lost or damaged by negligence.",
+      "replacement": "not stated for the military uniform (cold-weather items: fair wear and tear, 11.3(6)).",
+      "eligible": "Dual status technicians (DSTs) - Army or Air ('US Army or Air Force regulations', 10.1(1)).",
+      "requestProcedure": {
+        "to": "not stated",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "not stated (cold-weather items 'when requested', 11.3(5)).",
+        "agencyDeadline": "Only: if the Agency cannot provide an item within 120 days after the initial order, it 'should be secured through alternate means, within budgetary constraints, to include local purchase' (10.1(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "not stated (10.1(4) assumes an 'initial order'; 11.3(5)-(6) items are provided 'at the request of an employee').",
+      "waitBeforeGrievance": "not stated as a condition; only timed duty is 120 days after the initial order (10.1(4)).",
+      "informalStep": "not stated",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(5), 12.4(4)).",
+      "filingDeadline": "30 days after the occurrence, or 30 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Straight to Step 3, Adjutant General Review (12.2(2) cites 12.4(4)(c); 12.4(4) allows proceeding 'directly to Step 3' for 12.2(2) matters).",
+      "steps": [
+        "Step 1 - Informal Resolution Attempt (skipped for contract matters): Appendix D recommended; 15 days; Step 2 notice within 60 days after Step 1 (12.4(4)(a)).",
+        "Step 2 - Formal Resolution Attempt (skipped): next level of the Agency; 15 days; Step 3 notice within 60 days after Step 2 (12.4(4)(b)).",
+        "Step 3 - Adjutant General Review: TAG decides within 15 days of receipt (12.4(4)(c)).",
+        "Arbitration: Union only; within 30 days of the end of TAG Review (12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. Step 2: 15 days. TAG: 15 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "Appendix D, 'SC National Guard Grievance Form'.",
+      "formRequired": "No - 'Use of Appendix D is recommended, but not required' (12.4(4)(a)(1)).",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "not stated ('petition the Adjutant General'; notice 'served to the Agency'); email: not stated.",
+      "arbitration": "Union only; 30 days from the end of TAG Review; FMCS list of 7 (12.6(1)-(2))."
+    },
+    "notes": "Same uniform wording as NM plus a specific cold-weather list on request (11.3(5)-(6)). SC numbers TAG Review as Step 3 (12.4(4)(c)), so a uniform grievance should be addressed to 'Step 3 - Adjutant General Review'. No Agency duty to notify employees of grievances in this contract (12.1 has no such paragraph).",
+    "quotes": {
+      "10.1(1)": "Dual status technicians (DSTs) will wear the military uniform IAW federal law, US Army or Air Force regulations, and this Agreement. Absent specific approval by the Agency, the consumption of alcohol while in uniform is strictly prohibited both on and off duty.",
+      "10.1(3)": "Employees receive their normal issue of military apparel through their membership in the SCNG. The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations.",
+      "10.1(4)": "When the Agency is unable to provide a uniform(s) item within one-hundred and twenty (120) days after initial order, the item(s) should be secured through alternate means, within budgetary constraints, to include local purchase.",
+      "10.1(5)": "In addition to the items required in Paragraph 3, the Agency will provide DSTs with safety and protective clothing/equipment IAW Section 11.3 (Safety and Protective Clothing/Equipment).",
+      "11.3(5)": "Section 10.1(2)(d)(1) (Duty Uniform for Dual Status Technicians) notwithstanding, and IAW applicable laws and regulations, the Agency agrees to provide employees required to work in inclement weather conditions the following listed clothing items when requested: a. GoreTex outer gear (or equivalent); b. One (1) watch cap; c. One (1) pair of cold weather gloves;",
+      "11.3(6)": "The items in Paragraph 5 (above) shall be provided at the request of an employee whose assigned duties expose them to outdoor elements on a recurring and on-going basis. The items will be made part of the employee's issued property record and shall be replaced on a fair wear and tear basis, or when it becomes unserviceable during the course of performing normal duties.",
+      "12.2(2)": "Grievances related to matters that are covered in this Agreement shall be filed IAW Section 12.4(4)(c) (Adjutant General Review) for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) days after the occurrence of a grievable matter or incident, or no later than thirty (30) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)": "The following procedures shall be used for resolving grievances filed by or on behalf of employees, or by the Union against the Agency, except that for complaints covered by Sections 12.2(2) or 12.3(3), an employee or their representative may proceed directly to Step 3:",
+      "12.4(4)(a)(1)": "The aggrieved party shall advise the Agency of their intent to initiate the grievance process. The timeline for resolution begins upon notice being served. Use of Appendix D is recommended, but not required.",
+      "12.4(4)(c)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 2, or if the grievance is covered by Sections 12.2(2) or 12.3(3), then the grievant may petition the Adjutant General for relief. The timeline for resolution begins upon notice being served to the Agency.",
+      "12.4(4)(c)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than fifteen (15) days after receipt of the grievance.",
+      "12.4(4)(c)(3)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have thirty (30) days from conclusion of the Adjutant General's Review or the LIUNA Local 1776 Business Manager Review period to invoke arbitration."
+    }
+  },
+
+  "SD": {
+    "agency": "The Adjutant General of the South Dakota National Guard (SDNG) - South Dakota Army National Guard (SDARNG) unit",
+    "contract": "Executed September 10, 2021; approved by DoD October 4, 2021",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations (10.1(3)).",
+      "itemDetail": "Not itemized beyond 'all accessories'. Safety and protective clothing/equipment IAW 11.3 (10.1(4)); 11.3(6): outdoor workers get inclement-weather protective clothing, fair wear and tear.",
+      "replacement": "not stated for the military uniform.",
+      "eligible": "Dual status technicians (DSTs).",
+      "requestProcedure": {
+        "to": "STEP 1: 'through their military unit of assignment's supply system' (10.1(3)(a)).",
+        "inWriting": "Yes - 'The request shall be submitted via email, with a courtesy copy furnished to the employee's immediate supervisor' (10.1(3)(a)).",
+        "form": "not stated",
+        "window": "Any time (no cycle stated).",
+        "agencyDeadline": "STEP 2: order placed no later than 7 days after the request; unit confirms order and expected issue date to employee and supervisor no later than 45 days after the order. STEP 3: if not expected within 45 days after the order, 'the Agency will secure the uniform items through alternate means, to include local purchase' (10.1(3)(b)-(c))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes in practice - emailed request to unit supply, cc supervisor (10.1(3)(a)). Not expressly a condition of grieving.",
+      "waitBeforeGrievance": "Not stated as a condition. Timed duties: order within 7 days; alternate means if not expected within 45 days of the order.",
+      "informalStep": "not stated",
+      "supervisorNotice": "Supervisor is copied on the request (10.1(3)(a))."
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(5), 12.4(4)).",
+      "filingDeadline": "30 days after the occurrence, or 30 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Straight to Step 2, Adjutant General Review (12.2(2), 12.4(4)).",
+      "steps": [
+        "Step 1 (skipped for contract matters): Agency has 15 days; Step 2 notice within 30 days after Step 1 (12.4(4)(a)).",
+        "Step 2 - Adjutant General Review: TAG decides within 30 days (12.4(4)(b)).",
+        "Arbitration: Union only; within 30 days of the end of TAG Review (12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. TAG: 30 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "Appendix D, 'SD National Guard Grievance Form'.",
+      "formRequired": "not stated (Article 12 does not refer to Appendix D).",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "not stated; email: not stated for grievances.",
+      "arbitration": "Union only; 30 days from the end of TAG Review; FMCS list of 7 (12.6(1)-(2))."
+    },
+    "notes": "Fastest Agency clock of all ten: order within 7 days, alternate means at 45 days. Same email-and-cc-supervisor request rule as MI. No express uniform-grievance clause but 12.2(2) sends it to TAG Review.",
+    "quotes": {
+      "10.1(1)": "Dual status technicians (DSTs) will wear the military uniform IAW federal law, US Army regulations, and this Agreement.",
+      "10.1(3)": "Employees receive their normal issue of military apparel through their membership in the SDARNG. The Agency shall provide employees with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations. The following process will be observed when requesting uniform items:",
+      "10.1(3)(a)": "STEP 1: Employees will submit orders for required uniform items through their military unit of assignment's supply system. The request shall be submitted via email, with a courtesy copy furnished to the employee's immediate supervisor.",
+      "10.1(3)(b)": "STEP 2: The military unit will review the order to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than seven (7) days after the uniform items were requested. The unit will provide the requesting employee and their supervisor confirmation of order placement and expected date of issue, no later than forty-five (45) days after initial order.",
+      "10.1(3)(c)": "STEP 3: If the uniform items are not expected to be issued within forty-five (45) days after initial order, the Agency will secure the uniform items through alternate means, to include local purchase.",
+      "10.1(4)": "In addition to the items required in Paragraph 3, the Agency will provide DSTs with safety and protective clothing/equipment IAW Section 11.3.",
+      "12.2(2)": "Grievances related to matters that are covered in this Agreement shall be filed IAW Section 12.4(4)(b), Adjutant General Review, for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) days after the occurrence of a grievable matter or incident, or no later than thirty (30) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(b)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 1, or if the grievance is covered by Sections 12.2(2) or 12.3(3), then the grievant may petition the Adjutant General for relief. The timeline for resolution begins upon notice being served to the Agency.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than thirty (30) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within thirty (30) days after notice is served will allow the grievant to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have thirty (30) days from conclusion of the Adjutant General's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  },
+
+  "UT": {
+    "agency": "The Adjutant General of Utah - Utah Army National Guard (UTARNG) unit",
+    "contract": "Executed October 4, 2022; approved by DoD October 11, 2022",
+    "uniformSection": "10.1",
+    "grievanceArticle": "Article 12",
+    "uniform": {
+      "provides": "Four (4) sets of the primary duty uniform and all accessories required IAW military regulations; DSTs get priority for issue and replacement (10.1(3)).",
+      "itemDetail": "Ready-to-wear (emblems/patches/ribbons, nametags/tapes, insignia); all other accessories (undershirts, socks, ties, gloves, shoes/boots, hats, etc.); cold and foul weather gear per 11.3(5) (10.1(3)(a)-(c)). 11.3(5): outdoor workers get inclement-weather protective clothing, fair wear and tear.",
+      "replacement": "Fair wear and tear; same 'highly encouraged ... may become responsible for purchasing their own items' warning (10.1(3)(d)).",
+      "eligible": "'Eligible DSTs' (10.1(4)) - eligibility is not defined.",
+      "requestProcedure": {
+        "to": "'through the Agency to either their military unit of assignment or to the Central Issuing Facility (CIF)' (10.1(4)(a)(1)).",
+        "inWriting": "not stated",
+        "form": "not stated",
+        "window": "Annual 30-day FEHB Open Season is the normal cycle (10.1(4)(a)); out-of-cycle at any time for items damaged or unserviceable while performing assigned duties, 'unless damage occurs through negligence or abuse' (10.1(4)(b)).",
+        "agencyDeadline": "Order placed no later than 30 days after the request (10.1(4)(a)(2)); employee confirms status no later than 60 days after the order (10.1(4)(a)(3)); if not provided within 120 days of the order, items 'should be secured through alternate means, within budgetary constraints, to include local purchase' (10.1(4)(a)(4))."
+      }
+    },
+    "preconditions": {
+      "requestFirst": "Yes in practice (Open Season or out-of-cycle request); grievance compels 'the requested items' (10.1(4)(c)).",
+      "waitBeforeGrievance": "Not stated as a condition. Timed duties: order within 30 days of request; alternate means after 120 days from order ('should').",
+      "informalStep": "not stated",
+      "supervisorNotice": "not stated"
+    },
+    "grievance": {
+      "whoMayFile": "Employee, group of employees, or the Union (12.1(4), 12.4(4)).",
+      "filingDeadline": "30 days after the occurrence, or 30 days after the aggrieved party became aware; continuing violations excepted (12.4(3)).",
+      "dayType": "calendar (12.4(2))",
+      "filedWith": "Straight to Step 2, The Adjutant General (TAG) Review (10.1(4)(c) 'IAW Section 12.4(b)'; 12.2(2)).",
+      "steps": [
+        "Step 1 (skipped for contract matters): Agency has 15 days; Step 2 notice must begin within 30 days after Step 1 (12.4(4)(a)).",
+        "Step 2 - TAG Review: TAG decides within 15 days of receipt (12.4(4)(b)).",
+        "Arbitration: Union only; within 30 days of the end of TAG Review (12.6(1))."
+      ],
+      "agencyResponseTimes": "Step 1: 15 days. TAG: 15 days. Agency's missed deadline lets the grievant advance (12.4(3)).",
+      "form": "'UT National Guard Grievance Form' - lettering is inconsistent: the table of contents lists it under Appendix B, the page itself is headed Appendix D, and 12.3(1) says '(Reference Appendix C)'.",
+      "formRequired": "not stated.",
+      "requiredContents": "not stated in Article 12.",
+      "delivery": "not stated ('petition TAG'; notice 'served to the Agency'); email: not stated.",
+      "arbitration": "Union only (12.4(4)(b)(3)); 30 days from the end of TAG Review; FMCS list of 7 (12.6(1)-(2))."
+    },
+    "notes": "Nearly identical to NV (Open Season cycle, 120 days, 'should', negligence exception, express grievance clause), but filing deadline is 30 days (NV 45) and TAG answers in 15 days (NV 30). Requests may go to the unit or the CIF. Refer to the grievance form by name, not appendix letter.",
+    "quotes": {
+      "10.1(3)": "The Agency shall prioritize DSTs over other personnel for the issue and replacement of uniforms. DSTs shall be provided with a total of four (4) sets of their primary duty uniform and all accessories required for proper uniform wear IAW military regulations as follows:",
+      "10.1(3)(c)": "Cold and foul weather gear as provided in Section 11.3(5).",
+      "10.1(4)": "Eligible DST receive their normal issue of military apparel through their membership in the UTARNG. The Agency shall provide a standardized system to allow eligible DSTs to be issued uniform items and accessories. The following process will be observed when requesting uniform items, to include items required by Section 11.3:",
+      "10.1(4)(a)": "Eligible DSTs shall submit a request for uniform items and accessories during the annual thirty (30) day FEHB Open Season period. This period shall serve as the normal cycle for employees to request uniform items in order to ensure they have a full complement of uniforms IAW Section 10.1(3) and 11.3.",
+      "10.1(4)(a)(1)": "Eligible DSTs will submit orders for required uniform items through the Agency to either their military unit of assignment or to the Central Issuing Facility (CIF). The Agency is responsible to ensure uniforms are issued as required by this Section (e.g., G4).",
+      "10.1(4)(a)(2)": "The order will be reviewed by the Agency to ensure the employee is authorized to be issued the items requested and will place an order for the items which the employee is authorized to receive. The order shall be placed as soon as possible, but no later than thirty (30) days after the uniform items were requested.",
+      "10.1(4)(a)(3)": "As soon as possible, but no later than sixty (60) days after placing an order, the employee shall confirm the status of their uniform order with the Agency, to include the expected date of issue.",
+      "10.1(4)(a)(4)": "When the Agency is unable to provide a uniform(s) item within one-hundred and twenty (120) days after initial order, the item(s) should be secured through alternate means, within budgetary constraints, to include local purchase.",
+      "10.1(4)(b)": "Eligible DSTs who fail to request uniform items during the period provided for in sub-paragraph a may be responsible for purchasing their own items in order to comply with the requirement to wear a uniform. However, an employee may request an out-of-cycle replacement uniform item(s) at any time if that request is pursuant to an item becoming damaged or unserviceable while the employee is performing their assigned duties, unless damage occurs through negligence or abuse.",
+      "10.1(4)(c)": "A grievance arising from this Section shall be filed IAW Section 12.4(b) in order to compel the Agency to provide the requested items.",
+      "12.2(2)": "Grievances related to matters covered in this Agreement shall be filed IAW Section 12.4(4)(b), The Adjutant General Review, for all employee or Union-initiated grievances, or IAW Section 12.5(3)(b), LIUNA Local 1776 Business Manager Review, for all Agency-initiated grievances.",
+      "12.4(3)": "Except for claims of a continuing violation, to be considered timely, a grievance must be submitted to the Agency no later than thirty (30) days after the occurrence of a grievable matter or incident, or no later than thirty (30) days after the aggrieved party became aware of a grievable matter or incident.",
+      "12.4(4)(b)(1)": "If the aggrieved party is dissatisfied with the decision reached in Step 1, or if the grievance is covered by Sections 12.2(2) or 12.3(3), then the grievant may petition TAG for relief. The timeline for resolution begins upon notice being served to the Agency.",
+      "12.4(4)(b)(2)": "The Adjutant General, or their designated representative, shall take appropriate action to review the complaint file, to include meeting with the aggrieved party if necessary, and render a final Agency decision no later than fifteen (15) days after receipt of the grievance.",
+      "12.4(4)(b)(3)": "Failure to reach resolution within fifteen (15) days after notice is served will allow the grievant or Union to proceed to arbitration. However, only the Union may invoke arbitration.",
+      "12.6(1)": "The aggrieved party will have thirty (30) days from conclusion of TAG's Review or the LIUNA NGC Local 1776 Business Manager Review Period to invoke arbitration."
+    }
+  }
+}

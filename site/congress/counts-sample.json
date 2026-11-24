@@ -1,0 +1,98 @@
+{
+ "name": "SAMPLE - not real counts (preview only, /legislation?counts=sample on this PC)",
+ "fields": {
+  "asOf": {
+   "stringValue": "2026-11-21"
+  },
+  "total": {
+   "integerValue": "1181"
+  },
+  "unplaced": {
+   "integerValue": "37"
+  },
+  "states": {
+   "mapValue": {
+    "fields": {
+     "LA": {
+      "mapValue": {
+       "fields": {
+        "members": {
+         "integerValue": "412"
+        },
+        "districts": {
+         "mapValue": {
+          "fields": {
+           "01": {
+            "integerValue": "120"
+           },
+           "02": {
+            "integerValue": "88"
+           },
+           "03": {
+            "integerValue": "61"
+           },
+           "04": {
+            "integerValue": "40"
+           },
+           "05": {
+            "integerValue": "55"
+           },
+           "06": {
+            "integerValue": "48"
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     "AR": {
+      "mapValue": {
+       "fields": {
+        "members": {
+         "integerValue": "133"
+        },
+        "districts": {
+         "mapValue": {
+          "fields": {
+           "01": {
+            "integerValue": "20"
+           },
+           "02": {
+            "integerValue": "71"
+           },
+           "03": {
+            "integerValue": "22"
+           },
+           "04": {
+            "integerValue": "20"
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     "SD": {
+      "mapValue": {
+       "fields": {
+        "members": {
+         "integerValue": "19"
+        },
+        "districts": {
+         "mapValue": {
+          "fields": {
+           "AL": {
+            "integerValue": "19"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

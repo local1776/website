@@ -1,0 +1,18 @@
+{
+ "_note": "The rotating line in the header (Ben, Nov 22 2026). Every blurb is a HOOK, not a statement: a question or teaser people can't resist, then a short call to click ('Find out.', 'Read more.', 'We have the answer.'). Plain words — explain the term (\"Do you know what a Garrity warning is?\"), never assume people know it. Each one must still be TRUE to the Local 1776 page it links to. Keep each under about 150 characters (two lines). Videos get their own hooks in video-hooks.json.",
+ "facts": [
+  { "text": "Called into a meeting that could lead to discipline? You can ask for a union rep before you answer a single question. Know your rights.", "href": "/federal-employee-rights" },
+  { "text": "Do you know what a Garrity warning is? It's the one time you can stay silent in an investigation without being disciplined for it. Read more.", "href": "/federal-employee-rights" },
+  { "text": "Does the union have the right to attend formal meetings on grievances and working conditions, even if you don't want it there? Click to find out.", "href": "/formal-meeting-checklist" },
+  { "text": "You've heard of Law Enforcement Leave, but do you know what it is? If you're a dual-status technician in the Guard, you should. Find out here.", "href": "/law-enforcement-leave-fact-sheet" },
+  { "text": "You're welcome! Guard and Reserve members now get 20 days of military leave, 5 more than before, thanks in part to 20 years of union effort. Read more.", "href": "/law-enforcement-leave-fact-sheet" },
+  { "text": "Is a dual-status technician a federal employee or a state employee? The Supreme Court finally settled it. Find out what it means for you.", "href": "/legislation" },
+  { "text": "Activated for emergency duty and not sure which leave to take? We have the answer.", "href": "/emergency-leave-tracker" },
+  { "text": "Told to answer questions or face discipline? That may be a Kalkines warning. Know what it protects before you say a word.", "href": "/federal-employee-rights" },
+  { "text": "Is the investigation criminal or administrative? It matters more than you think. Here's what to ask before you answer anything.", "href": "/weingarten-checklist" },
+  { "text": "Think the union only helps dues-paying members? Think again. We take cases on their merits. See how it works.", "href": "/local-1776-terms-of-membership" },
+  { "text": "Still buying your own uniforms? Your contract may say the agency has to provide them. Request yours here.", "href": "/request-uniforms-and-other-personal-items" },
+  { "text": "Thinking about going AGR? Run the real numbers first: your pay, your retirement and what you give up. Try the calculator.", "href": "/agr-calculator" },
+  { "text": "Does your supervisor know what's in your contract? Do you? Every Local 1776 contract is online and searchable.", "href": "/agencies" }
+ ]
+}
