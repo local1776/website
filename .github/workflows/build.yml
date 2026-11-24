@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # THE LAUNCH SWITCH: "0" = preview (noindex, robots.txt says keep out). Set to "1" at launch.
-      L1776_LIVE: "0"
+      L1776_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
