@@ -740,7 +740,7 @@ function contractPage(u) {
 </header>
 <div class="wrap split ct-split">
   <aside class="ct-side" aria-label="Contents and search">
-    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off">${button(c.pdf, 'plan', 'Download', 'alt')}<span class="rcount" aria-live="polite">${nSec} sections</span></div>
+    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off">${button(c.pdf, 'plan', 'PDF', 'alt')}<span class="rcount" aria-live="polite">${nSec} sections</span></div>
     <details class="ct-toc" open><summary>Contents</summary>
       <ol>${c.preamble.length ? '<li><a href="#preamble"><span>&ndash;</span><em>Preamble</em></a></li>' : ''}${c.articles.map(a => `<li><a href="#a${a.n}" title="${esc(tc(a.title))}"><span>${a.n}</span><em>${esc(tc(a.title))}</em></a></li>`).join('')}</ol>
     </details>
