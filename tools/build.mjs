@@ -95,6 +95,8 @@ const ICON = {
   lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
   save: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>',
   restart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>',
+  upc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>',
+  down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
   up: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>',
   shirt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 4 5.5l1.8 4.2L8 8.8V21h8V8.8l2.2.9L20 5.5 15 3c-.4 1.4-1.6 2.3-3 2.3S9.4 4.4 9 3z"/></svg>',
   news: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5"/></svg>',
@@ -757,13 +759,14 @@ function contractPage(u) {
 </header>
 <div class="wrap split ct-split">
   <aside class="ct-side" aria-label="Contents and search">
-    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word or section number" autocomplete="off" enterkeyhint="search"><button type="button" class="btn" data-find><span class="ico">${ICON.search}</span><span class="lbl">Search</span></button><span class="rcount" aria-live="polite">${nSec} sections</span></div>
+    <div class="ct-find"><label for="cq">Search This Contract</label><input id="cq" type="search" placeholder="Word, &ldquo;Phrase&rdquo; or Section" autocomplete="off" enterkeyhint="search"><button type="button" class="btn" data-find><span class="ico">${ICON.search}</span><span class="lbl">Search</span></button><span class="ct-res"><span class="rcount" aria-live="polite">${nSec} sections</span><span class="ct-nav" hidden><button type="button" data-step="-1" aria-label="Previous match" title="Previous">${ICON.upc}</button><button type="button" data-step="1" aria-label="Next match" title="Next">${ICON.down}</button><button type="button" data-step="x" aria-label="Clear search" title="Clear">${ICON.close}</button></span></span></div>
     <details class="ct-toc" open><summary>Contents</summary>
       <ol>${c.preamble.length ? '<li><a href="#preamble"><span>&ndash;</span><em>Preamble</em></a></li>' : ''}${c.articles.map(a => `<li><a href="#a${a.n}" title="${esc(tc(a.title))}"><span>${a.n}</span><em>${phrases(tc(a.title))}</em></a></li>`).join('')}</ol>
     </details>
   </aside>
   <div class="ct-main">
-    <p class="ct-none" hidden>Nothing in this contract matches. Try a shorter word.</p>${c.preamble.length ? `
+    <div class="ct-strip" hidden><span class="ct-sq"></span><span class="ct-sc" aria-hidden="true"></span><span class="ct-nav" hidden><button type="button" data-step="-1" aria-label="Previous match" title="Previous">${ICON.upc}</button><button type="button" data-step="1" aria-label="Next match" title="Next">${ICON.down}</button><button type="button" data-step="x" aria-label="Clear search" title="Clear">${ICON.close}</button></span></div>
+    <p class="ct-none" hidden>Nothing in this contract matches. Try a shorter word, or take off the quotation marks.</p>${c.preamble.length ? `
     <section class="ct-art" id="preamble"><div class="ct-ah"><h2>Preamble</h2></div><div class="ct-sec ct-pre">${c.preamble.map(p => para(p)).join('')}</div></section>` : ''}${c.articles.map(a => `
     <section class="ct-art" id="a${a.n}">
       <div class="ct-ah"><div class="kicker">Article ${a.n}</div><h2>${esc(tc(a.title))}</h2></div>${a.intro.length ? `<div class="ct-sec ct-intro">${a.intro.map(p => para(p)).join('')}</div>` : ''}${a.sections.map(s => `

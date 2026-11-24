@@ -1084,7 +1084,26 @@ p,li,.deck,.rnote{text-wrap:pretty}
 .ct-find input:focus{border-color:var(--navy);outline:3px solid rgba(255,158,11,.3);outline-offset:0}
 .ct-find .btn{grid-row:2/4;grid-column:2}
 @media (max-width:640px){.ct-find input,.cg-row input{height:44px}}
-.ct-find .rcount{grid-column:1;margin-top:-2px}
+.ct-res{grid-column:1;display:flex;align-items:center;gap:8px;min-height:18px;margin-top:-2px;min-width:0}
+.ct-res .rcount{min-width:0;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.ct-nav{display:flex;flex:none;gap:4px;margin-left:auto}
+.ct-nav[hidden],.ct-strip[hidden]{display:none}
+.ct-nav button{position:relative;display:flex;align-items:center;justify-content:center;width:18px;height:18px;padding:0;border:0;background:none;color:var(--navy);cursor:pointer}
+.ct-nav button:hover,.ct-nav button:focus-visible{color:var(--gold-text)}
+.ct-nav svg{width:15px;height:15px}
+/* phones and tablets: the search box scrolls away, so the matches get a slim strip under the menu bar */
+.ct-strip{display:none}
+@media (max-width:900px){
+  .ct-res .ct-nav{display:none}
+  .ct-strip:not([hidden]){position:sticky;top:25px;z-index:12;display:flex;align-items:center;gap:10px;height:38px;margin:0 -16px 10px;padding:0 16px;background:#fff;border-bottom:1px solid rgba(18,18,18,.28);font-size:13px}
+  .ct-sq{min-width:0;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ct-sc{flex:none;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .ct-nav button{width:34px;height:36px}
+  .ct-nav svg{width:18px;height:18px}
+}
+@media (min-width:641px) and (max-width:900px){.ct-strip:not([hidden]){margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}}
+@media screen and (min-width:901px) and (pointer:coarse){.ct-res .rcount{font-size:12.5px}.ct-nav button{width:26px}.ct-nav button::before{content:"";position:absolute;inset:-8px -2px}}
+@media print{.ct-strip{display:none!important}}
 .ct-toc{min-height:0;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
 .ct-toc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);padding:10px 0 6px}
 .ct-toc summary::after{content:"";width:16px;height:16px;flex:none;background:no-repeat center/16px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b2a55' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");transition:transform .2s}
@@ -1110,13 +1129,15 @@ p,li,.deck,.rnote{text-wrap:pretty}
 .ct-sec h3 a{flex:none;font-variant-numeric:tabular-nums;color:var(--navy);text-decoration:none;min-width:36px}
 .ct-sec h3 a:hover{text-decoration:underline}
 .ct-sec p{margin:0 0 9px;position:relative}
-.ct-sec p.l1{padding-left:26px}.ct-sec p.l2{padding-left:52px}.ct-sec p.l3{padding-left:82px}.ct-sec p.l4{padding-left:108px}
-.ct-sec .mk{position:absolute;left:0;font-variant-numeric:tabular-nums}
-.ct-sec p.l2 .mk{left:26px}.ct-sec p.l3 .mk{left:52px}.ct-sec p.l4 .mk{left:82px}
+.ct-sec p.l1{padding-left:32px}.ct-sec p.l2{padding-left:58px}.ct-sec p.l3{padding-left:88px}.ct-sec p.l4{padding-left:114px}
+/* the number hangs in the margin; a long one (iii., (11)) pushes its own first line over instead of touching the text */
+.ct-sec .mk{display:inline-block;min-width:var(--mk);margin-left:calc(-1*var(--mk));padding-right:5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ct-sec p.l1{--mk:32px}.ct-sec p.l2{--mk:26px}.ct-sec p.l3{--mk:30px}.ct-sec p.l4{--mk:26px}
 .ct-sec p a{color:var(--navy);text-decoration:underline;text-decoration-color:#9fb0c8;text-underline-offset:2px}
 .ct-pre{border-top:0;padding-top:0}
 .ct-none{font-size:15px;color:var(--muted);margin:0 0 20px}
 .ct-source{margin:20px 0 0}
+::highlight(ct-now){background:var(--gold);color:var(--ink)}
 ::highlight(ct){background:#fff4e3;color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px}
 /* notes beside a section: what it means, what we negotiated, cases (thin outline, no colored bars) */
 .ct-notes{display:grid;gap:8px;margin:2px 0 12px}
@@ -1136,8 +1157,7 @@ p,li,.deck,.rnote{text-wrap:pretty}
 }
 @media (max-width:640px){
   .ct-sec{font-size:16px}
-  .ct-sec p.l1{padding-left:22px}.ct-sec p.l2{padding-left:42px}.ct-sec p.l3{padding-left:70px}.ct-sec p.l4{padding-left:92px}
-  .ct-sec p.l2 .mk{left:22px}.ct-sec p.l3 .mk{left:42px}.ct-sec p.l4 .mk{left:70px}
+  .ct-sec p.l1{padding-left:29px;--mk:29px}.ct-sec p.l2{padding-left:51px;--mk:22px}.ct-sec p.l3{padding-left:79px;--mk:28px}.ct-sec p.l4{padding-left:101px;--mk:22px}
   .ct-tiles .tile b{font-size:19px}
 }
 @media print{.ct-side,.ct-source,.ct-notes{display:none!important}.ct-split{display:block;padding:0}.ct-art{break-before:auto}.ct-sec{font-size:10.5pt;line-height:1.45}.ct-sec h3{break-after:avoid}}

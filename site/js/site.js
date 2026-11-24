@@ -541,13 +541,20 @@
     var rcount = document.querySelector('.rcount'), rnone = document.querySelector('.rnone');
     var total = document.querySelectorAll('.ritem').length;
     var norm = function (s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); };
+    // words in quotes (straight or a phone's curly ones) are an exact phrase, whole words only (Ben, Nov 24 2026)
+    var termsOf = function (v) {
+      var out = [], m, re = /"([^"]*)(?:"|$)|([^\s"]+)/g;
+      v = v.replace(/[\u201c\u201d\u201e\u201f\u2033]/g, '"');
+      while ((m = re.exec(v))) { if (m[1] !== undefined) { if (norm(m[1])) out.push(' ' + norm(m[1]) + ' '); } else norm(m[2]).split(' ').forEach(function (w) { if (w) out.push(w); }); }
+      return out;
+    };
     rq.addEventListener('input', function () {
-      var words = norm(rq.value).split(' ').filter(Boolean), shown = 0;
+      var words = termsOf(rq.value), shown = 0;
       document.querySelectorAll('.rrow').forEach(function (card) {
         var title = norm(card.querySelector('h3').textContent), any = 0;
         card.querySelectorAll('.ritem').forEach(function (li) {
           var part = li.closest('.rpart'), head = part && part.querySelector('.rhead');   // a part's heading ("Department of Labor Audits") counts too
-          var t = title + ' ' + (head ? norm(head.textContent) + ' ' : '') + norm(li.textContent) + ' ' + norm(li.querySelector('a') ? li.querySelector('a').getAttribute('href') : '');
+          var t = ' ' + [title, head ? norm(head.textContent) : '', norm(li.textContent), norm(li.querySelector('a') ? li.querySelector('a').getAttribute('href') : '')].join(' | ') + ' ';   // a phrase never runs from one part into the next
           var ok = words.every(function (w) { return t.indexOf(w) >= 0; });
           li.hidden = !ok; if (ok) { any++; shown++; }
         });
