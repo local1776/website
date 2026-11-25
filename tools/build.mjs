@@ -664,14 +664,28 @@ function videosHtml(list) {
 }
 
 // ---------- home photo slider ----------
-// Every picture in site/img/slides (01.jpg, 02.jpg ...) in order. The first loads with the page; site.js loads the rest
-// one at a time, just before each is shown.
-// Phones get the smaller copies in slides/m. slides/first.txt is the first photo at 40 px, kept in the page itself: it shows
-// at once, so the space is never a plain blue box while the real photo is on its way (Ben, Nov 24 2026).
-const slideFiles = fs.readdirSync(path.join(SRC, 'img', 'slides')).filter(f => /\.jpe?g$/i.test(f)).sort();
+// Five photo windows on a metal grill (Ben, Nov 25 2026): one large, four small, each changing at its own pace (site.js);
+// phones show only the large one. Every picture in site/img/slides (01.jpg, 02.jpg ...) takes part; which photo goes where
+// is in site/data/slides.json. The first five load with the page; site.js loads the rest one at a time, just before each is
+// shown. Small windows and phones use the smaller copies in slides/m. slides/first.txt is the first photo at 40 px, kept in
+// the page itself: it shows at once, so the space is never a plain blue box while the photo is on its way (Nov 24 2026).
+const SL = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'slides.json'), 'utf8'));
+const slideIds = (() => {
+  const all = fs.readdirSync(path.join(SRC, 'img', 'slides')).filter(f => /\.jpg$/i.test(f)).map(f => f.replace(/\.jpg$/i, '')).sort();
+  return [...SL.order.filter(x => all.includes(x)), ...all.filter(x => !SL.order.includes(x))];
+})();
 const slideFirst = fs.readFileSync(path.join(SRC, 'img', 'slides', 'first.txt'), 'utf8').trim();
-const slides = `<div class="slides" style="background-image:url(${slideFirst})" data-slides='${JSON.stringify(slideFiles.map(f => '/img/slides/' + f))}'><picture><source media="(max-width:640px)" srcset="/img/slides/m/${slideFiles[0]}"><img class="on" src="/img/slides/${slideFiles[0]}" alt="" fetchpriority="high"></picture></div>
+const slides = (() => {
+  const big = slideIds.find(x => SL.big.includes(x));
+  const four = slideIds.filter(x => x !== big && !SL.bigOnly.includes(x)).slice(0, 4);
+  const at = x => `style="object-position:${SL.focus[x] || '50% 35%'}"`;
+  const data = esc(JSON.stringify({ order: slideIds, big: SL.big, bigOnly: SL.bigOnly, notTablet: SL.notTablet, focus: SL.focus, first: [big, ...four] }));
+  return `<div class="panes" data-slides="${data}">
+    <div class="pane p0" style="background-image:url(${slideFirst})"><picture><source media="(max-width:640px)" srcset="/img/slides/m/${big}.jpg"><img class="on" src="/img/slides/${big}.jpg" alt="" ${at(big)} fetchpriority="high"></picture></div>
+    ${four.map((x, i) => `<div class="pane p${i + 1}"><img class="on" src="/img/slides/m/${x}.jpg" alt="" ${at(x)} loading="lazy"></div>`).join('')}
+  </div>
   <button class="hero-ctl" type="button" aria-label="Pause the photos" title="Pause">${ICON.pause}</button>`;
+})();
 
 // The privacy note on every form, like the AGR calculator's (Ben, Nov 21 2026). A form that sends: we get it, but nothing
 // stays on the website once it's sent. A form that stays on the device: nothing leaves it.

@@ -1,0 +1,8 @@
+{
+  "about": "Home photo windows. order = the order photos come up (a new photo in site/img/slides not listed here comes last). big = photos the large window may show. bigOnly = wide photos that lose people or parts of an aircraft in a small window. notTablet = photos left out on tablets. focus = the part to keep in view when a photo is cropped (left-right, top-bottom). first.txt in site/img/slides must be the first photo of order at 40 px.",
+  "order": ["02","01","17","12","25","08","03","10","13","26","14","24","22","07","15","05","11","27","16","09","18","20","28","06","21","23","29","04","19"],
+  "big": ["01","02","06","15","25","14","26","27","18","10","21","09","07","13","28","04","24","19"],
+  "bigOnly": ["01","02","06","15"],
+  "notTablet": ["01","06"],
+  "focus": {"10":"58% 45%","11":"50% 50%","12":"50% 62%","13":"25% 50%","14":"45% 50%","15":"55% 45%","16":"12% 45%","17":"30% 50%","18":"55% 55%","19":"20% 60%","20":"35% 50%","21":"72% 55%","22":"50% 45%","23":"85% 55%","24":"50% 45%","25":"20% 60%","26":"45% 60%","27":"55% 60%","29":"45% 60%","01":"52% 60%","02":"62% 50%","03":"50% 35%","04":"74% 45%","06":"50% 40%","07":"50% 62%","08":"25% 45%","09":"50% 62%"}
+}

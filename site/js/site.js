@@ -7,47 +7,90 @@
     grow(t);
   });
 
-  // Home photo slider: fades to the next photo every 6 seconds. Loads each photo just before it is shown.
-  // Stops for people who ask their device for reduced motion, and has a pause button.
-  var hero = document.querySelector('.hero .slides');
+  // Home photo windows (Ben, Nov 25 2026): one large and four small, each fading to its next photo at its own pace, never two
+  // at once and never the same photo twice. Phones show only the large one, a new photo every 6 seconds. Each photo loads just
+  // before it is shown. Stops for people who ask their device for reduced motion, and has a pause button.
+  var hero = document.querySelector('.panes');
   if (hero) {
-    var srcs = JSON.parse(hero.dataset.slides || '[]');
-    if (window.matchMedia && matchMedia('(max-width: 640px)').matches) srcs = srcs.map(function (s) { return s.replace('/slides/', '/slides/m/'); });
-    var imgs = [hero.querySelector('img')], cur = 0, timer = null;
-    var ctl = document.querySelector('.hero-ctl');
-    var PAUSE = ctl ? ctl.innerHTML : '';
+    var SD = JSON.parse(hero.dataset.slides), phone = window.matchMedia('(max-width: 640px)');
+    var PACE = [15000, 11000, 13500, 12200, 17000], START = [7000, 3500, 10000, 5200, 13000];   // each window's own pace, and its first change
+    var ctl = document.querySelector('.hero-ctl'), PAUSE = ctl.innerHTML, playing = false, lastSwap = 0;
     var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>';
-    var get = function (k) {
-      if (!imgs[k]) { var im = new Image(); im.alt = ''; im.decoding = 'async'; watch(im, k); im.src = srcs[k]; hero.appendChild(im); imgs[k] = im; }
-      return imgs[k];
-    };
+    var has = function (list, x) { return (list || []).indexOf(x) >= 0; };
+    var ready = function (im) { return im && im.complete && im.naturalWidth > 0; };
+    var panes = [].map.call(hero.querySelectorAll('.pane'), function (el, i) { return { el: el, i: i, id: SD.first[i], im: el.querySelector('img'), next: null, nextId: null, due: 0 }; });
+    var queue = [];   // photos waiting their turn
+    var shown = function () { return phone.matches ? panes.slice(0, 1) : panes; };
+    var src = function (p, id) { return '/img/slides/' + (p.i === 0 && !phone.matches ? '' : 'm/') + id + '.jpg'; };
     // A photo that fails is asked for again. A phone often opens a home screen app before its connection is awake: the page
     // comes from the phone's own copy and the first photo fails, which left a blue box until the next one (Ben, Nov 24 2026).
-    var ready = function (im) { return im && im.complete && im.naturalWidth > 0; };
-    var again = function (k) {
-      var im = imgs[k]; if (!im || ready(im)) return;
-      if (im.parentNode.tagName === 'PICTURE') { [].forEach.call(im.parentNode.querySelectorAll('source'), function (s) { s.remove(); }); }
-      im.src = srcs[k] + '?again=' + (im.tries = (im.tries || 0) + 1);
+    var again = function (im) {
+      if (!im || !im.isConnected || ready(im)) return;
+      if (im.parentNode.tagName === 'PICTURE') [].forEach.call(im.parentNode.querySelectorAll('source'), function (x) { x.remove(); });
+      im.src = im.base + '?again=' + (im.tries = (im.tries || 0) + 1);
     };
-    var watch = function (im, k) { im.addEventListener('load', function () { im.style.visibility = ''; }); im.addEventListener('error', function () { im.style.visibility = 'hidden'; if ((im.tries || 0) < 8) setTimeout(function () { again(k); }, Math.min(8000, 700 * ((im.tries || 0) + 1))); }); };
-    watch(imgs[0], 0);
-    if (imgs[0].complete && !imgs[0].naturalWidth) { imgs[0].style.visibility = 'hidden'; again(0); }
-    var wake = function () { if (!document.hidden) { [cur, (cur + 1) % srcs.length].forEach(function (k) { if (imgs[k] && imgs[k].complete) again(k); }); } };
+    var watch = function (im, base) {
+      im.base = base;
+      im.addEventListener('load', function () { im.style.visibility = ''; });
+      im.addEventListener('error', function () { im.style.visibility = 'hidden'; if ((im.tries || 0) < 8) setTimeout(function () { again(im); }, Math.min(8000, 700 * ((im.tries || 0) + 1))); });
+      if (im.complete && !im.naturalWidth && im.loading !== 'lazy') { im.style.visibility = 'hidden'; again(im); }
+    };
+    // which waiting photo may go in this window: the large one takes only photos the card doesn't cover, the small ones only
+    // photos that still make sense cropped; a tablet leaves out the wide group photos; a phone takes any
+    var fits = function (p, id) {
+      if (phone.matches) return true;
+      if (window.innerWidth < 1200 && has(SD.notTablet, id)) return false;
+      return p.i === 0 ? has(SD.big, id) : !has(SD.bigOnly, id);
+    };
+    var prep = function (p) {
+      if (p.next) return;
+      for (var k = 0; k < queue.length && !fits(p, queue[k]); k++);
+      if (k === queue.length) return;
+      p.nextId = queue.splice(k, 1)[0];
+      var im = new Image(); im.alt = ''; im.decoding = 'async'; im.style.objectPosition = SD.focus[p.nextId] || '50% 35%';
+      watch(im, src(p, p.nextId)); im.src = im.base; p.el.appendChild(im); p.next = im;
+    };
+    var drop = function (p) { if (p.next) { p.next.remove(); queue.unshift(p.nextId); p.next = null; } };
+    var swap = function (p) {
+      var old = p.im; p.next.offsetWidth; p.next.classList.add('on'); old.classList.remove('on');
+      setTimeout(function () { (old.parentNode.tagName === 'PICTURE' ? old.parentNode : old).remove(); }, 2000);
+      queue.push(p.id); p.im = p.next; p.id = p.nextId; p.next = null; prep(p);
+    };
+    var schedule = function () { var n = Date.now(); panes.forEach(function (p) { p.due = n + (phone.matches ? 6000 : START[p.i]); }); };
+    var begin = function () {   // at the start, and when a phone is turned
+      panes.forEach(drop);
+      var up = shown().map(function (p) { return p.id; });
+      queue = SD.order.filter(function (x) { return !has(up, x); });
+      shown().forEach(prep); schedule();
+    };
+    setInterval(function () {
+      if (!playing || document.hidden) return;
+      var n = Date.now(), p;
+      if (n - lastSwap < 1500) return;
+      p = shown().filter(function (x) { return n >= x.due && ready(x.next); }).sort(function (a, b) { return a.due - b.due; })[0];
+      if (!p) return;
+      lastSwap = n; p.due = n + (phone.matches ? 6000 : PACE[p.i]); swap(p);
+    }, 250);
+    var wake = function () { if (!document.hidden) shown().forEach(function (p) { [p.im, p.next].forEach(function (im) { if (im && im.complete) again(im); }); }); };
     ['online', 'pageshow'].forEach(function (e) { window.addEventListener(e, wake); });
-    document.addEventListener('visibilitychange', wake);
-    var show = function (k) {
-      var next = get(k);
-      var go = function () { imgs[cur].classList.remove('on'); next.classList.add('on'); cur = k; if (srcs.length > 1) get((k + 1) % srcs.length); };
-      if (next.complete && next.naturalWidth) go(); else next.onload = go;
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) { wake(); schedule(); } });
+    var set = function (on) { playing = on; if (on) schedule(); ctl.innerHTML = on ? PAUSE : PLAY; ctl.setAttribute('aria-label', on ? 'Pause the photos' : 'Play the photos'); ctl.title = on ? 'Pause' : 'Play'; };
+    ctl.addEventListener('click', function () { set(!playing); });
+    // the large photo ends under the end of the word Contact, and the grill is drawn in the screen's own dots
+    var contact = document.querySelector('.nav a[href="/contact-us"]'), heroEl = document.querySelector('.hero');
+    var fit = function () {
+      var d = window.devicePixelRatio || 1, sharp = d >= 1.7;
+      heroEl.style.setProperty('--hx', (sharp ? Math.round(3 * d) : 4) / d + 'px');
+      heroEl.style.setProperty('--hy', (sharp ? Math.round(5 * d) : 6) / d + 'px');
+      if (contact) hero.style.setProperty('--big', Math.round(contact.getBoundingClientRect().right - 10) + 'px');
     };
-    var play = function () { stop(); timer = setInterval(function () { show((cur + 1) % srcs.length); }, 6000); if (ctl) { ctl.innerHTML = PAUSE; ctl.setAttribute('aria-label', 'Pause the photos'); ctl.title = 'Pause'; } };
-    var stop = function () { clearInterval(timer); timer = null; if (ctl) { ctl.innerHTML = PLAY; ctl.setAttribute('aria-label', 'Play the photos'); ctl.title = 'Play'; } };
-    if (srcs.length > 1) {
-      get(1);
-      setTimeout(function () { if (cur === 0 && timer && !ready(imgs[0]) && ready(imgs[1])) { show(1); play(); } }, 2500);   // the second came first: don't wait on the first
-      if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) stop(); else play();
-      if (ctl) ctl.addEventListener('click', function () { if (timer) stop(); else play(); });
-    } else if (ctl) ctl.hidden = true;
+    fit(); window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    panes.forEach(function (p) { watch(p.im, src(p, p.id)); });
+    begin();
+    if (phone.addEventListener) phone.addEventListener('change', begin);
+    setTimeout(function () { var p = panes[0]; if (playing && !ready(p.im) && ready(p.next)) swap(p); }, 2500);   // the second came first: don't wait on the first
+    set(!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches));
     // Desktop + tablet: the whole header and the photo hold still while the page slides over the photo (CSS). Here: the
     // heights, and the hand-over (.free) once the page reaches the bottom of the white strip.
     var mast = document.querySelector('.mast'), bar = document.querySelector('.nav'), strip = document.querySelector('.strip'),

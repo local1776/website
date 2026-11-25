@@ -207,11 +207,21 @@ details.branch .plist{padding:0 14px 6px}
 .btn.icon{width:42px}.btn.icon .ico{width:42px;height:42px}.btn.icon .ico svg{width:21px;height:21px}
 .btn[disabled]{opacity:.5;cursor:default}
 
-/* Home photo slider (the old site's slideshow, kept by request) */
-.hero{position:relative;background:var(--navy)}
-.hero .slides{position:relative;height:clamp(320px,38vw,560px);overflow:hidden;background:#14233f center 35%/cover no-repeat}
-.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:0;transition:opacity 1.4s ease}
-.hero .slides img.on{opacity:1}
+/* Home photos: five windows floating on a gunmetal speaker grill (Ben, Nov 25 2026): one large, ending under the end of the
+   word Contact (site.js sets --big exactly), and four small. The grill is the smallest hexagon a screen can draw: three dots
+   wide, four tall, one-dot wire; site.js sizes it to the screen's own dots (--hx/--hy) so it never blurs. */
+.hero{--hx:4px;--hy:6px;--edge:10px;position:relative;box-shadow:inset 0 7px 9px -5px rgba(0,6,20,.6),inset 0 -6px 8px -5px rgba(0,6,20,.5);
+  --grill:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='6' viewBox='0 0 4 6' shape-rendering='crispEdges'><rect x='1' y='0' width='3' height='1' fill='%2303070e'/><rect x='1' y='1' width='3' height='1' fill='%230a1220'/><rect x='2' y='2' width='1' height='1' fill='%230a1220'/><rect x='2' y='5' width='1' height='1' fill='%2303070e'/><rect x='0' y='3' width='2' height='1' fill='%2303070e'/><rect x='3' y='3' width='1' height='1' fill='%2303070e'/><rect x='0' y='4' width='2' height='1' fill='%230a1220'/><rect x='3' y='4' width='1' height='1' fill='%230a1220'/><rect x='0' y='5' width='1' height='1' fill='%230a1220'/><rect x='0' y='2' width='1' height='1' fill='%2303070e'/></svg>");
+  background:linear-gradient(102deg,rgba(230,235,242,.13) 0,rgba(230,235,242,0) 22%,rgba(230,235,242,.1) 46%,rgba(230,235,242,0) 68%,rgba(230,235,242,.12) 100%),var(--grill) 0 0/var(--hx) var(--hy),linear-gradient(#59616a,#4a5159)}
+@media (min-resolution:1.7dppx),(-webkit-min-device-pixel-ratio:1.7){.hero{--hx:3px;--hy:5px;--grill:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'><defs><linearGradient id='h' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%2301050c'/><stop offset='.7' stop-color='%23050f20'/><stop offset='1' stop-color='%230e2142'/></linearGradient></defs><polygon points='0.00,-2.54 2.60,-1.09 2.60,1.79 0.00,3.24 -2.60,1.79 -2.60,-1.09' fill='%239ab8e2' fill-opacity='0.2'/><polygon points='0.00,-2.89 2.60,-1.44 2.60,1.44 0.00,2.89 -2.60,1.44 -2.60,-1.44' fill='url(%23h)'/><polygon points='6.00,-2.54 8.60,-1.09 8.60,1.79 6.00,3.24 3.40,1.79 3.40,-1.09' fill='%239ab8e2' fill-opacity='0.2'/><polygon points='6.00,-2.89 8.60,-1.44 8.60,1.44 6.00,2.89 3.40,1.44 3.40,-1.44' fill='url(%23h)'/><polygon points='0.00,7.46 2.60,8.91 2.60,11.79 0.00,13.24 -2.60,11.79 -2.60,8.91' fill='%239ab8e2' fill-opacity='0.2'/><polygon points='0.00,7.11 2.60,8.56 2.60,11.44 0.00,12.89 -2.60,11.44 -2.60,8.56' fill='url(%23h)'/><polygon points='6.00,7.46 8.60,8.91 8.60,11.79 6.00,13.24 3.40,11.79 3.40,8.91' fill='%239ab8e2' fill-opacity='0.2'/><polygon points='6.00,7.11 8.60,8.56 8.60,11.44 6.00,12.89 3.40,11.44 3.40,8.56' fill='url(%23h)'/><polygon points='3.00,2.46 5.60,3.91 5.60,6.79 3.00,8.24 0.40,6.79 0.40,3.91' fill='%239ab8e2' fill-opacity='0.2'/><polygon points='3.00,2.11 5.60,3.56 5.60,6.44 3.00,7.89 0.40,6.44 0.40,3.56' fill='url(%23h)'/></svg>")}}
+.panes{position:relative;box-sizing:border-box;display:grid;gap:var(--edge);padding:var(--edge);height:clamp(320px,38vw,560px);grid-template:minmax(0,1fr) minmax(0,1fr)/var(--big,calc(max(28px,(100vw - 1280px)/2 + 28px) + 755px)) minmax(0,1fr) minmax(0,1fr)}
+.pane{position:relative;overflow:hidden;background:#14233f center 35%/cover no-repeat;box-shadow:9px 11px 20px rgba(5,16,34,.5),3px 4px 6px rgba(5,16,34,.35)}
+.pane.p0{grid-row:1/3}
+.pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:0;transition:opacity 1.6s ease;filter:saturate(1.15) contrast(1.08) brightness(1.04)}   /* a little more color and snap: the photos looked "anemic" (Ben, Nov 22 2026) */
+.pane img.on{opacity:1}
+.pane.p0::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,16,34,.34) 0%,rgba(5,16,34,.08) 30%,rgba(5,16,34,0) 55%);pointer-events:none}   /* darker only behind the card, so it pops (Ben, Nov 20 2026) */
+@media (min-width:641px) and (max-width:1199px){.hero{--edge:8px}.panes{grid-template-columns:max(56%,394px) minmax(0,1fr) minmax(0,1fr)}}
+@media (min-width:641px) and (max-width:1023px){.panes{height:400px}}
 /* Home, desktop + tablet only (Ben, Nov 22 2026): the WHOLE header (logo, menu bar, white strip) and the photo hold still
    while the rest of the page (.over-photo, white) slides up over the photo. When the page reaches the bottom of the white
    strip, site.js adds .free: everything scrolls on together until the menu bar reaches the top, and the bar stays there.
@@ -229,16 +239,17 @@ html.dock,html.dock body{overflow-anchor:none}
   html.dock.free .hero{position:relative;z-index:0;margin-bottom:calc(-1 * var(--hero-h,0px))}
 }
 @media print{html.dock .mast,html.dock .strip,html.dock .hero{position:relative;top:0;margin:0}}
-.hero .slides::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,16,34,.38) 0%,rgba(5,16,34,.1) 28%,rgba(5,16,34,0) 55%,rgba(5,16,34,.12) 100%);pointer-events:none}   /* darkening only behind the banner at the top, so the banner pops (Ben, Nov 20 2026) and the photos stay clear (Nov 22 2026) */
-.hero .slides img{filter:saturate(1.15) contrast(1.08) brightness(1.04)}   /* a little more color and snap: the photos looked "anemic" (Ben, Nov 22 2026) */
-.hero .over{position:absolute;left:0;right:0;top:20px;z-index:2}
+.hero .over{position:absolute;left:0;right:0;top:calc(var(--edge) + 18px);z-index:2}
+@media (min-width:641px) and (max-width:1199px){.hero .over{top:24px}}
 /* banner floats over the photo, light from the top left (Ben, Nov 20 2026) */
-.hero-card{display:inline-flex;max-width:100%;background:rgba(11,42,85,.94);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:24px;align-items:center}
+.hero-card{display:inline-flex;max-width:100%;background:rgba(11,42,85,.94);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:22px;align-items:center}
 .hero-card .k{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
-.hero-card h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.15;margin:3px 0 0;white-space:nowrap}
+.hero-card h2{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.15;margin:3px 0 0;white-space:nowrap}
 .hc-note{margin:3px 0 0;font-family:var(--serif);font-size:14px;line-height:1.35;color:#d5ddea;white-space:nowrap}
-.hc-note .short{display:none}
-.hero-ctl{position:absolute;right:16px;top:16px;z-index:3;width:36px;height:36px;border-radius:6px;border:0;background:rgba(255,255,255,.88);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.hc-note .long{display:none}
+@media (min-width:1200px) and (hover:hover){.hc-note .long{display:inline}.hc-note .short{display:none}}   /* Click with a mouse, Tap with a finger */
+@media (min-width:960px) and (max-width:1199px){.hero-card{gap:16px;padding:9px 12px 9px 16px}.hero-card h2{font-size:18px}.hc-note{font-size:13px}}
+.hero-ctl{position:absolute;right:calc(var(--edge) + 10px);top:calc(var(--edge) + 10px);z-index:3;width:36px;height:36px;border-radius:6px;border:0;background:rgba(255,255,255,.88);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer}
 .hero-ctl svg{width:16px;height:16px}
 .hero-ctl:hover{background:#fff}
 
@@ -522,7 +533,10 @@ figure.lead img{display:block;width:100%;max-height:560px;object-fit:contain;bor
   .btn.sm{width:34px}.btn.sm .ico{width:34px;height:34px}.btn.sm .ico svg{width:17px;height:17px}
   .strip .who{display:none}
   .strip .wrap{justify-content:center;font-size:10.5px;letter-spacing:.1em}
-  .hero .slides{height:250px}
+  .hero{--edge:8px}
+  .panes{height:270px;grid-template:minmax(0,1fr)/minmax(0,1fr)}
+  .pane.p0{grid-row:1}
+  .pane:not(.p0){display:none}
   .hero{display:flex;flex-direction:column-reverse}
   .hero .over{position:static}
   .hero .over .wrap{padding:0}
@@ -530,9 +544,7 @@ figure.lead img{display:block;width:100%;max-height:560px;object-fit:contain;bor
   .hero-card h2{font-size:19px}
   .hero-card h2.lines span{display:block;white-space:nowrap}
   .hc-note{font-size:13px}
-  .hc-note .long{display:none}
-  .hc-note .short{display:inline}   /* broken on purpose: three balanced lines on a phone */
-  .hero-ctl{right:10px;top:auto;bottom:10px;width:32px;height:32px}
+  .hero-ctl{right:18px;top:auto;bottom:18px;width:32px;height:32px}
   .nav a{padding:12px 11px 9px;font-size:10.5px}
   .top{padding-top:26px}
   .deck{font-size:18px}
@@ -1400,12 +1412,12 @@ fieldset.fset[disabled] *{cursor:not-allowed}
 @media (max-width:900px){.uf-wyw{grid-template-columns:minmax(0,1fr)}.uf-seals{display:none}}
 /* header button labels in regular weight (Ben, Nov 21 2026 — trial) */
 
-/* the reform card's Plan button matches the header buttons: same size, thin white outline on the card's navy,
-   regular-weight label (Ben, Nov 21 2026) */
-.hero-card .btn.light{width:48px}
-.hero-card .btn.light .ico{width:48px;height:48px}
+/* the reform card's Plan button: thin white outline on the card's navy, the icon with little space around it (Ben, Nov 25 2026) */
+.hero-card .btn.light{width:34px}
+.hero-card .btn.light .ico{width:34px;height:34px}
 .hero-card .btn.light .ico svg{width:23px;height:23px}
-@media (max-width:640px){.hero-card .btn.light{width:44px}.hero-card .btn.light .ico{width:44px;height:44px}.hero-card .btn.light .ico svg{width:21px;height:21px}}
+@media (max-width:640px){.hero-card .btn.light .ico svg{width:21px;height:21px}}
+@media screen and (pointer:coarse){.hero-card .btn.light{position:relative}.hero-card .btn.light::before{content:"";position:absolute;inset:-6px}}
 .hero-card .btn.icon .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}   /* icon only: the subtitle says "click the button" */
 /* phone (Nov 23 2026): the button sits beside the title, inside the banner's margin; the kicker and note run the full width */
 @media (max-width:640px){
@@ -1415,10 +1427,14 @@ fieldset.fset[disabled] *{cursor:not-allowed}
   .hero-card .btn.light{grid-column:2;grid-row:2;align-self:center}
 }
 @media (max-width:340px){.hero-card .k{letter-spacing:.1em}.hero-card .hc-note{font-size:12px}}
-/* upright tablet: a two-line title and the short note, so the button stays on the banner and clear of the pause button */
-@media (min-width:641px) and (max-width:900px){
-  .hero-card h2.lines span:last-child{display:block}
-  .hc-note .long{display:none}.hc-note .short{display:inline}
+/* tablet: the title on two lines, so the card stays inside the large photo */
+@media (min-width:641px) and (max-width:959px){
+  .hero-card{display:inline-grid;grid-template-columns:auto auto;gap:0 14px;padding:10px 14px 10px 16px}
+  .hero-card>div{display:contents}
+  .hero-card .k,.hero-card .hc-note{grid-column:1/-1}
+  .hero-card h2{font-size:19px}
+  .hero-card h2.lines span{display:block}
+  .hero-card .btn.light{grid-column:2;grid-row:2;align-self:center;justify-self:end}
 }
 /* the reform card's button catches the light every few seconds (Ben, Nov 21 2026) */
 .hero-card .btn.light .ico{position:relative;overflow:hidden}
