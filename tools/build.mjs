@@ -5,6 +5,7 @@
 // The headlines are fetched at build time; the published site is rebuilt on a schedule so they stay current.
 // Run: node tools/build.mjs            (add --offline to skip fetching headlines)
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { congressData, vvHtml, congressGovUrl } from './lib/congress.mjs';
@@ -1066,6 +1067,23 @@ function fill(src) {
 }
 for (const [from, to] of Object.entries(REDIRECTS)) {
   fs.writeFileSync(path.join(OUT, from + '.html'), `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="${SITE}${to}"><meta http-equiv="refresh" content="0; url=${to}"><meta name="robots" content="noindex"></head><body><p>This page moved to <a href="${to}">${SITE}${to}</a>.</p></body></html>\n`);
+}
+// Every page names its styles and scripts with a stamp of their contents (site.css?v=1a2b3c4d), so a browser that kept the old
+// ones asks for the new ones the moment they change (Nov 24 2026: the new header showed white for people with the old styles).
+{
+  const stamps = {};
+  const stamp = f => stamps[f] ||= createHash('sha256').update(fs.readFileSync(path.join(OUT, f))).digest('hex').slice(0, 8);
+  (function walk(d) {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith('.html')) {
+        const h = fs.readFileSync(p, 'utf8');
+        const n = h.replace(/ (href|src)="\/((?:css|js)\/[\w.-]+\.(?:css|js))"/g, (m, a, u) => fs.existsSync(path.join(OUT, u)) ? ` ${a}="/${u}?v=${stamp(u)}"` : m);
+        if (n !== h) fs.writeFileSync(p, n);
+      }
+    }
+  })(OUT);
 }
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 // robots.txt and sitemap.xml: every page except the redirects and the 404 page (GitHub Pages serves 404.html itself)
