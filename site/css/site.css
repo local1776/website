@@ -1915,10 +1915,19 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 @media (max-width:640px){.steps.fit{grid-template-columns:1fr}}
 .stat .stat-logos{display:flex;margin-top:11px}
 .stat-logos a{position:relative;display:block;flex:none}
-.stat-logos img{display:block;width:auto;height:32px}
+.stat-logos img{display:block;width:auto;height:27px}
 .stat-logos a:hover img{opacity:.8}
-@media (min-width:901px) and (max-width:1160px){.stat-logos img{height:26px}}
+@media (min-width:901px) and (max-width:1160px){.stat-logos img{height:21px}}
 @media screen and (max-width:1023px),screen and (pointer:coarse){.stat-logos a::before{content:"";position:absolute;inset:-6px -6px}}
 @media (min-width:641px) and (max-width:720px){.steps.fit{grid-template-columns:1fr;gap:26px}.steps.fit li+li::before{left:50%;top:-21px;margin:0 0 0 -8px;transform:rotate(90deg)}.locals{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:901px) and (max-width:980px){.steps.fit{gap:18px}.steps.fit li+li::before{left:-17px}.steps.fit li{padding:8px}.steps.fit .yr{font-size:14px}.steps.fit h3{font-size:9px;letter-spacing:.04em}}
-@media screen and (max-width:1023px),screen and (pointer:coarse){.byline a::before{content:"";position:absolute;inset:-8px -5px}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.byline a::before{content:"";position:absolute;inset:-8px 0}}
+.steps.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps.n4 .yr{font-size:20px;white-space:nowrap}
+@media (max-width:900px){.steps.n3{grid-template-columns:1fr}}
+@media (max-width:1100px) and (min-width:901px){.steps.n4{gap:22px}.steps.n4 li{padding:10px}.steps.n4 li+li::before{left:-19px}.steps.n4 .yr{font-size:17px}}
+.case-k i{font-style:normal}
+.case-k span{white-space:nowrap}
+@media (max-width:640px){.case-k i{display:none}.case-k span{display:block}.case-h{font-size:clamp(20px,6.5vw,34px)!important}.case-tiles .tile{padding:10px}.case-tiles em{font-size:11.5px;white-space:nowrap}}
+@media (max-width:359px){.case-tiles em{font-size:10px}.case-tiles b{font-size:15.5px!important}.kicker.case-k{font-size:10.5px}}
+@media (max-width:420px){.byline{column-gap:21px}.byline span::before{left:-11px}}

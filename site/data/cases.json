@@ -1,66 +1,640 @@
 [
   {
     "slug": "flra-v-michigan-army-national-guard",
-    "draft": true,
     "forum": "U.S. Court of Appeals",
     "court": "Sixth Circuit",
-    "title": ["FLRA v. Michigan", "Army National Guard"],
+    "title": [
+      "FLRA v. Michigan",
+      "Army National Guard"
+    ],
     "deck": "Can the Guard forbid its employees from talking to their union in private? The Sixth Circuit said no.",
     "tiles": [
-      ["Decided", "Dec. 18, 2017", "Sixth Circuit, No. 17-3128"],
-      ["Citation", "878 F.3d 171", "Published, full text"],
-      ["Result", "Union Win", "With one change"],
-      ["Vote", "3 to 0", "To enforce the order"]
+      [
+        "Decided",
+        "Dec. 18, 2017",
+        "No. 17‑3128"
+      ],
+      [
+        "Citation",
+        "878 F.3d 171",
+        "Published, full text"
+      ],
+      [
+        "Result",
+        "Union Win",
+        "With one change"
+      ],
+      [
+        "Vote",
+        "3 to 0",
+        "To enforce the order"
+      ]
     ],
     "means": "You may talk to your union in private, about your job and about discipline. Wearing a uniform to work does not take that away. The notice the court approved says it outright: employees &ldquo;have the right to privately communicate with their union representatives about their conditions of employment, including disciplinary matters.&rdquo;",
     "audio": {
       "src": "/files/cases/6th-circuit-17-3128-argument.mp3",
       "seconds": 2052,
-      "note": ["Three federal judges question both attorneys.", "Argued October 4, 2017 &middot; 34 minutes &middot; Court recording"],
+      "note": [
+        "Three federal judges question both attorneys.",
+        "Argued October 4, 2017 &middot; 34 minutes &middot; Court recording"
+      ],
       "who": [
-        ["The Judges", "Eric L. Clay, John M. Rogers and Jeffrey S. Sutton"],
-        ["For the FLRA", "Zachary R. Henige, Federal Labor Relations Authority"],
-        ["For the Guard", "Tyce R. Walters, U.S. Department of Justice"]
+        [
+          "The Judges",
+          "Eric L. Clay, John M. Rogers and Jeffrey S. Sutton"
+        ],
+        [
+          "For the FLRA",
+          "Zachary R. Henige, Federal Labor Relations Authority"
+        ],
+        [
+          "For the Guard",
+          "Tyce R. Walters, U.S. Department of Justice"
+        ]
       ]
     },
     "timeline": [
-      ["March 2014", "The Letter", "A Guard attorney tells the union not to speak with employees alone."],
-      ["Oct. 2015", "The Judge", "An FLRA administrative law judge rules for the union."],
-      ["May 2016", "The FLRA", "The Authority agrees and orders the Guard to stop."],
-      ["Oct. 2017", "The Argument", "The Guard refuses to comply. The case is argued in the Sixth Circuit."],
-      ["Dec. 2017", "The Ruling", "All three judges vote to enforce the order."]
+      [
+        "March 2014",
+        "The Letter",
+        "A Guard attorney tells the union not to speak with employees alone."
+      ],
+      [
+        "Oct. 2015",
+        "The Judge",
+        "An FLRA administrative law judge rules for the union."
+      ],
+      [
+        "May 2016",
+        "The FLRA",
+        "The Authority agrees and orders the Guard to stop."
+      ],
+      [
+        "Oct. 2017",
+        "The Argument",
+        "The Guard refuses to comply. The case is argued in the Sixth Circuit."
+      ],
+      [
+        "Dec. 2017",
+        "The Ruling",
+        "All three judges vote to enforce the order."
+      ]
     ],
     "sections": [
-      ["What Happened", [
-        "In 2014, the Michigan Army National Guard fired two dual status technicians. They used the Guard&rsquo;s own appeal process, and their union, LIUNA Local 2132, represented them.",
-        "While that appeal was open, a Guard attorney wrote to the union&rsquo;s representative, Ben Banchs. It said that any communications with Guard employees without a Guard attorney present were &ldquo;improper&rdquo; until the hearing examiner decided otherwise.",
-        "Banchs answered that the Guard had &ldquo;no legal authority to regulate communications between bargaining unit employees . . . and the Union.&rdquo; The Guard said it meant only communications about the hearing, but left its letter in place. The union filed an unfair labor practice charge.",
-        "An administrative law judge ruled for the union, and so did the Federal Labor Relations Authority (FLRA). The Guard refused to comply, so the FLRA asked a federal court to enforce its order."
-      ]],
-      ["What the Court Decided", [
-        "<b>The letter broke the law.</b> The FLRA read it as a &ldquo;sweeping command&rdquo; that banned all private talk between employees and their union. The court found enough evidence to support that reading.",
-        "<b>The Technicians Act was no shield.</b> That law leaves decisions to fire a technician to the adjutant general. A ban on all private contact, including contact that had nothing to do with the firing, is not part of that decision.",
-        "<b>The union was in the right place.</b> Whether the Guard followed its own rules, and whether it broke federal labor law, are two different questions. The union could bring the second one to the FLRA."
-      ]],
-      ["The One Change", [
-        "The court narrowed the order&rsquo;s wording so that it bars &ldquo;sweeping directives&rdquo; against private communication, because that is what the FLRA found. Judge Clay agreed with the result but would have enforced the order as written. He called the Guard&rsquo;s letter &ldquo;slapdash.&rdquo;"
-      ]],
-      ["What It Left Open", [
-        "The court did not decide whether the Guard could use a narrower rule, one limited to private contact with witnesses about a pending termination hearing."
-      ]]
+      [
+        "What Happened",
+        [
+          "In 2014, the Michigan Army National Guard fired two dual status technicians. They used the Guard&rsquo;s own appeal process, and their union, LIUNA Local 2132, represented them.",
+          "While that appeal was open, a Guard attorney wrote to the union&rsquo;s representative, Ben Banchs. It said that any communications with Guard employees without a Guard attorney present were &ldquo;improper&rdquo; until the hearing examiner decided otherwise.",
+          "Banchs answered that the Guard had &ldquo;no legal authority to regulate communications between bargaining unit employees . . . and the Union.&rdquo; The Guard said it meant only communications about the hearing, but left its letter in place. The union filed an unfair labor practice charge.",
+          "An administrative law judge ruled for the union, and so did the Federal Labor Relations Authority (FLRA). The Guard refused to comply, so the FLRA asked a federal court to enforce its order."
+        ]
+      ],
+      [
+        "What the Court Decided",
+        [
+          "<b>The letter broke the law.</b> The FLRA read it as a &ldquo;sweeping command&rdquo; that banned all private talk between employees and their union. The court found enough evidence to support that reading.",
+          "<b>The Technicians Act was no shield.</b> That law leaves decisions to fire a technician to the adjutant general. A ban on all private contact, including contact that had nothing to do with the firing, is not part of that decision.",
+          "<b>The union was in the right place.</b> Whether the Guard followed its own rules, and whether it broke federal labor law, are two different questions. The union could bring the second one to the FLRA."
+        ]
+      ],
+      [
+        "The One Change",
+        [
+          "The court narrowed the order&rsquo;s wording so that it bars &ldquo;sweeping directives&rdquo; against private communication, because that is what the FLRA found. Judge Clay agreed with the result but would have enforced the order as written. He called the Guard&rsquo;s letter &ldquo;slapdash.&rdquo;"
+        ]
+      ],
+      [
+        "What It Left Open",
+        [
+          "The court did not decide whether the Guard could use a narrower rule, one limited to private contact with witnesses about a pending termination hearing."
+        ]
+      ],
+      [
+        "Since Then",
+        [
+          "The same court followed this decision in 2021 in <i>Ohio Adjutant General&rsquo;s Department v. FLRA</i>, 21 F.4th 401, and the Supreme Court affirmed that case in 2023, 598 U.S. 449."
+        ]
+      ]
     ],
-    "quote": ["Assuming that the FSLMRS provides labor rights of any sort to dual‑status technicians, which it clearly does, it is hard to see how the basic ability of union members to talk with union officers could not be protected.", "Judge Rogers, for the court"],
+    "quote": [
+      "Assuming that the FSLMRS provides labor rights of any sort to dual‑status technicians, which it clearly does, it is hard to see how the basic ability of union members to talk with union officers could not be protected.",
+      "Judge Rogers, for the court"
+    ],
     "docs": [
-      ["The Court&rsquo;s Opinion", "/files/cases/6th-circuit-17-3128-opinion.pdf", "16 pages, PDF"],
-      ["The FLRA&rsquo;s Decision", "https://www.flra.gov/decisions/v69/69-56.html", "69 FLRA No. 56, May 25, 2016"],
-      ["The Administrative Law Judge", "https://www.flra.gov/decisions/alj-decisions/michigan-army-national-guard-and-laborers-international-union-north-america", "Case CH-CA-14-0475"]
+      [
+        "The Court&rsquo;s Opinion",
+        "/files/cases/6th-circuit-17-3128-opinion.pdf",
+        "16 pages, PDF"
+      ],
+      [
+        "The FLRA&rsquo;s Decision",
+        "https://www.flra.gov/decisions/v69/69-56.html",
+        "69 FLRA No. 56, May 25, 2016"
+      ],
+      [
+        "The Administrative Law Judge",
+        "https://www.flra.gov/decisions/alj-decisions/michigan-army-national-guard-and-laborers-international-union-north-america",
+        "Case CH-CA-14-0475"
+      ],
+      [
+        "Ohio v. FLRA (2021)",
+        "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-20-03908/pdf/USCOURTS-ca6-20-03908-0.pdf",
+        "21 F.4th 401, followed it"
+      ]
     ],
     "law": [
-      ["5 U.S.C. 7102", "https://www.law.cornell.edu/uscode/text/5/7102", "Employees&rsquo; rights"],
-      ["5 U.S.C. 7116", "https://www.law.cornell.edu/uscode/text/5/7116", "Unfair labor practices"],
-      ["32 U.S.C. 709", "https://www.law.cornell.edu/uscode/text/32/709", "Technicians Act"]
+      [
+        "5 U.S.C. 7102",
+        "https://www.law.cornell.edu/uscode/text/5/7102",
+        "Employees&rsquo; rights"
+      ],
+      [
+        "5 U.S.C. 7116",
+        "https://www.law.cornell.edu/uscode/text/5/7116",
+        "Unfair labor practices"
+      ],
+      [
+        "32 U.S.C. 709",
+        "https://www.law.cornell.edu/uscode/text/32/709",
+        "Technicians Act"
+      ]
     ],
     "union": "LIUNA Local 2132, Michigan Army National Guard. It is now part of Local 1776.",
-    "reach": "Sixth Circuit rulings bind federal courts in Kentucky, Michigan, Ohio and Tennessee."
+    "reach": "Sixth Circuit rulings bind federal courts in Kentucky, Michigan, Ohio and Tennessee.",
+    "topic": "Talking to Your Union in Private",
+    "year": 2017,
+    "laborStatute": true
+  },
+  {
+    "slug": "erdel-v-department-of-the-army",
+    "forum": "Merit Systems Protection Board",
+    "court": "Precedential Decision",
+    "title": [
+      "Erdel v.",
+      "Department of the Army"
+    ],
+    "deck": "Can the MSPB do anything for a Guard technician who was fired? For 22 years the answer was no. Local 1776 got it changed.",
+    "tiles": [
+      [
+        "Decided",
+        "Dec. 12, 2023",
+        "AT‑0752‑22‑0590‑I‑1"
+      ],
+      [
+        "Citation",
+        "2023 MSPB 27",
+        "Binding on the MSPB"
+      ],
+      [
+        "Result",
+        "Union Win",
+        "Sent back for a hearing"
+      ],
+      [
+        "Vote",
+        "2 to 0",
+        "Full Board"
+      ]
+    ],
+    "means": "If you are a dual status technician and you are fired, demoted or suspended for more than 14 days over your civilian job, you may be able to appeal to the MSPB, and the MSPB can order the Army or the Air Force to make it right. It does not cover actions over your military duty or your fitness for duty in the reserves.",
+    "timeline": [
+      [
+        "2001",
+        "Singleton",
+        "A federal court rules that the MSPB cannot order an adjutant general to do anything."
+      ],
+      [
+        "Dec. 2016",
+        "The Law",
+        "Congress gives technicians MSPB appeal rights."
+      ],
+      [
+        "Aug. 2022",
+        "The Removal",
+        "South Carolina removes a technician. Local 1776 files the appeal."
+      ],
+      [
+        "May 2023",
+        "Supreme Court",
+        "In the Ohio case, the Court says technicians are federal employees."
+      ],
+      [
+        "Dec. 2023",
+        "The Ruling",
+        "The full Board rules that it can order relief."
+      ]
+    ],
+    "sections": [
+      [
+        "What Happened",
+        [
+          "In August 2022, the South Carolina Army National Guard removed a dual status technician with 15 years in the job. Local 1776 appealed to the Merit Systems Protection Board (MSPB).",
+          "The agency asked for a dismissal. It argued that the Board could not help even if the removal was wrong, because of <i>Singleton v. MSPB</i>, a 2001 court decision that said the Board had no authority over a state adjutant general. The MSPB judge agreed and dismissed the appeal without a hearing.",
+          "Ben Banchs, for the employee, asked the full Board to review it. The argument: Congress changed the law in 2016, and <i>Singleton</i> did not survive."
+        ]
+      ],
+      [
+        "What the Board Decided",
+        [
+          "<b>Technicians can appeal.</b> Since December 2016, a technician may appeal a removal and other serious actions to the Board, unless the action is about military duty or fitness for duty in the reserves.",
+          "<b>The employer is the Army or the Air Force.</b> Adjutants general hire and manage technicians only because the Army and the Air Force delegate that power to them. So the Board can order the Army or the Air Force to act.",
+          "<b><i>Singleton</i> is no longer the law.</b> The Board found that decision incompatible with what Congress did in 2016. It threw out the dismissal and ordered a hearing."
+        ]
+      ],
+      [
+        "Why It Matters",
+        [
+          "A right to appeal means little if nobody can order a remedy. The Board followed this decision in <i>Lane v. Department of the Army</i>, 2024 MSPB 4, and in <i>Terry</i>, 2024 MSPB 19, which involved another dual status technician."
+        ]
+      ],
+      [
+        "What It Left Open",
+        [
+          "The Board did not decide whether the removal was right or wrong. That went back to the judge. And the 2016 law does not reach back: it does not cover conduct from before December 23, 2016."
+        ]
+      ]
+    ],
+    "quote": [
+      "Because National Guard technicians are ultimately employees of the Department of the Army and the Department of the Air Force, the Board has the authority to order the employing agency of a National Guard technician to take an employment action.",
+      "The Board, paragraph 14"
+    ],
+    "docs": [
+      [
+        "The Board&rsquo;s Decision",
+        "/files/cases/mspb-2023-27-erdel.pdf",
+        "12 pages, PDF"
+      ],
+      [
+        "Lane v. Army",
+        "https://www.mspb.gov/decisions/precedential/Lane_Abenayaa_DE-0752-23-0001-I-1_Opinion_and_Order_Remand.pdf",
+        "2024 MSPB 4, followed Erdel"
+      ],
+      [
+        "Terry v. Army",
+        "https://www.mspb.gov/decisions/precedential/Terry_JasonDE-3330-23-0125-I-1_Opinion_and_Order.pdf",
+        "2024 MSPB 19, followed Erdel"
+      ]
+    ],
+    "law": [
+      [
+        "32 U.S.C. 709(f)",
+        "https://www.law.cornell.edu/uscode/text/32/709",
+        "Technicians&rsquo; appeal rights"
+      ],
+      [
+        "5 U.S.C. 7511",
+        "https://www.law.cornell.edu/uscode/text/5/7511",
+        "Who may appeal"
+      ],
+      [
+        "5 U.S.C. 7512",
+        "https://www.law.cornell.edu/uscode/text/5/7512",
+        "What can be appealed"
+      ]
+    ],
+    "union": "LIUNA Local 1776. Ben Banchs represented the employee.",
+    "reach": "Precedential MSPB decisions bind every MSPB judge in the country.",
+    "topic": "MSPB Relief for Technicians",
+    "year": 2023
+  },
+  {
+    "slug": "nevada-army-national-guard-higher-graded-duties",
+    "forum": "Federal Labor Relations Authority",
+    "court": "Arbitration",
+    "title": [
+      "Nevada Army National Guard",
+      "and LIUNA Local 1776"
+    ],
+    "deck": "Six years in a higher-graded job without the pay. The Guard said the union could not even grieve it. The FLRA disagreed.",
+    "tiles": [
+      [
+        "Decided",
+        "March 25, 2025",
+        "0‑AR‑5752"
+      ],
+      [
+        "Citation",
+        "74 FLRA 219",
+        "74 FLRA No. 36"
+      ],
+      [
+        "Result",
+        "Union Win",
+        "Back pay stands"
+      ],
+      [
+        "Vote",
+        "2 to 1",
+        "Chairman dissented"
+      ]
+    ],
+    "means": "If management puts you in an established higher-graded job without the pay, look at what your contract says about temporary promotions. A grievance that asks for the pay of a temporary promotion is not a classification complaint, and a desk audit does not turn it into one.",
+    "timeline": [
+      [
+        "April 2015",
+        "The Memo",
+        "The Guard assigns a GS-9 employee the duties of a GS-11 manager."
+      ],
+      [
+        "April 2021",
+        "The End",
+        "After six years, the Guard orders the employee to stop."
+      ],
+      [
+        "2021",
+        "The Award",
+        "The union grieves. An arbitrator orders back pay."
+      ],
+      [
+        "March 2025",
+        "The FLRA",
+        "The Authority upholds the award."
+      ]
+    ],
+    "sections": [
+      [
+        "What Happened",
+        [
+          "In April 2015, the Nevada Army National Guard appointed a GS-9 employee to perform the duties of the GS-11 food program manager. The employee did that job for six years and asked for a temporary promotion. The Guard did a desk audit instead and concluded the work was GS-9.",
+          "Local 1776 filed a grievance for back pay under Article 17 of the Nevada contract in effect then. It said an employee assigned higher-graded duties for more than 14 days in a 120-day period should be temporarily promoted.",
+          "The arbitrator agreed and awarded back pay for the whole time. The Guard asked the Federal Labor Relations Authority (FLRA) to set the award aside."
+        ]
+      ],
+      [
+        "What the FLRA Decided",
+        [
+          "<b>The grievance could go to arbitration.</b> Federal law keeps classification disputes out of the grievance process. This was not one. The question was whether the contract required a temporary promotion for work in an established, higher-graded job.",
+          "<b>A desk audit does not change that.</b> The Guard argued that its audit made the dispute about classification. The FLRA said it had never held that.",
+          "<b>The back pay stands.</b> The Guard&rsquo;s other argument, that the arbitrator went beyond their authority, failed too."
+        ]
+      ],
+      [
+        "What It Left Open",
+        [
+          "The FLRA did not change the rule on permanent promotions. A grievance that asks to have your own job permanently upgraded is still a classification matter and cannot be arbitrated. The words matter: the Chairman dissented on that point, and in 2026 the FLRA set aside an award where the grievance did not say &ldquo;temporary promotion&rdquo; (74 FLRA 421)."
+        ]
+      ]
+    ],
+    "quote": [
+      "[T]he Authority has never held that a grievance concerns classification merely because the duties at issue were also subject to a desk audit.",
+      "The FLRA, 74 FLRA at 221"
+    ],
+    "docs": [
+      [
+        "The FLRA&rsquo;s Decision",
+        "/files/cases/flra-74-36-nevada.pdf",
+        "7 pages, PDF"
+      ],
+      [
+        "On the FLRA&rsquo;s Website",
+        "https://www.flra.gov/decisions/v74/74-36",
+        "74 FLRA No. 36"
+      ]
+    ],
+    "law": [
+      [
+        "5 U.S.C. 7121",
+        "https://www.law.cornell.edu/uscode/text/5/7121",
+        "Grievances and arbitration"
+      ],
+      [
+        "5 U.S.C. 5596",
+        "https://www.law.cornell.edu/uscode/text/5/5596",
+        "Back pay"
+      ]
+    ],
+    "union": "LIUNA Local 1776.",
+    "reach": "FLRA decisions apply to federal employees and unions covered by the labor statute, nationwide.",
+    "topic": "Pay for Higher-Graded Work",
+    "year": 2025,
+    "laborStatute": true,
+    "short": "Nevada Army National Guard"
+  },
+  {
+    "slug": "illinois-national-guard-election-petition",
+    "forum": "Federal Labor Relations Authority",
+    "court": "Representation",
+    "title": [
+      "Illinois National Guard",
+      "and LIUNA"
+    ],
+    "deck": "The day before another union and the Guard signed their contract, LIUNA asked for an election. They said it was too late. The FLRA said it was right on time.",
+    "tiles": [
+      [
+        "Decided",
+        "Jan. 15, 2015",
+        "CH‑RP‑14‑0011"
+      ],
+      [
+        "Citation",
+        "68 FLRA 199",
+        "68 FLRA No. 34"
+      ],
+      [
+        "Result",
+        "Union Win",
+        "Election ordered"
+      ],
+      [
+        "Vote",
+        "3 to 0",
+        "All three members"
+      ]
+    ],
+    "means": "A contract blocks an election only once it is signed. Until then, employees who want a different union, or none, can still ask for a vote. Management and the union in place cannot shut the door with a deal nobody has signed.",
+    "timeline": [
+      [
+        "March 11, 2014",
+        "The Deal",
+        "The Guard emails an unsigned contract with ACT for review."
+      ],
+      [
+        "March 12, 2014",
+        "The Petition",
+        "LIUNA asks the FLRA for an election."
+      ],
+      [
+        "March 13, 2014",
+        "The Signing",
+        "The Guard and ACT sign the contract."
+      ],
+      [
+        "Jan. 2015",
+        "The Ruling",
+        "The FLRA upholds the order for an election."
+      ]
+    ],
+    "sections": [
+      [
+        "What Happened",
+        [
+          "In March 2014, the Association of Civilian Technicians (ACT) represented the employees of the Illinois Army National Guard, and its contract had expired. ACT and the Guard finished bargaining a new one, and on March 11 the Guard emailed it to the National Guard Bureau for review. Nobody had signed it.",
+          "On March 12, the LIUNA National Guard District Council asked the Federal Labor Relations Authority (FLRA) for an election. On March 13, the Guard and ACT signed.",
+          "A contract, or a contract under agency review, blocks an election petition. ACT said the petition came too late. The FLRA&rsquo;s Regional Director in Chicago ruled that it was on time and ordered an election. ACT asked the FLRA to overturn that."
+        ]
+      ],
+      [
+        "What the FLRA Decided",
+        [
+          "<b>An agreement has to be signed.</b> The review period that blocks an election starts when the contract is executed, and that means signed by the parties.",
+          "<b>Reaching a deal is not enough.</b> ACT argued that once the terms were written down, nothing more was needed. The FLRA found no decision that supported that.",
+          "<b>The petition was on time.</b> The only fact that mattered was not in dispute: LIUNA filed before anyone signed. The FLRA let the election order stand."
+        ]
+      ],
+      [
+        "What It Left Open",
+        [
+          "The rule is different when a contract is imposed by the Impasses Panel or an arbitrator. The FLRA noted that those can take effect without signatures."
+        ]
+      ],
+      [
+        "Since Then",
+        [
+          "The FLRA followed this decision in 2026, 74 FLRA 424, as the rule on when an agreement is executed."
+        ]
+      ]
+    ],
+    "quote": [
+      "Until such time as the parties have signed a written document embodying their understandings, there is no agreement to review under [§] 7114(c) or to otherwise implement.",
+      "The FLRA, quoting its earlier decision"
+    ],
+    "docs": [
+      [
+        "The FLRA&rsquo;s Decision",
+        "/files/cases/flra-68-34-illinois.pdf",
+        "With the Regional Director&rsquo;s, PDF"
+      ],
+      [
+        "On the FLRA&rsquo;s Website",
+        "https://www.flra.gov/decisions/v68/68-34.html",
+        "68 FLRA No. 34"
+      ]
+    ],
+    "law": [
+      [
+        "5 U.S.C. 7111",
+        "https://www.law.cornell.edu/uscode/text/5/7111",
+        "Elections"
+      ],
+      [
+        "5 U.S.C. 7114",
+        "https://www.law.cornell.edu/uscode/text/5/7114",
+        "Agency review of contracts"
+      ],
+      [
+        "5 C.F.R. 2422.12",
+        "https://www.law.cornell.edu/cfr/text/5/2422.12",
+        "When a petition is on time"
+      ]
+    ],
+    "union": "LIUNA National Guard District Council, now Local 1776.",
+    "reach": "FLRA decisions apply to federal employees and unions covered by the labor statute, nationwide.",
+    "topic": "When It Is Too Late for an Election",
+    "year": 2015,
+    "laborStatute": true,
+    "short": "Illinois National Guard"
+  },
+  {
+    "slug": "new-mexico-national-guard-affiliation",
+    "forum": "Federal Labor Relations Authority",
+    "court": "Representation",
+    "title": [
+      "New Mexico Army and",
+      "Air National Guard"
+    ],
+    "deck": "Can a local&rsquo;s members vote to leave one national union for another, even if the old one objects? In New Mexico they did, 40 to 4.",
+    "tiles": [
+      [
+        "Decided",
+        "March 16, 2000",
+        "DA‑RP‑70031"
+      ],
+      [
+        "Citation",
+        "56 FLRA 145",
+        "56 FLRA No. 18"
+      ],
+      [
+        "Result",
+        "Union Win",
+        "Move to LIUNA upheld"
+      ],
+      [
+        "Vote",
+        "2 to 1",
+        "Chairman dissented"
+      ]
+    ],
+    "means": "The union belongs to its members. If a local&rsquo;s members vote fairly and in secret to change their affiliation, the national union they are leaving cannot stop it by taking over the local after the local has filed with the FLRA.",
+    "timeline": [
+      [
+        "By May 1997",
+        "The Vote",
+        "Members choose LIUNA over NFFE by secret mail ballot, and the local asks the FLRA to change its certification."
+      ],
+      [
+        "After That",
+        "The Takeover",
+        "NFFE puts the local in trusteeship and removes its president."
+      ],
+      [
+        "March 2000",
+        "The Ruling",
+        "The FLRA upholds the members&rsquo; choice."
+      ]
+    ],
+    "sections": [
+      [
+        "What Happened",
+        [
+          "Local 1636 represented the employees of the New Mexico Army and Air National Guard as part of the National Federation of Federal Employees (NFFE). Members asked their president for a vote on moving to LIUNA.",
+          "The local wrote to the members explaining the choice and hired the American Arbitration Association to run the election by mail. Of 44 ballots counted, 40 were for LIUNA. The local asked the Federal Labor Relations Authority (FLRA) to change its certification.",
+          "After that, NFFE&rsquo;s national office put the local in trusteeship and told its president he was out. The FLRA&rsquo;s Regional Director approved the change anyway, and NFFE asked the FLRA to overturn it."
+        ]
+      ],
+      [
+        "What the FLRA Decided",
+        [
+          "<b>The old union had no right to advance notice from the FLRA&rsquo;s rules.</b> Those rules protect the members: notice to them, time to discuss, and a secret ballot with clear choices. Where members are spread too far apart for one meeting, a mail ballot will do.",
+          "<b>The FLRA does not enforce a union&rsquo;s constitution.</b> NFFE said its constitution required notice. That kind of complaint belongs to the Department of Labor.",
+          "<b>The takeover came too late.</b> A trusteeship imposed after the petition was filed had no effect on it."
+        ]
+      ],
+      [
+        "What It Left Open",
+        [
+          "A trusteeship imposed <i>before</i> members vote can be a different story. The FLRA has said a petition may have to wait while the Department of Labor decides whether that trusteeship is valid."
+        ]
+      ]
+    ],
+    "quote": [
+      "[A] trusteeship imposed after a petition to amend affiliation has been filed has no effect on the petition.",
+      "The FLRA, 56 FLRA at 149"
+    ],
+    "docs": [
+      [
+        "The FLRA&rsquo;s Decision",
+        "https://www.flra.gov/decisions/v56/56-018.html",
+        "56 FLRA No. 18"
+      ]
+    ],
+    "law": [
+      [
+        "5 U.S.C. 7111",
+        "https://www.law.cornell.edu/uscode/text/5/7111",
+        "Exclusive recognition"
+      ],
+      [
+        "5 U.S.C. 7120",
+        "https://www.law.cornell.edu/uscode/text/5/7120",
+        "Standards of conduct for unions"
+      ]
+    ],
+    "union": "Local 1636, New Mexico Army and Air National Guard, moving to LIUNA. It is now part of Local 1776.",
+    "reach": "FLRA decisions apply to federal employees and unions covered by the labor statute, nationwide.",
+    "topic": "Changing National Unions",
+    "year": 2000,
+    "laborStatute": true
   }
 ]

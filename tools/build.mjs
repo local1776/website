@@ -31,6 +31,8 @@ const LIVE = process.env.L1776_LIVE === '1' || process.argv.includes('--live');
 // out of the sitemap, the site search and the header's rotating line. Pages say different things with
 // {{IF:representation}}…{{ELSE}}…{{END}}; {{OFFNOTE}} = the box shown in place of a form.
 // --forms-on builds with both on, for this PC's own tests and samples (the Actions build never uses it).
+// our cases (site/data/cases.json): draft:true shows only with --cases
+const CASES_PAGES = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'cases.json'), 'utf8')).filter(c => !c.draft || process.argv.includes('--cases'));
 const FORMS_ON = Object.fromEntries(['representation', 'uniform'].map(k => [k, CONFIG[k + 'Form'] === 'on' || process.argv.includes('--forms-on')]));
 const FORM_PAGE = { representation: '/assistance-request', uniform: '/request-uniforms-and-other-personal-items' };
 const FORM_JS = { representation: ['rep.js'], uniform: ['uniform.js', 'ufig.js'] };
@@ -526,6 +528,12 @@ const REDIRECTS = { 'union-contracts': '/agencies', 'membership-portal': '/join-
 // ---------- Resources: site/data/resources.json -> search, jump tabs, one section per topic, cards of links ----------
 function resourcesHtml() {
   const R = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'resources.json'), 'utf8'));
+  // our own cases (site/data/cases.json), one row per forum, each with its own page (Ben, Nov 24 2026)
+  if (CASES_PAGES.length) {
+    const rows = [['Federal Courts', /Court/], ['MSPB', /Merit/], ['FLRA', /Labor Relations/]].map(([title, re]) => ({ title, items: CASES_PAGES.filter(c => re.test(c.forum)).flatMap(c => [
+      { label: (c.short || c.title.join(' ')) + ', ' + c.year, href: '/cases/' + c.slug, bold: true }, { label: c.topic, href: '/cases/' + c.slug, sub: 1 }]) })).filter(g => g.items.length);
+    R.splice(1, 0, { id: 'cases', title: 'Our Cases', tab: 'Our Cases', groups: rows });
+  }
   const isPdf = h => /\.pdf($|[?#])/i.test(h);
   const ext = h => /^https?:/i.test(h);
   const link = i => `<a href="${esc(i.href)}"${ext(i.href) ? ' target="_blank" rel="noopener"' : ''}>${esc(i.label)}</a>`;
@@ -876,7 +884,6 @@ if (APPS.length) {
 }
 // ---------- case pages (/cases/<slug>; Ben, Nov 24 2026: "an individual page for each case. Make it look nice") ----------
 // site/data/cases.json. draft:true shows only with --cases (this PC), so nothing is public until Ben has seen it.
-const CASES_PAGES = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'cases.json'), 'utf8')).filter(c => !c.draft || process.argv.includes('--cases'));
 const AU = { play: '<svg class="pl" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><svg class="pa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>', back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v5h5"/><path d="M4.6 9A8 8 0 1 1 4 13"/><text x="12" y="16" text-anchor="middle" font-family="Libre Franklin,Arial,sans-serif" font-size="7.4" font-weight="700" fill="currentColor" stroke="none">15</text></svg>', fwd: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4v5h-5"/><path d="M19.4 9A8 8 0 1 0 20 13"/><text x="12" y="16" text-anchor="middle" font-family="Libre Franklin,Arial,sans-serif" font-size="7.4" font-weight="700" fill="currentColor" stroke="none">15</text></svg>' };
 function casePage(c) {
   const ext = h => /^https?:/.test(h) ? ' target="_blank" rel="noopener"' : '';
@@ -884,7 +891,7 @@ function casePage(c) {
   const au = c.audio;
   return `<article class="case">
   <header class="top"><div class="wrap">
-    <div class="kicker">${c.forum} &middot; ${c.court}</div>
+    <div class="kicker case-k"><span>${c.forum}</span><i> &middot; </i><span>${c.court}</span></div>
     <h1 class="case-h">${c.title.map(t => `<span>${t}</span>`).join(' ')}</h1>
     <p class="deck">${c.deck}</p>
     <div class="t-tiles four case-tiles">${c.tiles.map(([k, v, n]) => `<div class="tile"><span>${k}</span><b>${v}</b><em>${n}</em></div>`).join('')}</div>
@@ -910,7 +917,7 @@ function casePage(c) {
     <aside class="story-side">
       <div class="aside"><h3>The Documents</h3>${list(c.docs)}</div>
       <div class="aside"><h3>The Law</h3>${list(c.law)}</div>
-      <div class="aside"><h3>The Union</h3><p class="case-n">${c.union}</p><h3>Where It Applies</h3><p class="case-n">${c.reach}</p></div>
+      <div class="aside"><h3>The Union</h3><p class="case-n">${c.union}</p><h3>Where It Applies</h3><p class="case-n">${c.reach}</p>${c.laborStatute ? `<h3>Status</h3><p class="case-n">${CONTRACT_STATUS.split(/(?<=\.) /).slice(0, 2).join(' ')}</p>` : ''}<a class="more" href="/resources#cases">All Our Cases &rsaquo;</a></div>
     </aside>
   </div>
 </article>
@@ -918,7 +925,7 @@ function casePage(c) {
 }
 for (const c of CASES_PAGES) {
   fs.mkdirSync(path.join(OUT, 'cases'), { recursive: true });
-  fs.writeFileSync(path.join(OUT, 'cases', c.slug + '.html'), layout({ title: c.title.join(' '), nav: 'resources', description: c.deck, path: '/cases/' + c.slug, noindex: !!c.draft }, fill(casePage(c))));
+  fs.writeFileSync(path.join(OUT, 'cases', c.slug + '.html'), layout({ title: c.title.join(' '), nav: 'resources', description: c.deck.replace(/&rsquo;/g, '’'), path: '/cases/' + c.slug, noindex: !!c.draft }, fill(casePage(c))));
   count++;
 }
 // every story at its old address (/slug), in the new format
@@ -999,7 +1006,7 @@ function fill(src) {
   const strip = h => unent(h.replace(/<(script|style|svg|noscript|template)\b[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
   const cut = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') : s);
   const postBy = new Map(posts.map(p => [p.slug, p]));
-  const files = fs.readdirSync(OUT).filter(f => f.endsWith('.html')).concat(fs.existsSync(path.join(OUT, 'video')) ? fs.readdirSync(path.join(OUT, 'video')).filter(f => f.endsWith('.html')).map(f => 'video/' + f) : []);
+  const files = fs.readdirSync(OUT).filter(f => f.endsWith('.html')).concat(fs.existsSync(path.join(OUT, 'video')) ? fs.readdirSync(path.join(OUT, 'video')).filter(f => f.endsWith('.html')).map(f => 'video/' + f) : []).concat(CASES_PAGES.filter(c => !c.draft).map(c => 'cases/' + c.slug + '.html'));
   const unitOfContract = Object.fromEntries(units.map(u => [(u.contract || '').replace(/^\//, ''), u]));
   const out = [];
   for (const f of files) {
@@ -1063,7 +1070,7 @@ for (const [from, to] of Object.entries(REDIRECTS)) {
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 // robots.txt and sitemap.xml: every page except the redirects and the 404 page (GitHub Pages serves 404.html itself)
 {
-  const pages = fs.readdirSync(OUT).filter(f => f.endsWith('.html') && !NOSITEMAP.has(f))
+  const pages = fs.readdirSync(OUT).concat(CASES_PAGES.filter(c => !c.draft).map(c => 'cases/' + c.slug + '.html')).filter(f => f.endsWith('.html') && !NOSITEMAP.has(f))
     .filter(f => !/http-equiv="refresh"/.test(fs.readFileSync(path.join(OUT, f), 'utf8').slice(0, 600)))
     .map(f => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''))).sort();
   fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
