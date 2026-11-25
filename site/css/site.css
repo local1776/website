@@ -233,7 +233,7 @@ html.dock,html.dock body{overflow-anchor:none}
 .hero .slides img{filter:saturate(1.15) contrast(1.08) brightness(1.04)}   /* a little more color and snap: the photos looked "anemic" (Ben, Nov 22 2026) */
 .hero .over{position:absolute;left:0;right:0;top:20px;z-index:2}
 /* banner floats over the photo, light from the top left (Ben, Nov 20 2026) */
-.hero-card{display:inline-flex;max-width:100%;background:rgba(11,42,85,.94);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:24px;align-items:center}
+.hero-card{display:inline-flex;max-width:100%;background:var(--navy);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:24px;align-items:center}
 .hero-card .k{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
 .hero-card h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.15;margin:3px 0 0;white-space:nowrap}
 .hc-note{margin:3px 0 0;font-family:var(--serif);font-size:14px;line-height:1.35;color:#d5ddea;white-space:nowrap}
@@ -468,9 +468,6 @@ figure.lead img{display:block;width:100%;max-height:560px;object-fit:contain;bor
 .ft-brand img{height:56px;width:auto;display:block}
 .ft-brand p{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--body-ink);margin:14px 0 16px}
 .ft-social{display:flex;gap:12px;align-items:center}
-.social{display:block;width:34px;height:34px;border-radius:8px;transition:transform .15s,opacity .15s}
-.social svg{display:block;width:100%;height:100%}
-.social:hover{transform:translateY(-1px);opacity:.88}
 .btn.sm{width:34px}
 .btn.sm .ico{width:34px;height:34px}
 .btn.sm .ico svg{width:17px;height:17px}
@@ -1141,7 +1138,7 @@ p,li,.deck,.rnote{text-wrap:pretty}
 ::highlight(ct-now){background:var(--gold);color:var(--ink)}
 ::highlight(ct){background:#fff4e3;color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px}
 /* notes beside a section: what it means, what we negotiated, cases (thin outline, no colored bars) */
-.ct-notes{display:grid;gap:8px;margin:2px 0 12px}
+.ct-notes{display:grid;gap:8px;margin:12px 0}
 .ct-note{border:1px solid var(--rule);border-radius:6px;padding:10px 14px;font-family:var(--sans)}
 .ct-note h4{margin:0 0 6px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text)}
 .ct-ni+.ct-ni{border-top:1px solid var(--rule);margin-top:8px;padding-top:8px}
@@ -1931,3 +1928,69 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 @media (max-width:640px){.case-k i{display:none}.case-k span{display:block}.case-h{font-size:clamp(20px,6.5vw,34px)!important}.case-tiles .tile{padding:10px}.case-tiles em{font-size:11.5px;white-space:nowrap}}
 @media (max-width:359px){.case-tiles em{font-size:10px}.case-tiles b{font-size:15.5px!important}.kicker.case-k{font-size:10.5px}}
 @media (max-width:420px){.byline{column-gap:21px}.byline span::before{left:-11px}}
+.ct-ni .more{display:inline-block;margin-top:8px}
+
+/* Navy header, white menu bar, navy footer (Ben, Nov 24 2026: our navy, the layout of the LIUNA concept site) */
+.mast{background:var(--navy);color:#fff}
+.mast .acts .btn{color:#fff}
+.mast .acts .btn.alt .ico{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff}
+.mast .acts .btn.alt:hover .ico{background:rgba(255,255,255,.14);border-color:#fff}
+.mast .acts .btn:not(.alt):not(.join) .ico,.mast .acts .btn:not(.alt):not(.join):hover .ico{background:#fff;border:1px solid #fff;color:var(--navy)}
+.mast .acts .btn.off,.mast .acts .btn.off .soon{color:#b9c4da}
+.mast .acts .btn.off .ico,.mast .acts .btn.off:hover .ico{background:transparent;border:1px solid rgba(255,255,255,.28);color:#b9c4da}
+.mast .acts .btn.off .ico svg{opacity:.7}
+.mast .hl-b{color:rgba(255,255,255,.7)}
+.mast .hl-b:hover,.mast .hl-b:focus-visible{color:var(--gold)}
+.mast .hl-k{color:var(--gold)}
+.mast .hl-d{color:rgba(255,255,255,.72)}
+.mast .hl-item,.mast .hl-t{color:#fff}
+.nav{background:#fff}   /* same slim bar, same lettering, same amber line at its foot; only the colors trade places */
+.nav a,.nav a:first-child{color:var(--ink);opacity:1;font-size:10.6px;font-weight:500}   /* black and a touch bigger so it pops (Ben, Nov 24 2026) */
+.nav a::after,.nav a:is([aria-current="page"],[aria-current="true"]),.nav a:is([aria-current="page"],[aria-current="true"]):first-child{font-size:11px;font-weight:700}
+.nav a:hover{color:var(--navy)}
+.nav a,.nav a:first-child,.nav a:is([aria-current="page"],[aria-current="true"]),.nav a:is([aria-current="page"],[aria-current="true"]):first-child{padding:9px 0 6px}   /* a 31px bar with the words centered in it (Ben, Nov 24 2026); sticky things sit just under it */
+.rtabs{top:31px}
+.ct-strip:not([hidden]),.dv-bar{top:30px!important}
+.atlas-map,.story-side,.bio-card{top:51px}
+.f-pic{top:55px}
+@media (max-width:860px){.nav .wrap{gap:15px}.nav a,.nav a:first-child{font-size:10.2px}.nav a::after,.nav a:is([aria-current="page"],[aria-current="true"]),.nav a:is([aria-current="page"],[aria-current="true"]):first-child{font-size:10.5px}}
+.nav-find,.nav-find:hover{background:#fff}
+.nav-find{color:var(--navy);box-shadow:28px 0 0 #fff,-12px 0 12px -6px #fff}
+.nav-find:hover,.nav-find[aria-expanded="true"]{color:var(--gold-text)}
+.strip{background:#eceef1;border-bottom:1px solid var(--rule)}
+.strip .reach a{color:var(--navy)}
+.find{background:#fff;border:1px solid var(--gold);border-top:0}
+.find-row input{border-color:#c9d0da}
+.find-x{color:var(--navy)}
+.find-x:hover,.find-x:focus-visible{color:var(--gold-text)}
+.find::before{left:-11px;top:0;width:11px;height:12px;background:radial-gradient(circle at 0 100%,transparent 9.8px,var(--gold) 10px,var(--gold) 10.8px,#fff 11.2px)}
+.find::after{right:-11px;top:0;width:11px;height:12px;background:radial-gradient(circle at 100% 100%,transparent 9.8px,var(--gold) 10px,var(--gold) 10.8px,#fff 11.2px)}
+.site-foot{background:var(--navy);color:#fff;border-top:2px solid var(--gold)}
+.site-foot h2{color:var(--gold)}
+.site-foot .ft-brand p{color:#d5dcea}
+.site-foot .ft-social{gap:4px}
+.site-foot .ft-social .ico{border-color:rgba(255,255,255,.55)}
+.site-foot .ft-col a,.site-foot .ft-col a:last-child,.site-foot .ft-reach dl div,.site-foot .ft-reach dl div:last-child{border-color:rgba(255,255,255,.16)}
+.site-foot .ft-col a,.site-foot .ft-reach dd,.site-foot .ft-reach dd a{color:#fff}
+.site-foot .ft-col a:hover,.site-foot .ft-reach dd a:hover{color:var(--gold)}
+.site-foot .ft-col a.off,.site-foot .ft-col a.off .soon,.site-foot .ft-reach dt{color:#b9c4da}
+.site-foot .ft-legal{background:#071d3d}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.nav-find{box-shadow:28px 0 0 #fff}.nav-find::after{background:linear-gradient(to right,rgba(255,255,255,0),#fff)}}
+@media (max-width:640px){.find{border-left:0;border-right:0}}
+
+/* Every in-page menu looks like the main menu bar (Ben, Nov 24 2026): regular words close to the line, the current one bold
+   with a thick amber bar on the line. data-t holds a bold copy so nothing shifts when a word turns bold. */
+.tabs:not(.unit-tabs) a,.tabs.dir-tabs button{display:inline-flex;flex-direction:column;align-items:center;padding:9px 0 4px;margin:0;font-size:10.6px;line-height:13px;font-weight:500;letter-spacing:.09em;color:var(--ink);border-bottom:3px solid transparent}
+.tabs:not(.unit-tabs) a::after,.tabs.dir-tabs button::after{content:attr(data-t);font-size:11px;font-weight:700;letter-spacing:.09em;height:0;overflow:hidden;visibility:hidden;pointer-events:none}
+.tabs:not(.unit-tabs) a[aria-current="true"],.tabs.dir-tabs button[aria-selected="true"]{font-size:11px;font-weight:700;color:var(--ink);border-bottom-color:var(--gold)}
+.tabs:not(.unit-tabs) a:not([aria-current]):hover,.tabs.dir-tabs button[aria-selected="false"]:hover{color:var(--navy);border-bottom-color:transparent}
+.tabs:not(.unit-tabs){gap:23px;margin-top:20px}
+.tabs.rtabs{margin-top:10px}
+@media (max-width:860px){.tabs:not(.unit-tabs){gap:18px}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.tabs:not(.unit-tabs) a,.tabs.dir-tabs button{padding-top:15px}.tabs:not(.unit-tabs) a,.tabs.dir-tabs button{position:relative}.tabs:not(.unit-tabs) a::before,.tabs.dir-tabs button::before{content:"";position:absolute;inset:0 -8px}}
+/* the light gray strip under the menu bar: a little narrower, its sentence a little smaller (Ben, Nov 24 2026) */
+.strip .wrap{padding-top:6px;padding-bottom:6px}
+.strip .who{font-size:10px}
+.tabs:not(.unit-tabs) a:first-child,.tabs.dir-tabs button:first-child{align-items:flex-start}
+.nav a::after{letter-spacing:.09em}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.tabs.dir-tabs:not(.unit-tabs){gap:22px}.tabs.dir-tabs button::before{inset:0 -11px}}

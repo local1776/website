@@ -791,3 +791,14 @@ select{height:32px;padding:0 8px;font-size:12.5px}
 }
 @media (max-width:640px){.ag-row input[type=search]{flex:1}.ag-res{width:100%;justify-content:space-between}}
 .agbar{scroll-margin-top:40px}
+
+/* Every in-page menu looks like the main menu bar (Ben, Nov 24 2026): regular words close to the line, the current one bold
+   with a thick amber bar on the line. data-t holds a bold copy so nothing shifts when a word turns bold. */
+.tabs button{display:inline-flex;flex-direction:column;align-items:center;padding:9px 0 4px;margin:0;font-size:10.6px;line-height:13px;font-weight:500;letter-spacing:.09em;color:var(--ink);border-bottom:3px solid transparent}
+.tabs button::after{content:attr(data-t);font-size:11px;font-weight:700;letter-spacing:.09em;height:0;overflow:hidden;visibility:hidden;pointer-events:none}
+.tabs button[aria-selected="true"]{font-size:11px;font-weight:700;color:var(--ink);border-bottom-color:var(--gold)}
+.tabs button[aria-selected="false"]:hover{color:var(--navy);border-bottom-color:transparent}
+.tabs{gap:23px;margin-top:20px}
+@media (max-width:860px){.tabs{gap:18px}}
+@media screen and (max-width:1023px),screen and (pointer:coarse){.tabs button{padding-top:15px}}
+.tabs button:first-child{align-items:flex-start}

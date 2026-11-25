@@ -150,7 +150,7 @@ ${meta.app ? `<link rel="stylesheet" href="/css/chrome.css">\n<style>\n${meta.cs
 <a class="skip" href="#main">Skip to content</a>
 <div class="print-head" aria-hidden="true"><img src="/img/logo.png" width="624" height="160" alt=""><div><b>LIUNA Local 1776</b><span>PO Box 1794, Abita Springs, LA 70420 &middot; 1 (800) 569-5861 &middot; www.local1776.org</span></div></div>
 <div class="mast"><div class="wrap">
-  <a class="logo-link" href="/"><img class="logo" src="/img/logo.png" width="624" height="160" alt="LIUNA Local 1776. We represent U.S. government employees. Feel the power."></a>
+  <a class="logo-link" href="/"><img class="logo" src="/img/logo-white.png" width="624" height="160" alt="LIUNA Local 1776. We represent U.S. government employees. Feel the power."></a>
   <div class="hline" hidden><div class="hl-top"><span class="hl-k"></span><span class="hl-ctl"><button type="button" class="hl-b" data-go="-1" aria-label="Previous" title="Previous">${ICON.prev}</button><button type="button" class="hl-b hl-p" aria-label="Pause" title="Pause">${ICON.pause}</button><button type="button" class="hl-b" data-go="1" aria-label="Next" title="Next">${ICON.next}</button></span></div><a class="hl-item" href="/"><span class="hl-t"></span></a></div>
   <div class="acts">${button('/agr-calculator', 'calc', 'AGR', onTile === 'agr' ? '' : 'alt').replace('<a ', '<a title="AGR Calculator" ')}${button('/request-uniforms-and-other-personal-items', 'shirt', 'Uniform', onTile === 'uniform' ? '' : 'alt').replace('<a ', '<a title="Request Uniforms" ')}${button('/assistance-request-portal', 'help', 'Help', onTile === 'help' ? '' : 'alt')}${button('/join-now', 'join', 'Join', 'join')}</div>
 </div></div>
@@ -174,11 +174,11 @@ ${pdfNewTab(body)}
 <footer class="site-foot">
   <div class="wrap ft-grid">
     <div class="ft-brand">
-      <a href="/"><img src="/img/logo.png" width="624" height="160" alt="LIUNA Local 1776"></a>
+      <a href="/"><img src="/img/logo-white.png" width="624" height="160" alt="LIUNA Local 1776"></a>
       <p>Representing U.S. government employees, including the Department of Defense and the National Guard.</p>
       <div class="ft-social">
-        <a class="social fb" href="https://facebook.com/Local1776" rel="noopener" aria-label="LIUNA Local 1776 on Facebook" title="Facebook"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#0866FF"/><path fill="#fff" d="M27.6 25.8 28.5 20H23v-3.8c0-1.6.8-3.1 3.3-3.1h2.5V8.2s-2.3-.4-4.5-.4c-4.6 0-7.6 2.8-7.6 7.8V20h-5v5.8h5V40c1 .2 2 .2 3.1.2s2.1-.1 3.1-.2V25.8z"/></svg></a>
-        <a class="social x" href="https://twitter.com/LIUNA_Local1776" rel="noopener" aria-label="LIUNA Local 1776 on X" title="X"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#000"/><path fill="#fff" d="M26.6 9.5h3.3l-7.3 8.3 8.6 11.4h-6.7l-5.3-6.9-6 6.9H9.9l7.8-8.9-8.2-10.8h6.9l4.8 6.3zm-1.2 17.7h1.8L15.4 11.4h-2z"/></svg></a>
+        <a class="btn light sm icon" href="https://facebook.com/Local1776" rel="noopener" aria-label="LIUNA Local 1776 on Facebook" title="Facebook"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.6 21v-7.6h2.6l.5-3.2h-3.1V8.1c0-.9.4-1.7 1.8-1.7h1.4V3.7s-1.3-.2-2.5-.2c-2.6 0-4.2 1.6-4.2 4.4v2.3H7.2v3.2h2.9V21z"/></svg></span></a>
+        <a class="btn light sm icon" href="https://twitter.com/LIUNA_Local1776" rel="noopener" aria-label="LIUNA Local 1776 on X" title="X"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.2 4h2.9l-6.3 7.2L21.2 20h-5.8l-4.5-5.9L5.7 20H2.8l6.7-7.7L2.4 4h5.9l4.1 5.4zm-1 14.3h1.6L7.4 5.6H5.7z"/></svg></span></a>
       </div>
     </div>
     <nav class="ft-col" aria-label="Get help">
@@ -265,7 +265,7 @@ function newsIndex() {
             <span class="nsub">${esc(p.subtitle || p.excerpt)}</span>
           </a>
         </li>`;
-  return `<nav class="tabs news-tabs" aria-label="Show"><a href="#" data-news="all" aria-current="true">All Stories</a><a href="#" data-news="ours">From Local 1776</a><a href="#" data-news="repost">Elsewhere</a></nav>
+  return `<nav class="tabs news-tabs" aria-label="Show"><a href="#" data-news="all" data-t="All Stories" aria-current="true">All Stories</a><a href="#" data-news="ours" data-t="From Local 1776">From Local 1776</a><a href="#" data-news="repost" data-t="Elsewhere">Elsewhere</a></nav>
     ${years.map(y => `<section class="nyear" id="y${y}"><h2>${y}</h2><ul class="nlist">${posts.filter(p => new Date(p.date).getUTCFullYear() === y).map(row).join('')}
       </ul></section>`).join('\n    ')}`;
 }
@@ -406,7 +406,7 @@ const unitTabs = (hrefBase) => `<nav class="tabs unit-tabs" aria-label="Choose a
 function repsHtml() {
   const tel = p => 'tel:+1' + p.replace(/\s*ext\.?\s*/i, ',').replace(/[^\d,]/g, '');
   return `<div class="dir" data-dir>
-      <div class="tabs dir-tabs" role="tablist" aria-label="States and territories">${units.map((u, i) => `<button type="button" role="tab" id="tab-${u.code}" aria-controls="dir-${u.code}" aria-selected="${i === 0}" data-code="${u.code}">${u.code}</button>`).join('')}</div>${units.map((u, i) => `
+      <div class="tabs dir-tabs" role="tablist" aria-label="States and territories">${units.map((u, i) => `<button type="button" role="tab" id="tab-${u.code}" aria-controls="dir-${u.code}" aria-selected="${i === 0}" data-code="${u.code}" data-t="${u.code}">${u.code}</button>`).join('')}</div>${units.map((u, i) => `
       <section class="dir-panel" id="dir-${u.code}" role="tabpanel" aria-labelledby="tab-${u.code}">
         <header class="dir-head">
           <img src="${u.seal}" alt="">
@@ -515,7 +515,7 @@ function congressHtml() {
     <div class="cg-comm">
       <h3>The Armed Services Committees</h3>
       <p class="cg-note">These committees write the defense bill every year, including the laws that govern National Guard technicians. If your senator or representative sits on one, your call carries extra weight.${leaving ? ' The lists show the current members; the new Congress sets its committees in January, and these lists update on their own when it does.' : ''}</p>
-      <div class="tabs dir-tabs cg-tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-tab="sasc">Senate</button><button type="button" role="tab" aria-selected="false" data-tab="hasc">House</button></div>
+      <div class="tabs dir-tabs cg-tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-tab="sasc" data-t="Senate">Senate</button><button type="button" role="tab" aria-selected="false" data-tab="hasc" data-t="House">House</button></div>
       ${roster(congress.sasc, 'sasc', false)}${roster(congress.hasc, 'hasc', true)}
     </div>
   </div>
@@ -588,7 +588,7 @@ function resourcesHtml() {
   }
   const count = R.reduce((a, s) => a + s.groups.reduce((b, g) => b + g.items.filter(i => i.href).length, 0), 0);
   return `<div class="rsearch"><label for="rq">Find a Document or Link</label><input id="rq" type="search" placeholder="Type a name or number, like &ldquo;LM-2,&rdquo; &ldquo;telework&rdquo; or &ldquo;752&rdquo;" autocomplete="off"><span class="rcount" aria-live="polite">${count} documents and links</span></div>
-    <nav class="tabs rtabs" aria-label="Sections">${R.map(s => `<a href="#${s.id}">${esc(s.tab || s.title)}</a>`).join('')}</nav>
+    <nav class="tabs rtabs" aria-label="Sections">${R.map((s, i) => `<a href="#${s.id}" data-t="${esc(s.tab || s.title)}"${i ? '' : ' aria-current="true"'}>${esc(s.tab || s.title)}</a>`).join('')}</nav>
     ${R.map(s => `<section class="rsec" id="${s.id}">
       <h2 class="rsec-title">${esc(s.title)}</h2>${s.note ? `\n      <p class="rnote">${esc(s.note)}</p>` : ''}
       <div class="rbox">${s.groups.map(g => {
@@ -736,13 +736,13 @@ function contractPage(u) {
     const body = t => (terms && termSource(t)) || refs(t);
     return m ? `<p class="l${p.lv}"><span class="mk">${esc(m[1])}</span>${body(m[2])}</p>` : `<p>${body(p.t)}</p>`;
   };
-  const notesFor = n => contractNotes.filter(x => String(x.section) === String(n) && (x.units === 'all' || (x.units || []).includes(u.code)) && (!x.draft || DRAFTS));
+  const notesFor = n => contractNotes.filter(x => String(x.section) === String(n) && (x.units === 'all' || (x.units || []).includes(u.code)) && (!x.draft || DRAFTS) && (!x.href || CASES_PAGES.some(c => x.href === '/cases/' + c.slug)));
   const notesHtml = n => {
     const list = notesFor(n);
     if (!list.length) return '';
     return `<div class="ct-notes">${Object.keys(NOTE_KIND).filter(k => list.some(x => x.kind === k)).map(k => `
           <div class="ct-note ${k}"><h4>${NOTE_KIND[k]}</h4>${list.filter(x => x.kind === k).map(x => `
-            <div class="ct-ni">${x.title ? `<b>${esc(x.title)}</b>` : ''}${x.date || x.outcome ? `<span class="ct-nm">${[x.date, x.outcome].filter(Boolean).map(esc).join(' &middot; ')}</span>` : ''}${x.draft ? '<span class="ct-draft">Draft</span>' : ''}<p>${esc(x.text)}</p></div>`).join('')}
+            <div class="ct-ni">${x.title ? `<b>${esc(x.title)}</b>` : ''}${x.date || x.outcome ? `<span class="ct-nm">${[x.date, x.outcome].filter(Boolean).map(t => t.split(/(?<=,) /).map(p => `<i class="ph">${esc(p)}</i>`).join(' ')).join(' &middot; ')}</span>` : ''}${x.draft ? '<span class="ct-draft">Draft</span>' : ''}<p>${esc(x.text)}</p>${x.href ? `<a class="more" href="${x.href}">${esc(x.more || 'Read More')} &rsaquo;</a>` : ''}</div>`).join('')}
           </div>`).join('')}
         </div>`;
   };
@@ -782,8 +782,8 @@ function contractPage(u) {
     <section class="ct-art" id="a${a.n}">
       <div class="ct-ah"><div class="kicker">Article ${a.n}</div><h2>${esc(tc(a.title))}</h2></div>${a.intro.length ? `<div class="ct-sec ct-intro">${a.intro.map(p => para(p)).join('')}</div>` : ''}${a.sections.map(s => `
       <div class="ct-sec" id="${secId(s.n)}">
-        <h3><a href="#${secId(s.n)}">${s.n}</a>${esc(tc(s.title))}</h3>${s.n === '10.1' && u.code !== 'ARNG' ? '<p class="ct-act"><a class="more" href="/request-uniforms-and-other-personal-items">Request Your Uniforms &rsaquo;</a></p>' : ''}${notesHtml(s.n)}
-        ${s.paras.map(p => para(p, /Interpretation of Terms/i.test(s.title))).join('')}
+        <h3><a href="#${secId(s.n)}">${s.n}</a>${esc(tc(s.title))}</h3>${s.n === '10.1' && u.code !== 'ARNG' ? '<p class="ct-act"><a class="more" href="/request-uniforms-and-other-personal-items">Request Your Uniforms &rsaquo;</a></p>' : ''}
+        ${s.paras.map(p => para(p, /Interpretation of Terms/i.test(s.title))).join('')}${notesHtml(s.n)}
       </div>`).join('')}
     </section>`).join('')}
     <p class="g-note ct-source">Text taken from the signed agreement. If anything here differs from the <a href="${c.pdf}">signed PDF</a>, the PDF controls.</p>
@@ -1027,7 +1027,7 @@ function fill(src) {
       for (const m of main.matchAll(/<section class="ct-art" id="(a\d+)">\s*<div class="ct-ah"><div class="kicker">([^<]*)<\/div><h2>([\s\S]*?)<\/h2>/g))
         out.push({ k: 'c', t: `${strip(m[2])}: ${strip(m[3])}`, u: `${u}#${m[1]}`, c: name, d: '', h: '', x: '' });
       for (const m of main.matchAll(/<div class="ct-sec" id="(s[\d-]+)">\s*<h3><a [^>]*>([^<]*)<\/a>([\s\S]*?)<\/h3>([\s\S]*?)(?=<div class="ct-sec"|<\/section>)/g))
-        out.push({ k: 'c', t: `${strip(m[2])} ${strip(m[3])}`, u: `${u}#${m[1]}`, c: name, d: '', h: '', x: cut(strip(m[4]), 260) });
+        out.push({ k: 'c', t: `${strip(m[2])} ${strip(m[3])}`, u: `${u}#${m[1]}`, c: name, d: '', h: '', x: cut(strip(m[4].replace(/<div class="ct-notes">[\s\S]*$/, '')), 260) });
       continue;
     }
     if (post || slug.startsWith('video/')) {
@@ -1048,7 +1048,7 @@ function fill(src) {
 
   // the header's rotating line: Know Your Rights facts (site/data/rights-facts.json) taking turns with the newest news —
   // our own stories and videos, and the Government Executive / Federal News Network headlines
-  const facts = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'rights-facts.json'), 'utf8')).facts.filter(f => !OFF_PAGES.includes(f.href));
+  const facts = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'rights-facts.json'), 'utf8')).facts.filter(f => !OFF_PAGES.includes(f.href) && (!f.href.startsWith('/cases/') || CASES_PAGES.some(c => f.href === '/cases/' + c.slug)));
   // our own news: a video shows its hook (site/data/video-hooks.json — a quote or teaser, Ben, Nov 22 2026), else its title;
   // a story shows its title and subtitle
   const hooks = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'video-hooks.json'), 'utf8')).hooks;
@@ -1059,7 +1059,7 @@ function fill(src) {
   for (let i = 0; i < 2; i++) for (const { f, items } of FEED_ITEMS) if (items[i]) news.push({ k: f.name, t: items[i].title, u: items[i].link, d: day(easternDay(items[i].date)), ext: 1 });
   const line = [];
   for (let i = 0; i < Math.max(facts.length, news.length); i++) {
-    if (facts[i]) line.push({ k: 'Know Your Rights', t: facts[i].text, u: facts[i].href });
+    if (facts[i]) line.push({ k: facts[i].k || 'Know Your Rights', t: facts[i].text, u: facts[i].href });
     if (news[i]) line.push(news[i]);
   }
   fs.writeFileSync(path.join(OUT, 'data', 'header-line.json'), JSON.stringify({ items: line }));

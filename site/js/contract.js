@@ -9,7 +9,7 @@
   var strip = document.querySelector('.ct-strip'), bars = [].slice.call(document.querySelectorAll('.ct-nav'));
 
   var F = window.L1776_FIND, find = F.find;
-  var text = secs.map(function (s) { return F.read(s, 'p,h3,h4,li,.ct-note,.mk,h3 a'); });
+  var text = secs.map(function (s) { return F.read(s, 'p,h3,h4,li,.mk,h3 a'); });
   var phone = window.matchMedia('(max-width: 900px)');
   if (phone.matches && toc) toc.open = false;
 

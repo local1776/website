@@ -1,4 +1,160 @@
 {
- "_about": "Notes shown beside a contract section (Ben, Nov 21 2026: explainers, what it meant when we negotiated it, cases and grievances). Each note: units = list of unit codes (or \"all\"), section = \"10.1\", kind = explain | intent | case, title (optional), text, date and outcome (optional, for cases: subject only, never an employee's name), draft = true to show only in a build run with --drafts. Later the Union App sends the cases.",
- "notes": []
+ "_about": "Notes shown beside a contract section (Ben, Nov 21 2026: explainers, what it meant when we negotiated it, cases and grievances). Each note: units = list of unit codes (or \"all\"), section = \"10.1\", kind = explain | intent | case, title (optional), text, date and outcome (optional, for cases: subject only, never an employee's name), href = the case's page (more = its link words), draft = true to show only in a build run with --drafts. Later the Union App sends the cases.",
+ "notes": [
+  {
+   "units": [
+    "ARNG",
+    "CA",
+    "GU",
+    "LA",
+    "NM",
+    "NV",
+    "SC",
+    "SD",
+    "UT"
+   ],
+   "section": "5.5",
+   "kind": "case",
+   "title": "Talking to Your Union in Private",
+   "date": "FLRA v. Michigan Army National Guard, 878 F.3d 171 (6th Cir. 2017)",
+   "text": "The Guard told the union not to talk to employees without a Guard attorney present. A federal appeals court upheld the ruling that its sweeping ban broke the law.",
+   "href": "/cases/flra-v-michigan-army-national-guard",
+   "more": "Read the Case and Hear the Argument"
+  },
+  {
+   "units": [
+    "IL"
+   ],
+   "section": "5.4",
+   "kind": "case",
+   "title": "Talking to Your Union in Private",
+   "date": "FLRA v. Michigan Army National Guard, 878 F.3d 171 (6th Cir. 2017)",
+   "text": "The Guard told the union not to talk to employees without a Guard attorney present. A federal appeals court upheld the ruling that its sweeping ban broke the law.",
+   "href": "/cases/flra-v-michigan-army-national-guard",
+   "more": "Read the Case and Hear the Argument"
+  },
+  {
+   "units": [
+    "MI"
+   ],
+   "section": "5.2",
+   "kind": "case",
+   "title": "Talking to Your Union in Private",
+   "date": "FLRA v. Michigan Army National Guard, 878 F.3d 171 (6th Cir. 2017)",
+   "text": "The Guard told the union not to talk to employees without a Guard attorney present. A federal appeals court upheld the ruling that its sweeping ban broke the law.",
+   "href": "/cases/flra-v-michigan-army-national-guard",
+   "more": "Read the Case and Hear the Argument"
+  },
+  {
+   "units": [
+    "CA",
+    "GU",
+    "NM",
+    "NV",
+    "SC",
+    "SD",
+    "UT",
+    "MI"
+   ],
+   "section": "13.5",
+   "kind": "case",
+   "title": "MSPB Relief for Technicians",
+   "date": "Erdel v. Department of the Army, 2023 MSPB 27",
+   "text": "The Board ruled that it can order the Army or the Air Force to give a dual status technician relief, and that the old court decision saying otherwise is no longer the law. A Local 1776 case.",
+   "href": "/cases/erdel-v-department-of-the-army",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "LA"
+   ],
+   "section": "13.6",
+   "kind": "case",
+   "title": "MSPB Relief for Technicians",
+   "date": "Erdel v. Department of the Army, 2023 MSPB 27",
+   "text": "The Board ruled that it can order the Army or the Air Force to give a dual status technician relief, and that the old court decision saying otherwise is no longer the law. A Local 1776 case.",
+   "href": "/cases/erdel-v-department-of-the-army",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "IL"
+   ],
+   "section": "13.4",
+   "kind": "case",
+   "title": "MSPB Relief for Technicians",
+   "date": "Erdel v. Department of the Army, 2023 MSPB 27",
+   "text": "The Board ruled that it can order the Army or the Air Force to give a dual status technician relief, and that the old court decision saying otherwise is no longer the law. A Local 1776 case.",
+   "href": "/cases/erdel-v-department-of-the-army",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "ARNG",
+    "GU",
+    "IL",
+    "LA",
+    "MI",
+    "NM",
+    "NV",
+    "SC",
+    "UT"
+   ],
+   "section": "17.3",
+   "kind": "case",
+   "title": "Pay for Higher-Graded Work",
+   "date": "Nevada Army National Guard and LIUNA Local 1776, 74 FLRA 219 (2025)",
+   "text": "A Nevada employee did a higher-graded job for six years without the pay. The Guard said it could not be grieved. The FLRA let the back pay award stand.",
+   "href": "/cases/nevada-army-national-guard-higher-graded-duties",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "SD"
+   ],
+   "section": "16.3",
+   "kind": "case",
+   "title": "Pay for Higher-Graded Work",
+   "date": "Nevada Army National Guard and LIUNA Local 1776, 74 FLRA 219 (2025)",
+   "text": "A Nevada employee did a higher-graded job for six years without the pay. The Guard said it could not be grieved. The FLRA let the back pay award stand.",
+   "href": "/cases/nevada-army-national-guard-higher-graded-duties",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "CA"
+   ],
+   "section": "17.6",
+   "kind": "case",
+   "title": "Pay for Higher-Graded Work",
+   "date": "Nevada Army National Guard and LIUNA Local 1776, 74 FLRA 219 (2025)",
+   "text": "A Nevada employee did a higher-graded job for six years without the pay. The Guard said it could not be grieved. The FLRA let the back pay award stand.",
+   "href": "/cases/nevada-army-national-guard-higher-graded-duties",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "IL"
+   ],
+   "section": "1.1",
+   "kind": "case",
+   "title": "When It Is Too Late for an Election",
+   "date": "Illinois National Guard, 68 FLRA 199 (2015)",
+   "text": "LIUNA asked for an election in Illinois the day before another union and the Guard signed their contract. The FLRA ruled it was on time.",
+   "href": "/cases/illinois-national-guard-election-petition",
+   "more": "Read the Case"
+  },
+  {
+   "units": [
+    "NM"
+   ],
+   "section": "1.1",
+   "kind": "case",
+   "title": "Changing National Unions",
+   "date": "New Mexico Army and Air National Guard, 56 FLRA 145 (2000)",
+   "text": "New Mexico members voted 40 to 4 to leave their national union for LIUNA. The FLRA upheld their choice over the old union’s objection.",
+   "href": "/cases/new-mexico-national-guard-affiliation",
+   "more": "Read the Case"
+  }
+ ]
 }

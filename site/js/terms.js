@@ -17,6 +17,7 @@
   function read(el, blocks) {
     var walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, t = '', at = [], last = null;
     while ((n = walk.nextNode())) {
+      if (n.parentNode.closest('.ct-notes')) continue;   // our notes are not the contract's own words
       var b = n.parentNode.closest(blocks);
       if (b !== last) t += '\n';   // a new paragraph, heading or number never joins the word before it
       last = b; at.push([t.length, n]); t += n.data.replace(/\n/g, ' ');

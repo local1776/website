@@ -584,6 +584,31 @@
     });
   }
 
+  // Resources menu: the section being read is the bold one (Ben, Nov 24 2026); a section just picked stays marked until the reader scrolls
+  var rtabs = document.querySelector('.rtabs');
+  if (rtabs) {
+    var rLinks = [].slice.call(rtabs.querySelectorAll('a')), picked = null, rTick = 0;
+    var rMark = function () {
+      rTick = 0;
+      var line = rtabs.getBoundingClientRect().bottom + 60, now = null, shown = [];
+      rLinks.forEach(function (a) { var s = document.getElementById(a.getAttribute('href').slice(1)); if (s && !s.hidden) { shown.push(a); if (s.getBoundingClientRect().top <= line) now = a; } });
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2 && shown.length && window.pageYOffset > 0) now = shown[shown.length - 1];
+      now = picked || now || shown[0];
+      rLinks.forEach(function (a) { if (a === now) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      if (now && rtabs.scrollWidth > rtabs.clientWidth) {   // on a phone the marked word stays in view
+        var l = now.offsetLeft - rtabs.offsetLeft, r = l + now.offsetWidth;
+        if (l < rtabs.scrollLeft + 16) rtabs.scrollLeft = l - 16; else if (r > rtabs.scrollLeft + rtabs.clientWidth - 16) rtabs.scrollLeft = r - rtabs.clientWidth + 16;
+      }
+    };
+    var rSoon = function () { if (!rTick) rTick = requestAnimationFrame(rMark); };
+    rtabs.addEventListener('click', function (e) { var a = e.target.closest('a'); if (a) { picked = a; rMark(); } });
+    ['wheel', 'touchmove', 'keydown', 'mousedown'].forEach(function (n) { window.addEventListener(n, function (e) { if (picked && !(e.target.nodeType && rtabs.contains(e.target))) { picked = null; rSoon(); } }, { passive: true }); });
+    window.addEventListener('scroll', rSoon, { passive: true });
+    window.addEventListener('resize', rSoon);
+    if (rq) rq.addEventListener('input', function () { picked = null; rSoon(); });
+    rMark();
+  }
+
   // News page: All Stories / From Local 1776 / Elsewhere
   var nTabs = document.querySelector('.news-tabs');
   if (nTabs) nTabs.addEventListener('click', function (e) {
