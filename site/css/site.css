@@ -233,7 +233,7 @@ html.dock,html.dock body{overflow-anchor:none}
 .hero .slides img{filter:saturate(1.15) contrast(1.08) brightness(1.04)}   /* a little more color and snap: the photos looked "anemic" (Ben, Nov 22 2026) */
 .hero .over{position:absolute;left:0;right:0;top:20px;z-index:2}
 /* banner floats over the photo, light from the top left (Ben, Nov 20 2026) */
-.hero-card{display:inline-flex;max-width:100%;background:var(--navy);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:24px;align-items:center}
+.hero-card{display:inline-flex;max-width:100%;background:rgba(11,42,85,.94);color:#fff;border-bottom:2px solid var(--gold);border-radius:6px;padding:10px 14px 10px 20px;box-shadow:14px 16px 26px rgba(0,0,0,.6),6px 7px 8px rgba(0,0,0,.4);gap:24px;align-items:center}
 .hero-card .k{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
 .hero-card h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.15;margin:3px 0 0;white-space:nowrap}
 .hc-note{margin:3px 0 0;font-family:var(--serif);font-size:14px;line-height:1.35;color:#d5ddea;white-space:nowrap}
@@ -1994,3 +1994,4 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 .tabs:not(.unit-tabs) a:first-child,.tabs.dir-tabs button:first-child{align-items:flex-start}
 .nav a::after{letter-spacing:.09em}
 @media screen and (max-width:1023px),screen and (pointer:coarse){.tabs.dir-tabs:not(.unit-tabs){gap:22px}.tabs.dir-tabs button::before{inset:0 -11px}}
+@media (max-width:640px){.hero-card{background:var(--navy)}}   /* on a phone the card sits above the photo, not over it */
