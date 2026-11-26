@@ -631,6 +631,11 @@ figure.lead img{display:block;width:100%;max-height:560px;object-fit:contain;bor
 .bio-card .kicker{color:var(--gold-text)}
 .bio-card .cv-title{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);margin:22px 0 4px}
 .bio-card .cv dt{white-space:nowrap}
+.bio-card .mail{font-size:13.5px;overflow-wrap:anywhere}
+.bio-lead img{height:auto}
+.bio .prose ul{margin:0 0 14px;padding-left:1.2em}
+.bio .prose li{margin:0 0 8px}
+.person .more{display:inline-flex;align-items:center;min-height:34px;margin-top:10px;padding-top:4px;border-top:1px solid var(--rule);width:100%}
 @media (max-width:900px){
   .feature{grid-template-columns:1fr;gap:18px}
   .feature.flip .f-text{order:0}

@@ -19,3 +19,6 @@ tools/.resize-list.txt
 
 # The clean public copy pushed to github.com/local1776/website (tools/publish.mjs) - never commit it here
 /publish/
+
+# The last good news index, rewritten by every build
+site/data/news-cache/
