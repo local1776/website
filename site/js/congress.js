@@ -55,7 +55,8 @@
       .sort(function (a, b) { return b[1] - a[1] || a[0].localeCompare(b[0]); });
     var asOf = COUNTS.asOf ? new Date(COUNTS.asOf + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '';
     box.innerHTML = '<div class="cg-tot"><div class="tile"><span>Members</span><b>' + (COUNTS.total || 0).toLocaleString('en-US') + '</b></div><div class="tile"><span>States and Territories</span><b>' + list.length + '</b></div></div>'
-      + '<h4 class="rhead">Local 1776 Members by State</h4><ul class="cg-sts">' + list.map(function (x) {
+      // one row on a computer, two even rows on a tablet, three on a phone (Ben, Nov 25 2026: no tiles wrapping onto a short row)
+      + '<h4 class="rhead">Local 1776 Members by State</h4><ul class="cg-sts" style="--n:' + list.length + ';--n2:' + Math.ceil(list.length / 2) + ';--n3:' + Math.ceil(list.length / 3) + '">' + list.map(function (x) {
         return '<li><button type="button" data-st="' + x[0] + '" title="' + esc((DATA && DATA.names[x[0]]) || x[0]) + '"><span>' + x[0] + '</span><b>' + x[1].toLocaleString('en-US') + '</b></button></li>';
       }).join('') + '</ul>' + (asOf ? '<p class="cg-asof">Member counts as of ' + asOf + '</p>' : '');
     box.hidden = false;

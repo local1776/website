@@ -110,6 +110,14 @@ const button = (href, icon, word, cls = '') => `<a class="btn${cls ? ' ' + cls :
 const submit = (icon, word) => `<button class="btn" type="submit"><span class="ico">${ICON[icon]}</span><span class="lbl">${word}</span></button>`;
 
 // every link to a PDF opens in a new tab (Ben, Nov 21 2026)
+// every link to a page OUTSIDE our website opens in a new tab (Ben, Nov 25 2026: "any links to pages outside of our website should
+// always open in a new tab"). Run over every built page; header.js does the same for links scripts add while the page is open.
+const OWN_HOST = /^https?:\/\/(www\.)?local1776\.org(\/|$)/i;
+const extNewTab = html => html.replace(/<a\b[^>]*>/gi, tag => {
+  const m = tag.match(/\shref="(https?:\/\/[^"]+)"/i);
+  if (!m || OWN_HOST.test(m[1]) || /\starget=/i.test(tag)) return tag;
+  return tag.replace(/>$/, ' target="_blank"' + (/\srel=/i.test(tag) ? '' : ' rel="noopener"') + '>');
+});
 const pdfNewTab = html => html.replace(/<a ((?:(?!target=)[^>])*?)href="([^"]+\.pdf)"((?:(?!target=)[^>])*)>/gi, '<a $1href="$2" target="_blank" rel="noopener"$3>');
 function layout(meta, body) {
   // section rules: only the FIRST one on a page is thick; the rest are thin (Ben, Nov 22 2026: thick dividers only where needed)
@@ -1093,7 +1101,7 @@ for (const [from, to] of Object.entries(REDIRECTS)) {
       if (e.isDirectory()) walk(p);
       else if (e.name.endsWith('.html')) {
         const h = fs.readFileSync(p, 'utf8');
-        const n = h.replace(/ (href|src)="\/((?:css|js)\/[\w.-]+\.(?:css|js))"/g, (m, a, u) => fs.existsSync(path.join(OUT, u)) ? ` ${a}="/${u}?v=${stamp(u)}"` : m);
+        const n = extNewTab(h).replace(/ (href|src)="\/((?:css|js)\/[\w.-]+\.(?:css|js))"/g, (m, a, u) => fs.existsSync(path.join(OUT, u)) ? ` ${a}="/${u}?v=${stamp(u)}"` : m);
         if (n !== h) fs.writeFileSync(p, n);
       }
     }

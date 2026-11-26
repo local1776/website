@@ -27,6 +27,14 @@
     location.href = '/document?f=' + encodeURIComponent(a.pathname);
   }, true);
 
+  // every link to a page outside our website opens in a new tab (Ben, Nov 25 2026). The build already marks the links in each
+  // page; this catches any link a script adds while the page is open. mailto: and tel: links are left alone.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.target || !/^https?:$/.test(a.protocol) || /^(www\.)?local1776\.org$/i.test(a.hostname) || a.origin === location.origin) return;
+    a.target = '_blank'; if (!a.rel) a.rel = 'noopener';
+  }, true);
+
   // iPhone home screen: pull the page down from the top to refresh it (Ben, Nov 24 2026). Android's own pull already works.
   // Never over a zoomed map, a window or a list that is scrolled, and never once something has been typed in a form.
   if (navigator.standalone === true) (function () {
