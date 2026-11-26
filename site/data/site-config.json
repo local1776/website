@@ -2,6 +2,6 @@
   "_note": "THE ONE PLACE for the website's links to the Union App (Ben, Nov 22 2026). firebaseProject = the app's Firebase project id (member counts, lobbying). formsUrl = the forms receiver; empty means the forms say 'Preview only'. Change here, rebuild, done. representationForm / uniformForm = the switch for each request form (Nov 23 2026): off takes the form off the site (no form, no script, grayed buttons, Coming Soon); on brings it all back.",
   "firebaseProject": "liuna-local-1776",
   "formsUrl": "https://us-central1-liuna-local-1776.cloudfunctions.net/forms",
-  "representationForm": "off",
-  "uniformForm": "off"
+  "representationForm": "on",
+  "uniformForm": "on"
 }
