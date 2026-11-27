@@ -115,7 +115,7 @@ export function scopeCss(css, scope = '#main') {
 const ROOTS = ['skip', 'print-head', 'mast', 'nav', 'find', 'strip', 'site-foot', 'ptr'];
 const WHERE = ':where(.skip,.print-head,.mast,.nav,.find,body>.strip,.site-foot,.ptr)';
 export function chromeCss(siteCss, chromeHtml) {
-  const classes = new Set(['nav-stuck']), ids = new Set(), tags = new Set(['html', 'body']);   // nav-stuck: set by header.js once the menu bar sticks
+  const classes = new Set(), ids = new Set(), tags = new Set(['html', 'body']);
   for (const m of chromeHtml.matchAll(/\bclass="([^"]*)"/g)) m[1].split(/\s+/).filter(Boolean).forEach(c => classes.add(c));
   for (const m of chromeHtml.matchAll(/\bid="([^"]*)"/g)) ids.add(m[1]);
   for (const m of chromeHtml.matchAll(/<([a-zA-Z][a-zA-Z0-9]*)/g)) tags.add(m[1].toLowerCase());

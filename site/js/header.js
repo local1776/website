@@ -27,22 +27,6 @@
     location.href = '/document?f=' + encodeURIComponent(a.pathname);
   }, true);
 
-  // the menu bar is white under the header, and turns navy (white words, same amber line) once the page has scrolled far enough
-  // that it is stuck at the top (Ben, Nov 26 2026). html.nav-stuck also recolors the search glass and its tab (site.css).
-  (function () {
-    var nav = document.querySelector('.nav'); if (!nav) return;
-    // checked on the scroll event itself (not a frame later) and switched at once, no fade (Ben, Nov 26 2026: "as soon as
-    // that top edge of that menu hits the top of the page, it should just turn blue")
-    var root = document.documentElement, on = false;
-    function check() {
-      var stuck = nav.getBoundingClientRect().top <= 0.5 && (window.pageYOffset || 0) > 1;
-      if (stuck !== on) { on = stuck; root.classList.toggle('nav-stuck', stuck); }
-    }
-    addEventListener('scroll', check, { passive: true });
-    addEventListener('resize', check);
-    check();
-  })();
-
   // every link to a page outside our website opens in a new tab (Ben, Nov 25 2026). The build already marks the links in each
   // page; this catches any link a script adds while the page is open. mailto: and tel: links are left alone.
   document.addEventListener('click', function (e) {
