@@ -2019,3 +2019,22 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 .nav a::after{letter-spacing:.09em}
 @media screen and (max-width:1023px),screen and (pointer:coarse){.tabs.dir-tabs:not(.unit-tabs){gap:22px}.tabs.dir-tabs button::before{inset:0 -11px}}
 @media (max-width:640px){.hero-card{background:var(--navy)}}   /* on a phone the card sits above the photo, not over it */
+
+/* The menu bar turns NAVY once it is stuck at the top of the window (Ben, Nov 26 2026): white under the header as before; when the
+   page scrolls and the bar freezes at the top it goes navy with white words, keeping the amber line at its foot and the amber bar
+   under the current page. html.nav-stuck is set by header.js. The search glass and the tab that opens under it go navy with it. */
+.nav,.nav a,.nav-find{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease}
+html.nav-stuck .nav{background:var(--navy)}
+html.nav-stuck .nav a,html.nav-stuck .nav a:first-child{color:#fff}
+html.nav-stuck .nav a:hover{color:var(--gold)}
+html.nav-stuck .nav .nav-find,html.nav-stuck .nav .nav-find:hover{background:var(--navy)}
+html.nav-stuck .nav .nav-find{color:#fff;box-shadow:28px 0 0 var(--navy),-12px 0 12px -6px var(--navy)}
+html.nav-stuck .nav .nav-find:hover,html.nav-stuck .nav .nav-find[aria-expanded="true"]{color:var(--gold)}
+@media screen and (max-width:1023px),screen and (pointer:coarse){html.nav-stuck .nav .nav-find{box-shadow:28px 0 0 var(--navy)}html.nav-stuck .nav .nav-find::after{background:linear-gradient(to right,rgba(11,42,85,0),var(--navy))}}
+html.nav-stuck .find{background:var(--navy);border:0;border-bottom:1px solid var(--gold)}
+html.nav-stuck .find .find-row input{border-color:#fff}
+html.nav-stuck .find .find-x{color:#fff}
+html.nav-stuck .find .find-x:hover,html.nav-stuck .find .find-x:focus-visible{color:var(--gold)}
+html.nav-stuck .find::before{left:-10px;width:10px;height:10px;background:radial-gradient(circle at 0 100%,transparent 9.5px,var(--navy) 10px)}
+html.nav-stuck .find::after{right:-10px;width:10px;height:10px;background:radial-gradient(circle at 100% 100%,transparent 9.5px,var(--navy) 10px)}
+@media (prefers-reduced-motion:reduce){.nav,.nav a,.nav-find{transition:none}}
