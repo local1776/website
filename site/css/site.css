@@ -2023,7 +2023,6 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 /* The menu bar turns NAVY once it is stuck at the top of the window (Ben, Nov 26 2026): white under the header as before; when the
    page scrolls and the bar freezes at the top it goes navy with white words, keeping the amber line at its foot and the amber bar
    under the current page. html.nav-stuck is set by header.js. The search glass and the tab that opens under it go navy with it. */
-.nav,.nav a,.nav-find{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease}
 html.nav-stuck .nav{background:var(--navy)}
 html.nav-stuck .nav a,html.nav-stuck .nav a:first-child{color:#fff}
 html.nav-stuck .nav a:hover{color:var(--gold)}
@@ -2037,4 +2036,3 @@ html.nav-stuck .find .find-x{color:#fff}
 html.nav-stuck .find .find-x:hover,html.nav-stuck .find .find-x:focus-visible{color:var(--gold)}
 html.nav-stuck .find::before{left:-10px;width:10px;height:10px;background:radial-gradient(circle at 0 100%,transparent 9.5px,var(--navy) 10px)}
 html.nav-stuck .find::after{right:-10px;width:10px;height:10px;background:radial-gradient(circle at 100% 100%,transparent 9.5px,var(--navy) 10px)}
-@media (prefers-reduced-motion:reduce){.nav,.nav a,.nav-find{transition:none}}

@@ -31,15 +31,15 @@
   // that it is stuck at the top (Ben, Nov 26 2026). html.nav-stuck also recolors the search glass and its tab (site.css).
   (function () {
     var nav = document.querySelector('.nav'); if (!nav) return;
-    var root = document.documentElement, on = false, asked = false;
+    // checked on the scroll event itself (not a frame later) and switched at once, no fade (Ben, Nov 26 2026: "as soon as
+    // that top edge of that menu hits the top of the page, it should just turn blue")
+    var root = document.documentElement, on = false;
     function check() {
-      asked = false;
       var stuck = nav.getBoundingClientRect().top <= 0.5 && (window.pageYOffset || 0) > 1;
       if (stuck !== on) { on = stuck; root.classList.toggle('nav-stuck', stuck); }
     }
-    function ask() { if (!asked) { asked = true; requestAnimationFrame(check); } }
-    addEventListener('scroll', ask, { passive: true });
-    addEventListener('resize', ask);
+    addEventListener('scroll', check, { passive: true });
+    addEventListener('resize', check);
     check();
   })();
 
