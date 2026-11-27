@@ -15,6 +15,7 @@ export const DOCS = [
   { page: '/formal-meeting-checklist', out: 'liuna-local-1776-formal-meeting-checklist.pdf' },
   { page: '/weingarten-checklist', out: 'liuna-local-1776-weingarten-checklist.pdf' },
   { page: '/law-enforcement-leave-fact-sheet', out: 'liuna-local-1776-law-enforcement-leave-fact-sheet.pdf' },
+  { page: '/military-leave', out: 'liuna-local-1776-military-leave-fact-sheet.pdf' },
   { page: '/rules-for-the-use-of-force', out: 'liuna-local-1776-rules-for-the-use-of-force-2020.pdf' },
 ];
 // a one-off test print: node tools/make-pdfs.mjs --page=/emergency-leave-tracker --out=C:/temp/test.pdf
