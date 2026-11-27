@@ -89,6 +89,9 @@ const ICON = {
   prev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>',
   next: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>',
   pause: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>',
+  // sign in to the Union App: an arrow going in through a doorway (Lucide "log-in", ISC; Ben, Nov 26 2026: not a person, not a key).
+  // Not used yet: Ben wants the app only as a quiet footer link for now ("don't put it in the header yet"); the tile goes between Help and Join.
+  login: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>',
   join: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="3.5"/><path d="M3.5 20a6.5 6.5 0 0 1 13 0"/><path d="M19 8v6M16 11h6"/></svg>',
   send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg>',
   plan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg>',
@@ -205,7 +208,8 @@ ${pdfNewTab(body)}
       <a href="/local-1776-terms-of-membership">Terms of Membership</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="/reform">Bargaining Reform</a>
-      <a href="/agr-calculator">AGR Pay Calculator</a>
+      <a href="/agr-calculator">AGR Pay Calculator</a>${CONFIG.appUrl ? `
+      <a href="${CONFIG.appUrl}" target="_blank" rel="noopener">Local 1776 App</a>` : ''}
     </nav>
     <div class="ft-reach">
       <h2>Reach Us</h2>

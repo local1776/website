@@ -1,6 +1,7 @@
 {
-  "_note": "THE ONE PLACE for the website's links to the Union App (Ben, Nov 22 2026). firebaseProject = the app's Firebase project id (member counts, lobbying). formsUrl = the forms receiver; empty means the forms say 'Preview only'. Change here, rebuild, done. representationForm / uniformForm = the switch for each request form (Nov 23 2026): off takes the form off the site (no form, no script, grayed buttons, Coming Soon); on brings it all back.",
+  "_note": "THE ONE PLACE for the website's links to the Union App (Ben, Nov 22 2026). firebaseProject = the app's Firebase project id (member counts, lobbying). formsUrl = the forms receiver; empty means the forms say 'Preview only'. Change here, rebuild, done. representationForm / uniformForm = the switch for each request form (Nov 23 2026): off takes the form off the site (no form, no script, grayed buttons, Coming Soon); on brings it all back. appUrl = the Union App's sign-in page, the header's Login tile (Nov 26 2026).",
   "firebaseProject": "liuna-local-1776",
+  "appUrl": "https://app.local1776.org/",
   "formsUrl": "https://us-central1-liuna-local-1776.cloudfunctions.net/forms",
   "representationForm": "on",
   "uniformForm": "on"
