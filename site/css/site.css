@@ -235,7 +235,10 @@ html.dock,html.dock body{overflow-anchor:none}
   html.dock:not(.free) .nav{top:var(--mast-h,0px)}
   html.dock:not(.free) .strip{position:sticky;top:calc(var(--mast-h,0px) + var(--nav-h,0px));z-index:20}
   html.dock:not(.free) .hero{position:sticky;top:calc(var(--mast-h,0px) + var(--nav-h,0px) + var(--strip-h,0px) - 1px);z-index:0}   /* tucked 1px under the strip: no seam at any scaling */
-  html.dock.free .mast{margin-top:var(--hero-h,0px)}
+  html.dock.free .mast{margin-top:var(--hero-h,0px);position:relative}
+  /* the space the header was pushed down by is navy, not white: scrolling back up, the browser can draw one frame a few pixels
+     past the hand-over before site.js docks the header again, and that sliver flashed white over the navy header (Ben, Nov 26 2026) */
+  html.dock.free .mast::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:var(--hero-h,0px);background:var(--navy)}
   html.dock.free .hero{position:relative;z-index:0;margin-bottom:calc(-1 * var(--hero-h,0px))}
 }
 @media print{html.dock .mast,html.dock .strip,html.dock .hero{position:relative;top:0;margin:0}}
