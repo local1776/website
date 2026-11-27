@@ -2023,3 +2023,6 @@ a.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none
 @media screen and (max-width:1023px),screen and (pointer:coarse){.tabs.dir-tabs:not(.unit-tabs){gap:22px}.tabs.dir-tabs button::before{inset:0 -11px}}
 @media (max-width:640px){.hero-card{background:var(--navy)}}   /* on a phone the card sits above the photo, not over it */
 
+/* "OK to Text You?" and the carriers' consent wording under it (Nov 27 2026, for the text-message approval) */
+.fset .uf-note+.seg-inline{margin-top:16px}
+.sms-note{margin-top:8px}

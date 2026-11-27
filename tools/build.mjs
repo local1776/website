@@ -207,6 +207,7 @@ ${pdfNewTab(body)}
       <a href="/about">About Local 1776</a>
       <a href="/local-1776-terms-of-membership">Terms of Membership</a>
       <a href="/privacy">Privacy Policy</a>
+      <a href="/sms-terms">SMS Terms</a>
       <a href="/reform">Bargaining Reform</a>
       <a href="/agr-calculator">AGR Pay Calculator</a>${CONFIG.appUrl ? `
       <a href="${CONFIG.appUrl}" target="_blank" rel="noopener">Local 1776 App</a>` : ''}
